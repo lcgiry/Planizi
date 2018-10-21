@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `db_planizi` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `db_planizi`;
 -- MySQL dump 10.13  Distrib 5.7.22, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: db_planizi
@@ -268,7 +270,7 @@ CREATE TABLE `shift_set` (
   `shift_set_start` datetime NOT NULL,
   `shift_set_end` datetime NOT NULL,
   PRIMARY KEY (`shift_set_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Table who store the set of one or several shifts. It''s just for indicate start hour and end hour.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Table who store the set of one or several shifts. It is just for indicate start hour and end hour.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -894,4 +896,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-21 15:06:37
+-- Dump completed on 2018-10-21 16:56:50
