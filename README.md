@@ -1,2 +1,2 @@
 # Planizi
-PILS
+Project PILS
