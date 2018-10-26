@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('code-node:server');
 var http = require('http');
+var mysql = require('mysql');
 
 /**
  * Get port from environment and store in Express.
@@ -28,6 +29,21 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+/**
+ * Connect to MySQL server
+ */
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "root",
+  port: 3306,
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
 
 /**
  * Normalize a port into a number, string, or false.
