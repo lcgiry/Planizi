@@ -28,10 +28,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Set all static file routes
 app.use('/js', express.static('node_modules/bootstrap/dist/js'));
-app.use('/js', express.static('node_modules/jquery/dist/js'));
+app.use('/js', express.static('node_modules/jquery/dist'));
 app.use('/js', express.static('node_modules/popper.js/dist/'));
 app.use('/js', express.static('public/javascripts'));
 app.use('/css', express.static('node_modules/bootstrap/dist/css'));
+app.use('/css', express.static('node_modules/font-awesome/css'));
 app.use('/css', express.static('public/stylesheets'));
 
 //Set all static routes
