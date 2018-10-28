@@ -1,0 +1,17 @@
+{
+    "mysql":
+    {
+        "dev": {
+            "host": "localhost",
+            "user": "planizi",
+            "password": "planizi",
+            "port": 3306
+        },
+        "prod": {
+            "host": "localhost",
+            "user": "root",
+            "password": "root",
+            "port": 3306
+        }
+    }
+}

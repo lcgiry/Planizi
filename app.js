@@ -1,32 +1,40 @@
-
-//All required modules
+//------------------------------ All required modules from Node repositories -----------------------------------
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
+var passport = require('passport');
 
+//------------------------------ All required modules from Planizi repository -----------------------------------
+var authenticationConfig = require('./config/authentication/config-authentication');
+authenticationConfig.googleAuthenticationConfiguration
 
 //All URL routes
 var indexRouter = require('./routes/index');
+var authenticationRouter = require ('./routes/authentication');
 
-
-
-//Lauch Express
+//------------------------------ Main Ssettings -----------------------------------
+//Start express for the server
 var app = express();
 
 // Set the templating motor
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-//Set all midleware
+//------------------------------ SET MIDDLEWARE -----------------------------------
+//Set all GENERIC midleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: 'keyboard cat' }));
+app.use(passport.initialize());
+app.use(passport.session());
 
-//Set all static file routes
+//Set all STATIC ROUTES FOR FILES
 app.use('/js', express.static('node_modules/bootstrap/dist/js'));
 app.use('/js', express.static('node_modules/jquery/dist'));
 app.use('/js', express.static('node_modules/popper.js/dist/'));
@@ -35,8 +43,9 @@ app.use('/css', express.static('node_modules/bootstrap/dist/css'));
 app.use('/css', express.static('node_modules/font-awesome/css'));
 app.use('/css', express.static('public/stylesheets'));
 
-//Set all static routes
+//Set all STATIC ROUTES FOR ROUTER
 app.use('/', indexRouter);
+app.use('/authentication', authenticationRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -53,4 +62,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+//------------------------------ Exports -----------------------------------
 module.exports = app;
