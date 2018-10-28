@@ -34,7 +34,7 @@ server.on('listening', onListening);
  * Connection to MySQL database
  */
 var databaseConfig = require('../config/database/config-database');
-databaseConfig.mysqlDatabaseConfiguration();
+databaseConfig.sequelizeInitialisation();
 
 
 /**
