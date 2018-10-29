@@ -92,6 +92,10 @@ module.exports = function(sequelize, DataTypes) {
     user_cv_file: {
       type: DataTypes.STRING(45),
       allowNull: true
+    },
+    user_last_login: {
+        type: DataTypes.DATE,
+        allowNull: true
     }
   }, {
     tableName: 'user'
