@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="552">
-              <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
+              <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -177,18 +177,7 @@
             <path>
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code-node" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
@@ -199,18 +188,6 @@
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
@@ -242,6 +219,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\database_dump" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\config\database" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\views" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\routes" />
@@ -279,7 +257,7 @@
       <updated>1540075210961</updated>
       <workItem from="1540075252567" duration="1244000" />
       <workItem from="1540153863558" duration="7191000" />
-      <workItem from="1540306387340" duration="43624000" />
+      <workItem from="1540306387340" duration="44459000" />
     </task>
     <task id="LOCAL-00001" summary="Generate the architecture of the project">
       <created>1540155774955</created>
@@ -292,7 +270,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52059000" />
+    <option name="totallyTimeSpent" value="52894000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,7 +283,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15911485" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32897604" />
@@ -648,7 +625,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
-          <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
+          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
         </state>
       </provider>
     </entry>
