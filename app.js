@@ -3,7 +3,6 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
@@ -15,6 +14,7 @@ authenticationConfig.googleAuthenticationConfiguration
 //All URL routes
 var indexRouter = require('./routes/index');
 var authenticationRouter = require ('./routes/authentication');
+var registrationRouter = require('./routes/registration');
 
 //------------------------------ Main Ssettings -----------------------------------
 //Start express for the server
@@ -27,8 +27,8 @@ app.set('view engine', 'ejs');
 //------------------------------ SET MIDDLEWARE -----------------------------------
 //Set all GENERIC midleware
 app.use(logger('dev'));
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({ secret: 'keyboard cat' }));
@@ -40,13 +40,16 @@ app.use('/js', express.static('node_modules/bootstrap/dist/js'));
 app.use('/js', express.static('node_modules/jquery/dist'));
 app.use('/js', express.static('node_modules/popper.js/dist/'));
 app.use('/js', express.static('public/javascripts'));
+app.use('/img', express.static('public/images'));
 app.use('/css', express.static('node_modules/bootstrap/dist/css'));
 app.use('/css', express.static('node_modules/font-awesome/css'));
 app.use('/css', express.static('public/stylesheets'));
+app.use('/assets', express.static('public/template-assets'));
 
 //Set all STATIC ROUTES FOR ROUTER
 app.use('/', indexRouter);
 app.use('/authentication', authenticationRouter);
+app.use("/registration", registrationRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
