@@ -37,14 +37,96 @@ The front part will be developped by using **EJS** templating and **Bootstrap, J
 - Open your browser and go at http://localhost:8080/
 
 
-## Project Architecture
+## Project Architecture & Technologies
 ### File architecture
-
+ ````$xslt
+|-- bin                                                         //Start file
+|   |-- www.js
+|
+|-- config                                                      //All configuration files
+|   |-- authentication
+|       |-- config-authentication.json
+|       |-- config-authentication.js
+|   |-- database
+|       |-- config-database.json
+|       |-- config-database.js
+|
+|-- database-dump                                               //To store dump of the db recurrently
+|   |-- planizi_database_dump_date.sql
+|
+|-- models                                                      //All models configuration to link database and code (Sequelize ORM code)
+|   |-- user.js
+|   |-- task.js
+|   |-- ...
+|   |-- ...
+|   |-- team.js
+|
+|-- node_modules                                                //The default package that store all node modules
+|   |-- ...
+|
+|-- public                                                      //The package that contain all front files as css, javascripts, images, medias... but not the html
+|   |-- images
+|   |   |-- ...
+|   |-- javascripts
+|   |   |-- ...
+|   |-- stylesheets
+|   |   |-- ...
+|   |-- template-assets
+|   |   |-- ...
+|
+|-- routes                                                      //Where all routes are defined to forward incoming API request
+|   |-- index.js
+|   |-- registration.js
+|   |-- ...
+|
+|-- views                                                       //All view (EJS) that will generate html that will be sent to the client
+|   |-- index.ejs
+|   |-- dashboard.ejs
+|   |-- ...
+|
+|-- package-lock.json
+|-- package.json
+|-- app.js                                                      //The first entrypoint when the application server in lauched (after bin/www)
+|-- Readme.md
+```` 
+ 
+ 
 ### Server and routing : *Express* module
 
 ### ORM and models : *Sequelize* module
 
 ### Views : *EJS* templating
+####Overview
+All view and pages that will be sent to the client are.ejs files. EJS provide a way to generate .html files from .ejs file. Thanks to that you can make loops, tests and other program instructions in your html to simplify your rendering.
+Note that you can just write classical html, css and javascript in .ejs file without problem.
+
+#### Back side
+Read EJS documentation if necessary. It's easy and not complicated.  
+To set the configuration in your application :
+```javascript
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+````
+To send a view to your client, you have to make in your controller/router :
+````javascript
+res.render('your_view', { firtVariableToSend: 'value1', secondVariableToSend: ['value2', 'value3'] });
+````
+
+#### Front side
+To set the configuration in your application :
+```html
+<html>
+<body>
+    <div class="title">
+        <%= firstVariableToSend %>
+        
+        <% secondVariableToSend.forEach(function(val) { %>
+            <li><%= val %></li>
+        <% }); %>
+    </div>
+</body>
+</html>
+````
 
 ### Other modules
 #### Authentication with *Passport* module and OAuth2
