@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <title>Planizi - Registration</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/stroke-7/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+</head>
+
+<body class="am-splash-screen">
+
+<div class="am-wrapper am-login">
+    <div class="am-content">
+        <div class="main-content">
+            <div class="row wizard-row">
+                <div class="col-md-12 fuelux">
+                    <div class="block-wizard panel panel-default">
+                        <div id="wizard1" class="wizard wizard-ux">
+                            <ul class="steps">
+                                <li data-step="1" class="active">Personal<span class="chevron"></span></li>
+                                <li data-step="2">Skill<span class="chevron"></span></li>
+                                <li data-step="3">Administrative<span class="chevron"></span></li>
+                            </ul>
+                            <div class="actions">
+                                <button type="button" class="btn btn-xs btn-prev btn-default"><i class="icon s7-angle-left"></i></button>
+                                <button type="button" data-last="Finish" class="btn btn-xs btn-next btn-default"><i class="icon s7-angle-right"></i></button>
+                            </div>
+                            <div class="step-content">
+                                <div data-step="1" class="step-pane active">
+                                    <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
+                                        <div class="form-group no-padding">
+                                            <div class="col-sm-7">
+                                                <h3 class="wizard-title">User Info</h3>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label font-weight-bold">Name *</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" required="" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label font-weight-bold">Surname *</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" required="" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Nickname</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label font-weight-bold">Email *</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" disabled="disabled" placeholder="<%= userMail %>" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Phone *</label>
+                                            <div class="col-sm-6">
+                                                <input data-parsley-type="digits" type="text" required="" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label font-weight-bold">Gender *</label>
+                                            <div class="col-sm-6">
+                                                <div class="am-radio inline">
+                                                    <input type="radio" name="gender" id="male">
+                                                    <label for="male">Male</label>
+                                                </div>
+                                                <div class="am-radio inline">
+                                                    <input type="radio" name="gender" id="female">
+                                                    <label for="female">Female</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label font-weight-bold">Birth date * </label>
+                                            <div class="col-sm-6">
+                                                <div data-min-view="2" data-date-format="dd/mm/yyyy" class="input-group date datetimepicker">
+                                                    <span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                                                    <input required="" type="text" data-mask="date" value="" placeholder="dd/mm/yyyy" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Description / Comments</label>
+                                            <div class="col-sm-6">
+                                                <textarea class="form-control" maxlength="500"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-12 text-center">
+                                                <button class="btn btn-default btn-space">Cancel</button>
+                                                <button data-wizard="#wizard1" class="btn btn-primary btn-space wizard-next">Next Step <i class="icon s7-angle-right"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div data-step="2" class="step-pane">
+                                    <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
+                                        <div class="form-group no-padding">
+                                            <div class="col-sm-7">
+                                                <h3 class="wizard-title">Skills</h3>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Experiences / Abilites</label>
+                                            <div class="col-sm-6">
+                                                <textarea class="form-control" maxlength="500"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Health problems / Disabilities</label>
+                                            <div class="col-sm-6">
+                                                <textarea class="form-control" maxlength="500"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Skills</label>
+                                            <div class="col-sm-6">
+                                                <div class="am-checkbox">
+                                                    <input id="check3" type="checkbox">
+                                                    <label for="check3">Driver licence</label>
+                                                </div>
+                                                <div class="am-checkbox">
+                                                    <input id="check4" type="checkbox">
+                                                    <label for="check4">Driver licence +3years</label>
+                                                </div>
+                                                <div class="am-checkbox">
+                                                    <input id="check5" type="checkbox">
+                                                    <label for="check5">CACES</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Your role</label>
+                                            <div class="col-sm-6">
+                                                <select class="select2">
+                                                    <option value="AK">Organizer</option>
+                                                    <option value="HI">Volunteer</option>
+                                                    <option value="HI">Service provider</option>
+                                                    <option value="HI">Technician</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-12 text-center">
+                                                <button class="btn btn-default btn-space">Cancel</button>
+                                                <button data-wizard="#wizard1" class="btn btn-primary btn-space wizard-next">Next Step <i class="icon s7-angle-right"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div data-step="3" class="step-pane">
+                                    <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
+                                        <div class="form-group no-padding">
+                                            <div class="col-sm-7">
+                                                <h3 class="wizard-title">Administrative documents</h3>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label font-weight-bold">Tee-shirt size *</label>
+                                            <div class="col-sm-6">
+                                                <select class="form-control">
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Social security number</label>
+                                            <div class="col-sm-6">
+                                                <input data-parsley-type="digits" type="text" required="" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Social security card</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group xs-mb-15">
+                                                    <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-primary">Ok</button></span>
+                                                    <input type="file" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Identity card / Passport</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group xs-mb-15">
+                                                    <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-primary">Ok</button></span>
+                                                    <input type="file" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Drive licence</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group xs-mb-15">
+                                                    <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-primary">Ok</button></span>
+                                                    <input type="file" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">CV</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group xs-mb-15">
+                                                    <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-primary">Ok</button></span>
+                                                    <input type="file" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-12 text-center">
+                                                <button data-wizard="#wizard1" class="btn btn-default btn-space wizard-previous"><i class="icon s7-angle-left"></i> Previous</button>
+                                                <button data-wizard="#wizard1" class="btn btn-success btn-space wizard-next"><i class="icon s7-check"></i> Complete</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div data-step="4" class="step-pane">
+                                    <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
+                                        <div class="form-group no-padding">
+                                            <div class="col-sm-7">
+                                                <h3 class="wizard-title">Notifications</h3>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-7">
+                                                <label class="control-label">E-Mail Notifications</label>
+                                                <p>This option allow you to recieve email notifications by us.</p>
+                                            </div>
+                                            <div class="col-sm-3 xs-pt-15">
+                                                <div class="switch-button">
+                                                    <input type="checkbox" checked="" name="swt1" id="swt1"><span>
+                                <label for="swt1"></label></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-7">
+                                                <label class="control-label">Phone Notifications</label>
+                                                <p>Allow us to send phone notifications to your cell phone.</p>
+                                            </div>
+                                            <div class="col-sm-3 xs-pt-15">
+                                                <div class="switch-button">
+                                                    <input type="checkbox" checked="" name="swt2" id="swt2"><span>
+                                <label for="swt2"></label></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-7">
+                                                <label class="control-label">Global Notifications</label>
+                                                <p>Allow us to send notifications to your dashboard.</p>
+                                            </div>
+                                            <div class="col-sm-3 xs-pt-15">
+                                                <div class="switch-button">
+                                                    <input type="checkbox" checked="" name="swt3" id="swt3"><span>
+                                <label for="swt3"></label></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <button data-wizard="#wizard1" class="btn btn-default btn-space wizard-previous"><i class="icon s7-angle-left"></i> Previous</button>
+                                                <button data-wizard="#wizard1" class="btn btn-primary btn-space wizard-next">Next Step <i class="icon s7-angle-right"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div data-step="5" class="step-pane">
+                                    <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
+                                        <div class="form-group no-padding">
+                                            <div class="col-sm-7">
+                                                <h3 class="wizard-title">Configuration</h3>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <label class="control-label">Buy Credits: <span id="credits">$30</span></label>
+                                                <p>This option allow you to buy an amount of credits.</p>
+                                                <input id="credit_slider" type="text" value="30" class="bslider form-control">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label class="control-label">Change Plan</label>
+                                                <p>Change your plan many times as you want.</p>
+                                                <select class="select2">
+                                                    <optgroup label="Personal">
+                                                        <option value="p1">Basic</option>
+                                                        <option value="p2">Medium</option>
+                                                    </optgroup>
+                                                    <optgroup label="Company">
+                                                        <option value="p3">Standard</option>
+                                                        <option value="p4">Silver</option>
+                                                        <option value="p5">Gold</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <label class="control-label">Payment Rate: <span id="rate">5%</span></label>
+                                                <p>Choose your payment rate to calculate how much money you will recieve.</p>
+                                                <input id="rate_slider" data-slider-min="0" data-slider-max="100" type="text" value="5" class="bslider form-control">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label class="control-label">Keywords</label>
+                                                <p>Write your keywords to do a successful SEO with web search engines.</p>
+                                                <select multiple="" class="tags">
+                                                    <option value="1">Twitter</option>
+                                                    <option value="2">Google</option>
+                                                    <option value="3">Facebook</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <button data-wizard="#wizard1" class="btn btn-default btn-space wizard-previous"><i class="icon s7-angle-left"></i> Previous</button>
+                                                <button data-wizard="#wizard1" class="btn btn-success btn-space wizard-next"><i class="icon s7-check"></i> Complete</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+<script src="assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+<script src="assets/js/main.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/lib/fuelux/js/wizard.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap-slider/js/bootstrap-slider.js" type="text/javascript"></script>
+<script src="assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="assets/js/app-form-wizard.js" type="text/javascript"></script>
+<script src="assets/js/app-form-elements.js" type="text/javascript"></script>
+<script src="assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//initialize the javascript
+		App.init();
+		App.wizard();
+		App.formElements();
+	});
+</script>
+
+</body>
+</html>

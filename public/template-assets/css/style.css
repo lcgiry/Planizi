@@ -181,7 +181,7 @@ figure {
 }
 hr {
   -moz-box-sizing: content-box;
-       box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
 }
 pre {
@@ -232,7 +232,7 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -242,7 +242,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
-       box-sizing: content-box;
+  box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
@@ -3178,7 +3178,7 @@ select[multiple].input-lg {
   text-align: center;
   vertical-align: middle;
   -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
@@ -4031,13 +4031,13 @@ tbody.collapse.in {
   overflow: hidden;
   -webkit-transition-property: height, visibility;
   -o-transition-property: height, visibility;
-     transition-property: height, visibility;
+  transition-property: height, visibility;
   -webkit-transition-duration: 0.35s;
   -o-transition-duration: 0.35s;
-     transition-duration: 0.35s;
+  transition-duration: 0.35s;
   -webkit-transition-timing-function: ease;
   -o-transition-timing-function: ease;
-     transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 .caret {
   display: inline-block;
@@ -7307,7 +7307,7 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
-     transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 .modal-show {
   visibility: visible;
@@ -7324,7 +7324,7 @@ perspective effects (not including the modals and the overlay).
   background: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal-show ~ .modal-overlay {
   opacity: 1;
@@ -7340,17 +7340,17 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: scale(0.7);
   -ms-transform: scale(0.7);
   -o-transform: scale(0.7);
-     transform: scale(0.7);
+  transform: scale(0.7);
   opacity: 0;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal-show.modal-effect-1 .modal-content {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
-     transform: scale(1);
+  transform: scale(1);
   opacity: 1;
 }
 /* Effect 2: Slide from the right */
@@ -7358,17 +7358,17 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: translateX(20%);
   -ms-transform: translateX(20%);
   -o-transform: translateX(20%);
-     transform: translateX(20%);
+  transform: translateX(20%);
   opacity: 0;
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
   -o-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-     transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 .modal-show.modal-effect-2 .modal-content {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
-     transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
 }
 /* Effect 3: Slide from the bottom */
@@ -7376,17 +7376,17 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: translateY(20%);
   -ms-transform: translateY(20%);
   -o-transform: translateY(20%);
-     transform: translateY(20%);
+  transform: translateY(20%);
   opacity: 0;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal-show.modal-effect-3 .modal-content {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
-     transform: translateY(0);
+  transform: translateY(0);
   opacity: 1;
 }
 /* Effect 4: Newspaper */
@@ -7394,20 +7394,20 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: scale(0) rotate(720deg);
   -ms-transform: scale(0) rotate(720deg);
   -o-transform: scale(0) rotate(720deg);
-     transform: scale(0) rotate(720deg);
+  transform: scale(0) rotate(720deg);
   opacity: 0;
 }
 .modal-show.modal-effect-4 ~ .modal-overlay,
 .modal-effect-4 .modal-content {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
-     transition: all 0.5s;
+  transition: all 0.5s;
 }
 .modal-show.modal-effect-4 .modal-content {
   -webkit-transform: scale(1) rotate(0deg);
   -ms-transform: scale(1) rotate(0deg);
   -o-transform: scale(1) rotate(0deg);
-     transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
   opacity: 1;
 }
 /* Effect 5: fall */
@@ -7426,7 +7426,7 @@ perspective effects (not including the modals and the overlay).
 .modal-show.modal-effect-5 .modal-content {
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
-     transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   -webkit-transform: translateZ(0px) rotateX(0deg);
   -ms-transform: translateZ(0px) rotateX(0deg);
   transform: translateZ(0px) rotateX(0deg);
@@ -7448,7 +7448,7 @@ perspective effects (not including the modals and the overlay).
 .modal-show.modal-effect-6 .modal-content {
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
-     transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   -webkit-transform: translate(0%) translateZ(0) rotate(0deg);
   -ms-transform: translate(0%) translateZ(0) rotate(0deg);
   transform: translate(0%) translateZ(0) rotate(0deg);
@@ -7460,23 +7460,23 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-     transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .modal-effect-7 .modal-content {
   -webkit-transform: translateY(-200%);
   -ms-transform: translateY(-200%);
   -o-transform: translateY(-200%);
-     transform: translateY(-200%);
+  transform: translateY(-200%);
   -webkit-transition: all .3s;
   -o-transition: all .3s;
-     transition: all .3s;
+  transition: all .3s;
   opacity: 0;
 }
 .modal-show.modal-effect-7 .modal-content {
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
-     transform: translateY(0%);
+  transform: translateY(0%);
   border-radius: 0 0 3px 3px;
   opacity: 1;
 }
@@ -7493,7 +7493,7 @@ perspective effects (not including the modals and the overlay).
   transform: rotateY(-70deg);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
   opacity: 0;
 }
 .modal-show.modal-effect-8 .modal-content {
@@ -7515,7 +7515,7 @@ perspective effects (not including the modals and the overlay).
   transform: rotateX(-70deg);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
   opacity: 0;
 }
 .modal-show.modal-effect-9 .modal-content {
@@ -7537,12 +7537,12 @@ perspective effects (not including the modals and the overlay).
   transform: rotateX(-60deg);
   -webkit-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
-   -o-transform-origin: 50% 0;
-      transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  transform-origin: 50% 0;
   opacity: 0;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal-show.modal-effect-10 .modal-content {
   -webkit-transform: rotateX(0deg);
@@ -7555,17 +7555,17 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: scale(2);
   -ms-transform: scale(2);
   -o-transform: scale(2);
-     transform: scale(2);
+  transform: scale(2);
   opacity: 0;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal-show.modal-effect-11 .modal-content {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
-     transform: scale(1);
+  transform: scale(1);
   opacity: 1;
 }
 /* Effect 12:  Just me */
@@ -7573,11 +7573,11 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   -o-transform: scale(0.8);
-     transform: scale(0.8);
+  transform: scale(0.8);
   opacity: 0;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal-show.modal-effect-12 ~ .modal-overlay {
   background: #000;
@@ -7586,7 +7586,7 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
-     transform: scale(1);
+  transform: scale(1);
   opacity: 1;
 }
 /* Effect 13: 3D slit */
@@ -7605,7 +7605,7 @@ perspective effects (not including the modals and the overlay).
 .modal-show.modal-effect-13 .modal-content {
   -webkit-animation: slit 0.7s forwards ease-out;
   -o-animation: slit 0.7s forwards ease-out;
-     animation: slit 0.7s forwards ease-out;
+  animation: slit 0.7s forwards ease-out;
 }
 @-webkit-keyframes slit {
   50% {
@@ -7623,7 +7623,7 @@ perspective effects (not including the modals and the overlay).
     transform: translateZ(-250px) rotateY(89deg);
     opacity: 1;
     -o-animation-timing-function: ease-in;
-       animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   100% {
     transform: translateZ(0) rotateY(0deg);
@@ -7633,15 +7633,15 @@ perspective effects (not including the modals and the overlay).
 @keyframes slit {
   50% {
     -webkit-transform: translateZ(-250px) rotateY(89deg);
-            transform: translateZ(-250px) rotateY(89deg);
+    transform: translateZ(-250px) rotateY(89deg);
     opacity: 1;
     -webkit-animation-timing-function: ease-in;
-         -o-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   100% {
     -webkit-transform: translateZ(0) rotateY(0deg);
-            transform: translateZ(0) rotateY(0deg);
+    transform: translateZ(0) rotateY(0deg);
     opacity: 1;
   }
 }
@@ -7658,12 +7658,12 @@ perspective effects (not including the modals and the overlay).
   transform: translateY(100%) rotateX(90deg);
   -webkit-transform-origin: 0 100%;
   -ms-transform-origin: 0 100%;
-   -o-transform-origin: 0 100%;
-      transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
-     transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .modal-show.modal-effect-14 .modal-content {
   -webkit-transform: translateY(0%) rotateX(0deg);
@@ -7684,12 +7684,12 @@ perspective effects (not including the modals and the overlay).
   transform: translateZ(100px) translateX(-30%) rotateY(90deg);
   -webkit-transform-origin: 0 100%;
   -ms-transform-origin: 0 100%;
-   -o-transform-origin: 0 100%;
-      transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
   opacity: 0;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal-show.modal-effect-15 .modal-content {
   -webkit-transform: translateZ(0px) translateX(0%) rotateY(0deg);
@@ -7710,20 +7710,20 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: translateY(-5%);
   -ms-transform: translateY(-5%);
   -o-transform: translateY(-5%);
-     transform: translateY(-5%);
+  transform: translateY(-5%);
   opacity: 0;
 }
 .modal-show.modal-effect-16 ~ .container,
 .modal-effect-16 .modal-content {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-     transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal-show.modal-effect-16 .modal-content {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
-     transform: translateY(0);
+  transform: translateY(0);
   opacity: 1;
 }
 /* Effect 17:  Slide in from bottom with perspective on container */
@@ -7732,7 +7732,7 @@ perspective effects (not including the modals and the overlay).
   overflow: hidden;
   -webkit-transition: -webkit-transform 0.3s;
   -o-transition: -o-transform 0.3s;
-     transition: transform 0.3s;
+  transition: transform 0.3s;
 }
 .modal-show.modal-effect-17 ~ .container,
 .modal-show.modal-effect-17 ~ .modal-overlay {
@@ -7741,8 +7741,8 @@ perspective effects (not including the modals and the overlay).
   transform: rotateX(-2deg);
   -webkit-transform-origin: 50% 0%;
   -ms-transform-origin: 50% 0%;
-   -o-transform-origin: 50% 0%;
-      transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
@@ -7751,17 +7751,17 @@ perspective effects (not including the modals and the overlay).
   -webkit-transform: translateY(200%);
   -ms-transform: translateY(200%);
   -o-transform: translateY(200%);
-     transform: translateY(200%);
+  transform: translateY(200%);
 }
 .modal-show.modal-effect-17 .modal-content {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
-     transform: translateY(0);
+  transform: translateY(0);
   opacity: 1;
   -webkit-transition: all 0.3s 0.2s;
   -o-transition: all 0.3s 0.2s;
-     transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
 }
 /* Effect 18:  Slide from right with perspective on container */
 .modal-show.modal-effect-18 ~ .container {
@@ -7772,7 +7772,7 @@ perspective effects (not including the modals and the overlay).
   background: rgba(143, 27, 15, 0.8);
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
-     transition: all 0.5s;
+  transition: all 0.5s;
 }
 .modal-show.modal-effect-18 ~ .container,
 .modal-show.modal-effect-18 ~ .modal-overlay {
@@ -7783,14 +7783,14 @@ perspective effects (not including the modals and the overlay).
   -moz-transform-origin: 0% 50%;
   -moz-animation: rotateRightSideFirst 0.5s forwards ease-in;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-transform-origin: 0% 50%;
-      -ms-transform-origin: 0% 50%;
-       -o-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
   -webkit-animation: rotateRightSideFirst 0.5s forwards ease-in;
-       -o-animation: rotateRightSideFirst 0.5s forwards ease-in;
-          animation: rotateRightSideFirst 0.5s forwards ease-in;
+  -o-animation: rotateRightSideFirst 0.5s forwards ease-in;
+  animation: rotateRightSideFirst 0.5s forwards ease-in;
 }
 @-webkit-keyframes rotateRightSideFirst {
   50% {
@@ -7805,7 +7805,7 @@ perspective effects (not including the modals and the overlay).
   50% {
     transform: translateZ(-50px) rotateY(5deg);
     -o-animation-timing-function: ease-out;
-       animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   100% {
     transform: translateZ(-200px);
@@ -7814,32 +7814,32 @@ perspective effects (not including the modals and the overlay).
 @keyframes rotateRightSideFirst {
   50% {
     -webkit-transform: translateZ(-50px) rotateY(5deg);
-            transform: translateZ(-50px) rotateY(5deg);
+    transform: translateZ(-50px) rotateY(5deg);
     -webkit-animation-timing-function: ease-out;
-         -o-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   100% {
     -webkit-transform: translateZ(-200px);
-            transform: translateZ(-200px);
+    transform: translateZ(-200px);
   }
 }
 .modal-effect-18 .modal-content {
   -webkit-transform: translateX(200%);
   -ms-transform: translateX(200%);
   -o-transform: translateX(200%);
-     transform: translateX(200%);
+  transform: translateX(200%);
   opacity: 0;
 }
 .modal-show.modal-effect-18 .modal-content {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
-     transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
   -webkit-transition: all 0.5s 0.1s;
   -o-transition: all 0.5s 0.1s;
-     transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
 }
 /*------------------------------------------------------------------
 [General elements style]
@@ -8052,20 +8052,22 @@ button:focus {
 }
 .am-animate .am-top-header {
   -webkit-transition: all 0.35s ease;
-       -o-transition: all 0.35s ease;
-          transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 .am-top-header .navbar-header .navbar-brand {
   background-color: #3d3c3c;
   color: #ffffff;
   padding-top: 0;
   padding-bottom: 0;
-  line-height: 80px;
-  height: 80px;
-  width: 100px;
-  background-image: url("../img/logo.png");
+  line-height: 60px;
+  height: 60px;
+  width: 120px;
+  max-width: 120px;
+  background-image: url("/img/logo_planizi_blanc_sf_320.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: 80%;
   margin-right: 20px;
   border-bottom: 1px solid #474646;
 }
@@ -8084,14 +8086,14 @@ button:focus {
   border-bottom-width: 0;
   margin-left: 0;
   margin-right: 10px;
-  width: 180px;
+  max-width: 180px;
   background-image: url("../img/logo-full.png");
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .am-nosidebar-left .am-top-header .navbar-header .navbar-brand {
     margin-right: 0;
     padding-left: 0;
-    width: 160px;
+    max-width: 160px;
   }
 }
 .am-top-header .navbar-header .am-toggle-left-sidebar {
@@ -8105,7 +8107,7 @@ button:focus {
   display: none;
   padding: 0 18px;
   border-width: 0;
-  line-height: 70px;
+  line-height: 60px;
 }
 .am-top-header .navbar-header .am-toggle-left-sidebar .icon-bar {
   display: inline-block;
@@ -8138,7 +8140,7 @@ button:focus {
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
   font-size: 19px;
-  line-height: 70px;
+  line-height: 40px;
 }
 @media (max-width: 767px) {
   .am-top-header .navbar-header .page-title {
@@ -8154,7 +8156,7 @@ button:focus {
   padding-right: 20px;
 }
 .am-top-header .navbar-collapse .navbar-nav > li > a {
-  line-height: 80px;
+  line-height: 60px;
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
@@ -8505,7 +8507,7 @@ button:focus {
   float: right;
   display: block;
   padding: 0 18px;
-  line-height: 80px;
+  line-height: 60px;
   color: #ffffff;
   margin-right: 5px;
 }
@@ -8527,7 +8529,7 @@ button:focus {
     position: absolute;
     top: 0;
     right: 0;
-    line-height: 70px;
+    line-height: 40px;
     margin-right: 0;
   }
 }
@@ -8535,8 +8537,8 @@ button:focus {
   display: none;
   text-align: center;
   background-color: #393838;
-  font-size: 31px;
-  line-height: 41px;
+  font-size: 30px;
+  line-height: 30px;
   color: #e1e1e1;
 }
 @media (max-width: 767px) {
@@ -8886,8 +8888,8 @@ button:focus {
 }
 .am-animate .am-left-sidebar:before {
   -webkit-transition: all 0.35s ease;
-       -o-transition: all 0.35s ease;
-          transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 @media (max-width: 767px) {
   .am-left-sidebar:before {
@@ -8903,7 +8905,7 @@ button:focus {
     position: fixed;
     top: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
     z-index: 1031;
   }
   .am-left-sidebar .sidebar-elements > li > a {
@@ -8974,8 +8976,8 @@ button:focus {
 }
 .am-animate .am-left-sidebar {
   -webkit-transition: all 0.35s ease;
-       -o-transition: all 0.35s ease;
-          transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 .am-fixed-sidebar .am-left-sidebar {
   margin-top: 80px;
@@ -9007,11 +9009,11 @@ button:focus {
   body.open-left-sidebar .am-content,
   body.open-left-sidebar .am-top-header {
     -webkit-transform: translate3d(85%, 0, 0);
-            transform: translate3d(85%, 0, 0);
+    transform: translate3d(85%, 0, 0);
   }
   body.open-left-sidebar .am-left-sidebar {
     -webkit-transform: translate3d(0%, 0, 0);
-            transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
   }
 }
 /*------------------------------------------------------------------
@@ -9027,8 +9029,8 @@ button:focus {
 }
 .am-animate .am-right-sidebar {
   -webkit-transition: all 0.35s ease;
-       -o-transition: all 0.35s ease;
-          transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 @media (min-width: 768px) {
   body.open-right-sidebar .am-content {
@@ -9056,7 +9058,7 @@ button:focus {
   body.open-right-sidebar .am-top-header,
   body.open-right-sidebar .page-aside {
     -webkit-transform: translate3d(-255px, 0, 0);
-            transform: translate3d(-255px, 0, 0);
+    transform: translate3d(-255px, 0, 0);
   }
 }
 @media (max-width: 767px) and (max-width: 767px) {
@@ -9064,7 +9066,7 @@ button:focus {
   body.open-right-sidebar .am-top-header,
   body.open-right-sidebar .page-aside {
     -webkit-transform: translate3d(-85%, 0, 0);
-            transform: translate3d(-85%, 0, 0);
+    transform: translate3d(-85%, 0, 0);
   }
 }
 @media (max-width: 767px) and (max-width: 767px) {
@@ -9073,7 +9075,7 @@ button:focus {
   }
   body.open-right-sidebar .am-right-sidebar {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 .am-right-sidebar {
@@ -9340,8 +9342,8 @@ button:focus {
   top: 1px;
   display: inline-block;
   -webkit-transition: all 0.3s ease;
-       -o-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .am-right-sidebar .tab-panel .tab-content .faqs .panel-group .panel .panel-heading .panel-title a .title {
   font-size: 12px;
@@ -9349,15 +9351,15 @@ button:focus {
 }
 .am-right-sidebar .tab-panel .tab-content .faqs .panel-group .panel .panel-heading .panel-title a.collapsed .icon {
   -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 .am-right-sidebar .tab-panel .tab-content .faqs .panel-group .panel .panel-heading .panel-title a.collapsed .icon > span {
   -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-       -o-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 .am-right-sidebar .tab-panel .tab-content .faqs .panel-group .panel .panel-collapse .panel-body {
   border-top: 0;
@@ -9404,7 +9406,7 @@ button:focus {
     width: 85%;
     right: 0;
     -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
   .am-right-sidebar .tab-panel .tab-content > .chat {
     width: 100%;
@@ -9572,8 +9574,8 @@ button:focus {
   position: absolute;
   left: 0;
   -webkit-transition: left 0.3s ease;
-       -o-transition: left 0.3s ease;
-          transition: left 0.3s ease;
+  -o-transition: left 0.3s ease;
+  transition: left 0.3s ease;
 }
 .am-right-sidebar .chat .chat-contacts .chat-sections {
   height: 100%;
@@ -9786,8 +9788,8 @@ button:focus {
 }
 .am-animate .am-content {
   -webkit-transition: all 0.35s ease;
-       -o-transition: all 0.35s ease;
-          transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 .am-nosidebar-left .am-content {
   margin-left: 0;
@@ -9884,8 +9886,8 @@ button:focus {
 }
 .am-animate .page-aside {
   -webkit-transition: all 0.35s ease;
-       -o-transition: all 0.35s ease;
-          transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 .page-aside .content {
   padding: 20px;
@@ -9987,8 +9989,8 @@ button:focus {
   padding: 4px 9px;
   display: none;
   -webkit-transition: background-color 0.2s ease;
-       -o-transition: background-color 0.2s ease;
-          transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
   border-radius: 4px;
 }
 .am-scroll-top:hover {
@@ -11628,7 +11630,7 @@ li.L9 {
   width: 100%;
   background: rgba(239, 98, 98, 0.8);
   -o-transition: opacity 300ms ease;
-     transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
   -webkit-transition: opacity 300ms ease;
 }
 .gallery-container .item .photo .img .over .func {
@@ -11637,8 +11639,8 @@ li.L9 {
   top: 50%;
   text-align: center;
   -webkit-transition: margin-top 200ms ease-in-out;
-       -o-transition: margin-top 200ms ease-in-out;
-          transition: margin-top 200ms ease-in-out;
+  -o-transition: margin-top 200ms ease-in-out;
+  transition: margin-top 200ms ease-in-out;
 }
 .gallery-container .item .photo .img .over .func a {
   display: inline-block;
@@ -16853,8 +16855,8 @@ fieldset[disabled] .btn-social.btn-tumblr.active {
 }
 .panel-group.accordion .panel .panel-heading a .icon {
   -webkit-transition: -webkit-transform 200ms ease-in-out;
-       -o-transition: -o-transform 200ms ease-in-out;
-          transition: transform 200ms ease-in-out;
+  -o-transition: -o-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
   font-size: 25px;
   vertical-align: middle;
   position: relative;
@@ -16866,9 +16868,9 @@ fieldset[disabled] .btn-social.btn-tumblr.active {
 }
 .panel-group.accordion .panel .panel-heading a.collapsed .icon {
   -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-       -o-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 .panel-group.accordion .panel .panel-collapse .panel-body {
   padding: 0 30px 20px 40px;
@@ -16890,8 +16892,8 @@ fieldset[disabled] .btn-social.btn-tumblr.active {
   background-color: #ef6262;
   color: #ffffff;
   -webkit-transition: background-color 200ms ease-in-out;
-       -o-transition: background-color 200ms ease-in-out;
-          transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 }
 .panel-group.accordion.accordion-semi .panel .panel-heading a.collapsed {
   background-color: #ffffff;
@@ -18388,8 +18390,8 @@ form.dropzone .note {
   height: 23px;
   width: 23px;
   -webkit-transition: box-shadow 200ms ease-in-out;
-       -o-transition: box-shadow 200ms ease-in-out;
-          transition: box-shadow 200ms ease-in-out;
+  -o-transition: box-shadow 200ms ease-in-out;
+  transition: box-shadow 200ms ease-in-out;
 }
 .slider.slider-horizontal .slider-handle {
   margin-top: -7px;
