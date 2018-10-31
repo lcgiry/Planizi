@@ -13,7 +13,8 @@ router.get('/', function(req, res, next) {
 	res.send('welcome');
 });
 
-router.get('/test', function(req, res, next) {
+router.get('/tests', function(req, res, next) {
+	console.log('TEST : '+req.session.userID);
 	res.render('test');
 });
 

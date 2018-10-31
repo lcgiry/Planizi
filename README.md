@@ -96,7 +96,7 @@ The front part will be developped by using **EJS** templating and **Bootstrap, J
 ### ORM and models : *Sequelize* module
 
 ### Views : *EJS* templating
-####Overview
+####  Overview
 All view and pages that will be sent to the client are.ejs files. EJS provide a way to generate .html files from .ejs file. Thanks to that you can make loops, tests and other program instructions in your html to simplify your rendering.
 Note that you can just write classical html, css and javascript in .ejs file without problem.
 
@@ -113,7 +113,7 @@ res.render('your_view', { firtVariableToSend: 'value1', secondVariableToSend: ['
 ````
 
 #### Front side
-To set the configuration in your application :
+Example of front code in a .ejs view file :
 ```html
 <html>
 <body>

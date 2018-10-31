@@ -41,6 +41,26 @@ let googleAuthenticationConfiguration = passport.use(new GoogleStrategy(
 		}
 	));
 
+passport.serializeUser(function(user, done) {
+	if(user instanceof User){
+		console.log('UTILISATEUR DETECTE');
+		done(null, user.user_mail);
+	}else if(user instanceof String){
+		console.log('UTILISATEUR DETECTE');
+		done(null, user);
+	}
+});
+
+passport.deserializeUser(function(user_id, done) {
+	User.findOne({where: {user_mail: user_id}})
+		.then(result => {
+			done(null, result);
+		})
+		.catch(err => {
+			done(err, null);
+		});
+});
+
 module.exports = {
 	googleAuthenticationConfiguration: googleAuthenticationConfiguration
 }

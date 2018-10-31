@@ -6,7 +6,7 @@ const User = sequelize.import('../models/user');
 
 router.get("/", function(req, res, next){
 	res.render("registrationForm",{
-		userMail: req.session.userMail
+		user: req.session.userID
 	});
 });
 
