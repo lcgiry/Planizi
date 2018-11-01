@@ -15,6 +15,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/tests', function(req, res, next) {
 	console.log('TEST : '+req.session.userID);
+	User.find({where: {user_mail: 'john71570@gmail.com'}}).then(user =>{
+		console.log(user.user_birthdate);
+	});
 	res.render('test');
 });
 

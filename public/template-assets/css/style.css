@@ -9798,6 +9798,8 @@ button:focus {
   padding-left: 35px;
   padding-right: 35px;
   padding-top: 35px;
+  margin: auto;
+  max-width: 1600px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-content {

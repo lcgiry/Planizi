@@ -15,8 +15,8 @@ router.get('/google/callback', function(req, res, next){
 		}else	if(info.exist == false){
 			req.session.userID = user;
 			req.session.save();
-			console.log('AUTHENTIFICATION NOUVELLE : '+req.session.userID);
-			res.redirect('/registration');
+			console.log('NEW AUTHENTIFICATION : '+req.session.userID);
+			res.redirect('/registration/personal');
 		}else{
 			throw new Error("Authentication failed !")
 		}

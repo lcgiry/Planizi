@@ -38,7 +38,7 @@
                             </div>
                             <div class="step-content">
                                 <div data-step="1" class="step-pane active">
-                                    <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
+                                    <form method="post" action="/registration/personal" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed" id="formPersonal">
                                         <div class="form-group no-padding">
                                             <div class="col-sm-7">
                                                 <h3 class="wizard-title">User Info</h3>
@@ -47,42 +47,42 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label font-weight-bold">Name *</label>
                                             <div class="col-sm-6">
-                                                <input type="text" required="" placeholder="" class="form-control">
+                                                <input name="userName" type="text" required="" placeholder="" class="form-control">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label font-weight-bold">Surname *</label>
                                             <div class="col-sm-6">
-                                                <input type="text" required="" placeholder="" class="form-control">
+                                                <input name="userSurname" type="text" required="" placeholder="" class="form-control">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Nickname</label>
                                             <div class="col-sm-6">
-                                                <input type="text" placeholder="" class="form-control">
+                                                <input name="userNickname" type="text" placeholder="" class="form-control">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label font-weight-bold">Email *</label>
                                             <div class="col-sm-6">
-                                                <input type="text" disabled="disabled" placeholder="<%= user %>" class="form-control">
+                                                <input name="userMail" type="text" disabled="disabled" placeholder="<%= user %>" class="form-control">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Phone *</label>
                                             <div class="col-sm-6">
-                                                <input data-parsley-type="digits" type="text" required="" placeholder="" class="form-control">
+                                                <input name="userPhone" data-parsley-type="digits" type="text" required="" placeholder="" class="form-control">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label font-weight-bold">Gender *</label>
                                             <div class="col-sm-6">
                                                 <div class="am-radio inline">
-                                                    <input type="radio" name="gender" id="male">
+                                                    <input type="radio" name="userGender" id="male">
                                                     <label for="male">Male</label>
                                                 </div>
                                                 <div class="am-radio inline">
-                                                    <input type="radio" name="gender" id="female">
+                                                    <input type="radio" name="userGender" id="female">
                                                     <label for="female">Female</label>
                                                 </div>
                                             </div>
@@ -92,26 +92,26 @@
                                             <div class="col-sm-6">
                                                 <div data-min-view="2" data-date-format="dd/mm/yyyy" class="input-group date datetimepicker">
                                                     <span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
-                                                    <input required="" type="text" data-mask="date" value="" placeholder="dd/mm/yyyy" class="form-control">
+                                                    <input name="userBirthdate" required="" type="text" data-mask="date" value="" placeholder="dd/mm/yyyy" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Description / Comments</label>
                                             <div class="col-sm-6">
-                                                <textarea class="form-control" maxlength="500"></textarea>
+                                                <textarea name="userDescription" class="form-control" maxlength="500"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-12 text-center">
                                                 <button class="btn btn-default btn-space">Cancel</button>
-                                                <button data-wizard="#wizard1" class="btn btn-primary btn-space wizard-next">Next Step <i class="icon s7-angle-right"></i></button>
+                                                <button data-wizard="#wizard1"form="formPersonal" class="btn btn-primary btn-space wizard-next">Next<i class="icon s7-angle-right"></i></button>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                                 <div data-step="2" class="step-pane">
-                                    <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
+                                    <form action="/registration/skill" id="formSkill" method="post" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
                                         <div class="form-group no-padding">
                                             <div class="col-sm-7">
                                                 <h3 class="wizard-title">Skills</h3>
@@ -160,13 +160,13 @@
                                         <div class="form-group">
                                             <div class="col-sm-12 text-center">
                                                 <button data-wizard="#wizard1" class="btn btn-default btn-space wizard-previous"><i class="icon s7-angle-left"></i>Previous</button>
-                                                <button data-wizard="#wizard1" class="btn btn-primary btn-space wizard-next">Next Step <i class="icon s7-angle-right"></i></button>
+                                                <button data-wizard="#wizard1" class="btn btn-primary btn-space wizard-next">Next<i class="icon s7-angle-right"></i></button>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                                 <div data-step="3" class="step-pane">
-                                    <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
+                                    <form action="/registration/administrative" id="formAdministrative" method="post" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
                                         <div class="form-group no-padding">
                                             <div class="col-sm-7">
                                                 <h3 class="wizard-title">Administrative documents</h3>
@@ -232,7 +232,7 @@
                                         <div class="form-group">
                                             <div class="col-sm-12 text-center">
                                                 <button data-wizard="#wizard1" class="btn btn-default btn-space wizard-previous"><i class="icon s7-angle-left"></i> Previous</button>
-                                                <button data-wizard="#wizard1" class="btn btn-success btn-space wizard-next"><i class="icon s7-check"></i> Complete</button>
+                                                <button onclick="submitForms()" class="btn btn-success btn-space"><i class="icon s7-check"></i> Complete</button>
                                             </div>
                                         </div>
                                     </form>
@@ -264,6 +264,13 @@
 		App.init();
 		App.wizard();
 		App.formElements();
+
+		submitForms = function(){
+			console.log("jjj");
+			document.getElementById("formPersonal").submit();
+			document.getElementById("formAdministrative").submit();
+			document.getElementById("formSkill").submit();
+		}
 	});
 </script>
 
