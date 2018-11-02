@@ -2,6 +2,12 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('availibility_equipment', {
+    availibility_equipment_id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
     availibility_equipment_shift_unit: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -27,6 +33,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER(4),
       allowNull: true,
       defaultValue: '0'
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'availibility_equipment'

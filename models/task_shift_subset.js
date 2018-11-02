@@ -22,6 +22,14 @@ module.exports = function(sequelize, DataTypes) {
         model: 'shift_subset',
         key: 'shift_subset_id'
       }
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'task_shift_subset'

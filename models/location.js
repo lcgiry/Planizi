@@ -34,6 +34,14 @@ module.exports = function(sequelize, DataTypes) {
     location_description: {
       type: DataTypes.STRING(256),
       allowNull: true
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'location'

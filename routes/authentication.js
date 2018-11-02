@@ -2,10 +2,11 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 
-/* GET home page. */
+/* When you click on login to redirect to Google API */
 router.get('/google',
 	passport.authenticate('google', { session:false, scope: ['https://www.googleapis.com/auth/userinfo.email'] }));
 
+/* When google has authenticated the user and call back the application */
 router.get('/google/callback', function(req, res, next){
 	passport.authenticate('google', { session: false }, function(err, user, info){
 		if(info.exist == true){

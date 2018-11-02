@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "try": "node scriptTest"
   },
   "dependencies": {
     "@angular/cli": "^7.0.3",
@@ -12,6 +13,7 @@
     "debug": "^2.6.9",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-fileupload": "^1.0.0",
     "express-session": "^1.15.6",
     "font-awesome": "^4.7.0",
     "http-errors": "^1.7.1",

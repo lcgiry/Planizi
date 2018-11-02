@@ -14,6 +14,14 @@ module.exports = function(sequelize, DataTypes) {
     shift_set_end: {
       type: DataTypes.DATE,
       allowNull: false
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'shift_set'

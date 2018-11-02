@@ -89,13 +89,25 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(45),
       allowNull: true
     },
+    user_driver_licence_file: {
+      type: DataTypes.STRING(256),
+      allowNull: true
+    },
     user_cv_file: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(256),
       allowNull: true
     },
     user_last_login: {
-        type: DataTypes.DATE,
-        allowNull: true
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'user'

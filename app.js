@@ -7,6 +7,7 @@ var logger = require('morgan');
 var session = require('express-session');
 var MemoryStore = require('memorystore')(session)
 var passport = require('passport');
+var fileUpload = require('express-fileupload');
 
 //------------------------------ All required modules from Planizi repository -----------------------------------
 var authenticationConfig = require('./config/authentication/config-authentication');
@@ -31,6 +32,7 @@ app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(fileUpload());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
 	store: new MemoryStore(),

@@ -62,6 +62,14 @@ module.exports = function(sequelize, DataTypes) {
         model: 'task_instructions',
         key: 'task_instruction_id'
       }
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'task'

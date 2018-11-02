@@ -2,6 +2,12 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('user_skill', {
+    user_skill_id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
     user_skill_user: {
       type: DataTypes.STRING(256),
       allowNull: false,
@@ -17,6 +23,14 @@ module.exports = function(sequelize, DataTypes) {
         model: 'skill',
         key: 'skill_label'
       }
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'user_skill'

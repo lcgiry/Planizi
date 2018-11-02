@@ -2,6 +2,11 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('task_assignment_user', {
+    task_assignment_user_id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      primaryKey: true
+    },
     task_assignment_task_shift_subset: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -20,11 +25,19 @@ module.exports = function(sequelize, DataTypes) {
     },
     task_assignment_user_need_fulfilled: {
       type: DataTypes.INTEGER(11),
-      allowNull: true,
+      allowNull: false,
       references: {
         model: 'user_need',
         key: 'user_need_id'
       }
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'task_assignment_user'

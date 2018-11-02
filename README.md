@@ -94,6 +94,47 @@ The front part will be developped by using **EJS** templating and **Bootstrap, J
 ### Server and routing : *Express* module
 
 ### ORM and models : *Sequelize* module
+#### Overview
+Consult the official documentation that's very useful: http://docs.sequelizejs.com.  
+Sequelize enable Database mapping. That's to say all table are mapped on the Node code thank's to object instantiate by Sequelize.
+All accesses to the database will be performed with Sequelize.
+
+#### Architecture and database link
+The configuration link is very simple and set with database configuration in ``/config/database/config-database``.  
+Each table of the database is defined as a model in ``/models/[table_name].js``.  
+When you add a new table or a new field of an existing table of the database, you have to alter the corresponding models. Refer to an existing one to create a new model or a new field. Take care to have a good mapping between the model and the table, otherwise errors will occur.  
+You can generate theses models by using ``sequelize-auto`` module with the command:  
+``node ./node_modules/sequelize-auto/bin/sequelize-auto -h localhost -d db_planizi -u [user] -x [password]
+``
+
+#### Make queries
+Refer to documentation: http://docs.sequelizejs.com/manual/tutorial/models-usage.html and http://docs.sequelizejs.com/manual/tutorial/querying.html.  
+Note that Sequelize uses promises that return an instance of an object defined by the appropriate model (if no error). For example :
+````javascript
+UserModel.findAll({where: {id: userId}})                                //You can make some types of query (findAll, findOne, findAndCount, ... with some clauses) 
+    .then(userResult => {                                               //userResult is an instance of the object defined in /models/UserModel.js
+    	console.log('user found : '+ userResult.name);
+    })
+    .catch(err =>{
+    	console.log('error : '+err);
+    });
+```` 
+
+#### Object instance and inserts
+You can create an object instance defined in /models/ to prepare an entry that could be insert in the database.
+````javascript
+const userInstance = UserModel.build({
+        id: userId
+        name: userName,
+        surname: userSurname
+    });
+
+console.log(userInstance.surname);
+
+userInstance.save()                                 //To insert in database
+    .then( ()=>{} )
+    .catch( err=>{} );
+```` 
 
 ### Views : *EJS* templating
 ####  Overview

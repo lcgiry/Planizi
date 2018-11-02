@@ -18,6 +18,14 @@ module.exports = function(sequelize, DataTypes) {
     shift_unit_point: {
       type: DataTypes.INTEGER(11),
       allowNull: true
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'shift_unit'

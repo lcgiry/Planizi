@@ -22,6 +22,14 @@ module.exports = function(sequelize, DataTypes) {
         model: 'equipment_type',
         key: 'equipment_type_label'
       }
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'equipment'

@@ -2,6 +2,11 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('task_need_equipment', {
+    task_need_equipment_id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      primaryKey: true
+    },
     task_need_equipment_task_shift_subset: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -17,6 +22,14 @@ module.exports = function(sequelize, DataTypes) {
         model: 'equipment_need',
         key: 'equipment_need_id'
       }
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'task_need_equipment'
