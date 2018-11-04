@@ -6,11 +6,24 @@ const User = sequelize.import('../models/user.js');
 
 /* GET home page. */
 router.get('/login', function(req, res, next) {
-	res.render('login', { test: 'Express' });
+	if(req.session.user){
+		res.redirect('/');
+	}else{
+		res.render('login');
+	}
+});
+
+router.get('/logout', function(req, res, next) {
+	req.session.destroy();
+	res.redirect('/');
 });
 
 router.get('/', function(req, res, next) {
-	res.send('welcome');
+	if(!req.session.userID){
+		res.redirect('/login');
+	}else{
+		res.render('test');
+	}
 });
 
 router.get('/tests', function(req, res, next) {

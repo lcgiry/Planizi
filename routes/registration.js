@@ -8,17 +8,17 @@ const Role = sequelize.import('../models/role');
 const UserSkill = sequelize.import('../models/user_skill');
 
 router.get("/personal", function(req, res, next){
-	if(req.session.userID) {
+	if(req.session.userID && !req.session.user) {
 		res.render("registrationFormPersonal", {
 			user: req.session.userID
 		});
 	}else{
-		res.redirect("/login");
+		res.redirect("/");
 	}
 });
 
 router.get("/skill", function(req, res, next){
-	if(req.session.userID) {
+	if(req.session.userID && !req.session.user) {
 
 		var skillPromise = Skill.findAll({order: ['skill_name']});
 		var rolePromise = Role.findAll();
@@ -34,38 +34,25 @@ router.get("/skill", function(req, res, next){
 				console.error('Cannot find in database :' +err);
 			});
 	}else{
-		res.redirect("/login");
+		res.redirect("/");
 	}
 });
 
 router.get("/administrative", function(req, res, next){
-	if(!req.session.userID) {
-
-		var skillPromise = Skill.findAll({order: ['skill_name']});
-		var rolePromise = Role.findAll();
-
-		Promise.all([skillPromise, rolePromise])
-			.then( results => {
-				res.render("registrationFormAdministrative", {
-					skillArray: results[0],
-					roleArray: results[1]
-				});
-			})
-			.catch( err => {
-				console.error('Cannot find in database :' +err);
-			});
+	if(req.session.userID && !req.session.user) {
+		res.render("registrationFormAdministrative");
 	}else{
-		res.redirect("/login");
+		res.redirect("/");
 	}
 });
 
-router.post("/cancel", function(req, res, next){
+router.get("/cancel", function(req, res, next){
 	req.session.destroy();
 	res.redirect("/");
 });
 
 router.post('/personal', function(req, res, next){
-	if(req.session.userID){
+	if(req.session.userID && !req.session.user){
 		var regexp =  new RegExp("[0-9]{1,2}[/]{1}[0-9]{1,2}[/]{1}[0-9]{4}");
 
 		//Check birthdate format
@@ -95,7 +82,7 @@ router.post('/personal', function(req, res, next){
 			.save()
 			.then(function(){
 				console.info('New user added in database');
-				res.redirect('/tests');
+				res.redirect('/registration/skill');
 			})
 			.catch(function(err){
 				console.error('Cannot insert in database :' +err);
@@ -105,12 +92,12 @@ router.post('/personal', function(req, res, next){
 
 	}else{
 		console.log('Session not initialized');
-		res.redirect('/login');
+		res.redirect('/');
 	}
 });
 
 router.post('/skill', function(req, res, next){
-	if(req.session.userID){
+	if(req.session.userID && !req.session.user){
 
 		var userExperience = req.body.userExperience.substring(0, 255);
 		var userIncapacity = req.body.userIncapacity.substring(0, 255);
@@ -136,25 +123,25 @@ router.post('/skill', function(req, res, next){
 			});
 		}
 
-		Promise.all(userUpdatePromise, userSkillPromiseClear, userSkillPromiseAutoincrement, userSkillPromiseAdd)
+		Promise.all([userUpdatePromise, userSkillPromiseClear, userSkillPromiseAutoincrement, userSkillPromiseAdd])
 			.then( results => {
 				res.redirect("/registration/administrative")
 			})
 			.catch( err => {
 				console.error(err);
-				res.redirect("/");
+				req.session.destroy();
+				next(err);
 			});
 
 	}else{
-		res.redirect('/login');
+		res.redirect('/');
 	}
-
 });
 
 router.post('/administrative', function(req, res, next){
 	var uploadFilePromises = [];
 
-	if(req.session.userID) {
+	if(req.session.userID && !req.session.user) {
 
 		var userUpdatePromise = [];
 

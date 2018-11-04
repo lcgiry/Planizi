@@ -19,15 +19,14 @@ let googleAuthenticationConfiguration = passport.use(new GoogleStrategy(
 			let userMail = profile.emails[0].value;
 
 			if(userMail){
-				User.findAll({
-					where: {user_mail: userMail}
+				User.findOne({
+					where: {user_mail: userMail},
+					raw: true
 				})
 					.then(user => {
 						if(user !== '' && user != '' && user !== null && user != undefined){
-							console.log('-->'+user);
-							done(null, userMail,{exist: true, message: "Google check good"});
+							done(null, user,{exist: true, message: "Google check good"});
 						}else{
-							console.log('jj');
 							done(null, userMail, {exist: false, message: "User does not exist yet"});
 						}
 					})

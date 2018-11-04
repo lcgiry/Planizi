@@ -23,8 +23,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+            <state relative-caret-position="474">
+              <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -32,49 +32,38 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+            <state relative-caret-position="144">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/registration.js">
+      <file leaf-file-name="authentication.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/authentication.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="235" column="120" selection-start-line="235" selection-start-column="120" selection-end-line="235" selection-end-column="120" />
+            <state relative-caret-position="288">
+              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config-authentication.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/authentication/config-authentication.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/header.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="586">
+              <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
               <folding>
-                <element signature="e#237#346#0" />
-                <element signature="e#1062#1486#0" />
-                <element signature="e#1089#1450#0" />
-                <element signature="e#338#342#0" />
-                <element signature="e#482#1712#0" />
-                <element signature="e#2611#3788#0" />
-                <element signature="e#4653#4662#0" />
-                <element signature="e#4970#5247#0" />
-                <element signature="e#5231#5994#0" />
-                <element signature="e#6018#6690#0" />
-                <element signature="e#6726#7479#0" />
-                <element signature="e#7515#8297#0" />
+                <element signature="e#3917#13226#0#HTML" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registrationFormSkill.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/registrationFormSkill.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="50" column="115" selection-start-line="50" selection-start-column="115" selection-end-line="50" selection-end-column="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registrationFormAdministrative.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/registrationFormAdministrative.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="47" column="154" selection-start-line="47" selection-start-column="154" selection-end-line="47" selection-end-column="154" />
             </state>
           </provider>
         </entry>
@@ -93,7 +82,6 @@
     <findStrings>
       <find>body-parser</find>
       <find>80px</find>
-      <find>navbar</find>
       <find>NAVBAR</find>
       <find>am-toggle-top-header-</find>
       <find>COLLAPSED</find>
@@ -108,6 +96,7 @@
       <find>Read</find>
       <find>am-content</find>
       <find>main-content</find>
+      <find>navbar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,7 +115,6 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/config/authentication-google-configuration.js" />
         <option value="$PROJECT_DIR$/config/config-authentication.json" />
-        <option value="$PROJECT_DIR$/views/error.ejs" />
         <option value="$PROJECT_DIR$/views/fail.ejs" />
         <option value="$PROJECT_DIR$/config/database/config-database.json" />
         <option value="$PROJECT_DIR$/bin/www" />
@@ -135,22 +123,23 @@
         <option value="$PROJECT_DIR$/models/user.js" />
         <option value="$PROJECT_DIR$/views/login.ejs" />
         <option value="$PROJECT_DIR$/views/header2.ejs" />
-        <option value="$PROJECT_DIR$/views/header.ejs" />
         <option value="$PROJECT_DIR$/views/test.ejs" />
         <option value="$PROJECT_DIR$/views/registrationForm1.ejs" />
-        <option value="$PROJECT_DIR$/config/authentication/config-authentication.js" />
-        <option value="$PROJECT_DIR$/public/template-assets/css/style.css" />
         <option value="$PROJECT_DIR$/views/registrationForm.ejs" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/routes/authentication.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/views/registrationFormPersonal.ejs" />
         <option value="$PROJECT_DIR$/scriptTest.js" />
         <option value="$PROJECT_DIR$/views/registrationFormSkill.ejs" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/registrationFormAdministrative.ejs" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/views/error.ejs" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/config/authentication/config-authentication.js" />
+        <option value="$PROJECT_DIR$/routes/authentication.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/registration.js" />
+        <option value="$PROJECT_DIR$/views/header.ejs" />
+        <option value="$PROJECT_DIR$/public/template-assets/css/style.css" />
       </list>
     </option>
   </component>
@@ -207,12 +196,39 @@
             <path>
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="uploaded-documents" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code-node" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code-node" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="template-assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code-node" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="template-assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code-node" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="template-assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="style.less" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -273,7 +289,7 @@
       <workItem from="1540153863558" duration="7191000" />
       <workItem from="1540306387340" duration="44780000" />
       <workItem from="1540771508171" duration="7741000" />
-      <workItem from="1540819850094" duration="83225000" />
+      <workItem from="1540819850094" duration="91721000" />
     </task>
     <task id="LOCAL-00001" summary="Generate the architecture of the project">
       <created>1540155774955</created>
@@ -286,7 +302,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144181000" />
+    <option name="totallyTimeSpent" value="152677000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -301,7 +317,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16491044" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22339304" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021075" side_tool="true" weight="0.32897604" />
@@ -310,7 +326,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.50052685" side_tool="true" visible="true" weight="0.21568628" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.50052685" side_tool="true" visible="true" weight="0.21568628" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -362,22 +378,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/registration.js</url>
-          <line>171</line>
+          <line>158</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out-template-html/pages-login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -459,13 +468,6 @@
             <element signature="n#nav#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#nav#1;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="119" selection-start-line="27" selection-start-column="119" selection-end-line="27" selection-end-column="119" />
         </state>
       </provider>
     </entry>
@@ -554,20 +556,6 @@
         <state relative-caret-position="-702" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/template-assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="9801" column="19" selection-start-line="9801" selection-start-column="19" selection-end-line="9801" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out-template-html/form-elements.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-13472">
@@ -592,24 +580,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/authentication/config-authentication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/database/config-database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-288">
           <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/authentication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -624,20 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/error.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -674,25 +634,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uploaded-documents/user-ssn/user_ssn_JOHN.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/uploaded-documents/user-identity/user_driver_licence_john71570@gmail.com.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/registrationFormSkill.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="50" column="115" selection-start-line="50" selection-start-column="115" selection-end-line="50" selection-end-column="115" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -726,23 +672,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out-template-html/pages-404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/error.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/registrationFormSkill.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="50" column="115" selection-start-line="50" selection-start-column="115" selection-end-line="50" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="119" selection-start-line="27" selection-start-column="119" selection-end-line="27" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/authentication/config-authentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/authentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/registration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="235" column="120" selection-start-line="235" selection-start-column="120" selection-end-line="235" selection-end-column="120" />
+        <state relative-caret-position="234">
+          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
           <folding>
-            <element signature="e#237#346#0" />
-            <element signature="e#1062#1486#0" />
-            <element signature="e#1089#1450#0" />
-            <element signature="e#338#342#0" />
-            <element signature="e#482#1712#0" />
-            <element signature="e#2611#3788#0" />
-            <element signature="e#4653#4662#0" />
-            <element signature="e#4970#5247#0" />
-            <element signature="e#5231#5994#0" />
-            <element signature="e#6018#6690#0" />
-            <element signature="e#6726#7479#0" />
-            <element signature="e#7515#8297#0" />
+            <element signature="e#397#540#0" />
+            <element signature="e#589#1012#0" />
+            <element signature="e#615#976#0" />
+            <element signature="e#1070#1183#0" />
+            <element signature="e#1554#1601#0" />
+            <element signature="e#1654#3051#0" />
+            <element signature="e#1679#2973#0" />
+            <element signature="e#2831#4213#0" />
+            <element signature="e#2856#4177#0" />
+            <element signature="e#4520#8668#0" />
+            <element signature="e#4329#8388#0" />
+            <element signature="e#5261#6024#0" />
+            <element signature="e#6076#6749#0" />
+            <element signature="e#6817#7570#0" />
+            <element signature="e#7645#8427#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/template-assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="8065" column="17" lean-forward="true" selection-start-line="8065" selection-start-column="17" selection-end-line="8065" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+          <folding>
+            <element signature="e#3917#13226#0#HTML" />
           </folding>
         </state>
       </provider>
