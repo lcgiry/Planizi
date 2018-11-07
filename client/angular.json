@@ -25,7 +25,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/template-assets/lib/jquery/jquery.min.js",
+              "src/assets/template-assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js",
+              "src/assets/template-assets/js/main.js",
+              "src/assets/template-assets/lib/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
