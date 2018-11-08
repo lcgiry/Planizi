@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { SignInComponent } from './components/sign-in/sign-in.component'
 
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angular-6-social-login-v2";
@@ -24,11 +25,18 @@ export function getAuthServiceConfigs() {
 
   return config;
 }
+=======
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
+>>>>>>> e381c2e7ee2464f5cd5cc9ce06d3aca332e7cd32
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     SignInComponent,
+=======
+    HeaderMenuComponent
+>>>>>>> e381c2e7ee2464f5cd5cc9ce06d3aca332e7cd32
   ],
   imports: [
     BrowserModule,
