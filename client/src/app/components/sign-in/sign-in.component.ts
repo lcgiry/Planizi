@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService, GoogleLoginProvider } from 'angular-6-social-login-v2';
-
+import { AuthenticationService } from '../../services/authentication.service'
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  styleUrls: ['../../../assets/template-assets/lib/stroke-7/style.css', '../../../assets/template-assets/lib/jquery.nanoscroller/css/nanoscroller.css', '../../../assets/template-assets/css/style.css']
 })
 export class SignInComponent implements OnInit {
 
-  constructor( private socialAuthService: AuthService ) {}
+  constructor( private socialAuthService: AuthService, private authenticationService : AuthenticationService ) {}
 
   ngOnInit() {
   }
@@ -27,10 +27,11 @@ export class SignInComponent implements OnInit {
         console.log(socialPlatform+" sign in data : " , userData);
         // Now sign-in with userData
         // ...
+        this.authenticationService.sendInfos(socialPlatform, userData)
             
       }
     );
-    console.log('done');
+
     
   }
 

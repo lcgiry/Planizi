@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignInComponent } from './components/sign-in/sign-in.component'
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { HeaderMenuComponent } from './components/header-menu/header-menu.component'
 
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angular-6-social-login-v2";
 
@@ -29,6 +30,7 @@ export function getAuthServiceConfigs() {
   declarations: [
     AppComponent,
     SignInComponent,
+    HeaderMenuComponent,
   ],
   imports: [
     BrowserModule,
