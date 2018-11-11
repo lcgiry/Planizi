@@ -17,6 +17,7 @@ authenticationConfig.googleAuthenticationConfiguration
 var indexRouter = require('./routes/index');
 var authenticationRouter = require ('./routes/authentication');
 var registrationRouter = require('./routes/registration');
+var userRouter = require('./routes/user');
 
 //------------------------------ Main Ssettings -----------------------------------
 //Start express for the server
@@ -56,6 +57,7 @@ app.use('/assets', express.static('public/template-assets'));
 app.use('/', indexRouter);
 app.use('/authentication', authenticationRouter);
 app.use("/registration", registrationRouter);
+app.use("/user", userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

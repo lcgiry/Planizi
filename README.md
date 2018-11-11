@@ -7,7 +7,7 @@ The solution try provide a way of gathering all people who have a role in the or
 
 ## Installation
 ### Overview
-That project is developped with **NodeJS** and Express module.  
+API side : That project is developped with **NodeJS** and Express module.  
 The database used is **MySQL** with Sequelize module as ORM.  
 
 ### Set up your development environment
