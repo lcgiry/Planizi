@@ -1,5 +1,10 @@
 {
   "name": "code-node",
+  "apidoc": {
+    "title": "Doc - API Planizi",
+    "name":"Planizi API",
+    "description": "Full documentation about Planizi API"
+  },
   "version": "0.0.0",
   "private": true,
   "scripts": {
