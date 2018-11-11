@@ -1,4 +1,4 @@
-api/nodes_modules/
-template/
-.idea/
-out-template-html/
+/api/nodes_modules/
+/template/
+/.idea/
+/out-template-html/
