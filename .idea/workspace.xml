@@ -23,48 +23,32 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+            <state relative-caret-position="136">
+              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/routes/user.js">
+      <file leaf-file-name="skill.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/routes/skill.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="370">
+              <caret line="221" lean-forward="true" selection-start-line="221" selection-end-line="221" />
               <folding>
-                <element signature="e#3085#5033#0" />
-                <element signature="e#3004#3444#0" />
-                <element signature="e#1453#1696#0" />
-                <element signature="e#1697#2988#0" />
-                <element signature="e#3031#4609#0" />
-                <element signature="e#3065#4399#0" />
-                <element signature="e#5979#6064#0" />
-                <element signature="e#4820#4833#0" />
-                <element signature="e#4403#4606#0" />
-                <element signature="e#6136#6513#0" />
-                <element signature="e#6515#8156#0" />
-                <element signature="e#7139#7189#0" />
-                <element signature="e#7173#7183#0" />
-                <element signature="e#7187#7352#0" />
-                <element signature="e#9062#9449#0" />
-                <element signature="e#9441#11081#0" />
-                <element signature="e#9804#10454#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user-validator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/services/validators/user-validator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1854">
-              <caret line="126" column="38" selection-start-line="126" selection-start-column="38" selection-end-line="126" selection-end-column="38" />
-              <folding>
-                <element signature="e#2474#3761#0" />
-                <element signature="e#3802#4022#0" />
+                <element signature="e#429#627#0" />
+                <element signature="e#577#2632#0" />
+                <element signature="e#2729#3111#0" />
+                <element signature="e#5120#5560#0" />
+                <element signature="e#5251#5432#0" />
+                <element signature="e#5450#5555#0" />
+                <element signature="e#5564#5949#0" />
+                <element signature="e#7714#8753#0" />
+                <element signature="e#7990#8338#0" />
+                <element signature="e#8757#9134#0" />
+                <element signature="e#10827#11683#0" />
+                <element signature="e#11687#12077#0" />
+                <element signature="e#12031#12334#0" />
+                <element signature="e#12436#12850#0" />
               </folding>
             </state>
           </provider>
@@ -141,8 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/node_modules/accepts/style.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/header.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/header.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/config/authentication-google-configuration.js" />
@@ -190,8 +172,10 @@
         <option value="$PROJECT_DIR$/api/routes/index.js" />
         <option value="$PROJECT_DIR$/api/scriptTest.js" />
         <option value="$PROJECT_DIR$/api/services/mapping/user-mapping.js" />
+        <option value="$PROJECT_DIR$/api/services/validators/skill-validator.js" />
         <option value="$PROJECT_DIR$/api/app.js" />
         <option value="$PROJECT_DIR$/api/routes/user.js" />
+        <option value="$PROJECT_DIR$/api/routes/skill.js" />
       </list>
     </option>
   </component>
@@ -260,6 +244,12 @@
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code-node" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -288,19 +278,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.1.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\validators" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\routes" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\assets" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\format" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\assets\template-assets\css" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\views" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\assets" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\routes" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\views" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\public\template-assets\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -331,7 +321,7 @@
       <workItem from="1540771508171" duration="7741000" />
       <workItem from="1540819850094" duration="97628000" />
       <workItem from="1541596719566" duration="44413000" />
-      <workItem from="1542018849642" duration="23816000" />
+      <workItem from="1542018849642" duration="28532000" />
     </task>
     <task id="LOCAL-00001" summary="Generate the architecture of the project">
       <created>1540155774955</created>
@@ -344,7 +334,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226813000" />
+    <option name="totallyTimeSpent" value="231529000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -357,6 +347,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1743941" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32897604" />
@@ -424,19 +415,10 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/routes/authentication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/header-menu/header-menu.component.spec.ts" />
-    <entry file="file://$PROJECT_DIR$/client/src/app/header-menu/header-menu.component.html" />
     <entry file="file://$PROJECT_DIR$/client/src/app/header-menu/header-menu.component.ts" />
     <entry file="file://$PROJECT_DIR$/client/src/app/components/header-menu/header-menu.component.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -683,9 +665,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/models/user_skill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#114#736#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/services/validators/user-validator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1854">
+        <state relative-caret-position="1260">
           <caret line="126" column="38" selection-start-line="126" selection-start-column="38" selection-end-line="126" selection-end-column="38" />
           <folding>
             <element signature="e#2474#3761#0" />
@@ -694,35 +686,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app.js">
+    <entry file="file://$PROJECT_DIR$/api/services/validators/skill-validator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+        <state relative-caret-position="720">
+          <caret line="40" column="61" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="140">
+          <caret line="260" column="71" selection-start-line="260" selection-start-column="71" selection-end-line="260" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/skill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="221" lean-forward="true" selection-start-line="221" selection-end-line="221" />
           <folding>
-            <element signature="e#3085#5033#0" />
-            <element signature="e#3004#3444#0" />
-            <element signature="e#1453#1696#0" />
-            <element signature="e#1697#2988#0" />
-            <element signature="e#3031#4609#0" />
-            <element signature="e#3065#4399#0" />
-            <element signature="e#5979#6064#0" />
-            <element signature="e#4820#4833#0" />
-            <element signature="e#4403#4606#0" />
-            <element signature="e#6136#6513#0" />
-            <element signature="e#6515#8156#0" />
-            <element signature="e#7139#7189#0" />
-            <element signature="e#7173#7183#0" />
-            <element signature="e#7187#7352#0" />
-            <element signature="e#9062#9449#0" />
-            <element signature="e#9441#11081#0" />
-            <element signature="e#9804#10454#0" />
+            <element signature="e#429#627#0" />
+            <element signature="e#577#2632#0" />
+            <element signature="e#2729#3111#0" />
+            <element signature="e#5120#5560#0" />
+            <element signature="e#5251#5432#0" />
+            <element signature="e#5450#5555#0" />
+            <element signature="e#5564#5949#0" />
+            <element signature="e#7714#8753#0" />
+            <element signature="e#7990#8338#0" />
+            <element signature="e#8757#9134#0" />
+            <element signature="e#10827#11683#0" />
+            <element signature="e#11687#12077#0" />
+            <element signature="e#12031#12334#0" />
+            <element signature="e#12436#12850#0" />
           </folding>
         </state>
       </provider>

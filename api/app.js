@@ -19,6 +19,7 @@ var indexRouter = require('./routes/index');
 var authenticationRouter = require ('./routes/authentication');
 var registrationRouter = require('./routes/registration');
 var userRouter = require('./routes/user');
+var skillRouter = require('./routes/skill');
 
 //------------------------------ Main Ssettings -----------------------------------
 //Start express for the server
@@ -59,6 +60,7 @@ app.use('/', indexRouter);
 app.use('/authentication', authenticationRouter);
 app.use("/registration", registrationRouter);
 app.use("/user", userRouter);
+app.use("/skill", skillRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
