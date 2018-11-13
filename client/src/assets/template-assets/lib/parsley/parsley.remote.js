@@ -362,7 +362,7 @@ var Validator = ( function ( ) {
       try {
         this._bootstrap( data );
       } catch ( err ) {
-        throw new Error( 'Should give a valid mapping object to Constraint', err, data );
+        throw new Error( 'Should give a valid validators object to Constraint', err, data );
       }
     }
   };
@@ -390,7 +390,7 @@ var Validator = ( function ( ) {
             new Assert().HaveProperty( property ).validate( object );
           }
           result = this._check( property, object[ property ], group );
-          // check returned an array of Violations or an object mapping Violations
+          // check returned an array of Violations or an object validators Violations
           if ( ( _isArray( result ) && result.length > 0 ) || ( !_isArray( result ) && !_isEmptyObject( result ) ) ) {
             failures[ property ] = result;
           }

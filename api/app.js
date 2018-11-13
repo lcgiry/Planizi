@@ -8,6 +8,7 @@ var session = require('express-session');
 var MemoryStore = require('memorystore')(session)
 var passport = require('passport');
 var fileUpload = require('express-fileupload');
+var errorResponse = require('./errors/errors-response');
 
 //------------------------------ All required modules from Planizi repository -----------------------------------
 var authenticationConfig = require('./config/authentication/config-authentication');
@@ -71,7 +72,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   // render the error page
   res.status(err.status || 500);
-  res.render('error', { code: err.status, message: err.message });
+  res.send(errorResponse.GenericError(err.name, err.status, err.message));
 });
 
 

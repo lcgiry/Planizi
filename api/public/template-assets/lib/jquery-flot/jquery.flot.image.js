@@ -20,7 +20,7 @@ all images are loaded (or failed loading). In the callback, you can then call
 $.plot with the data set. See the included example.
 
 A more low-level helper, $.plot.image.load(urls, callback) is also included.
-Given a list of URLs, it calls callback with an object mapping from URL to
+Given a list of URLs, it calls callback with an object validators from URL to
 Image object when all images are loaded or have failed loading.
 
 The plugin supports these options:

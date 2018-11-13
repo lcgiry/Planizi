@@ -100,7 +100,7 @@ var requirejs, require, define;
                             //End of the line. Keep at least one non-dot
                             //path segment at the front so it can be mapped
                             //correctly to disk. Otherwise, there is likely
-                            //no path mapping for a path starting with '..'.
+                            //no path validators for a path starting with '..'.
                             //This can still fail, but catches the most reasonable
                             //uses of ..
                             break;

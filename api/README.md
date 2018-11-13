@@ -169,3 +169,9 @@ userInstance.save()                                 //To insert in database
 
 ## Other modules
 ### Authentication with *Passport* module and OAuth2
+
+## Documentation
+### Generate documentation
+``apidoc -i routes/ -o doc/``
+
+### Add documentation
