@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, GoogleLoginProvider } from 'angular-6-social-login-v2';
-import { AuthenticationService } from '../../services/authentication.service'
+import { AuthService, GoogleLoginProvider, SocialUser} from "angularx-social-login";
+import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -8,31 +10,39 @@ import { AuthenticationService } from '../../services/authentication.service'
 })
 export class SignInComponent implements OnInit {
 
-  constructor( private socialAuthService: AuthService, private authenticationService : AuthenticationService ) {}
+  private user: SocialUser;
+  private connected: boolean = false; 
+
+  constructor( private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      console.log( 'test',user);
+      
+    });
   }
 
-  public socialSignIn(socialPlatform : string) {
-    console.log('signin component socialSignIn');
-    
-    let socialPlatformProvider;
-     if(socialPlatform == "google"){
-      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
-    } else {
-      console.log("There's a problem with the Google OAuth service.");
+  signInWithGoogle(): void {
+    if (this.user == null){
+      this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
+        (user) => {
+          console.log(this.user);
+          this.router.navigate(['/header']);
+        });
+      this.connected = true;
     }
-    this.socialAuthService.signIn(socialPlatformProvider).then(
-      (userData) => {
-        console.log(socialPlatform+" sign in data : " , userData);
-        // Now sign-in with userData
-        // ...
-        this.authenticationService.sendInfos(socialPlatform, userData)
-            
-      }
-    );
+    else {
+      console.log('The user was already logged',this.user);
+      this.router.navigate(['/header']);
+    }
+  }
 
-    
+
+  signOut(): void {
+    this.authService.signOut();
+    this.connected = false;
+
   }
 
 }
