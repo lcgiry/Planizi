@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { RequestOptions, Request, RequestMethod } from '@angular/http';
 import { environment }  from '../../environments/environment';
 import { Observable } from 'rxjs';
-import { Profile } from '../classes/profile';
+import { User } from '../classes/user';
 
 
 @Injectable({
@@ -12,14 +12,23 @@ import { Profile } from '../classes/profile';
 export class UserService {
 
   API_URL = environment.API_URL;
+  private user = {};
 
   constructor(private http: HttpClient) { }
 
-  get_profile(profileId: string){
+  get_profile(profileId: string): Promise<User>{
     //profileId is an email address
-    this.http.get(this.API_URL + '/user/user/' + profileId).subscribe((res)=>{
-        console.log(res);
-    });
+    // this.http.get(this.API_URL + '/user/user/' + profileId).subscribe((res)=>{
+    //     console.log(res);
+    //     this.user = res;
+    // });
+    return this.http.get(this.API_URL + '/user/user/' + profileId).toPromise()
+      .then(function(res){
+        console.log(res)
+        return res
+      }).catch(function(err){
+        return err
+      })
 }
   //  getProfile (profileId: string): Observable<Profile[]> {
   //    let url = this.API_URL + profileId;
