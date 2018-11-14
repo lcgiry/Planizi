@@ -2,13 +2,15 @@ var express = require('express');
 var router = express.Router();
 var sequelize = require('../config/database/config-database').sequelize;
 
-var skillValidator = require('../services/validators/team-validator');
+var teamValidator = require('../services/validators/team-validator');
 var errorResponse = require('../errors/errors-response');
 const Team = sequelize.import('../models/team.js');
 const User = sequelize.import('../models/user.js');
 const User_Team = sequelize.import('../models/user_team.js');
+Team.belongsToMany(User, {through: User_Team, foreignKey: 'user_team_team', otherKey:'user_team_user'});
+	
 
-//----------------------------------------- SKILL TABLE
+//----------------------------------------- TEAM TABLE
 /**
  * @apiDefine ErrorGetGroup
  * @apiError AuthenticationRequired You must be authenticated.
@@ -16,28 +18,28 @@ const User_Team = sequelize.import('../models/user_team.js');
  * @apiError UserNotFound The user does not exist.
  */
 /**
- * @apiGroup SKILL
- * @api {GET} /skill/skills Get all skills
- * @apiDescription Retrieve all information about all skills inserted
- * @apiSuccess {Object[]} skills The array with all users
- * @apiSuccess {String} skills.skill_label The mail of the user to retrieve (ID)
- * @apiSuccess {String} skills.skill_name The english name of the skill to display
- * @apiSuccess {String} skills.skill_name_fr The french name of the skill to display
- * @apiSuccess {String} skills.skill_description The description of the skill
- * @apiSuccess {Date} cratedAt The creation date of the skill raw
- * @apiSuccess {Date} updatedAt The last date update of the skill raw
+ * @apiGroup TEAM
+ * @api {GET} /team/teams Get all teams
+ * @apiDescription Retrieve all information about all teams inserted
+ * @apiSuccess {Object[]} teams The array with all teams
+ * @apiSuccess {String} teams.team_label The mail of the user to retrieve (ID)
+ * @apiSuccess {String} teams.team_name The english name of the team to display
+ * @apiSuccess {String} teams.team_name_fr The french name of the team to display
+ * @apiSuccess {String} teams.team_description The description of the team
+ * @apiSuccess {Date} createdAt The creation date of the team raw
+ * @apiSuccess {Date} updatedAt The last date update of the team raw
  * @apiUse ErrorGetGroup
  */
-router.get('/skills', function(req, res, next) {
+router.get('/teams', function(req, res, next) {
 
-	Skill.findAll({ raw: true })
-		.then(skillResult => {
-			if (skillResult) {
+	Team.findAll({ raw: true })
+		.then(teamResult => {
+			if (teamResult) {
 				res.type('json');
-				res.send({ skills : skillResult });
+				res.send({ teams : teamResult });
 			} else {
 				res.status(404);
-				res.send(errorResponse.RessourceNotFound('There is no skills in database'));
+				res.send(errorResponse.RessourceNotFound('There is no teams in database'));
 			}
 		})
 		.catch(err => {
@@ -48,28 +50,28 @@ router.get('/skills', function(req, res, next) {
 });
 
 /**
- * @apiGroup SKILL
- * @api {GET} /skill/skill/:label Get one skill
- * @apiDescription Retrieve all information about a skill
- * @apiParam {String} label ``REQUIRED`` The label given to the skill (ID)
- * @apiSuccess {String} skill_label The mail of the user to retrieve (ID)
- * @apiSuccess {String} skill_name The english name of the skill to display
- * @apiSuccess {String} skill_name_fr The french name of the skill to display
- * @apiSuccess {String} skill_description The description of the skill
- * @apiSuccess {Date} cratedAt The creation date of the skill raw
- * @apiSuccess {Date} updatedAt The last date update of the skill raw
+ * @apiGroup TEAM
+ * @api {GET} /team/team/:label Get one team
+ * @apiDescription Retrieve all information about a team
+ * @apiParam {String} label ``REQUIRED`` The label given to the team (ID)
+ * @apiSuccess {String} team_label The mail of the user to retrieve (ID)
+ * @apiSuccess {String} team_name The english name of the team to display
+ * @apiSuccess {String} team_name_fr The french name of the team to display
+ * @apiSuccess {String} team_description The description of the team
+ * @apiSuccess {Date} createdAt The creation date of the team raw
+ * @apiSuccess {Date} updatedAt The last date update of the team raw
  * @apiUse ErrorGetGroup
  */
-router.get('/skill/:label', function(req, res, next) {
+router.get('/team/:label', function(req, res, next) {
 
-	Skill.findOne({ where: { skill_label : skillValidator.checkAndFormat_skill_label(req.params.label) }, raw: true })
-		.then(skillResult => {
-			if (skillResult) {
+	Team.findOne({ where: { team_label : teamValidator.checkAndFormat_team_label(req.params.label) }, raw: true })
+		.then(teamResult => {
+			if (teamResult) {
 				res.type('json');
-				res.send(skillResult);
+				res.send(teamResult);
 			} else {
 				res.status(404);
-				res.send(errorResponse.RessourceNotFound('The skill does not exist'));
+				res.send(errorResponse.RessourceNotFound('The team does not exist'));
 			}
 		})
 		.catch(err => {
@@ -88,46 +90,46 @@ router.get('/skill/:label', function(req, res, next) {
  * @apiError RessourceAlreadyExist The ressource already exists
  */
 /**
- * @apiGroup SKILL
- * @api {POST} /skill/skill/ Post a new skill
- * @apiDescription Create a new skill in database
- * @apiParam (Body) {String} skill_label ``REQUIRED`` The label given to the skill (ID)
- * @apiParam (Body) {String} skill_name ``REQUIRED`` The english name of the skill to display
- * @apiParam (Body) {String} skill_name_fr ``REQUIRED`` The french name of the skill to display
- * @apiParam (Body) {String} skill_description The description of the skill
- * @apiSuccess (Success 201) {String} skill_label The skill label of the new skill.
+ * @apiGroup TEAM
+ * @api {POST} /team/team/ Post a new team
+ * @apiDescription Create a new team in database
+ * @apiParam (Body) {String} team_label ``REQUIRED`` The label given to the team (ID)
+ * @apiParam (Body) {String} team_name ``REQUIRED`` The english name of the team to display
+ * @apiParam (Body) {String} team_name_fr ``REQUIRED`` The french name of the team to display
+ * @apiParam (Body) {String} team_description The description of the team
+ * @apiSuccess (Success 201) {String} team_label The team label of the new team.
  * @apiUse ErrorPostGroup
  */
-router.post('/skill/', function(req, res, next) {
+router.post('/team/', function(req, res, next) {
 
 	if(req.is('application/json')){
 
-		var newSkillPromise = Skill.build(skillValidator.mapSkill(req));
+		var newTeamPromise = Team.build(teamValidator.mapTeam(req));
 
-		Skill.findOne({ where: { skill_label : skillValidator.checkAndFormat_skill_label(req.body.skill_label) } })
+		Team.findOne({ where: { team_label : teamValidator.checkAndFormat_team_label(req.body.team_label) } })
 			.then( result =>{
-				//If skill does not exist yet
+				//If team does not exist yet
 				if(result === null){
-					//Save the new skill
-					Promise.all([newSkillPromise.save()])
+					//Save the new team
+					Promise.all([newTeamPromise.save()])
 						.then( result => {
 							res.status(201);
 							res.send({
-								"skill_label": result[0].skill_label
+								"team_label": result[0].team_label
 							});
 						})
 						.catch( err =>{
 							res.status(500);
 							res.send(errorResponse.InternalServerError(err.message));
 						});
-				//If skill exists yet
+				//If team exists yet
 				}else{
 					res.status(404);
 					res.send(errorResponse.RessourceAlreadyExist( "The user is yet exists"));
 				}
 			})
 			.catch( err =>{
-				res.send(errorResponse.InternalServerError("Problem to check if the skill exists : "+err));
+				res.send(errorResponse.InternalServerError("Problem to check if the team exists : "+err));
 			});
 
 	}else{
@@ -146,40 +148,40 @@ router.post('/skill/', function(req, res, next) {
 * @apiError RessourceAlreadyExist The ressource already exists
 */
 /**
- * @apiGroup SKILL
- * @api {PUT} /skill/skill/:label Update a skill
- * @apiDescription Update a skill
- * @apiParam {String} label ``REQUIRED`` The label of the skill (ID)
- * @apiParam (Body) {String} skill_label The label given to the skill (ID)
- * @apiParam (Body) {String} skill_name The english name of the skill to display
- * @apiParam (Body) {String} skill_name_fr The french name of the skill to display
- * @apiParam (Body) {String} skill_description The description of the skill
+ * @apiGroup TEAM
+ * @api {PUT} /team/team/:label Update a team
+ * @apiDescription Update a team
+ * @apiParam {String} label ``REQUIRED`` The label of the team (ID)
+ * @apiParam (Body) {String} team_label The label given to the team (ID)
+ * @apiParam (Body) {String} team_name The english name of the team to display
+ * @apiParam (Body) {String} team_name_fr The french name of the team to display
+ * @apiParam (Body) {String} team_description The description of the team
  * @apiSuccess (Success 204) NOCONTENT *No content sent*
  * @apiUse ErrorPostGroup
  */
-router.put('/skill/:label', function (req, res, next) {
+router.put('/team/:label', function (req, res, next) {
 
 	if(req.is('application/json')){
 
-		Skill.findOne({  where: { skill_label : skillValidator.checkAndFormat_skill_label(req.params.label) } })
-			.then( skillResult => {
-				if (skillResult) {
+		Team.findOne({  where: { team_label : teamValidator.checkAndFormat_team_label(req.params.label) } })
+			.then( teamResult => {
+				if (teamResult) {
 
-					skillResult.update(skillValidator.mapSkill(req)).then( result => {
+					teamResult.update(teamValidator.mapTeam(req)).then( result => {
 						res.status(204).end();
 					}).catch( err => {
 						res.status(500);
-						res.send(errorResponse.InternalServerError("Problem to update skill : "+err));
+						res.send(errorResponse.InternalServerError("Problem to update team : "+err));
 					});
 
 				} else {
 					res.status(404);
-					res.send(errorResponse.RessourceNotFound('The skill does not exist'));
+					res.send(errorResponse.RessourceNotFound('The team does not exist'));
 				}
 			})
 			.catch(err => {
 				res.status(500);
-				res.send(errorResponse.InternalServerError("Problem to check if the skill exists : "+err));
+				res.send(errorResponse.InternalServerError("Problem to check if the team exists : "+err));
 			});
 
 	}else{
@@ -199,32 +201,32 @@ router.put('/skill/:label', function (req, res, next) {
  *
  */
 /**
- * @apiGroup SKILL
- * @api {DELETE} /skill/skill/:label Delete the skill
- * @apiDescription Delete definitively the skill of the database
- * @apiParam {String} label ``REQUIRED`` The label of the skill (ID)
+ * @apiGroup TEAM
+ * @api {DELETE} /team/team/:label Delete the team
+ * @apiDescription Delete definitively the team of the database
+ * @apiParam {String} label ``REQUIRED`` The label of the team (ID)
  * @apiSuccess (Success 204) NOCONTENT *No content sent*
  * @apiUse ErrorDeleteGroup
  */
-router.delete('/skill/:label', function (req, res, next) {
+router.delete('/team/:label', function (req, res, next) {
 
-	Skill.destroy({ where: {skill_label: skillValidator.checkAndFormat_skill_label(req.params.label)}})
+	Team.destroy({ where: {team_label: teamValidator.checkAndFormat_team_label(req.params.label)}})
 		.then( result => {
 			if (result > 0) {
 				res.status(204).end();
 			} else {
 				res.status(404);
-				res.send(errorResponse.RessourceNotFound('The skill does not exist'));
+				res.send(errorResponse.RessourceNotFound('The team does not exist'));
 			}
 		})
 		.catch(err => {
 			res.status(500);
-			res.send(errorResponse.InternalServerError("Problem to delete the skill : "+err));
+			res.send(errorResponse.InternalServerError("Problem to delete the team : "+err));
 		});
 
 });
 
-//----------------------------------------- USER_SKILL TABLE
+//----------------------------------------- USER_TEAM TABLE
 /**
  * @apiDefine ErrorGetGroup
  * @apiError AuthenticationRequired You must be authenticated.
@@ -232,12 +234,12 @@ router.delete('/skill/:label', function (req, res, next) {
  * @apiError UserNotFound The user does not exist.
  */
 /**
- * @apiGroup SKILL
- * @api {GET} /skill/users/:label Get all users linked to a skill
- * @apiDescription Retrieve all users linked linked to a particular skill
- * @apiParam {String} label ``REQUIRED`` The label given to the skill (ID)
- * @apiSuccess {String} skill The skill related to the next users
- * @apiSuccess {Object[]} users The array with all users linked to the skill
+ * @apiGroup TEAM
+ * @api {GET} /team/users/:label Get all users linked to a team
+ * @apiDescription Retrieve all users linked linked to a particular team
+ * @apiParam {String} label ``REQUIRED`` The label given to the team (ID)
+ * @apiSuccess {String} team The team related to the next users
+ * @apiSuccess {Object[]} users The array with all users linked to the team
  * @apiSuccess {String} users.user_mail The mail of the user to retrieve (ID)
  * @apiSuccess {String} users.user_name The name of the user
  * @apiSuccess {String} users.user_surname The surname of the user
@@ -260,45 +262,41 @@ router.delete('/skill/:label', function (req, res, next) {
  * @apiSuccess {Date} users.user_last_login The date of the last login user
  * @apiSuccess {Date} users.cratedAt The creation date of the user raw
  * @apiSuccess {Date} users.updatedAt The last date update of the user raw
- * @apiSuccess {Object} users.user_skill *JOIN TABLE* The association table between skills and users
- * @apiSuccess {Integer} users.user_skill.skill_id *JOIN TABLE* The ID of the raw
- * @apiSuccess {String}  users.user_skill.skill_user *JOIN TABLE* The foreign key to user
- * @apiSuccess {String} users.user_skill.skill_skill *JOIN TABLE* The foreign key to skill
- * @apiSuccess {Date}  users.user_skill.cratedAt *JOIN TABLE* The creation date of the raw
- * @apiSuccess {Date}  users.user_skill.updatedAt *JOIN TABLE* The last date update of the raw
+ * @apiSuccess {Object} users.user_team *JOIN TABLE* The association table between teams and users
+ * @apiSuccess {Integer} users.user_team.team_id *JOIN TABLE* The ID of the raw
+ * @apiSuccess {String}  users.user_team.team_user *JOIN TABLE* The foreign key to user
+ * @apiSuccess {String} users.user_team.team_team *JOIN TABLE* The foreign key to team
+ * @apiSuccess {Date}  users.user_team.createdAt *JOIN TABLE* The creation date of the raw
+ * @apiSuccess {Date}  users.user_team.updatedAt *JOIN TABLE* The last date update of the raw
  * @apiUse ErrorGetGroup
  */
 router.get('/users/:label', function(req, res, next) {
-
-	User.belongsToMany(Skill, {through: User_Skill, foreignKey: 'user_skill_user'});
-	Skill.belongsToMany(User, {through: User_Skill, foreignKey: 'user_skill_skill'});
-
-	Skill.findOne({where: {skill_label: req.params.label}})
-		.then(skillResult=>{
-			if(skillResult) {
-				skillResult.getUsers()
+	Team.findOne({where: {team_label: req.params.label}})
+		.then(result=>{
+			if(result) {
+				result.getUsers()
 					.then(result => {
 
 						if(result[0]){
 							res.status(200);
-							res.send({skill: result[0].user_skill.user_skill_skill, users: result});
+							res.send({team: result[0].user_team.user_team_team, users: result});
 						}else{
 							res.status(404);
-							res.send(errorResponse.RessourceNotFound("The skill is valid by no user"));
+							res.send(errorResponse.RessourceNotFound("There is no user in the team"));
 						}
 					})
 					.catch(err => {
 						res.status(500);
-						res.send(errorResponse.InternalServerError("Problem to retrieve the users for the skill : "+err));
+						res.send(errorResponse.InternalServerError("Problem to retrieve the users for the team : "+err));
 					});
 			}else{
 				res.status(404);
-				res.send(errorResponse.RessourceNotFound("The skill does not exist : "+err));
+				res.send(errorResponse.RessourceNotFound("The team does not exist"));
 			}
 		})
 		.catch(err=>{
 			res.status(500);
-			res.send(errorResponse.InternalServerError("Problem to check if the skill exists : "+err));
+			res.send(errorResponse.InternalServerError("Problem to check if the team exists : "+err));
 		});
 
 });
