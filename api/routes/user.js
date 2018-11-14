@@ -7,10 +7,14 @@ var serverConfig = require('../config/server.json');
 var userValidator = require('../services/validators/user-validator');
 var errorResponse = require('../errors/errors-response');
 const User = sequelize.import('../models/user.js');
-const User_Skill = sequelize.import('../models/user_skill.js');
 const Skill = sequelize.import('../models/skill.js');
+const User_Skill = sequelize.import('../models/user_skill.js');
+User.belongsToMany(Skill, {through: User_Skill, foreignKey: 'user_skill_user', otherKey:'user_skill_skill'});
 const Team = sequelize.import('../models/team.js');
 const User_Team = sequelize.import('../models/user_team.js');
+User.belongsToMany(Team, {through: User_Team, foreignKey: 'user_team_user', otherKey:'user_team_team'});
+const User_Friend = sequelize.import('../models/user_friend.js');
+User.belongsToMany(User, {as: "friends", through: User_Friend, foreignKey: 'user_friend_user', otherKey: 'user_friend_friend'});
 
 //----------------------------------------- USER TABLE
 /**
@@ -316,8 +320,7 @@ router.delete('/user/:mail', function (req, res, next) {
  */
 router.get('/skills/:mail', function(req, res, next) {
 
-	User.belongsToMany(Skill, {through: User_Skill, foreignKey: 'user_skill_user'});
-	Skill.belongsToMany(User, {through: User_Skill, foreignKey: 'user_skill_skill'});
+
 
 	User.findOne({where: {user_mail: req.params.mail}})
 		.then(result=>{
@@ -339,7 +342,7 @@ router.get('/skills/:mail', function(req, res, next) {
 					});
 			}else{
 				res.status(404);
-				res.send(errorResponse.RessourceNotFound("The user does not exist : "+err));
+				res.send(errorResponse.RessourceNotFound("The user does not exist : "));
 			}
 		})
 		.catch(err=>{
@@ -366,14 +369,13 @@ router.get('/skills/:mail', function(req, res, next) {
  * @apiSuccess {Integer} teams.user_team.user_team_id *JOIN TABLE* The ID of the raw
  * @apiSuccess {String}  teams.user_team.user_team_user *JOIN TABLE* The foreign key to user
  * @apiSuccess {String} teams.user_team.user_team_team *JOIN TABLE* The foreign key to team
- * @apiSuccess {Date}  skills.user_team.createdAt *JOIN TABLE* The creation date of the raw
- * @apiSuccess {Date}  skills.user_team.updatedAt *JOIN TABLE* The last date update of the raw
+ * @apiSuccess {Date}  teams.user_team.createdAt *JOIN TABLE* The creation date of the raw
+ * @apiSuccess {Date}  teams.user_team.updatedAt *JOIN TABLE* The last date update of the raw
  * @apiUse ErrorGetGroup
  */
 router.get('/teams/:mail', function(req, res, next) {
 
-	User.belongsToMany(Team, {through: User_Team, foreignKey: 'user_team_user'});
-	Team.belongsToMany(User, {through: User_Team, foreignKey: 'user_team_team'});
+
 
 	User.findOne({where: {user_mail: req.params.mail}})
 		.then(result=>{
@@ -395,7 +397,75 @@ router.get('/teams/:mail', function(req, res, next) {
 					});
 			}else{
 				res.status(404);
-				res.send(errorResponse.RessourceNotFound("The user does not exist : "+err));
+				res.send(errorResponse.RessourceNotFound("The user does not exist "));
+			}
+		})
+		.catch(err=>{
+			res.status(500);
+			res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
+		});
+});		
+/**
+ * @apiGroup USER
+ * @api {GET} /user/friends/:mail Get all friends of an user
+ * @apiDescription Retrieve all friends about an users
+ * @apiParam {String} mail ``REQUIRED`` The mail of the user to retrieve his friends (ID)
+ * @apiSuccess {String} user The user related to the next friends
+ * @apiSuccess {Object[]} friends The array with all friend friends of the user
+ * @apiSuccess {String} friends.user_mail The mail of the friend 
+ * @apiSuccess {String} friends.user_name The name of the friend
+ * @apiSuccess {String} friends.user_surname The surname of the friend
+ * @apiSuccess {String} friends.user_gender The gender of the friend ('m' or 'f')
+ * @apiSuccess {String} friends.user_phone The phone number of the friend
+ * @apiSuccess {Date} friends.user_birthdate The birthdate in YYYY-MM-DD format of the friend
+ * @apiSuccess {String} friends.user_description The description written by the friend
+ * @apiSuccess {String} friends.user_experience The personal experience of the friend
+ * @apiSuccess {String} friends.user_incapacity The possible incapacities og the friend
+ * @apiSuccess {String} friends.user_teeshirt_size The teeshirt-size of the friend ('S', 'M', 'L' or 'XL')
+ * @apiSuccess {Integer} friends.user_trust_point The trust point given for the friend
+ * @apiSuccess {Integer} friends.user_involvement_point The involvement point given for the friend
+ * @apiSuccess {Integer} friends.user_happiness_point The happiness level of the friend
+ * @apiSuccess {String} friends.user_rights The ID rights of the friend among all rights stored in 'rights' table
+ * @apiSuccess {String} friends.user_role The ID role of the friend among all roles stores in 'role' table
+ * @apiSuccess {String} friends.user_social_security_card_number The SSN of the friend.
+ * @apiSuccess {String} friends.user_social_security_card_file The path file of the SS card of the friend
+ * @apiSuccess {String} friends.user_identity_card_file The path file of the Identity card of the friend
+ * @apiSuccess {String} friends.user_cv_file The path file of the cv of the friend
+ * @apiSuccess {Date} friends.user_last_login The date of the last login friend
+ * @apiSuccess {Date} friends.createdAt The creation date of the friend raw
+ * @apiSuccess {Date} friends.updatedAt The last date update of the friend raw
+ * @apiSuccess {Object} friends.user_friend *JOIN TABLE* The association table between teams and users
+ * @apiSuccess {Integer} friends.user_friend.user_friend_id *JOIN TABLE* The ID of the raw
+ * @apiSuccess {String}  friends.user_friend.user_friend_user *JOIN TABLE* The foreign key to user
+ * @apiSuccess {String} friends.user_friend.user_friend_friend *JOIN TABLE* The foreign key to team
+ * @apiSuccess {Date}  friends.user_friend.createdAt *JOIN TABLE* The creation date of the raw
+ * @apiSuccess {Date}  friens.user_friend.updatedAt *JOIN TABLE* The last date update of the raw
+ * @apiUse ErrorGetGroup
+ */
+
+router.get('/friends/:mail', function(req, res, next) {
+	
+	User.findOne({where: {user_mail: req.params.mail}})
+		.then(result=>{
+			if(result) {
+				result.getFriends()
+					.then(result => {
+
+						if(result[0]){
+							res.status(200);
+							res.send({user: result[0].user_friend.user_friend_user, friends: result});
+						}else{
+							res.status(404);
+							res.send(errorResponse.RessourceNotFound("The user has no friend"));
+						}
+					})
+					.catch(err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError("Problem to retrieve the user friends : "+err));
+					});
+			}else{
+				res.status(404);
+				res.send(errorResponse.RessourceNotFound("The user does not exist "));
 			}
 		})
 		.catch(err=>{

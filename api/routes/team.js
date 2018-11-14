@@ -2,13 +2,11 @@ var express = require('express');
 var router = express.Router();
 var sequelize = require('../config/database/config-database').sequelize;
 
-var skillValidator = require('../services/validators/skill-validator');
+var skillValidator = require('../services/validators/team-validator');
 var errorResponse = require('../errors/errors-response');
-const Skill = sequelize.import('../models/skill.js');
+const Team = sequelize.import('../models/team.js');
 const User = sequelize.import('../models/user.js');
-const User_Skill = sequelize.import('../models/user_skill.js');
-User.belongsToMany(Skill, {through: User_Skill, foreignKey: 'user_skill_user', otherKey: 'user_skill_skill'});
-
+const User_Team = sequelize.import('../models/user_team.js');
 
 //----------------------------------------- SKILL TABLE
 /**
@@ -271,6 +269,9 @@ router.delete('/skill/:label', function (req, res, next) {
  * @apiUse ErrorGetGroup
  */
 router.get('/users/:label', function(req, res, next) {
+
+	User.belongsToMany(Skill, {through: User_Skill, foreignKey: 'user_skill_user'});
+	Skill.belongsToMany(User, {through: User_Skill, foreignKey: 'user_skill_skill'});
 
 	Skill.findOne({where: {skill_label: req.params.label}})
 		.then(skillResult=>{
