@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component'
 
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angular-6-social-login-v2";
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 // Config for social login
@@ -31,9 +34,12 @@ export function getAuthServiceConfigs() {
     AppComponent,
     SignInComponent,
     HeaderMenuComponent,
+    UserProfileComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     SocialLoginModule,
   ],
