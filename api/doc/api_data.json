@@ -77,7 +77,7 @@
     "group": "SKILL",
     "type": "GET",
     "url": "/skill/skill/:label",
-    "title": "Get skill information",
+    "title": "Get one skill",
     "description": "<p>Retrieve all information about a skill</p>",
     "parameter": {
       "fields": {
@@ -115,6 +115,13 @@
             "optional": false,
             "field": "skill_name_fr",
             "description": "<p>The french name of the skill to display</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skill_description",
+            "description": "<p>The description of the skill</p>"
           },
           {
             "group": "Success 200",
@@ -201,6 +208,13 @@
           },
           {
             "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skills.skill_description",
+            "description": "<p>The description of the skill</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "Date",
             "optional": false,
             "field": "cratedAt",
@@ -247,99 +261,10 @@
   },
   {
     "group": "SKILL",
-    "type": "POST",
-    "url": "/skill/skill/",
-    "title": "Post a new skill",
-    "description": "<p>Create a new skill in database</p>",
-    "parameter": {
-      "fields": {
-        "Body": [
-          {
-            "group": "Body",
-            "type": "String",
-            "optional": false,
-            "field": "skill_label",
-            "description": "<p><code>REQUIRED</code> The label given to the skill (ID)</p>"
-          },
-          {
-            "group": "Body",
-            "type": "String",
-            "optional": false,
-            "field": "skill_name",
-            "description": "<p><code>REQUIRED</code> The english name of the skill to display</p>"
-          },
-          {
-            "group": "Body",
-            "type": "String",
-            "optional": false,
-            "field": "skill_name_fr",
-            "description": "<p><code>REQUIRED</code> The french name of the skill to display</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 201": [
-          {
-            "group": "Success 201",
-            "type": "String",
-            "optional": false,
-            "field": "skill_label",
-            "description": "<p>The skill label of the new skill.</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "routes/skill.js",
-    "groupTitle": "SKILL",
-    "name": "PostSkillSkill",
-    "error": {
-      "fields": {
-        "Error 4xx": [
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "AuthenticationRequired",
-            "description": "<p>You must be authenticated.</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "ContentTypeInvalid",
-            "description": "<p>The content-type of the request is invalid..</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "UnsupportedMediaTypeError",
-            "description": "<p>The body passed is invalid.</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "RessourceAlreadyExist",
-            "description": "<p>The ressource already exists</p>"
-          }
-        ],
-        "Error 5xx": [
-          {
-            "group": "Error 5xx",
-            "optional": false,
-            "field": "InternalServerError",
-            "description": "<p>The problem is due to the server</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "group": "SKILL",
-    "type": "PUT",
-    "url": "/skill/skill/:label",
-    "title": "Update a skill",
-    "description": "<p>Update a skill</p>",
+    "type": "GET",
+    "url": "/skill/users/:label",
+    "title": "Get all users linked to a skill",
+    "description": "<p>Retrieve all users linked linked to a particular skill</p>",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -348,178 +273,27 @@
             "type": "String",
             "optional": false,
             "field": "label",
-            "description": "<p><code>REQUIRED</code> The label of the skill (ID)</p>"
-          }
-        ],
-        "Body": [
-          {
-            "group": "Body",
-            "type": "String",
-            "optional": false,
-            "field": "skill_label",
-            "description": "<p>The label given to the skill (ID)</p>"
-          },
-          {
-            "group": "Body",
-            "type": "String",
-            "optional": false,
-            "field": "skill_name",
-            "description": "<p>The english name of the skill to display</p>"
-          },
-          {
-            "group": "Body",
-            "type": "String",
-            "optional": false,
-            "field": "skill_name_fr",
-            "description": "<p>The french name of the skill to display</p>"
+            "description": "<p><code>REQUIRED</code> The label given to the skill (ID)</p>"
           }
         ]
       }
     },
-    "success": {
-      "fields": {
-        "Success 204": [
-          {
-            "group": "Success 204",
-            "optional": false,
-            "field": "NOCONTENT",
-            "description": "<p><em>No content sent</em></p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "routes/skill.js",
-    "groupTitle": "SKILL",
-    "name": "PutSkillSkillLabel",
-    "error": {
-      "fields": {
-        "Error 4xx": [
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "AuthenticationRequired",
-            "description": "<p>You must be authenticated.</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "ContentTypeInvalid",
-            "description": "<p>The content-type of the request is invalid..</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "UnsupportedMediaTypeError",
-            "description": "<p>The body passed is invalid.</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "RessourceAlreadyExist",
-            "description": "<p>The ressource already exists</p>"
-          }
-        ],
-        "Error 5xx": [
-          {
-            "group": "Error 5xx",
-            "optional": false,
-            "field": "InternalServerError",
-            "description": "<p>The problem is due to the server</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "group": "USER",
-    "type": "DELETE",
-    "url": "/user/user/:mail",
-    "title": "Delete the user",
-    "description": "<p>Delete definitively the user of the database</p>",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "mail",
-            "description": "<p><code>REQUIRED</code> The mail of the user to delete (ID)</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 204": [
-          {
-            "group": "Success 204",
-            "optional": false,
-            "field": "NOCONTENT",
-            "description": "<p><em>No content sent</em></p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "routes/user.js",
-    "groupTitle": "USER",
-    "name": "DeleteUserUserMail",
-    "error": {
-      "fields": {
-        "Error 4xx": [
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "AuthenticationRequired",
-            "description": "<p>You must be authenticated.</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "ContentTypeInvalid",
-            "description": "<p>The content-type of the request is invalid..</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "UnsupportedMediaTypeError",
-            "description": "<p>The body passed is invalid.</p>"
-          },
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "RessourceAlreadyExist",
-            "description": "<p>The ressource already exists</p>"
-          }
-        ],
-        "Error 5xx": [
-          {
-            "group": "Error 5xx",
-            "optional": false,
-            "field": "InternalServerError",
-            "description": "<p>The problem is due to the server</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "group": "USER",
-    "type": "GET",
-    "url": "/user/skills/:mail",
-    "title": "Get all users",
-    "description": "<p>Retrieve all information about all users</p>",
     "success": {
       "fields": {
         "Success 200": [
           {
             "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skill",
+            "description": "<p>The skill related to the next users</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "Object[]",
             "optional": false,
             "field": "users",
-            "description": "<p>The array with all users</p>"
+            "description": "<p>The array with all users linked to the skill</p>"
           },
           {
             "group": "Success 200",
@@ -674,6 +448,474 @@
             "optional": false,
             "field": "users.updatedAt",
             "description": "<p>The last date update of the user raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "users.user_skill",
+            "description": "<p><em>JOIN TABLE</em> The association table between skills and users</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "users.user_skill.skill_id",
+            "description": "<p><em>JOIN TABLE</em> The ID of the raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "users.user_skill.skill_user",
+            "description": "<p><em>JOIN TABLE</em> The foreign key to user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "users.user_skill.skill_skill",
+            "description": "<p><em>JOIN TABLE</em> The foreign key to skill</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "users.user_skill.cratedAt",
+            "description": "<p><em>JOIN TABLE</em> The creation date of the raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "users.user_skill.updatedAt",
+            "description": "<p><em>JOIN TABLE</em> The last date update of the raw</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/skill.js",
+    "groupTitle": "SKILL",
+    "name": "GetSkillUsersLabel",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "BadRequest",
+            "description": "<p>Your request is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UserNotFound",
+            "description": "<p>The user does not exist.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "SKILL",
+    "type": "POST",
+    "url": "/skill/skill/",
+    "title": "Post a new skill",
+    "description": "<p>Create a new skill in database</p>",
+    "parameter": {
+      "fields": {
+        "Body": [
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "skill_label",
+            "description": "<p><code>REQUIRED</code> The label given to the skill (ID)</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "skill_name",
+            "description": "<p><code>REQUIRED</code> The english name of the skill to display</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "skill_name_fr",
+            "description": "<p><code>REQUIRED</code> The french name of the skill to display</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "skill_description",
+            "description": "<p>The description of the skill</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 201": [
+          {
+            "group": "Success 201",
+            "type": "String",
+            "optional": false,
+            "field": "skill_label",
+            "description": "<p>The skill label of the new skill.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/skill.js",
+    "groupTitle": "SKILL",
+    "name": "PostSkillSkill",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ContentTypeInvalid",
+            "description": "<p>The content-type of the request is invalid..</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UnsupportedMediaTypeError",
+            "description": "<p>The body passed is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "RessourceAlreadyExist",
+            "description": "<p>The ressource already exists</p>"
+          }
+        ],
+        "Error 5xx": [
+          {
+            "group": "Error 5xx",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>The problem is due to the server</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "SKILL",
+    "type": "PUT",
+    "url": "/skill/skill/:label",
+    "title": "Update a skill",
+    "description": "<p>Update a skill</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "label",
+            "description": "<p><code>REQUIRED</code> The label of the skill (ID)</p>"
+          }
+        ],
+        "Body": [
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "skill_label",
+            "description": "<p>The label given to the skill (ID)</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "skill_name",
+            "description": "<p>The english name of the skill to display</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "skill_name_fr",
+            "description": "<p>The french name of the skill to display</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "skill_description",
+            "description": "<p>The description of the skill</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 204": [
+          {
+            "group": "Success 204",
+            "optional": false,
+            "field": "NOCONTENT",
+            "description": "<p><em>No content sent</em></p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/skill.js",
+    "groupTitle": "SKILL",
+    "name": "PutSkillSkillLabel",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ContentTypeInvalid",
+            "description": "<p>The content-type of the request is invalid..</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UnsupportedMediaTypeError",
+            "description": "<p>The body passed is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "RessourceAlreadyExist",
+            "description": "<p>The ressource already exists</p>"
+          }
+        ],
+        "Error 5xx": [
+          {
+            "group": "Error 5xx",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>The problem is due to the server</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "USER",
+    "type": "DELETE",
+    "url": "/user/user/:mail",
+    "title": "Delete the user",
+    "description": "<p>Delete definitively the user of the database</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "mail",
+            "description": "<p><code>REQUIRED</code> The mail of the user to delete (ID)</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 204": [
+          {
+            "group": "Success 204",
+            "optional": false,
+            "field": "NOCONTENT",
+            "description": "<p><em>No content sent</em></p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/user.js",
+    "groupTitle": "USER",
+    "name": "DeleteUserUserMail",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ContentTypeInvalid",
+            "description": "<p>The content-type of the request is invalid..</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UnsupportedMediaTypeError",
+            "description": "<p>The body passed is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "RessourceAlreadyExist",
+            "description": "<p>The ressource already exists</p>"
+          }
+        ],
+        "Error 5xx": [
+          {
+            "group": "Error 5xx",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>The problem is due to the server</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "USER",
+    "type": "GET",
+    "url": "/user/skills/:mail",
+    "title": "Get all skills of an user",
+    "description": "<p>Retrieve all skills about an users</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "mail",
+            "description": "<p><code>REQUIRED</code> The mail of the user to retrieve for get his skills (ID)</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "user",
+            "description": "<p>The user related to the next skills</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "skills",
+            "description": "<p>The array with all skills of the user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skills.skill_label",
+            "description": "<p>The label given to the skill (ID)</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skills.skill_name",
+            "description": "<p>The english name of the skill to display</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skills.skill_name_fr",
+            "description": "<p>The french name of the skill to display</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skills.skill_description",
+            "description": "<p>The description of the skill</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "skills.cratedAt",
+            "description": "<p>The creation date of the skill raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "skill.updatedAt",
+            "description": "<p>The last date update of the skill raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "skill.user_skill",
+            "description": "<p><em>JOIN TABLE</em> The association table between skills and users</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "skill.user_skill.skill_id",
+            "description": "<p><em>JOIN TABLE</em> The ID of the raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skills.user_skill.skill_user",
+            "description": "<p><em>JOIN TABLE</em> The foreign key to user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "skills.user_skill.skill_skill",
+            "description": "<p><em>JOIN TABLE</em> The foreign key to skill</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "skills.user_skill.cratedAt",
+            "description": "<p><em>JOIN TABLE</em> The creation date of the raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "skills.user_skill.updatedAt",
+            "description": "<p><em>JOIN TABLE</em> The last date update of the raw</p>"
           }
         ]
       }
@@ -711,7 +953,7 @@
     "group": "USER",
     "type": "GET",
     "url": "/user/user/:mail",
-    "title": "Get user information",
+    "title": "Get one user",
     "description": "<p>Retrieve all information about an user</p>",
     "parameter": {
       "fields": {

@@ -11,7 +11,7 @@ var fileUpload = require('express-fileupload');
 var errorResponse = require('./errors/errors-response');
 
 //------------------------------ All required modules from Planizi repository -----------------------------------
-var authenticationConfig = require('./config/authentication/config-authentication');
+var authenticationConfig = require('./config/authentication/config-authentication-old');
 authenticationConfig.googleAuthenticationConfiguration
 
 //All URL routes
