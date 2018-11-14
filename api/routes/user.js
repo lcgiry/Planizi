@@ -33,30 +33,18 @@ User.belongsToMany(Shift_Unit, {as: "avaibilities", through: Availibility_User, 
  * @apiSuccess {String} users.user_mail The mail of the user to retrieve (ID)
  * @apiSuccess {String} users.user_name The name of the user
  * @apiSuccess {String} users.user_surname The surname of the user
+ * @apiSuccess {String} users.user_nickname The nickname of the user
  * @apiSuccess {String} users.user_gender The gender of the user ('m' or 'f')
  * @apiSuccess {String} users.user_phone The phone number of the user
  * @apiSuccess {Date} users.user_birthdate The birthdate in YYYY-MM-DD format
- * @apiSuccess {String} users.user_description The description written by the user
- * @apiSuccess {String} users.user_experience The personal experience of the user
- * @apiSuccess {String} users.user_incapacity The possible incapacities og the user
- * @apiSuccess {String} users.user_teeshirt_size The teeshirt-size of the user ('S', 'M', 'L' or 'XL')
- * @apiSuccess {Integer} users.user_trust_point The trust point given for the user
- * @apiSuccess {Integer} users.user_involvement_point The involvement point given for the user
- * @apiSuccess {Integer} users.user_happiness_point The happiness level of the user
- * @apiSuccess {String} users.user_rights The ID rights of the user among all rights stored in 'rights' table
- * @apiSuccess {String} users.user_role The ID role of the user among all roles stores in 'role' table
- * @apiSuccess {String} users.user_social_security_card_number The SSN of the user.
- * @apiSuccess {String} users.user_social_security_card_file The path file of the SS card of the user
- * @apiSuccess {String} users.user_identity_card_file The path file of the Identity card of the user
- * @apiSuccess {String} users.user_cv_file The path file of the cv of the user
  * @apiSuccess {Date} users.user_last_login The date of the last login user
- * @apiSuccess {Date} users.cratedAt The creation date of the user raw
+ * @apiSuccess {Date} users.createdAt The creation date of the user raw
  * @apiSuccess {Date} users.updatedAt The last date update of the user raw
  * @apiUse ErrorGetGroup
  */
 router.get('/users', function(req, res, next) {
 
-	User.findAll({ raw: true })
+	User.findAll({attributes: ['user_mail', 'user_name','user_surname','user_nickname','user_gender','user_phone','user_birthdate','user_last_login','createdAt']})
 		.then(userResult => {
 			if (userResult) {
 				res.type('json');
@@ -122,14 +110,7 @@ router.get('/user/:mail', function(req, res, next) {
 
 });
 
-/**
- * @apiDefine ErrorPostGroup
- * @apiError AuthenticationRequired You must be authenticated.
- * @apiError ContentTypeInvalid The content-type of the request is invalid..
- * @apiError UnsupportedMediaTypeError The body passed is invalid.
- * @apiError (Error 5xx) InternalServerError The problem is due to the server
- * @apiError RessourceAlreadyExist The ressource already exists
- */
+
 /**
  * @apiGroup USER
  * @api {POST} /user/user/ Post a new user
@@ -417,25 +398,7 @@ router.get('/teams/:mail', function(req, res, next) {
  * @apiSuccess {String} friends.user_mail The mail of the friend 
  * @apiSuccess {String} friends.user_name The name of the friend
  * @apiSuccess {String} friends.user_surname The surname of the friend
- * @apiSuccess {String} friends.user_gender The gender of the friend ('m' or 'f')
- * @apiSuccess {String} friends.user_phone The phone number of the friend
- * @apiSuccess {Date} friends.user_birthdate The birthdate in YYYY-MM-DD format of the friend
- * @apiSuccess {String} friends.user_description The description written by the friend
- * @apiSuccess {String} friends.user_experience The personal experience of the friend
- * @apiSuccess {String} friends.user_incapacity The possible incapacities og the friend
- * @apiSuccess {String} friends.user_teeshirt_size The teeshirt-size of the friend ('S', 'M', 'L' or 'XL')
- * @apiSuccess {Integer} friends.user_trust_point The trust point given for the friend
- * @apiSuccess {Integer} friends.user_involvement_point The involvement point given for the friend
- * @apiSuccess {Integer} friends.user_happiness_point The happiness level of the friend
- * @apiSuccess {String} friends.user_rights The ID rights of the friend among all rights stored in 'rights' table
- * @apiSuccess {String} friends.user_role The ID role of the friend among all roles stores in 'role' table
- * @apiSuccess {String} friends.user_social_security_card_number The SSN of the friend.
- * @apiSuccess {String} friends.user_social_security_card_file The path file of the SS card of the friend
- * @apiSuccess {String} friends.user_identity_card_file The path file of the Identity card of the friend
- * @apiSuccess {String} friends.user_cv_file The path file of the cv of the friend
- * @apiSuccess {Date} friends.user_last_login The date of the last login friend
- * @apiSuccess {Date} friends.createdAt The creation date of the friend raw
- * @apiSuccess {Date} friends.updatedAt The last date update of the friend raw
+ * @apiSuccess {String} friends.user_nickname 
  * @apiSuccess {Object} friends.user_friend *JOIN TABLE* The association table between teams and users
  * @apiSuccess {Integer} friends.user_friend.user_friend_id *JOIN TABLE* The ID of the raw
  * @apiSuccess {String}  friends.user_friend.user_friend_user *JOIN TABLE* The foreign key to user
@@ -450,7 +413,7 @@ router.get('/friends/:mail', function(req, res, next) {
 	User.findOne({where: {user_mail: req.params.mail}})
 		.then(result=>{
 			if(result) {
-				result.getFriends()
+				result.getFriends({attributes: ['user_mail', 'user_name','user_surname','user_nickname']})
 					.then(result => {
 
 						if(result[0]){
