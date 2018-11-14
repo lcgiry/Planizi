@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { User } from 'src/app/classes/user';
 
 @Component({
   selector: 'app-user-profile',
@@ -7,13 +8,19 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['../../../assets/template-assets/lib/stroke-7/style.css', '../../../assets/template-assets/lib/jquery.nanoscroller/css/nanoscroller.css', '../../../assets/template-assets/css/style.css']
 })
 export class UserProfileComponent implements OnInit {
-
+  promiseUser: Promise<User>
+  user: User;
   constructor(private userService : UserService) { }
 
   ngOnInit() {
-    console.log('Get Profile initiated');
-    
-    this.userService.get_profile('lc.giry@gmail.com')
+    this.user = {}
+    this.promiseUser = this.userService.get_profile('0604fabien@gmail.com')
+    this.promiseUser.then(
+      user => 
+        {
+          this.user = user
+        }
+    )
   }
 
   // showProfile() {
