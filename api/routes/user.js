@@ -9,6 +9,8 @@ var errorResponse = require('../errors/errors-response');
 const User = sequelize.import('../models/user.js');
 const User_Skill = sequelize.import('../models/user_skill.js');
 const Skill = sequelize.import('../models/skill.js');
+const Team = sequelize.import('../models/team.js');
+const User_Team = sequelize.import('../models/user_team.js');
 
 //----------------------------------------- USER TABLE
 /**
@@ -100,6 +102,7 @@ router.get('/user/:mail', function(req, res, next) {
 		.then(userResult => {
 			if (userResult) {
 				res.type('json');
+				// res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
 				res.send(userResult);
 			} else {
 				res.status(404);
@@ -301,13 +304,13 @@ router.delete('/user/:mail', function (req, res, next) {
  * @apiSuccess {String} skills.skill_name The english name of the skill to display
  * @apiSuccess {String} skills.skill_name_fr The french name of the skill to display
  * @apiSuccess {String} skills.skill_description The description of the skill
- * @apiSuccess {Date} skills.cratedAt The creation date of the skill raw
+ * @apiSuccess {Date} skills.createdAt The creation date of the skill raw
  * @apiSuccess {Date} skill.updatedAt The last date update of the skill raw
  * @apiSuccess {Object} skill.user_skill *JOIN TABLE* The association table between skills and users
- * @apiSuccess {Integer} skill.user_skill.skill_id *JOIN TABLE* The ID of the raw
- * @apiSuccess {String}  skills.user_skill.skill_user *JOIN TABLE* The foreign key to user
- * @apiSuccess {String} skills.user_skill.skill_skill *JOIN TABLE* The foreign key to skill
- * @apiSuccess {Date}  skills.user_skill.cratedAt *JOIN TABLE* The creation date of the raw
+ * @apiSuccess {Integer} skill.user_skill.user_skill_id *JOIN TABLE* The ID of the raw
+ * @apiSuccess {String}  skills.user_skill.user_skill_user *JOIN TABLE* The foreign key to user
+ * @apiSuccess {String} skills.user_skill.user_skill_skill *JOIN TABLE* The foreign key to skill
+ * @apiSuccess {Date}  skills.user_skill.createdAt *JOIN TABLE* The creation date of the raw
  * @apiSuccess {Date}  skills.user_skill.updatedAt *JOIN TABLE* The last date update of the raw
  * @apiUse ErrorGetGroup
  */
@@ -333,6 +336,62 @@ router.get('/skills/:mail', function(req, res, next) {
 					.catch(err => {
 						res.status(500);
 						res.send(errorResponse.InternalServerError("Problem to retrieve the user skills : "+err));
+					});
+			}else{
+				res.status(404);
+				res.send(errorResponse.RessourceNotFound("The user does not exist : "+err));
+			}
+		})
+		.catch(err=>{
+			res.status(500);
+			res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
+		});
+
+});
+
+/**
+ * @apiGroup USER
+ * @api {GET} /user/teams/:mail Get all skills of an user
+ * @apiDescription Retrieve all teams about an users
+ * @apiParam {String} mail ``REQUIRED`` The mail of the user to retrieve for get his skills (ID)
+ * @apiSuccess {String} user The user related to the next skills
+ * @apiSuccess {Object[]} teams The array with all teams of the user
+ * @apiSuccess {String} teams.team_label The label given to the user (ID)
+ * @apiSuccess {String} teams.team_name The english name of the team to display
+ * @apiSuccess {String} teams.team_name_fr The french name of the team to display
+ * @apiSuccess {String} teams.team_description The description of the team
+ * @apiSuccess {Date} teams.createdAt The creation date of the team raw
+ * @apiSuccess {Date} teams.updatedAt The last date update of the team raw
+ * @apiSuccess {Object} teams.user_team *JOIN TABLE* The association table between teams and users
+ * @apiSuccess {Integer} teams.user_team.user_team_id *JOIN TABLE* The ID of the raw
+ * @apiSuccess {String}  teams.user_team.user_team_user *JOIN TABLE* The foreign key to user
+ * @apiSuccess {String} teams.user_team.user_team_team *JOIN TABLE* The foreign key to team
+ * @apiSuccess {Date}  skills.user_team.createdAt *JOIN TABLE* The creation date of the raw
+ * @apiSuccess {Date}  skills.user_team.updatedAt *JOIN TABLE* The last date update of the raw
+ * @apiUse ErrorGetGroup
+ */
+router.get('/teams/:mail', function(req, res, next) {
+
+	User.belongsToMany(Team, {through: User_Team, foreignKey: 'user_team_user'});
+	Team.belongsToMany(User, {through: User_Team, foreignKey: 'user_team_team'});
+
+	User.findOne({where: {user_mail: req.params.mail}})
+		.then(result=>{
+			if(result) {
+				result.getTeams()
+					.then(result => {
+
+						if(result[0]){
+							res.status(200);
+							res.send({user: result[0].user_team.user_team_user, teams: result});
+						}else{
+							res.status(404);
+							res.send(errorResponse.RessourceNotFound("The user has no team"));
+						}
+					})
+					.catch(err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError("Problem to retrieve the user teams : "+err));
 					});
 			}else{
 				res.status(404);
