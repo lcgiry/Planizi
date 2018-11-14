@@ -15,7 +15,9 @@ const User_Team = sequelize.import('../models/user_team.js');
 User.belongsToMany(Team, {through: User_Team, foreignKey: 'user_team_user', otherKey:'user_team_team'});
 const User_Friend = sequelize.import('../models/user_friend.js');
 User.belongsToMany(User, {as: "friends", through: User_Friend, foreignKey: 'user_friend_user', otherKey: 'user_friend_friend'});
-
+const Shift_Unit = sequelize.import('../models/shift_unit.js');
+const Availibility_User = sequelize.import('../models/availibility_user.js');
+User.belongsToMany(Shift_Unit, {as: "avaibilities", through: Availibility_User, foreignKey: 'availibility_user_user', otherKey: 'availibility_user_shift_unit'});
 //----------------------------------------- USER TABLE
 /**
  * @apiDefine ErrorGetGroup
@@ -475,5 +477,45 @@ router.get('/friends/:mail', function(req, res, next) {
 
 });
 
+/**
+ * @apiGroup USER
+ * @api {GET} /user/avaibilities/:mail Get all skills of an user
+ * @apiDescription Retrieve all teams about an users
+ * @apiParam {String} mail ``REQUIRED`` The mail of the user to retrieve for get his skills (ID)
+ * @apiSuccess {String} user The user related to the next skills
+ * @apiSuccess {Object[]} avaibilities The array with all teams of the user
+ 
+ * @apiUse ErrorGetGroup
+ */
+router.get('/avaibilities/:mail', function(req, res, next) {
+
+	User.findOne({where: {user_mail: req.params.mail}})
+		.then(result=>{
+			if(result) {
+				result.getAvaibilities()
+					.then(result => {
+
+						if(result[0]){
+							res.status(200);
+							res.send({user: result[0].availibility_user.availibility_user_user, avaibilities: result});
+						}else{
+							res.status(404);
+							res.send(errorResponse.RessourceNotFound("The user has no avaibilities"));
+						}
+					})
+					.catch(err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError("Problem to retrieve the user avaibilities : "+err));
+					});
+			}else{
+				res.status(404);
+				res.send(errorResponse.RessourceNotFound("The user does not exist "));
+			}
+		})
+		.catch(err=>{
+			res.status(500);
+			res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
+		});
+});
 
 module.exports = router;
