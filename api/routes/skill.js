@@ -275,7 +275,7 @@ router.get('/users/:label', function(req, res, next) {
 	Skill.findOne({where: {skill_label: req.params.label}})
 		.then(skillResult=>{
 			if(skillResult) {
-				skillResult.getUsers()
+				skillResult.getUsers({attributes: ['user_mail', 'user_name','user_surname','user_nickname']})
 					.then(result => {
 
 						if(result[0]){
