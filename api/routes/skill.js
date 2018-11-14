@@ -7,6 +7,8 @@ var errorResponse = require('../errors/errors-response');
 const Skill = sequelize.import('../models/skill.js');
 const User = sequelize.import('../models/user.js');
 const User_Skill = sequelize.import('../models/user_skill.js');
+Skill.belongsToMany(User, {through: User_Skill, foreignKey: 'user_skill_skill', otherKey: 'user_skill_user'});
+
 
 //----------------------------------------- SKILL TABLE
 /**
@@ -270,9 +272,6 @@ router.delete('/skill/:label', function (req, res, next) {
  */
 router.get('/users/:label', function(req, res, next) {
 
-	User.belongsToMany(Skill, {through: User_Skill, foreignKey: 'user_skill_user'});
-	Skill.belongsToMany(User, {through: User_Skill, foreignKey: 'user_skill_skill'});
-
 	Skill.findOne({where: {skill_label: req.params.label}})
 		.then(skillResult=>{
 			if(skillResult) {
@@ -284,7 +283,7 @@ router.get('/users/:label', function(req, res, next) {
 							res.send({skill: result[0].user_skill.user_skill_skill, users: result});
 						}else{
 							res.status(404);
-							res.send(errorResponse.RessourceNotFound("The skill is valid by no user"));
+							res.send(errorResponse.RessourceNotFound("No user has this skill"));
 						}
 					})
 					.catch(err => {
