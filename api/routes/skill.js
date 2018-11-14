@@ -7,6 +7,8 @@ var errorResponse = require('../errors/errors-response');
 const Skill = sequelize.import('../models/skill.js');
 const User = sequelize.import('../models/user.js');
 const User_Skill = sequelize.import('../models/user_skill.js');
+User.belongsToMany(Skill, {through: User_Skill, foreignKey: 'user_skill_user', otherKey: 'user_skill_skill'});
+
 
 //----------------------------------------- SKILL TABLE
 /**
@@ -269,9 +271,6 @@ router.delete('/skill/:label', function (req, res, next) {
  * @apiUse ErrorGetGroup
  */
 router.get('/users/:label', function(req, res, next) {
-
-	User.belongsToMany(Skill, {through: User_Skill, foreignKey: 'user_skill_user'});
-	Skill.belongsToMany(User, {through: User_Skill, foreignKey: 'user_skill_skill'});
 
 	Skill.findOne({where: {skill_label: req.params.label}})
 		.then(skillResult=>{
