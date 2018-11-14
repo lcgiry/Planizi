@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
-import {SignInComponent} from './components/sign-in/sign-in.component';
-import {HeaderMenuComponent} from './components/header-menu/header-menu.component';
-const appRoutes: Routes = [
-  { path: '', component: SignInComponent}, //The default route
-  { path: 'signIn', component: SignInComponent },
-  { path: 'header', component: HeaderMenuComponent },
-]
+const routes: Routes = [
+  { path: 'userprofile', component: UserProfileComponent },
+  { path: 'signin', component: SignInComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+];
+
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

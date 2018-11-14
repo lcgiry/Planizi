@@ -8,9 +8,10 @@ var session = require('express-session');
 var MemoryStore = require('memorystore')(session)
 var passport = require('passport');
 var fileUpload = require('express-fileupload');
+var errorResponse = require('./errors/errors-response');
 
 //------------------------------ All required modules from Planizi repository -----------------------------------
-var authenticationConfig = require('./config/authentication/config-authentication');
+var authenticationConfig = require('./config/authentication/config-authentication-old');
 authenticationConfig.googleAuthenticationConfiguration
 
 //All URL routes
@@ -18,6 +19,7 @@ var indexRouter = require('./routes/index');
 var authenticationRouter = require ('./routes/authentication');
 var registrationRouter = require('./routes/registration');
 var userRouter = require('./routes/user');
+var skillRouter = require('./routes/skill');
 
 //------------------------------ Main Ssettings -----------------------------------
 //Start express for the server
@@ -42,6 +44,12 @@ app.use(session({
 app.use(passport.initialize());
 //app.use(passport.session());
 
+//Header handler
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  return next();
+});
+
 //Set all STATIC ROUTES FOR FILES
 app.use('/js', express.static('node_modules/bootstrap/dist/js'));
 app.use('/js', express.static('node_modules/jquery/dist'));
@@ -58,20 +66,23 @@ app.use('/', indexRouter);
 app.use('/authentication', authenticationRouter);
 app.use("/registration", registrationRouter);
 app.use("/user", userRouter);
+app.use("/skill", skillRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
+  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
   // render the error page
   res.status(err.status || 500);
-  res.render('error', { code: err.status, message: err.message });
+  res.send(errorResponse.GenericError(err.name, err.status, err.message));
 });
 
 

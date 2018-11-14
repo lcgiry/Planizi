@@ -1,3 +1,9 @@
-var str = "lahuk";
+var str = "salut";
 
-console.log(str.substring(0, 2));
+var j = eval('hello_'+str)();
+
+function hello_salut (){
+	return 'coucou';
+}
+
+console.log(j);

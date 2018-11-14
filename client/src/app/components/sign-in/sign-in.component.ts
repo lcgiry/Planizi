@@ -18,31 +18,22 @@ export class SignInComponent implements OnInit {
   ngOnInit() {
     this.authService.authState.subscribe((user) => {
       this.user = user;
-      console.log( 'test',user);
-      
     });
   }
 
   signInWithGoogle(): void {
-    if (this.user == null){
       this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
         (user) => {
           console.log(this.user);
-          this.router.navigate(['/header']);
+          this.router.navigate(['/userprofile']);
         });
       this.connected = true;
-    }
-    else {
-      console.log('The user was already logged',this.user);
-      this.router.navigate(['/header']);
-    }
   }
 
 
   signOut(): void {
     this.authService.signOut();
     this.connected = false;
-
   }
 
 }
