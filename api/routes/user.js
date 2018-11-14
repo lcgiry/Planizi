@@ -301,7 +301,7 @@ router.delete('/user/:mail', function (req, res, next) {
  * @apiSuccess {String} skills.skill_name The english name of the skill to display
  * @apiSuccess {String} skills.skill_name_fr The french name of the skill to display
  * @apiSuccess {String} skills.skill_description The description of the skill
- * @apiSuccess {Date} skills.cratedAt The creation date of the skill raw
+ * @apiSuccess {Date} skills.createdAt The creation date of the skill raw
  * @apiSuccess {Date} skill.updatedAt The last date update of the skill raw
  * @apiSuccess {Object} skill.user_skill *JOIN TABLE* The association table between skills and users
  * @apiSuccess {Integer} skill.user_skill.skill_id *JOIN TABLE* The ID of the raw

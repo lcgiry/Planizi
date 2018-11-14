@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     role_label: {
       type: DataTypes.STRING(45),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
     },
     role_name: {
       type: DataTypes.STRING(45),

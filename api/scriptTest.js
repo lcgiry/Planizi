@@ -1,9 +1,6 @@
-var str = "salut";
+const crypto = require('crypto')
 
-var j = eval('hello_'+str)();
+const hmac = crypto.createHmac('sha256', 'testsecretsecure');
+const res = hmac.digest('base64');
 
-function hello_salut (){
-	return 'coucou';
-}
-
-console.log(j);
+console.log(res.toString());

@@ -12,6 +12,7 @@ var errorResponse = require('./errors/errors-response');
 
 //------------------------------ All required modules from Planizi repository -----------------------------------
 var authenticationConfig = require('./config/authentication/config-authentication-old');
+var authConfig = require('./config/authentication/config-authentication.js');
 authenticationConfig.googleAuthenticationConfiguration
 
 //All URL routes
@@ -37,6 +38,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(fileUpload());
 app.use(express.static(path.join(__dirname, 'public')));
+//app.use(authConfig);
 app.use(session({
 	store: new MemoryStore(),
 	secret: 'keyboard cat'
@@ -54,6 +56,7 @@ app.use('/css', express.static('node_modules/bootstrap/dist/css'));
 app.use('/css', express.static('node_modules/font-awesome/css'));
 app.use('/css', express.static('public/stylesheets'));
 app.use('/assets', express.static('public/template-assets'));
+
 
 //Set all STATIC ROUTES FOR ROUTER
 app.use('/', indexRouter);

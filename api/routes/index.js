@@ -26,8 +26,8 @@ router.get('/', function(req, res, next) {
 	}
 });
 
-router.post('/tests', function(req, res, next) {
-	console.log(req.body.access_token);
+router.get('/tests', function(req, res, next) {
+	console.log(req.credentials.name);
 });
 
 
