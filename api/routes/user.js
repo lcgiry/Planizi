@@ -102,6 +102,7 @@ router.get('/user/:mail', function(req, res, next) {
 		.then(userResult => {
 			if (userResult) {
 				res.type('json');
+				// res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
 				res.send(userResult);
 			} else {
 				res.status(404);
