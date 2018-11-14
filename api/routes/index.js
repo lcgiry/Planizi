@@ -27,12 +27,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/tests', function(req, res, next) {
-	for (var key in req.body) {
-		if (req.body.hasOwnProperty(key)) {
-			item = req.body[key];
-			console.log(key+item);
-		}
-	}
+	console.log(req.body.access_token);
 });
 
 

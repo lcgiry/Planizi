@@ -7,7 +7,7 @@ let fields = [	'skill_label', 'skill_name', 'skill_name_fr', 'skill_description'
 
 //------------------------ Define all methods that can check and format each field -----------------------------
 module.exports.checkAndFormat_skill_label = function(value){
-	return value;
+	return value.replace(/ /g, "_");
 };
 
 module.exports.checkAndFormat_skill_name = function(value){
