@@ -1,16 +1,31 @@
 import { Injectable } from '@angular/core';
-import { compileNgModule } from '@angular/compiler';
+// import { compileNgModule } from '@angular/compiler';
+import { HttpClient, } from '@angular/common/http';
+import { Headers, URLSearchParams, RequestOptions} from '@angular/http';
+import { environment }  from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor() { }
+  API_URL = environment.API_URL;
 
-   sendInfos(socialPlatform: string, data: any) : string {
-    //This function send the infos gathered from the Google API to the PLanizi API
-    console.log(socialPlatform, data);
+
+
+  constructor( private http: HttpClient) {}
+
+   sendInfosToServer(user : any) : string {
+    //This function sends the connection infos received by Google API
+    
+    // let myHeaders = new Headers({'Content-Type': 'application/json'}); 
+    // let myParams = new URLSearchParams(); //append(param: string, val: string)
+    // myParams.set('user_mail', user.email)
+    // let options = new RequestOptions({ headers: myHeaders, params: myParams }); 
+    // let url = this.API_URL + 'user'
+    // return this.http.get(url, options)
+    // .map(this.extractData)
+	  // .catch(this.handleError);
     return 'a';
   }
 }

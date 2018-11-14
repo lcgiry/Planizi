@@ -16,7 +16,11 @@ let mysqlConnexion = function () {
 	});
 }
 
-const sequelize = new Sequelize('db_planizi', 'planizi', 'planizi', {
+<<<<<<< HEAD
+const sequelize = new Sequelize('db_planizi', 'root', 'root', {
+=======
+const sequelize = new Sequelize('Planizi', 'root', 'planizi', {
+>>>>>>> 7f56ebca6337ca98e448e91d59453d4cc7b811df
 	host: 'localhost',
 	dialect: 'mysql',
 	operatorsAliases: false,
