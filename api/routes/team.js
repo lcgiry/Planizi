@@ -243,25 +243,7 @@ router.delete('/team/:label', function (req, res, next) {
  * @apiSuccess {String} users.user_mail The mail of the user to retrieve (ID)
  * @apiSuccess {String} users.user_name The name of the user
  * @apiSuccess {String} users.user_surname The surname of the user
- * @apiSuccess {String} users.user_gender The gender of the user ('m' or 'f')
- * @apiSuccess {String} users.user_phone The phone number of the user
- * @apiSuccess {Date} users.user_birthdate The birthdate in YYYY-MM-DD format
- * @apiSuccess {String} users.user_description The description written by the user
- * @apiSuccess {String} users.user_experience The personal experience of the user
- * @apiSuccess {String} users.user_incapacity The possible incapacities og the user
- * @apiSuccess {String} users.user_teeshirt_size The teeshirt-size of the user ('S', 'M', 'L' or 'XL')
- * @apiSuccess {Integer} users.user_trust_point The trust point given for the user
- * @apiSuccess {Integer} users.user_involvement_point The involvement point given for the user
- * @apiSuccess {Integer} users.user_happiness_point The happiness level of the user
- * @apiSuccess {String} users.user_rights The ID rights of the user among all rights stored in 'rights' table
- * @apiSuccess {String} users.user_role The ID role of the user among all roles stores in 'role' table
- * @apiSuccess {String} users.user_social_security_card_number The SSN of the user.
- * @apiSuccess {String} users.user_social_security_card_file The path file of the SS card of the user
- * @apiSuccess {String} users.user_identity_card_file The path file of the Identity card of the user
- * @apiSuccess {String} users.user_cv_file The path file of the cv of the user
- * @apiSuccess {Date} users.user_last_login The date of the last login user
- * @apiSuccess {Date} users.cratedAt The creation date of the user raw
- * @apiSuccess {Date} users.updatedAt The last date update of the user raw
+ * @apiSuccess {String} users.user_nickname The nickname of the user 
  * @apiSuccess {Object} users.user_team *JOIN TABLE* The association table between teams and users
  * @apiSuccess {Integer} users.user_team.team_id *JOIN TABLE* The ID of the raw
  * @apiSuccess {String}  users.user_team.team_user *JOIN TABLE* The foreign key to user
@@ -274,7 +256,7 @@ router.get('/users/:label', function(req, res, next) {
 	Team.findOne({where: {team_label: req.params.label}})
 		.then(result=>{
 			if(result) {
-				result.getUsers()
+				result.getUsers({attributes: ['user_mail', 'user_name','user_surname','user_nickname']})
 					.then(result => {
 
 						if(result[0]){

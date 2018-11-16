@@ -15,7 +15,9 @@ const User_Team = sequelize.import('../models/user_team.js');
 User.belongsToMany(Team, {through: User_Team, foreignKey: 'user_team_user', otherKey:'user_team_team'});
 const User_Friend = sequelize.import('../models/user_friend.js');
 User.belongsToMany(User, {as: "friends", through: User_Friend, foreignKey: 'user_friend_user', otherKey: 'user_friend_friend'});
-
+const Shift_Unit = sequelize.import('../models/shift_unit.js');
+const Availibility_User = sequelize.import('../models/availibility_user.js');
+User.belongsToMany(Shift_Unit, {as: "avaibilities", through: Availibility_User, foreignKey: 'availibility_user_user', otherKey: 'availibility_user_shift_unit'});
 //----------------------------------------- USER TABLE
 /**
  * @apiDefine ErrorGetGroup
@@ -31,30 +33,18 @@ User.belongsToMany(User, {as: "friends", through: User_Friend, foreignKey: 'user
  * @apiSuccess {String} users.user_mail The mail of the user to retrieve (ID)
  * @apiSuccess {String} users.user_name The name of the user
  * @apiSuccess {String} users.user_surname The surname of the user
+ * @apiSuccess {String} users.user_nickname The nickname of the user
  * @apiSuccess {String} users.user_gender The gender of the user ('m' or 'f')
  * @apiSuccess {String} users.user_phone The phone number of the user
  * @apiSuccess {Date} users.user_birthdate The birthdate in YYYY-MM-DD format
- * @apiSuccess {String} users.user_description The description written by the user
- * @apiSuccess {String} users.user_experience The personal experience of the user
- * @apiSuccess {String} users.user_incapacity The possible incapacities og the user
- * @apiSuccess {String} users.user_teeshirt_size The teeshirt-size of the user ('S', 'M', 'L' or 'XL')
- * @apiSuccess {Integer} users.user_trust_point The trust point given for the user
- * @apiSuccess {Integer} users.user_involvement_point The involvement point given for the user
- * @apiSuccess {Integer} users.user_happiness_point The happiness level of the user
- * @apiSuccess {String} users.user_rights The ID rights of the user among all rights stored in 'rights' table
- * @apiSuccess {String} users.user_role The ID role of the user among all roles stores in 'role' table
- * @apiSuccess {String} users.user_social_security_card_number The SSN of the user.
- * @apiSuccess {String} users.user_social_security_card_file The path file of the SS card of the user
- * @apiSuccess {String} users.user_identity_card_file The path file of the Identity card of the user
- * @apiSuccess {String} users.user_cv_file The path file of the cv of the user
  * @apiSuccess {Date} users.user_last_login The date of the last login user
- * @apiSuccess {Date} users.cratedAt The creation date of the user raw
+ * @apiSuccess {Date} users.createdAt The creation date of the user raw
  * @apiSuccess {Date} users.updatedAt The last date update of the user raw
  * @apiUse ErrorGetGroup
  */
 router.get('/users', function(req, res, next) {
 
-	User.findAll({ raw: true })
+	User.findAll({attributes: ['user_mail', 'user_name','user_surname','user_nickname','user_gender','user_phone','user_birthdate','user_last_login','createdAt']})
 		.then(userResult => {
 			if (userResult) {
 				res.type('json');
@@ -120,14 +110,7 @@ router.get('/user/:mail', function(req, res, next) {
 
 });
 
-/**
- * @apiDefine ErrorPostGroup
- * @apiError AuthenticationRequired You must be authenticated.
- * @apiError ContentTypeInvalid The content-type of the request is invalid..
- * @apiError UnsupportedMediaTypeError The body passed is invalid.
- * @apiError (Error 5xx) InternalServerError The problem is due to the server
- * @apiError RessourceAlreadyExist The ressource already exists
- */
+
 /**
  * @apiGroup USER
  * @api {POST} /user/user/ Post a new user
@@ -415,25 +398,7 @@ router.get('/teams/:mail', function(req, res, next) {
  * @apiSuccess {String} friends.user_mail The mail of the friend 
  * @apiSuccess {String} friends.user_name The name of the friend
  * @apiSuccess {String} friends.user_surname The surname of the friend
- * @apiSuccess {String} friends.user_gender The gender of the friend ('m' or 'f')
- * @apiSuccess {String} friends.user_phone The phone number of the friend
- * @apiSuccess {Date} friends.user_birthdate The birthdate in YYYY-MM-DD format of the friend
- * @apiSuccess {String} friends.user_description The description written by the friend
- * @apiSuccess {String} friends.user_experience The personal experience of the friend
- * @apiSuccess {String} friends.user_incapacity The possible incapacities og the friend
- * @apiSuccess {String} friends.user_teeshirt_size The teeshirt-size of the friend ('S', 'M', 'L' or 'XL')
- * @apiSuccess {Integer} friends.user_trust_point The trust point given for the friend
- * @apiSuccess {Integer} friends.user_involvement_point The involvement point given for the friend
- * @apiSuccess {Integer} friends.user_happiness_point The happiness level of the friend
- * @apiSuccess {String} friends.user_rights The ID rights of the friend among all rights stored in 'rights' table
- * @apiSuccess {String} friends.user_role The ID role of the friend among all roles stores in 'role' table
- * @apiSuccess {String} friends.user_social_security_card_number The SSN of the friend.
- * @apiSuccess {String} friends.user_social_security_card_file The path file of the SS card of the friend
- * @apiSuccess {String} friends.user_identity_card_file The path file of the Identity card of the friend
- * @apiSuccess {String} friends.user_cv_file The path file of the cv of the friend
- * @apiSuccess {Date} friends.user_last_login The date of the last login friend
- * @apiSuccess {Date} friends.createdAt The creation date of the friend raw
- * @apiSuccess {Date} friends.updatedAt The last date update of the friend raw
+ * @apiSuccess {String} friends.user_nickname 
  * @apiSuccess {Object} friends.user_friend *JOIN TABLE* The association table between teams and users
  * @apiSuccess {Integer} friends.user_friend.user_friend_id *JOIN TABLE* The ID of the raw
  * @apiSuccess {String}  friends.user_friend.user_friend_user *JOIN TABLE* The foreign key to user
@@ -448,7 +413,7 @@ router.get('/friends/:mail', function(req, res, next) {
 	User.findOne({where: {user_mail: req.params.mail}})
 		.then(result=>{
 			if(result) {
-				result.getFriends()
+				result.getFriends({attributes: ['user_mail', 'user_name','user_surname','user_nickname']})
 					.then(result => {
 
 						if(result[0]){
@@ -475,5 +440,45 @@ router.get('/friends/:mail', function(req, res, next) {
 
 });
 
+/**
+ * @apiGroup USER
+ * @api {GET} /user/avaibilities/:mail Get all skills of an user
+ * @apiDescription Retrieve all teams about an users
+ * @apiParam {String} mail ``REQUIRED`` The mail of the user to retrieve for get his skills (ID)
+ * @apiSuccess {String} user The user related to the next skills
+ * @apiSuccess {Object[]} avaibilities The array with all teams of the user
+ 
+ * @apiUse ErrorGetGroup
+ */
+router.get('/avaibilities/:mail', function(req, res, next) {
+
+	User.findOne({where: {user_mail: req.params.mail}})
+		.then(result=>{
+			if(result) {
+				result.getAvaibilities()
+					.then(result => {
+
+						if(result[0]){
+							res.status(200);
+							res.send({user: result[0].availibility_user.availibility_user_user, avaibilities: result});
+						}else{
+							res.status(404);
+							res.send(errorResponse.RessourceNotFound("The user has no avaibilities"));
+						}
+					})
+					.catch(err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError("Problem to retrieve the user avaibilities : "+err));
+					});
+			}else{
+				res.status(404);
+				res.send(errorResponse.RessourceNotFound("The user does not exist "));
+			}
+		})
+		.catch(err=>{
+			res.status(500);
+			res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
+		});
+});
 
 module.exports = router;
