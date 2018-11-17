@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
-import { User } from 'src/app/classes/user';
+import { User } from '../../classes/user';
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls: ['../../../assets/template-assets/lib/stroke-7/style.css', '../../../assets/template-assets/lib/jquery.nanoscroller/css/nanoscroller.css', '../../../assets/template-assets/css/style.css']
+  styleUrls: []
 })
 export class UserProfileComponent implements OnInit {
-  promiseUser: Promise<User>
+
+  promiseUser: Promise<User>;
   user: User;
   constructor(private userService : UserService) { }
 
@@ -37,14 +38,14 @@ export class UserProfileComponent implements OnInit {
     //   user_surname: '',
     //   user_teeshirt_size: '',
     //   user_trust_point: 0}
-    this.user = new User
-    this.promiseUser = this.userService.get_profile('0604fabien@gmail.com')
+    this.user = new User;
+    this.promiseUser = this.userService.get_profile('0604fabien@gmail.com');
     this.promiseUser.then(
-      user => 
+      user =>
         {
           this.user = user
         }
-    )
+    );
   }
 
   // showProfile() {

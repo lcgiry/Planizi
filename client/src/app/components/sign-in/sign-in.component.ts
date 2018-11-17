@@ -6,12 +6,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['../../../assets/template-assets/lib/stroke-7/style.css', '../../../assets/template-assets/lib/jquery.nanoscroller/css/nanoscroller.css', '../../../assets/template-assets/css/style.css']
+  styleUrls: []
 })
 export class SignInComponent implements OnInit {
 
   private user: SocialUser;
-  private connected: boolean = false; 
+  private connected: boolean = false;
 
   constructor( private authService: AuthService, private router: Router) {}
 
