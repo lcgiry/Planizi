@@ -40,7 +40,7 @@ The database used is **MySQL** with Sequelize module as ORM.
 |-- config                                                      //All configuration files
 |   |-- authentication
 |       |-- config-authentication.json
-|       |-- config-authentication-old.js
+|       |-- config-authentication.js
 |   |-- database
 |       |-- config-database.json
 |       |-- config-database.js

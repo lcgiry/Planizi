@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="891ded10-5da8-4e91-aa1f-edfd27b17fa1" name="Default" comment="Generate the architecture of the project">
       <change afterPath="$APPLICATION_CONFIG_DIR$/colors/_@user_Darcula.icls" afterDir="false" />
+      <change afterPath="$APPLICATION_CONFIG_DIR$/options/baseRefactoring.xml" afterDir="false" />
       <change afterPath="$APPLICATION_CONFIG_DIR$/options/find.xml" afterDir="false" />
       <change afterPath="$APPLICATION_CONFIG_DIR$/options/markdown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
@@ -19,111 +20,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app.js">
+        <entry file="file://$PROJECT_DIR$/client/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-416">
+              <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/routes/dashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/header.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="role.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/models/role.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#72#651#0" />
+                <element signature="e#4807#14116#0#HTML" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/routes/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="292" selection-start-line="292" selection-end-line="292" />
-              <folding>
-                <element signature="e#580#781#0" />
-                <element signature="e#782#2836#0" />
-                <element signature="e#2883#3274#0" />
-                <element signature="e#3278#5223#0" />
-                <element signature="e#5275#5729#0" />
-                <element signature="e#5733#6118#0" />
-                <element signature="e#6119#7835#0" />
-                <element signature="e#7883#8924#0" />
-                <element signature="e#7917#8752#0" />
-                <element signature="e#8928#9305#0" />
-                <element signature="e#9306#10945#0" />
-                <element signature="e#10998#11856#0" />
-                <element signature="e#11860#12250#0" />
-                <element signature="e#12251#12551#0" />
-                <element signature="e#12607#13021#0" />
-                <element signature="e#13086#13284#0" />
-                <element signature="e#13285#14707#0" />
-                <element signature="e#14761#15727#0" />
-                <element signature="e#14999#15587#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user-validator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/services/validators/user-validator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="130" column="31" lean-forward="true" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config-authentication.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/config/authentication/config-authentication.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth2/lib/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-702" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth2/lib/parser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="93" column="82" selection-start-line="93" selection-start-column="82" selection-end-line="93" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="skill.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/routes/skill.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="270" column="53" selection-start-line="270" selection-start-column="53" selection-end-line="270" selection-end-column="53" />
-              <folding>
-                <element signature="e#8246#8444#0" />
-                <element signature="e#8445#11251#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verify.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth2/lib/verify.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="21" column="45" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -162,10 +94,16 @@
       <find>case</find>
       <find>user_name</find>
       <find>'</find>
+      <find>/template-assets/</find>
+      <find>c=&quot;</find>
+      <find>sets/</find>
+      <find>c=&quot;../</find>
+      <find>AppRoutingModule</find>
+      <find>DefaultLayoutComponent</find>
+      <find>team</find>
+      <find>Team</find>
     </findStrings>
     <replaceStrings>
-      <replace>case\n</replace>
-      <replace>case</replace>
       <replace>\ncase</replace>
       <replace>' :</replace>
       <replace>user_surname</replace>
@@ -190,6 +128,12 @@
       <replace>user_last_login</replace>
       <replace>: \n</replace>
       <replace>} users.</replace>
+      <replace>c=&quot;../</replace>
+      <replace>/</replace>
+      <replace>sets/template-assets/</replace>
+      <replace>c=&quot;</replace>
+      <replace>role</replace>
+      <replace>Role</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -199,57 +143,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/database/config-database.json" />
-        <option value="$PROJECT_DIR$/bin/www" />
-        <option value="$PROJECT_DIR$/config/database/config-database.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/models/user.js" />
-        <option value="$PROJECT_DIR$/views/login.ejs" />
-        <option value="$PROJECT_DIR$/views/header2.ejs" />
-        <option value="$PROJECT_DIR$/views/test.ejs" />
-        <option value="$PROJECT_DIR$/views/registrationForm1.ejs" />
-        <option value="$PROJECT_DIR$/views/registrationForm.ejs" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/views/registrationFormPersonal.ejs" />
-        <option value="$PROJECT_DIR$/scriptTest.js" />
-        <option value="$PROJECT_DIR$/views/registrationFormSkill.ejs" />
-        <option value="$PROJECT_DIR$/views/registrationFormAdministrative.ejs" />
-        <option value="$PROJECT_DIR$/views/error.ejs" />
-        <option value="$PROJECT_DIR$/config/authentication/config-authentication.js" />
-        <option value="$PROJECT_DIR$/routes/authentication.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/header.ejs" />
-        <option value="$PROJECT_DIR$/public/template-assets/css/style.css" />
-        <option value="$PROJECT_DIR$/routes/registration.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/client/src/assets/template-assets/css/style.css" />
-        <option value="$PROJECT_DIR$/client/src/app/header-menu/header-menu.component.html" />
-        <option value="$PROJECT_DIR$/client/angular.json" />
-        <option value="$PROJECT_DIR$/client/src/app/header-menu/header-menu.component.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/components/sign-in/sign-in.component.html" />
-        <option value="$PROJECT_DIR$/client/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/client/src/index.html" />
-        <option value="$PROJECT_DIR$/api/package.json" />
-        <option value="$PROJECT_DIR$/api/config/database/config-database.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/api/check-services/format-user.js" />
-        <option value="$PROJECT_DIR$/api/services/format/user.js" />
-        <option value="$PROJECT_DIR$/api/models/user.js" />
-        <option value="$PROJECT_DIR$/api/services/format.js" />
-        <option value="$PROJECT_DIR$/api/README.md" />
-        <option value="$PROJECT_DIR$/api/errors/errors-response.js" />
-        <option value="$PROJECT_DIR$/api/services/mapping/user-mapping.js" />
-        <option value="$PROJECT_DIR$/api/services/validators/skill-validator.js" />
-        <option value="$PROJECT_DIR$/api/config/server.json" />
-        <option value="$PROJECT_DIR$/api/models/user_skill.js" />
-        <option value="$PROJECT_DIR$/api/routes/skill.js" />
-        <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/api/routes/index.js" />
         <option value="$PROJECT_DIR$/api/config/authentication/config-authentication.js" />
         <option value="$PROJECT_DIR$/api/scriptTest.js" />
         <option value="$PROJECT_DIR$/api/models/role.js" />
-        <option value="$PROJECT_DIR$/api/app.js" />
+        <option value="$PROJECT_DIR$/api/services/validators/team-validator.js" />
+        <option value="$PROJECT_DIR$/client/src/app/components/header-menu/header-menu.component.html" />
+        <option value="$PROJECT_DIR$/client/src/app/components/user-profile/user-profile.component.html" />
+        <option value="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.html" />
+        <option value="$PROJECT_DIR$/client/src/styles.css" />
+        <option value="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/components/user-profile/user-profile.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/components/header-menu/header-menu.component.css" />
+        <option value="$PROJECT_DIR$/client/angular.json" />
+        <option value="$PROJECT_DIR$/client/src/assets/js/loader.js" />
+        <option value="$PROJECT_DIR$/api/out-template-html/form-wysiwyg.html" />
+        <option value="$PROJECT_DIR$/client/src/app/components/task-edition/task-edition.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/components/task-edition/task-edition.component.html" />
+        <option value="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/components/header-menu/header-menu.component.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/components/sign-in/sign-in.component.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/components/task-edition/task-edition.component.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/client/src/app/components/user-profile/user-profile.component.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/client/src/app/containers/default-layout/default-layout.component.html" />
+        <option value="$PROJECT_DIR$/client/src/index.html" />
+        <option value="$PROJECT_DIR$/client/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/client/package.json" />
+        <option value="$PROJECT_DIR$/api/errors/errors-response.js" />
         <option value="$PROJECT_DIR$/api/routes/user.js" />
+        <option value="$PROJECT_DIR$/client/routes/authentication.js" />
+        <option value="$PROJECT_DIR$/client/bin/www" />
+        <option value="$PROJECT_DIR$/client/config/authentication/config-authentication.json" />
+        <option value="$PROJECT_DIR$/api/package.json" />
+        <option value="$PROJECT_DIR$/client/views/header.ejs" />
+        <option value="$PROJECT_DIR$/client/config/authentication/config-authentication.js" />
+        <option value="$PROJECT_DIR$/client/views/error.ejs" />
+        <option value="$PROJECT_DIR$/client/services/skill-validator.js" />
+        <option value="$PROJECT_DIR$/client/services/user-api-request.js" />
+        <option value="$PROJECT_DIR$/api/services/validators/role-validator.js" />
+        <option value="$PROJECT_DIR$/api/app.js" />
+        <option value="$PROJECT_DIR$/api/routes/role.js" />
+        <option value="$PROJECT_DIR$/client/services/request-service.js" />
+        <option value="$PROJECT_DIR$/api/views/registrationFormSkill.ejs" />
+        <option value="$PROJECT_DIR$/client/views/registration/registrationFormSkill.ejs" />
+        <option value="$PROJECT_DIR$/client/routes/registration.js" />
+        <option value="$PROJECT_DIR$/client/routes/index.js" />
+        <option value="$PROJECT_DIR$/client/app.js" />
+        <option value="$PROJECT_DIR$/client/views/dashboard.ejs" />
+        <option value="$PROJECT_DIR$/client/routes/dashboard.js" />
       </list>
     </option>
   </component>
@@ -273,25 +217,25 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/api/out-template-html/assets/lib/bootstrap-markdown/package.json" />
-      <path value="$PROJECT_DIR$/api/out-template-html/assets/lib/jquery-flot/package.json" />
-      <path value="$PROJECT_DIR$/api/out-template-html/assets/lib/jquery.gritter/package.json" />
-      <path value="$PROJECT_DIR$/api/out-template-html/assets/lib/jquery.niftymodals/package.json" />
       <path value="$PROJECT_DIR$/api/package.json" />
       <path value="$PROJECT_DIR$/api/public/template-assets/lib/bootstrap-markdown/package.json" />
       <path value="$PROJECT_DIR$/api/public/template-assets/lib/jquery-flot/package.json" />
       <path value="$PROJECT_DIR$/api/public/template-assets/lib/jquery.gritter/package.json" />
       <path value="$PROJECT_DIR$/api/public/template-assets/lib/jquery.niftymodals/package.json" />
+      <path value="$PROJECT_DIR$/client/out-template-html/assets/lib/bootstrap-markdown/package.json" />
+      <path value="$PROJECT_DIR$/client/out-template-html/assets/lib/jquery-flot/package.json" />
+      <path value="$PROJECT_DIR$/client/out-template-html/assets/lib/jquery.gritter/package.json" />
+      <path value="$PROJECT_DIR$/client/out-template-html/assets/lib/jquery.niftymodals/package.json" />
       <path value="$PROJECT_DIR$/client/package.json" />
-      <path value="$PROJECT_DIR$/client/src/assets/template-assets/lib/bootstrap-markdown/package.json" />
-      <path value="$PROJECT_DIR$/client/src/assets/template-assets/lib/jquery-flot/package.json" />
-      <path value="$PROJECT_DIR$/client/src/assets/template-assets/lib/jquery.gritter/package.json" />
-      <path value="$PROJECT_DIR$/client/src/assets/template-assets/lib/jquery.niftymodals/package.json" />
+      <path value="$PROJECT_DIR$/client/public/template-assets/lib/bootstrap-markdown/package.json" />
+      <path value="$PROJECT_DIR$/client/public/template-assets/lib/jquery-flot/package.json" />
+      <path value="$PROJECT_DIR$/client/public/template-assets/lib/jquery.gritter/package.json" />
+      <path value="$PROJECT_DIR$/client/public/template-assets/lib/jquery.niftymodals/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="39" />
-    <option name="y" value="20" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-45" />
+    <option name="y" value="-29" />
     <option name="width" value="1756" />
     <option name="height" value="995" />
   </component>
@@ -301,7 +245,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,65 +255,53 @@
             <path>
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code-node" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="7.7.3" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.1.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\node_modules" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\validators" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\routes" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\assets" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\app\components" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\format" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\assets\template-assets\css" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\routes" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\validators" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\routes" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\services" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\views\registration" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -402,6 +333,7 @@
       <workItem from="1540819850094" duration="97628000" />
       <workItem from="1541596719566" duration="44413000" />
       <workItem from="1542018849642" duration="55856000" />
+      <workItem from="1542476423257" duration="17517000" />
     </task>
     <task id="LOCAL-00001" summary="Generate the architecture of the project">
       <created>1540155774955</created>
@@ -414,7 +346,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258853000" />
+    <option name="totallyTimeSpent" value="307099000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -426,28 +358,50 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="20" width="1756" height="995" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19266589" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1923077" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021075" side_tool="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49841937" weight="0.32897604" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49789253" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.3340358" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.5015806" side_tool="true" visible="true" weight="0.35239208" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.5021075" side_tool="true" visible="true" weight="0.30283225" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.49947312" weight="0.32897604" />
+      <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.49883586" weight="0.32788798" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.3340358" weight="0.32897604" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32897604" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="8" sideWeight="0.49883586" weight="0.32788798" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.5015806" side_tool="true" visible="true" weight="0.35239208" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021075" side_tool="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49841937" weight="0.32897604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19266589" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -494,367 +448,239 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/test.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/views/registrationFormAdministrative.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/views/registrationFormPersonal.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-972" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/views/registrationForm.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2412">
-          <caret line="67" column="124" selection-start-line="67" selection-start-column="120" selection-end-line="67" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/views/registrationFormSkill.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="48" column="84" lean-forward="true" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/apidoc.json" />
-    <entry file="file://$PROJECT_DIR$/client/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/config/database/config-database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-926" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/location.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1304" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/task-edition/task-edition.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/views/error/404.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/views/error/404.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/views/buttons/brand-buttons.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/user-profile/user-profile.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/components/user-profile/user-profile.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/views/base/base.module.ts" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/default-layout/default-layout.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/src/index.html" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/default-layout/index.ts" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/index.ts" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/views/dashboard/dashboard.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/containers/default-layout/default-layout.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/client/src/app/app-routing.module.ts" />
     <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/views/test.ejs">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/angular.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="486">
-            <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/format/user.js" />
-    <entry file="file://$PROJECT_DIR$/api/doc/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/doc/api_data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3348" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="58" column="10" lean-forward="true" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/errors/errors-response.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/registration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2312">
-          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="110" />
-          <folding>
-            <element signature="e#397#556#0" />
-            <element signature="e#605#1044#0" />
-            <element signature="e#1102#1232#0" />
-            <element signature="e#1282#1329#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/format.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="74" selection-start-line="1" selection-start-column="74" selection-end-line="1" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/validators/skill-validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/config/database/config-database.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/config/server.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="37" lean-forward="true" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="439">
-            <caret line="174" column="2" lean-forward="true" selection-start-line="174" selection-start-column="2" selection-end-line="174" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="234">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/authentication.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config/database/config-database.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config/server.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="3" lean-forward="true" selection-start-line="6" selection-end-line="30" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config/authentication/config-authentication.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/views/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <element signature="e#425#1051#0" />
+            <element signature="e#4807#14116#0#HTML" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config/authentication/config-authentication.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+        <state relative-caret-position="180">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/config/authentication/config-authentication-old.js">
+    <entry file="file://$PROJECT_DIR$/client/out-template-html/pages-404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#298#340#0" />
-            <element signature="e#616#790#0" />
-            <element signature="e#845#1401#0" />
-            <element signature="e#1452#1646#0" />
-            <element signature="e#1699#1839#0" />
-          </folding>
+        <state>
+          <caret selection-end-line="42" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/config/authentication/config-authentication.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth/lib/parser.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth/lib/verify.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth/lib/index.js">
+    <entry file="file://$PROJECT_DIR$/client/routes/authentication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth/lib/algorithm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-386" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/scriptTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+        <state relative-caret-position="396">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth2/lib/errors.js">
+    <entry file="file://$PROJECT_DIR$/client/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormAdministrative.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config/authentication/config-authentication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1898" />
+        <state relative-caret-position="288">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth2/lib/algorithm.js">
+    <entry file="file://$PROJECT_DIR$/api/views/error.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <caret line="20" selection-start-line="20" selection-end-line="25" selection-end-column="84" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth2/lib/verify.js">
+    <entry file="file://$PROJECT_DIR$/client/views/error.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="45" />
+        <state relative-caret-position="128">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth2/lib/index.js">
+    <entry file="file://$PROJECT_DIR$/client/views/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-702" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/node_modules/api-key-auth2/lib/parser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="93" column="82" selection-start-line="93" selection-start-column="82" selection-end-line="93" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/skill.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="270" column="53" selection-start-line="270" selection-start-column="53" selection-end-line="270" selection-end-column="53" />
+        <state relative-caret-position="288">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
-            <element signature="e#8246#8444#0" />
-            <element signature="e#8445#11251#0" />
+            <element signature="e#4807#14116#0#HTML" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/api/services/validators/role-validator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-          <folding>
-            <element signature="e#391#438#0" />
-            <element signature="e#483#571#0" />
-          </folding>
+        <state relative-caret-position="738">
+          <caret line="41" column="69" lean-forward="true" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="-558">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/validators/user-validator.js">
+    <entry file="file://$PROJECT_DIR$/api/routes/role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="130" column="31" lean-forward="true" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
+        <state relative-caret-position="-509">
+          <caret line="235" column="17" selection-start-line="235" selection-start-column="17" selection-end-line="235" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/config/authentication/config-authentication.js">
+    <entry file="file://$PROJECT_DIR$/api/config/server.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/views/registrationFormSkill.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="51" column="93" lean-forward="true" selection-start-line="51" selection-start-column="93" selection-end-line="51" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormSkill.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/role.js">
+    <entry file="file://$PROJECT_DIR$/client/routes/registration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        <state relative-caret-position="486">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#72#651#0" />
+            <element signature="e#828#1370#0" />
+            <element signature="e#733#742#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/user_skill.js">
+    <entry file="file://$PROJECT_DIR$/client/services/request-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/user_friend.js">
+    <entry file="file://$PROJECT_DIR$/client/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="412">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/user.js">
+    <entry file="file://$PROJECT_DIR$/client/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="292" selection-start-line="292" selection-end-line="292" />
-          <folding>
-            <element signature="e#580#781#0" />
-            <element signature="e#782#2836#0" />
-            <element signature="e#2883#3274#0" />
-            <element signature="e#3278#5223#0" />
-            <element signature="e#5275#5729#0" />
-            <element signature="e#5733#6118#0" />
-            <element signature="e#6119#7835#0" />
-            <element signature="e#7883#8924#0" />
-            <element signature="e#7917#8752#0" />
-            <element signature="e#8928#9305#0" />
-            <element signature="e#9306#10945#0" />
-            <element signature="e#10998#11856#0" />
-            <element signature="e#11860#12250#0" />
-            <element signature="e#12251#12551#0" />
-            <element signature="e#12607#13021#0" />
-            <element signature="e#13086#13284#0" />
-            <element signature="e#13285#14707#0" />
-            <element signature="e#14761#15727#0" />
-            <element signature="e#14999#15587#0" />
-          </folding>
+        <state relative-caret-position="-416">
+          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/dashboard.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="88" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>

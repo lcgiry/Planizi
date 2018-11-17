@@ -6,6 +6,14 @@ module.exports.RessourceNotFound = function (message){
 	}
 };
 
+module.exports.UserNotFound = function (message){
+	return {
+		"error": "UserNotFound",
+		"code": 404,
+		"message": message
+	}
+};
+
 module.exports.BadRequest = function (message){
 	return {
 		"error": "BadRequest",

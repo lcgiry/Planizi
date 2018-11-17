@@ -33,7 +33,7 @@ var checkAndFormatCallable = {
 
 
 //------------------------ The most important function that map request to an object well formed for the database -----------------------------
-module.exports.mapteam = function(req){
+module.exports.mapTeam = function(req){
 
 	let result = {};
 

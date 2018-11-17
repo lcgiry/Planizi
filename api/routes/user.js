@@ -100,7 +100,7 @@ router.get('/user/:mail', function(req, res, next) {
 				res.send(userResult);
 			} else {
 				res.status(404);
-				res.send(errorResponse.RessourceNotFound('The user does not exist'));
+				res.send(errorResponse.UserNotFound('The user does not exist'));
 			}
 		})
 		.catch(err => {
@@ -358,8 +358,6 @@ router.get('/skills/:mail', function(req, res, next) {
  */
 router.get('/teams/:mail', function(req, res, next) {
 
-
-
 	User.findOne({where: {user_mail: req.params.mail}})
 		.then(result=>{
 			if(result) {
@@ -387,6 +385,7 @@ router.get('/teams/:mail', function(req, res, next) {
 			res.status(500);
 			res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
 		});
+
 });		
 /**
  * @apiGroup USER
