@@ -8039,7 +8039,7 @@ button:focus {
 */
 .am-wrapper {
   min-height: 100%;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 @media (max-width: 767px) {
   .am-wrapper {
@@ -9790,7 +9790,7 @@ button:focus {
 .am-content {
   position: relative;
   left: 0;
-  margin-left: 100px;
+  /*margin-left: 100px;*/
   min-height: 100%;
 }
 @media (max-width: 767px) {

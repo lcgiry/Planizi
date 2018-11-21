@@ -19,8 +19,12 @@ let googleAuthenticationConfiguration = passport.use(new GoogleStrategy(
 
 			if (userMail) {
 
-				request.get(serverConfig.server + '/user/user/' + userMail, (errror, response, body) => {
-					var result = JSON.parse(body);
+				request.get(serverConfig.server + '/user/user/' + userMail, (error, response, body) => {
+					if(body){
+						var result = JSON.parse(body);
+					}else{
+						throw new Error("No server running");
+					}
 					//console.log(result);
 					if (response.statusCode === 200 && result.user_mail == userMail) {
 						done(null, result, {exist: true, message: "Google check good"});
