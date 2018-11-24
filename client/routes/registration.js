@@ -77,7 +77,6 @@ router.post('/personal', function(req, res, next){
 router.post('/skill', function(req, res, next){
 
 	if(req.session.userID && !req.session.user){
-		var result =
 	}else{
 		res.redirect('/');
 	}
