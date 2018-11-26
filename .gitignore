@@ -1,4 +1,4 @@
-/api/nodes_modules/
+/nodes_modules
 /template/
 /.idea/
 /out-template-html/

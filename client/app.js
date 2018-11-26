@@ -19,6 +19,7 @@ var authenticationRouter = require('./routes/authentication');
 var registrationRouter = require('./routes/registration');
 var dashboardRouter = require('./routes/dashboard');
 var taskRouter = require('./routes/tasks');
+var addAvailabilitiesRouter = require('./routes/availabilities')
 var app = express();
 
 
@@ -53,12 +54,15 @@ app.use('/css', express.static('node_modules/font-awesome/css'));
 app.use('/css', express.static('public/stylesheets'));
 app.use('/assets', express.static('public/template-assets'));
 
+// app.use(express.static(path.join(__dirname, '/public/stylesheets')));
+
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/authentication', authenticationRouter);
 app.use('/registration', registrationRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/tasks', taskRouter);
+app.use('/availabilities', addAvailabilitiesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

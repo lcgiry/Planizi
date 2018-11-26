@@ -10126,6 +10126,7 @@ button:focus {
   background-color: #b3b3b3;
 }
 .switch-button.switch-button-success label {
+  content : "OUI";
   border-color: #ababab;
 }
 .switch-button.switch-button-success input[type="checkbox"]:checked + span {

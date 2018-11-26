@@ -27,24 +27,24 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3>Skills and abilities</h3>
+                            <h3>Compétences et spécificités</h3>
                         </div>
                         <div class="panel-body">
                             <form method="post" action="/registration/skill" style="border-radius: 0px;" class="form-horizontal group-border-dashed">
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Experiences / Abilites</label>
+                                    <label class="col-sm-3 control-label">Expériences / Compétences</label>
                                     <div class="col-sm-6">
                                         <textarea class="form-control" maxlength="500" name="userExperience"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Health problems / Disabilities</label>
+                                    <label class="col-sm-3 control-label">Prblèmes de santé / Handicaps</label>
                                     <div class="col-sm-6">
                                         <textarea class="form-control" maxlength="500" name="userIncapacity"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Skills</label>
+                                    <label class="col-sm-3 control-label">Compétences</label>
                                     <div class="col-sm-6">
                                         <% skillArray.forEach((skill, index) => { %>
                                         <div class="am-checkbox">
@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Your role *</label>
+                                    <label class="col-sm-3 control-label">Rôle *</label>
                                     <div class="col-sm-6">
                                         <select class="select2" name="userRole">
                                             <% roleArray.forEach((role, index) => { %>
@@ -66,8 +66,8 @@
                                 </div>
                                     <div class="form-group">
                                         <div class="col-sm-12 text-center">
-                                            <a href="/registration/cancel" style="color: white; text-decoration: white" class="btn btn-danger btn-space">Cancel</a>
-                                            <button class="btn btn-alt3 btn-space">Valid<i class="icon s7-check"></i></button>
+                                            <a href="/registration/cancel" style="color: white; text-decoration: white" class="btn btn-danger btn-space">Annuler</a>
+                                            <button class="btn btn-alt3 btn-space">Valider<i class="icon s7-check"></i></button>
                                         </div>
                                     </div>
                                 </form>
