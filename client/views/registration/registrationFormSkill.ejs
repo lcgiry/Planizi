@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+    <title>Planizi - Registration</title>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/stroke-7/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/jquery.nanoscroller/css/nanoscroller.css"/>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
+</head>
+
+<body class="am-splash-screen">
+
+<div class="am-wrapper am-login">
+    <div class="am-content">
+        <div class="main-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Compétences et spécificités</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form method="post" action="/registration/skill" style="border-radius: 0px;" class="form-horizontal group-border-dashed">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Expériences / Compétences</label>
+                                    <div class="col-sm-6">
+                                        <textarea class="form-control" maxlength="500" name="userExperience"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Prblèmes de santé / Handicaps</label>
+                                    <div class="col-sm-6">
+                                        <textarea class="form-control" maxlength="500" name="userIncapacity"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Compétences</label>
+                                    <div class="col-sm-6">
+                                        <% skillArray.forEach((skill, index) => { %>
+                                        <div class="am-checkbox">
+                                            <input name="userSkills" id="check<%= index %>" type="checkbox" value="<%= skill.skill_label %>">
+                                            <label for="check<%= index %>"><%= skill.skill_name_fr %></label>
+                                        </div>
+                                        <% }) %>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Rôle *</label>
+                                    <div class="col-sm-6">
+                                        <select class="select2" name="userRole">
+                                            <% roleArray.forEach((role, index) => { %>
+                                                <option value="<%= role.role_label %>"><%= role.role_name_fr %></option>
+                                            <% }) %>
+                                        </select>
+                                    </div>
+                                </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12 text-center">
+                                            <a href="/registration/cancel" style="color: white; text-decoration: white" class="btn btn-danger btn-space">Annuler</a>
+                                            <button class="btn btn-alt3 btn-space">Valider<i class="icon s7-check"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+<script src="/assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+<script src="/assets/js/main.js" type="text/javascript"></script>
+<script src="/assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/lib/fuelux/js/wizard.js" type="text/javascript"></script>
+<script src="/assets/lib/bootstrap-slider/js/bootstrap-slider.js" type="text/javascript"></script>
+<script src="/assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="/assets/js/app-form-wizard.js" type="text/javascript"></script>
+<script src="/assets/js/app-form-elements.js" type="text/javascript"></script>
+<script src="/assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//initialize the javascript
+		App.init();
+		App.formElements();
+	});
+</script>
+
+</body>
+</html>

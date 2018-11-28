@@ -1,0 +1,9 @@
+node_modules
+api/config
+/template/
+/.idea/
+/out-template-html/
+api/package.json
+api/package-lock.json
+client/package.json
+client/package-lock.json

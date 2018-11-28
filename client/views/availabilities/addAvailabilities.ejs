@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Planizi - Task edition</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/checkmark.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/lib/summernote/summernote.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/lib/select2/css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap-slider/css/bootstrap-slider.css" />
+</head>
+
+<body>
+    <header>
+        <%- include ../header.ejs %>
+        <script type="text/javascript">$('#page-title-for-mobile-version').append('Dashboard')</script>
+    </header>
+    <div class="am-wrapper">
+        <div class="am-content">
+            <div class="main-content">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">
+                        <h3>Mes disponibilités</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-4 col-md-4">
+                                    <div class="col-sm-12 col-md-6 inputGroup">
+                                        <h5><strong>Lundi 11 Octobre</strong></h5>
+                                        <div>
+                                            <input id="dispo1" name="dispo1" type="checkbox" />
+                                            <label for="dispo1">8h - 10h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo2" name="dispo2" type="checkbox" />
+                                            <label for="dispo2">10h - 12h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo3" name="dispo3" type="checkbox" />
+                                            <label for="dispo3">12h - 14h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo4" name="dispo4" type="checkbox" />
+                                            <label for="dispo4">14h - 16h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo5" name="dispo5" type="checkbox" />
+                                            <label for="dispo5">16h - 18h</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 inputGroup">
+                                        <h5><strong>Mardi 12 Octobre</strong></h5>
+                                        <div>
+                                            <input id="dispo6" name="dispo6" type="checkbox" />
+                                            <label for="dispo6">8h - 10h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo7" name="dispo7" type="checkbox" />
+                                            <label for="dispo7">10h - 12h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo8" name="dispo8" type="checkbox" />
+                                            <label for="dispo8">12h - 14h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo9" name="dispo9" type="checkbox" />
+                                            <label for="dispo9">14h - 16h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo10" name="dispo10" type="checkbox" />
+                                            <label for="dispo10">16h - 18h</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-4">
+                                    <div class="col-sm-12 col-md-6 inputGroup">
+                                        <h5><strong>Mercredi 13 Octobre</strong></h5>
+                                        <div>
+                                            <input id="dispo11" name="dispo11" type="checkbox" />
+                                            <label for="dispo11">8h - 10h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo12" name="dispo12" type="checkbox" />
+                                            <label for="dispo12">10h - 12h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo13" name="dispo13" type="checkbox" />
+                                            <label for="dispo13">12h - 14h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo14" name="dispo14" type="checkbox" />
+                                            <label for="dispo14">14h - 16h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo15" name="dispo15" type="checkbox" />
+                                            <label for="dispo15">16h - 18h</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 inputGroup">
+                                        <h5><strong>Jeudi 14 Octobre</strong></h5>
+                                        <div>
+                                            <input id="dispo16" name="dispo16" type="checkbox" />
+                                            <label for="dispo16">8h - 10h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo17" name="dispo17" type="checkbox" />
+                                            <label for="dispo17">10h - 12h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo18" name="dispo18" type="checkbox" />
+                                            <label for="dispo18">12h - 14h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo19" name="dispo19" type="checkbox" />
+                                            <label for="dispo19">14h - 16h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo20" name="dispo20" type="checkbox" />
+                                            <label for="dispo20">16h - 18h</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-4">
+                                    <div class="col-sm-12 col-md-6 inputGroup">
+                                        <h5><strong>Vendredi 15 Octobre</strong></h5>
+                                        <div>
+                                            <input id="dispo21" name="dispo21" type="checkbox" />
+                                            <label for="dispo21">8h - 10h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo22" name="dispo22" type="checkbox" />
+                                            <label for="dispo22">10h - 12h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo23" name="dispo23" type="checkbox" />
+                                            <label for="dispo23">12h - 14h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo24" name="dispo24" type="checkbox" />
+                                            <label for="dispo24">14h - 16h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo25" name="dispo25" type="checkbox" />
+                                            <label for="dispo25">16h - 18h</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 inputGroup">
+                                        <h5><strong>Samedi 16 Octobre</strong></h5>
+                                        <div>
+                                            <input id="dispo26" name="dispo26" type="checkbox" />
+                                            <label for="dispo26">8h - 10h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo27" name="dispo27" type="checkbox" />
+                                            <label for="dispo27">10h - 12h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo28" name="dispo28" type="checkbox" />
+                                            <label for="dispo28">12h - 14h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo29" name="dispo29" type="checkbox" />
+                                            <label for="dispo29">14h - 16h</label>
+                                        </div>
+                                        <div>
+                                            <input id="dispo30" name="dispo30" type="checkbox" />
+                                            <label for="dispo30">16h - 18h</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="/assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+<script src="/assets/js/main.js" type="text/javascript"></script>
+<script src="/assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//initialize the javascript
+		App.init();
+	});
+</script>
+
+</html>
