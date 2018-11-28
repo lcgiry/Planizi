@@ -19,7 +19,7 @@ var authenticationRouter = require('./routes/authentication');
 var registrationRouter = require('./routes/registration');
 var dashboardRouter = require('./routes/dashboard');
 var taskRouter = require('./routes/tasks');
-var addAvailabilitiesRouter = require('./routes/availabilities')
+var availabilitiesRouter = require('./routes/availabilities')
 var profileRouter = require('./routes/profile');
 var teamRouter = require('./routes/team');
 var app = express();
@@ -64,7 +64,7 @@ app.use('/authentication', authenticationRouter);
 app.use('/registration', registrationRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/tasks', taskRouter);
-app.use('/availabilities', addAvailabilitiesRouter);
+app.use('/availabilities', availabilitiesRouter);
 app.use('/profile', profileRouter);
 app.use('/team', teamRouter);
 
