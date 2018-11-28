@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const request = require("request");
+var requestService = require('../services/request-service');
 
 
 router.get('/', function(req, res, next) {
@@ -12,5 +13,9 @@ router.get('/', function(req, res, next) {
 	}
 
 });
+
+router.post('/editProfile', function(req, res, next){
+	console.log(req.body.userName)
+})
 
 module.exports = router;
