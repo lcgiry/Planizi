@@ -49,12 +49,10 @@
                                     <label class="col-sm-3 control-label">Equipe</label>
                                     <div class="col-sm-8">
                                         <select class="select2">
-                                            <option value="AK">Equipe 1</option>
-                                            <option value="HI">Hawaii</option>
-                                            <option value="CA">California</option>
-                                            <option value="NV">Nevada</option>
-                                            <option value="OR">Oregon</option>
-                                            <option value="WA">Washington</option>
+											<% for(var i=0; i<teams.teams.length; i++) {%>
+												<option value=i><%= teams.teams[i].team_name_fr %></option>
+											<% } %>
+                                         
                                         </select>
                                     </div>
                                 </div>
@@ -63,12 +61,9 @@
                                     <label class="col-sm-3 control-label">Superviseur</label>
                                     <div class="col-sm-8">
                                         <select class="select2">
-                                            <option value="AK">Equipe 1</option>
-                                            <option value="HI">Hawaii</option>
-                                            <option value="CA">California</option>
-                                            <option value="NV">Nevada</option>
-                                            <option value="OR">Oregon</option>
-                                            <option value="WA">Washington</option>
+                                            <% for(var i=0; i<users.users.length; i++) {%>
+												<option value=i><%= users.users[i].user_name%> <%=users.users[i].user_surname %> (<%=users.users[i].user_nickname %>)</option>
+											<% } %>
                                         </select>
                                     </div>
                                 </div>
@@ -77,12 +72,9 @@
                                     <label class="col-sm-3 control-label">Responsable</label>
                                     <div class="col-sm-8">
                                         <select class="select2">
-                                            <option value="AK">Equipe 1</option>
-                                            <option value="HI">Hawaii</option>
-                                            <option value="CA">California</option>
-                                            <option value="NV">Nevada</option>
-                                            <option value="OR">Oregon</option>
-                                            <option value="WA">Washington</option>
+											<% for(var i=0; i<users.users.length; i++) {%>
+												<option value=i><%= users.users[i].user_name%> <%=users.users[i].user_surname %> (<%=users.users[i].user_nickname %>)</option>
+											<% } %>
                                         </select>
                                     </div>
                                 </div>
