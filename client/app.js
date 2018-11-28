@@ -19,11 +19,8 @@ var authenticationRouter = require('./routes/authentication');
 var registrationRouter = require('./routes/registration');
 var dashboardRouter = require('./routes/dashboard');
 var taskRouter = require('./routes/tasks');
-<<<<<<< HEAD
 var addAvailabilitiesRouter = require('./routes/availabilities')
-=======
 var profileRouter = require('./routes/profile');
->>>>>>> d27d805fa56fc495a0c57766148c8e83c109def3
 var app = express();
 
 
@@ -66,11 +63,8 @@ app.use('/authentication', authenticationRouter);
 app.use('/registration', registrationRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/tasks', taskRouter);
-<<<<<<< HEAD
 app.use('/availabilities', addAvailabilitiesRouter);
-=======
 app.use('/profile', profileRouter);
->>>>>>> d27d805fa56fc495a0c57766148c8e83c109def3
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
