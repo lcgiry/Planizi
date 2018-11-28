@@ -1,12 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const request = require("request");
-var test;
-
 
 
 router.get('/new-task', function(req, res, next) {
-
 	if(!req.session.user){
 		res.redirect('/login');
 	}else{

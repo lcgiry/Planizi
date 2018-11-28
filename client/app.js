@@ -68,6 +68,7 @@ app.use('/availabilities', availabilitiesRouter);
 app.use('/profile', profileRouter);
 app.use('/team', teamRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

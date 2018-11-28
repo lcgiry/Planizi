@@ -11,6 +11,7 @@ router.get('/', function(req, res, next) {
 		res.render('dashboard', { 'user':req.session.user});
 	
 	}
+
 });
 
 module.exports = router;

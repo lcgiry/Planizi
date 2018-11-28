@@ -19,7 +19,6 @@ const Shift_Unit = sequelize.import('../models/shift_unit.js');
 const Availibility_User = sequelize.import('../models/availibility_user.js');
 User.belongsToMany(Shift_Unit, {as: "avaibilities", through: Availibility_User, foreignKey: 'availibility_user_user', otherKey: 'availibility_user_shift_unit'});
 
-
 //----------------------------------------- USER TABLE
 /**
  * @apiDefine ErrorGetGroup
@@ -209,6 +208,10 @@ router.post('/user/', function(req, res, next) {
  * @apiUse ErrorPutGroup
  */
 router.put('/user/:mail', function (req, res, next) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca40371f03cf99581f9c07bce1443bdbcc5bb95c
 	if(req.is('application/json')){
 
 		User.findOne({ where: {user_mail: userValidator.checkAndFormat_user_mail(req.params.mail)}})
@@ -216,6 +219,7 @@ router.put('/user/:mail', function (req, res, next) {
 				if (userResult) {
 
 					userResult.update(userValidator.mapUser(req)).then( result => {
+<<<<<<< HEAD
 						res.status(200)
 						res.send(userResult);
 					}).catch( err => {
@@ -223,6 +227,12 @@ router.put('/user/:mail', function (req, res, next) {
 						res.status(500);
 						res.send(errorResponse.InternalServerError("Problem to update user : "+err));
 
+=======
+						res.status(200).end();
+					}).catch( err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError("Problem to update user : "+err));
+>>>>>>> ca40371f03cf99581f9c07bce1443bdbcc5bb95c
 					});
 
 				} else {
