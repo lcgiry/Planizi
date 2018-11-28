@@ -4,7 +4,7 @@ const request = require("request");
 
 
 router.get('/', function(req, res, next) {
-	res.render('dashboard', {user: req.session.user});
+	res.render('dashboard', {user: {}});
 });
 
 module.exports = router;

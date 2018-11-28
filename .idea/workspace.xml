@@ -20,48 +20,73 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="new-task.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/views/tasks/new-task.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="126" column="17" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tasks.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/routes/tasks.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registration.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/routes/registration.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="30" column="73" lean-forward="true" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ui-buttons.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/out-template-html/ui-buttons.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2376">
-              <caret line="434" column="42" selection-start-line="434" selection-start-column="42" selection-end-line="434" selection-end-column="42" />
-              <folding>
-                <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="dashboard.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/routes/dashboard.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="108">
+                  <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config-database.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/config/database/config-database.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="342">
+                  <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="userProfile.ejs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/views/userProfile.ejs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="128">
+                  <caret line="91" column="29" selection-start-line="88" selection-end-line="107" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="addAvailabilities.ejs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/views/availabilities/addAvailabilities.ejs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="308">
+                  <caret line="187" column="22" lean-forward="true" selection-start-line="187" selection-start-column="22" selection-end-line="187" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.ejs" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/views/header.ejs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="216">
+                  <caret line="39" column="143" selection-start-line="39" selection-start-column="143" selection-end-line="39" selection-end-column="143" />
+                  <folding>
+                    <element signature="e#4888#14197#0#HTML" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="dashboard.ejs" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/views/dashboard.ejs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="380">
+                  <caret line="202" column="19" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,8 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>am-toggle-right-sidebar</find>
-      <find>navbar-header</find>
       <find>navbar-collapse</find>
       <find>navbar-brand</find>
       <find>add</find>
@@ -103,10 +126,10 @@
       <find>inline</find>
       <find>tool</find>
       <find>warn</find>
+      <find>theme</find>
+      <find>;</find>
     </findStrings>
     <replaceStrings>
-      <replace>\ncase</replace>
-      <replace>' :</replace>
       <replace>user_surname</replace>
       <replace>user_nickname</replace>
       <replace>user_gender</replace>
@@ -135,6 +158,8 @@
       <replace>c=&quot;</replace>
       <replace>role</replace>
       <replace>Role</replace>
+      <replace>&quot;;&quot;\n</replace>
+      <replace>&quot;;&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -144,10 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/app/components/header-menu/header-menu.component.html" />
-        <option value="$PROJECT_DIR$/client/src/app/components/user-profile/user-profile.component.html" />
-        <option value="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.html" />
-        <option value="$PROJECT_DIR$/client/src/styles.css" />
         <option value="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.css" />
         <option value="$PROJECT_DIR$/client/src/app/components/user-profile/user-profile.component.css" />
         <option value="$PROJECT_DIR$/client/src/app/components/header-menu/header-menu.component.css" />
@@ -182,19 +203,23 @@
         <option value="$PROJECT_DIR$/api/routes/role.js" />
         <option value="$PROJECT_DIR$/client/services/request-service.js" />
         <option value="$PROJECT_DIR$/api/views/registrationFormSkill.ejs" />
-        <option value="$PROJECT_DIR$/client/routes/index.js" />
-        <option value="$PROJECT_DIR$/client/routes/dashboard.js" />
-        <option value="$PROJECT_DIR$/client/views/dashboard.ejs" />
         <option value="$PROJECT_DIR$/client/routes/users.js" />
         <option value="$PROJECT_DIR$/client/app.js" />
         <option value="$PROJECT_DIR$/client/public/template-assets/css/style.css" />
-        <option value="$PROJECT_DIR$/client/views/header.ejs" />
         <option value="$PROJECT_DIR$/client/public/template-assets/lib/summernote/summernote.js" />
         <option value="$PROJECT_DIR$/client/views/tasks/new-task.ejs" />
         <option value="$PROJECT_DIR$/client/views/registration/registrationFormSkill.ejs" />
-        <option value="$PROJECT_DIR$/client/routes/registration.js" />
         <option value="$PROJECT_DIR$/client/config/authentication/config-authentication.js" />
         <option value="$PROJECT_DIR$/client/routes/tasks.js" />
+        <option value="$PROJECT_DIR$/client/routes/registration.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.css" />
+        <option value="$PROJECT_DIR$/client/routes/dashboard.js" />
+        <option value="$PROJECT_DIR$/api/config/database/config-database.js" />
+        <option value="$PROJECT_DIR$/client/routes/index.js" />
+        <option value="$PROJECT_DIR$/client/views/userProfile.ejs" />
+        <option value="$PROJECT_DIR$/client/views/dashboard.ejs" />
+        <option value="$PROJECT_DIR$/client/views/availabilities/addAvailabilities.ejs" />
+        <option value="$PROJECT_DIR$/client/views/header.ejs" />
       </list>
     </option>
   </component>
@@ -234,9 +259,9 @@
       <path value="$PROJECT_DIR$/client/public/template-assets/lib/jquery.niftymodals/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="35" />
+    <option name="y" value="219" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -246,6 +271,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,12 +283,6 @@
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="out-template-html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
@@ -281,19 +301,35 @@
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="availabilities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code-node" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="CSS" />
     <property name="javascript.nodejs.core.library.configured.version" value="7.7.3" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -349,7 +385,9 @@
       <workItem from="1542018849642" duration="55856000" />
       <workItem from="1542476423257" duration="30633000" />
       <workItem from="1542701082102" duration="25000" />
-      <workItem from="1542792553808" duration="3680000" />
+      <workItem from="1542792553808" duration="6669000" />
+      <workItem from="1542967837984" duration="193000" />
+      <workItem from="1543177309570" duration="2797000" />
     </task>
     <task id="LOCAL-00001" summary="Generate the architecture of the project">
       <created>1540155774955</created>
@@ -362,7 +400,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323920000" />
+    <option name="totallyTimeSpent" value="329899000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -374,10 +412,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1923077" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1923077" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021075" side_tool="true" weight="0.32897604" />
@@ -385,7 +423,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.5021075" visible="true" weight="0.30283225" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.5021075" visible="true" weight="0.30283225" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.49883586" weight="0.32788798" />
@@ -468,50 +506,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/views/test.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/errors/errors-response.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/authentication.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/config/database/config-database.js" />
-    <entry file="file://$PROJECT_DIR$/client/config/server.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="3" lean-forward="true" selection-start-line="6" selection-end-line="30" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/config/authentication/config-authentication.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/views/header.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -546,9 +540,6 @@
           <caret selection-end-line="42" selection-end-column="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormAdministrative.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/api/views/error.ejs">
       <provider selected="true" editor-type-id="text-editor">
@@ -633,13 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="398" column="40" selection-start-line="392" selection-start-column="9" selection-end-line="398" selection-end-column="40" />
-          <folding>
-            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#nav#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,13 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8100">
           <caret line="997" column="26" selection-start-line="931" selection-start-column="20" selection-end-line="997" selection-end-column="26" />
-          <folding>
-            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -661,10 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="322" column="25" selection-start-line="322" selection-start-column="25" selection-end-line="322" selection-end-column="25" />
-          <folding>
-            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -682,22 +655,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/config/authentication/config-authentication.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/dashboard.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
@@ -706,24 +665,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/routes/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -748,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/routes/tasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/out-template-html/dashboard3.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -762,16 +700,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="505" column="12" selection-start-line="505" selection-start-column="12" selection-end-line="532" selection-end-column="18" />
-          <folding>
-            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/javascripts/header.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/out-template-html/ui-buttons.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2376">
+        <state relative-caret-position="2700">
           <caret line="434" column="42" selection-start-line="434" selection-start-column="42" selection-end-line="434" selection-end-column="42" />
           <folding>
             <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -780,24 +717,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormSkill.ejs">
+    <entry file="file://$PROJECT_DIR$/client/public/template-assets/css/themes/theme-twilight.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/template-assets/css/themes/theme-twilight.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
+        <state relative-caret-position="-2754" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/tasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/routes/registration.js">
+    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormSkill.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="73" lean-forward="true" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="73" />
+        <state relative-caret-position="198">
+          <caret line="50" column="86" selection-start-line="50" selection-start-column="86" selection-end-line="50" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormPersonal.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-722" />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/tasks/new-task.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="126" column="17" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="17" />
+        <state relative-caret-position="288">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/config/database/config-database.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/registration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/config/database/config-database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormAdministrative.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/dashboard.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="202" column="19" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/userProfile.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="91" column="29" selection-start-line="88" selection-end-line="107" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/availabilities/addAvailabilities.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="187" column="22" lean-forward="true" selection-start-line="187" selection-start-column="22" selection-end-line="187" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="39" column="143" selection-start-line="39" selection-start-column="143" selection-end-line="39" selection-end-column="143" />
+          <folding>
+            <element signature="e#4888#14197#0#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>

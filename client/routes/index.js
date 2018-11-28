@@ -19,11 +19,11 @@ router.get('/logout', function(req, res, next) {
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-	if(!req.session.user){
-		res.redirect('/login');
-	}else{
+	//if(req.session.user){
+	//	res.redirect('/login');
+	//}else{
 		res.redirect('/dashboard');
-	}
+	//}
 
 });
 
