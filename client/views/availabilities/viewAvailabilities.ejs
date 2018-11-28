@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="/assets/img/favicon.png">
+  <title>Planizi</title>
+  <link rel="stylesheet" type="text/css" href="/assets/lib/stroke-7/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/lib/jquery.nanoscroller/css/nanoscroller.css">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="/assets/lib/jquery.fullcalendar/fullcalendar.css">
+  <link rel="stylesheet" type="text/css" href="/assets/lib/jquery.fullcalendar/fullcalendar.print.css">
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+</head>
+<!-- <body style="cursor: auto;" class=""> -->
+
+<body>
+  <header>
+    <%- include ../header.ejs %>
+  </header>
+  <div class="am-wrapper">
+    <div class="am-content">
+      <div class="main-content">
+        <div class="row full-calendar">
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div id="calendar" class="fc fc-ltr">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3>Draggable Events</h3>
+                </div>
+                <div class="panel-body">
+                  <div id="external-events">
+                    <div class="external-event ui-draggable ui-draggable-handle" style="position: relative; z-index: auto; width: 66px; right: auto; height: 25px; bottom: auto; left: 0px; top: 0px;">My
+                      Event 1</div>
+                    <div class="external-event ui-draggable ui-draggable-handle" style="position: relative; z-index: auto; width: 66px; right: auto; height: 25px; bottom: auto; left: 0px; top: 0px;">My
+                      Event 2</div>
+                    <div class="external-event ui-draggable ui-draggable-handle" style="position: relative;">My Event 3</div>
+                    <div class="external-event ui-draggable ui-draggable-handle" style="position: relative;">My Event 4</div>
+                    <div class="external-event ui-draggable ui-draggable-handle" style="position: relative; z-index: auto; width: 66px; right: auto; height: 25px; bottom: auto; left: 0px; top: 0px;">My
+                      Event 5</div>
+                    <p>
+                      <input id="drop-remove" type="checkbox">
+                      <label for="drop-remove">remove after drop</label>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="widget widget-weather">
+                <div class="wt-container">
+                  <div class="wt-hour"><span class="hour">2:45</span><span class="meridian">PM</span></div>
+                  <div class="wt-info">
+                    <div class="wt-day"><span class="day">Today</span>
+                      <canvas height="35" width="55" class="icon1"></canvas><span class="date">30°/28°</span>
+                    </div>
+                    <div class="wt-day"><span class="day">Tue</span>
+                      <canvas height="35" width="45" class="icon2"></canvas><span class="date">28°/25°</span>
+                    </div>
+                    <div class="wt-day"><span class="day">Wed</span>
+                      <canvas height="35" width="45" class="icon3"></canvas><span class="date">23°/18°</span>
+                    </div>
+                  </div>
+                  <div class="wt-location"><span class="icon s7-map-marker"></span><span class="city">Toronto, Canada</span></div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="/assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+  <script src="/assets/js/main.js" type="text/javascript"></script>
+  <script src="/assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="/assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+  <script src="/assets/lib/jquery.fullcalendar/fullcalendar.js" type="text/javascript"></script>
+  <script src="/assets/lib/skycons/skycons.js" type="text/javascript"></script>
+  <script src="/assets/js/app-page-calendar.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      //initialize the javascript
+      App.init();
+
+      // $('#calendar').fullCalendar({
+      //   dayClick: function() {
+      //     alert('a day has been clicked!');
+      //   }
+      // })
+      // $('#calendar').fullCalendar('gotoDate', '2019-07-13');
+
+      App.pageCalendar();
+    });
+  </script>
+
+</body>
+
+</html>
