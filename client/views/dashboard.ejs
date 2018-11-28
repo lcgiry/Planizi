@@ -22,13 +22,15 @@
                         <div class="bottom">
                             <div class="user-avatar"><span class="status"></span><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/bobross-profile_image-0b9dd167a9bb16b5-300x300.jpeg"></div>
                                 <div class="user-info">
+                                    <div class="col-xs-10">
                                     <h4><%= user.user_name %> <%= user.user_nickname == '' ? '' : '"'+user.user_nickname+'"' %> <%= user.user_surname %></h4><span><%= user.user_description %></span>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <a href="/profile/editProfile"><button class="btn btn-default">Editer mon profil</button></a>
+                                    </div>
+                                
                                 </div>
-                            <div class="col-sm-2">
-                                <div class="content">
-                                    <a href="/profile/editProfile"><button class="btn btn-default">Editer mon profil</button></a>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
