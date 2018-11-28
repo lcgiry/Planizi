@@ -39,49 +39,82 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Prénom</label>
                                     <div class="col-sm-6">
-                                        <input data-parsley-type="digits" type="text" value="<%= user.user_name %>" class="form-control" name="userName">
+                                        <input data-parsley-type="digits" type="text" value="<%= user.user_name %>" class="form-control" name="user_name">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Nom</label>
                                     <div class="col-sm-6">
-                                        <input data-parsley-type="digits" type="text" value="<%= user.user_surname %>" class="form-control" name="userSurname">
+                                        <input data-parsley-type="digits" type="text" value="<%= user.user_surname %>" class="form-control" name="user_surname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Surnom</label>
                                     <div class="col-sm-6">
-                                        <input data-parsley-type="digits" type="text" value="<%= user.user_nickname %>" class="form-control" name="userNickname">
+                                        <input data-parsley-type="digits" type="text" value="<%= user.user_nickname %>" class="form-control" name="user_nickname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label font-weight-bold">Genre</label>
+                                    <div class="col-sm-6">
+                                        <select class="form-control" name="user_gender" >
+                                            <option value=<%= user.user_gender %> selected disabled hidden><%= user.user_gender %></option>
+                                            <option value="f">f</option>
+                                            <option value="m">m</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label font-weight-bold">Date de naissance</label>
+                                    <div class="col-sm-6">
+										<input type="date" class="form-control" name="user_birthdate"
+											value=<%= user.user_birthdate %>
+											min="1918-01-01" max="2018-01-01">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Description</label>
                                     <div class="col-sm-6">
-                                        <textarea class="form-control" name="userDescription"><%= user.user_description %></textarea>
+                                        <textarea class="form-control" name="user_description"><%= user.user_description %></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Expérience</label>
+                                    <div class="col-sm-6">
+                                        <textarea class="form-control" name="user_experience"><%= user.user_experience %></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Impossibilité</label>
+                                    <div class="col-sm-6">
+                                        <textarea class="form-control" name="user_incapacity"><%= user.user_incapacity %></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Téléphone</label>
                                     <div class="col-sm-6">
-                                        <textarea class="form-control" name="userDescription"><%= user.user_phone %></textarea>
+										 <input data-parsley-type="digits" type="text" value="<%= user.user_phone %>" class="form-control" name="user_phone">
                                     </div>
+                                        
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">E-mail</label>
+                                    <label class="col-sm-3 control-label font-weight-bold">Taille T-Shirt</label>
                                     <div class="col-sm-6">
-                                        <textarea class="form-control" name="userDescription"><%= user.user_mail %></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label font-weight-bold">Tee-shirt size</label>
-                                    <div class="col-sm-6">
-                                        <select class="form-control" name="userTeeshirtSize">
+                                        <select class="form-control" name="user_teeshirt_size" >
+                                            <option value=<%= user.user_teeshirt_size %> selected disabled hidden><%= user.user_teeshirt_size %></option>
                                             <option value="S">S</option>
                                             <option value="M">M</option>
                                             <option value="L">L</option>
                                             <option value="XL">XL</option>
                                         </select>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Numéro de sécurité sociale</label>
+                                    <div class="col-sm-6">
+										 <input data-parsley-type="digits" type="text" value="<%= user.user_social_security_card_number %>" class="form-control" name="user_social_security_card_number">
+                                    </div>
+                                        
                                 </div>
                                     <div class="form-group">
                                         <div class="col-sm-12 text-center">
