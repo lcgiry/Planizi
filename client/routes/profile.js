@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const request = require("request");
-<<<<<<< HEAD
 var requestService = require('../services/request-service');
 
 
