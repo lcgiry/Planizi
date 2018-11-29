@@ -150,10 +150,9 @@ router.post('/user/', function(req, res, next) {
 					Promise.all([newUserPromise.save()])
 						.then( result => {
 							res.status(201);
-							res.send({
-								"user_mail": result[0].user_mail
-							});
+							res.send(result);
 						})
+						
 						.catch( err =>{
 							res.status(500);
 							res.send(errorResponse.InternalServerError(err.message));

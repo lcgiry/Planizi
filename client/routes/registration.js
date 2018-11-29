@@ -3,6 +3,7 @@ var router = express.Router();
 var rp = require('request-promise');
 var serverConfig = require('../config/server');
 var requestService = require('../services/request-service');
+var request = require('request');
 
 router.get("/personal", function(req, res, next){
 	if(req.session.userID && !req.session.user) {
@@ -67,7 +68,14 @@ router.get("/cancel", function(req, res, next){
 });
 
 router.post('/personal', function(req, res, next){
+		var myURL ='http://localhost:8080/user/user/';
+		var data = req.body;
+		console.log(data);
+		request({ url: myURL, method: 'POST', json: data}, function(error, request, body) {
+			req.session.user = body;
+		})
 	if(req.session.userID && !req.session.user){
+		res.redirect('/');
 
 	}else{
 		res.redirect('/');
