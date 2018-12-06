@@ -6,12 +6,13 @@
     <title>Planizi - Task edition</title>
 
     <link rel="stylesheet" type="text/css" href="/assets/lib/summernote/summernote.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/lib/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
 
 </head>
+
 <body>
 <header>
     <%- include ../header.ejs %>
@@ -22,7 +23,6 @@
     <div class="am-content">
         <div class="main-content">
 
-            <!--Summernote-->
             <div class="row">
 
                 <div class="col-md-6">
@@ -49,9 +49,9 @@
                                     <label class="col-sm-3 control-label">Equipe</label>
                                     <div class="col-sm-8">
                                         <select class="select2">
-											<% for(var i=0; i<teams.teams.length; i++) {%>
-												<option value=i><%= teams.teams[i].team_name_fr %></option>
-											<% } %>
+                                            <% teamArray.forEach((team, index) => { %>
+                                            <option value="<%= team.team_label %>"><%= team.team_name_fr %></option>
+                                            <% }) %>
                                         </select>
                                     </div>
                                 </div>
@@ -60,9 +60,9 @@
                                     <label class="col-sm-3 control-label">Superviseur</label>
                                     <div class="col-sm-8">
                                         <select class="select2">
-                                            <% for(var i=0; i<users.users.length; i++) {%>
-												<option value=i><%= users.users[i].user_name%> <%=users.users[i].user_surname %> (<%=users.users[i].user_nickname %>)</option>
-											<% } %>
+                                            <% userArray.forEach((user, index) => { %>
+                                            <option value="<%= user.user_mail %>"><%= user.user_name %> <%= user.user_surname %> (<%= user.user_nickname %>)</option>
+                                            <% }) %>
                                         </select>
                                     </div>
                                 </div>
@@ -71,9 +71,9 @@
                                     <label class="col-sm-3 control-label">Responsable</label>
                                     <div class="col-sm-8">
                                         <select class="select2">
-											<% for(var i=0; i<users.users.length; i++) {%>
-												<option value=i><%= users.users[i].user_name%> <%=users.users[i].user_surname %> (<%=users.users[i].user_nickname %>)</option>
-											<% } %>
+                                            <% userArray.forEach((user, index) => { %>
+                                            <option value="<%= user.user_mail %>"><%= user.user_name %> <%= user.user_surname %> (<%= user.user_nickname %>)</option>
+                                            <% }) %>
                                         </select>
                                     </div>
                                 </div>
@@ -95,8 +95,8 @@
                                     </div>
                                 </div>
 
-                                <div class="spacer text-right">
-                                    <button type="submit" class="btn btn-space btn-primary">Sauvegarder</button>
+                                <div class="spacer text-center sm-mt-5">
+                                    <button type="submit" class="btn btn-space btn-success">Sauvegarder</button>
                                     <button class="btn btn-space btn-default">Annuler</button>
                                 </div>
                             </form>
@@ -111,6 +111,10 @@
                         </div>
                         <div class="panel-body">
                             <div id="editor1"></div>
+                            <div class="spacer text-center sm-mt-15">
+                                <button type="submit" class="btn btn-space btn-success">Sauvegarder</button>
+                                <button class="btn btn-space btn-default">Annuler</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -118,50 +122,55 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <div class="panel-title">Plages horraires et besoins</div>
+                            <div class="panel-title">Plages horraires et besoins humains</div>
                         </div>
                         <div class="panel-body">
 
-                            <div class="content">
+                            <div class="content text-center">
                                 <button class="btn btn-alt3">Générer des shifts</button>
-                                <button class="btn btn-alt3">Ajouter un shift</button>
+                                <button data-modal="shift-edit-modal" class="btn btn-dark md-trigger">Ajouter un shift</button>
                             </div>
 
-                            <div class="content sm-mt-15 sm-mb-5 col-sm-12">
-                                <div class="content">
-                                    <div class="col-sm-12">
-                                        <div class="widget widget-fullwidth widget-small">
-                                            <div class="widget-head">
-                                            </div>
-                                            <table class="table table-fw-widget">
-                                                <thead>
-                                                <tr>
-                                                    <th class="">Edition</th>
-                                                    <th class="">Nom</th>
-                                                    <th class="">Début</th>
-                                                    <th class="">Fin</th>
-                                                    <th class="">Durée</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td class=""><a href="#" data-toggle="tooltip" data-placement="top" title="Editer" style="color: black"><i class="fa fa-2x fa-pencil-square"></i></a>&nbsp;&nbsp;<a href="#s" style="color: black" data-toggle="tooltip" data-placement="top" title="Suprimer"><i class="fa fa-2x fa-trash"></i></a></td>
-                                                    <td class="">Shift #1</td>
-                                                    <td class="">Vendredi 3 mai - 12:00</td>
-                                                    <td class="">Vendredi 5 mai - 14:00</td>
-                                                    <td class="">2h00</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                            <div class="sm-mb-15"></div>
+
+                            <div class="col-sm-12">
+                                <div class="widget widget-fullwidth widget-small" style="overflow:auto">
+                                    <table class="table table-condensed table-striped table-fw-widget">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th class="text-center">Début</th>
+                                            <th class="text-center">Fin</th>
+                                            <th class="text-center">Durée</th>
+                                            <th class="text-center">Besoins</th>
+                                            <th class="text-center">Gestion</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-center">0202-001</td>
+                                            <td class="text-center">VEN 22 FEVRIER - 23:30</td>
+                                            <td class="text-center">SAM 23 FEVRIER - 03:30</td>
+                                            <td class="text-center">4:00</td>
+                                            <td class="text-center">3&nbsp;<i class="fas fa-male"></i>&nbsp;&nbsp;&nbsp;4&nbsp;<i class="fas fa-hammer "></i></td>
+                                            <td class="text-center"><button data-modal="full-dark">++</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">0202-002</td>
+                                            <td class="text-center">VEN 22 FEVRIER - 23:30</td>
+                                            <td class="text-center">SAM 23 FEVRIER - 03:30</td>
+                                            <td class="text-center">4:00</td>
+                                            <td class="text-center">3&nbsp;<i class="fas fa-male "></i>&nbsp;&nbsp;&nbsp;4&nbsp;<i class="fas fa-hammer "></i></td>
+                                            <td class="text-center"><button data-modal="full-dark" class="btn btn-xs btn-alt3 xs-mr-5 xs-ml-5"><i class="fas fa-edit"></i></button><button data-modal="full-dark" class="btn btn-xs btn-danger xs-ml-5 xs-mr-5"><i class="fas fa-trash"></i></button></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
 
             </div>
 
@@ -169,9 +178,209 @@
     </div>
 </div>
 
+<div id="shift-edit-modal" class="modal-container modal-full-width modal-full-color-dark modal-effect-9">
+    <div class="modal-content">
+        <div class="modal-header" style="color: white">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close modal-close"><i class="icon s7-close"></i></button>
+            <h3 class="modal-title">Edition du shift 0202-001</h3>
+        </div>
+        <div class="modal-body"  style="max-height: calc(100vh - 210px); overflow-y: scroll;" style="max-height: calc(100vh - 210px); overflow-y: auto;">
+
+            <form role="form" class="form-horizontal" name="form" method="post" action="/tasks/new-task/add-shift">
+                <div class="panel panel-full-alt1">
+                    <div class="panel-heading">Horraires&nbsp;&nbsp;<span class="label label-primary hidden" id="date-end-invalid">La date de fin doit être après la date de début</span></div>
+                    <div class="panel-body">
+                        <div class="form-group col-md-6">
+                            <label class="col-sm-4 control-label">Date de début</label>
+                            <div class="col-sm-6">
+                                <div data-start-view="2" data-date="2019-04-01" data-date-format="dd-mm-yyyy - HH:ii" data-link-field="dtp_input1" class="input-group date datetimepicker col-sm12">
+                                    <input required size="16" name="date-start" type="text" value="" class="form-control task-need-date-input" id="task-need-date-start"><span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="col-sm-4 control-label">Date de fin</label>
+                            <div class="col-sm-6">
+                                <div data-start-view="2" data-date="2019-04-01" data-date-format="dd-mm-yyyy - HH:ii" data-link-field="dtp_input1" class="input-group date datetimepicker col-sm12">
+                                    <input required size="16" name="date-end" type="text" value="" class="form-control task-need-date-input" id="task-need-date-end"><span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-alt1">
+                    <div class="panel-heading">Besoins humains &nbsp;<button type="button" class="btn btn-alt2" id="task-need-people-body-generic-button-add">Ajouter un besoin</button>&nbsp;<button type="button" class="btn btn-alt2" id="task-need-people-body-specific-button-add">Requerir une personne</button></div>
+                    <div class="panel-body" id="task-need-people-body">
+
+                        <div class="col-md-6 col-lg-4 sm-p-5 hidden task-need-people-generic-panel" id="task-need-people-generic-1">
+                            <div class="panel panel-full-alt1 sm-m-0">
+                                <div class="panel-body">
+
+                                    <div class="form-group">
+                                        <label class="col-sm-4 col-xs-12 control-label">Nb.</label>
+                                        <div class="col-sm-6 col-xs-10">
+                                            <input data-parsley-type="number" type="number" required="" value="1" min="1" class="form-control" name="number-need-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-4 col-xs-12 control-label">Compétences</label>
+                                        <div class="col-sm-6 col-xs-10">
+                                            <select multiple="" class="tags" name="skill-need-1">
+                                                <option value="0">Aucune</option>
+                                                <% skillArray.forEach((skill, index) => { %>
+                                                <option value="<%= skill.skill_label %>"><%= skill.skill_name_fr %></option>
+                                                <% }) %>
+                                            </select>
+                                        </div>
+                                        <div class="am-checkbox col-xs-2">
+                                            <input id="check-skill-1" type="checkbox" name="check-skill-1">
+                                            <label for="check-skill-1"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-4 col-xs-12 control-label">Rôle</label>
+                                        <div class="col-sm-6 col-xs-10">
+                                            <select class="select2" name="role-need-1">
+                                                <option value="0">Peu importe</option>
+                                                <% roleArray.forEach((role, index) => { %>
+                                                <option value="<%= role.role_label %>"><%= role.role_name_fr %></option>
+                                                <% }) %>
+                                            </select>
+                                        </div>
+                                        <div class="am-checkbox col-xs-2">
+                                            <input id="check-role-1" type="checkbox" name="check-role-1" value="1">
+                                            <label for="check-role-1"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-4 col-xs-12 control-label">Equipe</label>
+                                        <div class="col-sm-6 col-xs-10">
+                                            <select class="select2" name="team-need-1">
+                                                <option value="0">Peu importe</option>
+                                                <% teamArray.forEach((team, index) => { %>
+                                                <option value="<%= team.team_label %>"><%= team.team_name_fr %></option>
+                                                <% }) %>
+                                            </select>
+                                        </div>
+                                        <div class="am-checkbox col-xs-2">
+                                            <input id="check-team-1" type="checkbox" name="check-team-1" value="1">
+                                            <label for="check-team-1"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-4 col-xs-12 control-label">Minimum de Confiance</label>
+                                        <div class="col-sm-6 col-xs-10">
+                                            <select class="select2 form-control" name="trust-need-1">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </div>
+                                        <div class="am-checkbox col-xs-2">
+                                            <input id="check-trust-point-1" type="checkbox" name="check-trust-point-1" value="1">
+                                            <label for="check-trust-point-1"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-danger delete-people-need-panel">Supprimer</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 sm-p-5 hidden task-need-people-specific-panel" id="task-need-people-specific-1">
+                            <div class="panel panel-full-alt1 sm-m-0">
+                                <div class="panel-body">
+
+                                    <div class="form-group">
+                                        <label class="col-sm-4 control-label">Personne</label>
+                                        <div class="col-sm-7">
+                                            <select class="select2" name="people-need-1">
+                                                <% userArray.forEach((user, index) => { %>
+                                                <option value="<%= user.user_mail %>"><%= user.user_name %> <%= user.user_surname %> (<%= user.user_nickname %>)</option>
+                                                <% }) %>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-danger delete-people-need-panel2">Supprimer</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-alt1">
+                    <div class="panel-heading">Besoins matériel &nbsp;<button type="button" class="btn btn-alt2" id="task-need-equipment-button-add">Ajouter un besoin</button></div>
+                    <div class="panel-body">
+
+                        <div class="col-md-6 col-lg-4 sm-p-5 hidden task-need-equipment-panel" id="task-need-equipment-1">
+                            <div class="panel panel-full-alt1 sm-m-0">
+                                <div class="panel-body">
+
+                                    <div class="form-group">
+                                        <label class="col-sm-4 control-label">Nb.</label>
+                                        <div class="col-sm-6">
+                                            <input data-parsley-type="number" name="nb-equipment-1" min="1" value="1" type="number" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-4 control-label">Matériel</label>
+                                        <div class="col-sm-7">
+                                            <select multiple="" class="tags" name="label-equipment-1">
+                                                <option value="1">Green</option>
+                                                <option value="2">Red</option>
+                                                <option value="3">Blue</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-danger delete-equipment-need-panel">Supprimer</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="spacer text-right">
+                    <button type="button" data-dismiss="modal" class="btn btn-dark btn-shade1 modal-close">Annuler</button>
+                    <button type="submit" data-dismiss="modal" class="btn btn-dark btn-shade1" id="valid-edit-task">Valider</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
 <script src="/assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
 <script src="/assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="/assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
 <script src="/assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
 <script src="/assets/js/main.js" type="text/javascript"></script>
 <script src="/assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
@@ -186,7 +395,16 @@
 <script src="/assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
 <script src="/assets/lib/markdown-js/markdown.js" type="text/javascript"></script>
 <script src="/assets/js/app-form-wysiwyg.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js" type="text/javascript"></script>
+<script src="/js/new-task.js" type="text/javascript"></script>
 <script type="text/javascript">
+	//Set Nifty Modals defaults
+	$.fn.niftyModal('setDefaults',{
+		overlaySelector: '.modal-overlay',
+		closeSelector: '.modal-close',
+		classAddAfterOpen: 'modal-show',
+	});
+
 	$(document).ready(function(){
 		App.init();
 		App.formElements();
@@ -196,4 +414,3 @@
 
 </body>
 </html>
-

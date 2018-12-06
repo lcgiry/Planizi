@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Planizi - Task edition</title>
+
+    <link rel="stylesheet" type="text/css" href="/assets/lib/summernote/summernote.css"/>
+    <link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style-shift.css"/>
+
+</head>
+
+<body>
+<header>
+    <%- include ../header.ejs %>
+</header>
+
+<div class="am-wrapper">
+    <div class="am-content">
+        <div class="main-content">
+
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="panel panel-dark panel-borders">
+                        <div class="panel-heading">
+                            <div class="panel-title">Résumé</div>
+                        </div>
+                        <div class="panel-body" id="panel-sumup-shift">
+
+                            <div class="col-sm-12">
+                                <div class="panel-full-dark col-xs-12 xs-mb-10">
+                                    <div class="panel-body text-center">
+                                        <div class="col-xs-12 hidden-xs visible-md-block visible-lg-block col-md-12 font-bold  font-20px">VEN 23 JUIN - 12h00  >  SAM 24 JUIN 10h00 <span class="font-16px">(22h00)</span></div>
+                                        <div class="col-xs-12 hidden-xs visible-sm hidden-md hidden-lg font-bold  font-20px">VEN 23 JUIN - 12h00</div>
+                                        <div class="col-xs-12 hidden-xs visible-sm hidden-md hidden-lg font-bold font-20px">SAM 24 JUIN - 14h00</div>
+                                        <div class="col-xs-12 visible-xs hidden-sm hidden-md hidden-lg font-bold">VEN 23 JUIN - 12h00</div>
+                                        <div class="col-xs-12 visible-xs hidden-sm hidden-md hidden-lg font-bold">SAM 24 JUIN - 14h00</div>
+                                        <div class="col-xs-12 visible-xs visible-sm hidden-md hidden-lg font-16px">(22h00)</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">Plage horraire&nbsp;&nbsp;<span class="label label-primary hidden" id="date-end-invalid" style="overflow: auto">La date de fin doit être après la date de début</span></div>
+                        </div>
+                        <div class="panel-body">
+
+                            <form role="form" class="form-horizontal" id="form">
+                                <div class="hidden">
+                                    <input name="shift-id" value="123">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-3 control-label">Début</label>
+                                    <div class="col-sm-7">
+                                        <div data-start-view="2" data-date="2019-04-01" data-date-format="dd-mm-yyyy - hh:ii" data-link-field="dtp_input1" class="input-group date datetimepicker col-sm12">
+                                            <input required size="16" name="date-start" type="text" value="" class="form-control task-need-date-input" id="task-need-date-start"><span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-3 control-label">Fin</label>
+                                    <div class="col-sm-7">
+                                        <div data-start-view="2" data-date="2019-04-01" data-date-format="dd-mm-yyyy - hh:ii" data-link-field="dtp_input1" class="input-group date datetimepicker col-sm12">
+                                            <input required size="16" name="date-end" type="text" value="" class="form-control task-need-date-input" id="task-need-date-end"><span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">Besoins humains</div>
+                        </div>
+                        <div class="panel-body xs-p-0">
+                            <form role="form" class="form-horizontal" id="form-people-generic-need">
+                                <div class="col-md-6 sm-p-5 task-need-people-generic-panel" id="task-need-people-generic">
+                                <div class="panel panel-default sm-m-0">
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-4 col-xs-12 control-label">Nb.</label>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <input data-parsley-type="number" type="number" required="" value="1" min="1" class="form-control" name="number-need">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-4 col-xs-12 control-label">Compétences</label>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <select multiple="" class="tags" name="skill-need">
+                                                    <option value="0">Aucune</option>
+                                                    <% skillArray.forEach((skill, index) => { %>
+                                                    <option value="<%= skill.skill_label %>"><%= skill.skill_name_fr %></option>
+                                                    <% }) %>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-4 col-xs-12 control-label">Rôle</label>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <select class="select2" name="role-need">
+                                                    <option value="0">Peu importe</option>
+                                                    <% roleArray.forEach((role, index) => { %>
+                                                    <option value="<%= role.role_label %>"><%= role.role_name_fr %></option>
+                                                    <% }) %>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-4 col-xs-12 control-label">Equipe</label>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <select class="select2" name="team-need">
+                                                    <option value="0">Peu importe</option>
+                                                    <% teamArray.forEach((team, index) => { %>
+                                                    <option value="<%= team.team_label %>"><%= team.team_name_fr %></option>
+                                                    <% }) %>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-4 col-xs-12 control-label">Minimum de Confiance</label>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <select class="select2 form-control" name="trust-need">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center xs-mb-10 xs-mt-10">
+                                            <button type="submit" class="btn btn-alt2" id="task-need-people-body-generic-button-add"><i class="fas fa-plus-circle"></i> Besoin</button>
+                                            <button type="button" class="btn btn-danger delete-people-need-panel">RAZ</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                            <form role="form" class="form-horizontal" id="form-people-specific-need">
+                                <div class="col-md-6 sm-p-5 task-need-people-specific-panel" id="task-need-people-specific">
+                                <div class="panel panel-default sm-m-0">
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">Personne</label>
+                                            <div class="col-sm-6">
+                                                <select class="select2" name="people-need">
+                                                    <% userArray.forEach((user, index) => { %>
+                                                    <option value="<%= user.user_mail %>"><%= user.user_name %> <%= user.user_surname %> (<%= user.user_nickname %>)</option>
+                                                    <% }) %>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center xs-mb-10 xs-mt-10">
+                                            <button type="submit" class="btn btn-alt2" id="task-need-people-body-generic-button-add"><i class="fas fa-plus-circle"></i> Personne</button>
+                                            <button type="button" class="btn btn-danger delete-people-need-panel2">RAZ</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">Besoins matériel</div>
+                        </div>
+                        <div class="panel-body">
+
+                            <form role="form" class="form-horizontal" id="form">
+                                <div class="sm-p-5 task-need-equipment-specific-panel form-group" id="task-need-people-specific">
+                                <div class="panel panel-default sm-m-0">
+                                    <div class="panel-body xs-p-0">
+
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                            <label class="col-sm-4 col-xs-12 control-label">Nb.</label>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <input data-parsley-type="number" type="number" required="" value="1" min="1" class="form-control" name="number-need-1">
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                            <label class="col-sm-4 control-label">Materiel</label>
+                                            <div class="col-sm-6">
+                                                <select class="select2" name="people-need-1">
+                                                    <% userArray.forEach((user, index) => { %>
+                                                    <option value="<%= user.user_mail %>"><%= user.user_name %> <%= user.user_surname %> (<%= user.user_nickname %>)</option>
+                                                    <% }) %>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center xs-mb-10 xs-mt-10">
+                                        <button type="button" class="btn btn-alt2" id="task-need-people-body-generic-button-add"><i class="fas fa-plus-circle"></i> Personne</button>
+                                        <button type="button" class="btn btn-danger delete-people-need-panel2">RAZ</button>
+                                    </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 form-group text-right sm-mr-10">
+                    <button type="submit" class="btn btn-success" id="valid-edit-date">Valider<i class="fas fa-check"></i></button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<script src="/assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+<script src="/assets/js/main.js" type="text/javascript"></script>
+<script src="/assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+<script src="/assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="/assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+<script src="/assets/lib/bootstrap-slider/js/bootstrap-slider.js" type="text/javascript"></script>
+<script src="/assets/js/app-form-elements.js" type="text/javascript"></script>
+<script src="/assets/lib/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
+<script src="/assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+<script src="/assets/lib/markdown-js/markdown.js" type="text/javascript"></script>
+<script src="/assets/js/app-form-wysiwyg.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js" type="text/javascript"></script>
+<script src="/js/shift-task.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//Set Nifty Modals defaults
+	$.fn.niftyModal('setDefaults',{
+		overlaySelector: '.modal-overlay',
+		closeSelector: '.modal-close',
+		classAddAfterOpen: 'modal-show',
+	});
+
+	$(document).ready(function(){
+		App.init();
+		App.formElements();
+	});
+</script>
+<script type="text/javascript">$('#page-title-for-mobile-version').append('New task')</script>
+
+</body>
+</html>

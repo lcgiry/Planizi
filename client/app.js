@@ -55,6 +55,7 @@ app.use('/css', express.static('node_modules/bootstrap/dist/css'));
 app.use('/css', express.static('node_modules/font-awesome/css'));
 app.use('/css', express.static('public/stylesheets'));
 app.use('/assets', express.static('public/template-assets'));
+app.use('/lib', express.static('public/libraries'));
 
 // app.use(express.static(path.join(__dirname, '/public/stylesheets')));
 

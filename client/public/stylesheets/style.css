@@ -58,3 +58,24 @@ li a:hover{
 }.main-content{
      text-align:center;
  }
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.font-20px{
+    font-size: 20px;
+}
+
+.font-16px{
+    font-size: 16px;
+}
+
+.font-color-black{
+    color: black;
+}
