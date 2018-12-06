@@ -34,63 +34,65 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label font-weight-bold">Nom *</label>
                                         <div class="col-sm-6">
-                                            <input name="userName" type="text" required="" placeholder="" class="form-control">
+                                            <input name="user_surname" type="text" required="" placeholder="" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label font-weight-bold">Prénom *</label>
                                         <div class="col-sm-6">
-                                            <input name="userSurname" type="text" required="" placeholder="" class="form-control">
+                                            <input name="user_name" type="text" required="" placeholder="" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">Surnom</label>
                                         <div class="col-sm-6">
-                                            <input name="userNickname" type="text" placeholder="" class="form-control">
+                                            <input name="user_nickname" type="text" placeholder="" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label font-weight-bold">Email *</label>
                                         <div class="col-sm-6">
-                                            <input name="userMail" type="text" disabled="disabled" placeholder="<%= user %>" class="form-control">
+                                            <input name="userMail" type="text" disabled="disabled" placeholder="<%= user %>"  class="form-control">
+                                            <input id="prodId" name="user_mail" type="hidden" value="<%= user %>">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">Numéro de téléphone *</label>
                                         <div class="col-sm-6">
-                                            <input name="userPhone" data-parsley-type="digits" type="text" required="" placeholder="" class="form-control">
+                                            <input name="user_phone" data-parsley-type="digits" type="text" required="" placeholder="" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label font-weight-bold">Genre *</label>
                                         <div class="col-sm-6">
                                             <div class="am-radio inline">
-                                                <input type="radio" required="required" name="userGender" id='male' value="m">
-                                                <label for="male">Male</label>
+                                                <input type="radio" required="required" name="user_gender" id='male' value="m">
+                                                <label for="male">Homme</label>
                                             </div>
                                             <div class="am-radio inline">
-                                                <input type="radio" required="required" name="userGender" id="female" value="f">
-                                                <label for="female">Female</label>
+                                                <input type="radio" required="required" name="user_gender" id="female" value="f">
+                                                <label for="female">Femme</label>
                                             </div>
                                             <div class="am-radio inline">
-                                                    <input type="radio" required="required" name="userGender" id="autre" value="f">
+                                                    <input type="radio" required="required" name="user_gender" id="autre" value="f">
                                                     <label for="female">Autre</label>
                                                 </div>
                                         </div>
-                                    </div>
+</div>
+                                    
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label font-weight-bold">Date de naissance * </label>
                                         <div class="col-sm-6">
-                                            <div data-min-view="2" data-date-format="dd/mm/yyyy" class="input-group date datetimepicker">
+                                            <div data-min-view="2" data-date-format="yyyy-mm-dd" class="input-group date datetimepicker">
                                                 <span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
-                                                <input name="userBirthdate" required="" type="text" data-mask="date" value="" placeholder="dd/mm/yyyy" class="form-control">
+                                                <input name="user_birthdate" required="" type="text" data-mask="date" value="" placeholder="yyyy-mm-dd" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">Description / Commentaires</label>
                                         <div class="col-sm-6">
-                                            <textarea name="userDescription" class="form-control" maxlength="500"></textarea>
+                                            <textarea name="user_description" class="form-control" maxlength="500"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">

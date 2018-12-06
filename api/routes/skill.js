@@ -2,12 +2,12 @@ var express = require('express');
 var router = express.Router();
 var sequelize = require('../config/database/config-database').sequelize;
 
-var skillValidator = require('../services/validators/skill-validator');
+var userValidator = require('../services/validators/user-validator');
 var errorResponse = require('../errors/errors-response');
-const Skill = sequelize.import('../models/skill.js');
 const User = sequelize.import('../models/user.js');
+const Skill = sequelize.import('../models/skill.js');
 const User_Skill = sequelize.import('../models/user_skill.js');
-Skill.belongsToMany(User, {through: User_Skill, foreignKey: 'user_skill_skill', otherKey: 'user_skill_user'});
+Skill.belongsToMany(User, {through: User_Skill, foreignKey: 'user_skill_skill', otherKey:'user_skill_user'});
 
 
 //----------------------------------------- SKILL TABLE

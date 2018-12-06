@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var sequelize = require('../config/database/config-database').sequelize;
+errorResponse = require('../errors/errors-response');
 
-const User = sequelize.import('../models/user.js');
 
 /* GET home page. */
 router.get('/login', function(req, res, next) {

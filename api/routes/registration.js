@@ -2,10 +2,9 @@ var express = require('express');
 var router = express.Router();
 var sequelize = require('../config/database/config-database').sequelize;
 
-const User = sequelize.import('../models/user');
-const Skill = sequelize.import('../models/skill');
-const Role = sequelize.import('../models/role');
-const UserSkill = sequelize.import('../models/user_skill');
+const User = sequelize.import('../models/user.js');
+const Role = sequelize.import('../models/role.js');
+const Skill = sequelize.import('../models/skill.js');
 
 router.get("/personal", function(req, res, next){
 	if(req.session.userID && !req.session.user) {

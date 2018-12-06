@@ -67,9 +67,12 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label font-weight-bold">Date de naissance</label>
                                     <div class="col-sm-6">
-										<input type="date" class="form-control" name="user_birthdate"
-											value=<%= user.user_birthdate %>
-											min="1918-01-01" max="2018-01-01">
+										<div data-min-view="2" data-date-format="dd/mm/yyyy" class="input-group date datetimepicker">
+                                                <span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                                                <input name="user_birthdate" required="" type="text" data-mask="date" value=<%= user.user_birthdate %>
+                                                 placeholder="dd/mm/yyyy" class="form-control" min="1918-01-01" max="2018-01-01">
+                                            </div>
+										
                                     </div>
                                 </div>
                                 <div class="form-group">
