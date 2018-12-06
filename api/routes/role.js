@@ -2,14 +2,12 @@ var express = require('express');
 var router = express.Router();
 var sequelize = require('../config/database/config-database').sequelize;
 
-var roleValidator = require('../services/validators/role-validator');
-var errorResponse = require('../errors/errors-response');
 const Role = sequelize.import('../models/role.js');
 const User = sequelize.import('../models/user.js');
-//Team.belongsToMany(User, {through: User_Team, foreignKey: 'user_team_team', otherKey:'user_team_user'});
-	
+var roleValidator = require('../services/validators/role-validator');
+User.hasOne(Role);
 
-//----------------------------------------- TEAM TABLE
+//----------------------------------------- ROLE TABLE
 /**
  * @apiDefine ErrorGetGroup
  * @apiError AuthenticationRequired You must be authenticated.

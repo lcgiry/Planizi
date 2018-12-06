@@ -23,6 +23,7 @@ var userRouter = require('./routes/user');
 var skillRouter = require('./routes/skill');
 var teamRouter = require('./routes/team');
 var roleRouter = require('./routes/role');
+var shiftUnitRouter = require('./routes/shift_unit');
 
 //------------------------------ Main Ssettings -----------------------------------
 //Start express for the server
@@ -74,6 +75,7 @@ app.use("/user", userRouter);
 app.use("/skill", skillRouter);
 app.use("/team", teamRouter);
 app.use("/role", roleRouter);
+app.use("/shift_unit", shiftUnitRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

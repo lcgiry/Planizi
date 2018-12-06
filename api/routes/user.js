@@ -19,6 +19,7 @@ const Shift_Unit = sequelize.import('../models/shift_unit.js');
 const Availibility_User = sequelize.import('../models/availibility_user.js');
 User.belongsToMany(Shift_Unit, {as: "avaibilities", through: Availibility_User, foreignKey: 'availibility_user_user', otherKey: 'availibility_user_shift_unit'});
 
+
 //----------------------------------------- USER TABLE
 /**
  * @apiDefine ErrorGetGroup
@@ -149,6 +150,8 @@ router.post('/user/', function(req, res, next) {
 					//Save the new user
 					Promise.all([newUserPromise.save()])
 						.then( result => {
+							Shift_Unit.findAll({attributes: ['shift_unit_id']}).then( shiftResult =>{
+								result[0].setAvaibilities(shiftResult)});
 							res.status(201);
 							res.send(result);
 						})
