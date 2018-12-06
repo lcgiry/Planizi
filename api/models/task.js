@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     task_id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     task_label: {
       type: DataTypes.STRING(128),
@@ -60,7 +61,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       references: {
         model: 'task_instructions',
-        key: 'task_instruction_id'
+        key: 'task_instructions_id'
       }
     },
     createdAt: {
