@@ -32,7 +32,7 @@ module.exports.checkAndFormat_user_phone = function(value){
 };
 
 module.exports.checkAndFormat_user_birthdate = function(value){
-	return value;
+	return value; 
 };
 
 module.exports.checkAndFormat_user_description = function(value){
