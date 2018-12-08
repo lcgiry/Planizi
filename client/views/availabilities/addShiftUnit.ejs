@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+    <title>Planizi - Registration</title>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/stroke-7/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/jquery.nanoscroller/css/nanoscroller.css"/>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
+</head>
+
+<body>
+
+<header>
+    <%- include ../header.ejs %>
+    <!-- <script type="text/javascript">$('#page-title-for-mobile-version').append('Dashboard')</script> -->
+</header>
+
+<div class="am-wrapper am-login">
+    <div class="am-content">
+        <div class="main-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Ajouter un créneau</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form method="post" action="/availabilities/addShiftUnit" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label font-weight-bold">Début</label>
+                                    <div class="col-sm-6">
+										<div data-start-view="2", data-min-view="0" "step=15" data-date-format="dd/mm/yyyy-HH:ii" class="input-group date datetimepicker">
+                                                <span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                                                <input name="shift_unit_start" required="" type="text" data-mask="date" value=<%= moment(shift_unit.shift_unit_start).format("DD/MM/YYYY-HH:mm") %>
+                                                 placeholder="dd/mm/yyyy-HH:ii" class="form-control task-need-date-input" min="2018-01-01T00:00:00" max="2118-01-01T00:00:00">
+                                            </div>				      				
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label font-weight-bold">Fin</label>
+                                    <div class="col-sm-6">
+										<div data-start-view="2", data-min-view="0" "step=15" data-date-format="dd/mm/yyyy-HH:ii" class="input-group date datetimepicker">
+                                                <span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                                                <input name="shift_unit_end" required="" type="text" data-mask="date" value=<%= moment(shift_unit.shift_unit_end).format("DD/MM/YYYY-HH:mm") %>
+                                                 placeholder="dd/mm/yyyy-HH:ii" class="form-control task-need-date-input" min="2018-01-01T00:00:00" max="2118-01-01T00:00:00">
+                                            </div>				      				
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Point</label>
+                                    <div class="col-sm-6">
+                                        <input data-parsley-type="digits" type="number" value="<%= shift_unit.shift_unit_point %>" class="form-control" name="shift_unit_point">
+                                    </div>
+                                </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12 text-center">
+                                            <a href="/availabilities/showShiftUnit" style="color: white; text-decoration: white" class="btn btn-danger btn-space">Annuler</a>
+                                            <button class="btn btn-alt3 btn-space" type="submit">Enregistrer<i class="icon s7-check"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+<script src="/assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+<script src="/assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+<script src="/assets/js/main.js" type="text/javascript"></script>
+<script src="/assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/lib/fuelux/js/wizard.js" type="text/javascript"></script>
+<script src="/assets/lib/bootstrap-slider/js/bootstrap-slider.js" type="text/javascript"></script>
+<script src="/assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="/assets/js/app-form-wizard.js" type="text/javascript"></script>
+<script src="/assets/js/app-form-elements.js" type="text/javascript"></script>
+<script src="/assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+<script src="/assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//initialize the javascript
+		App.init();
+		App.formElements();
+	});
+	        
+</script>
+
+</body>
+</html>
