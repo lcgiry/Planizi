@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     task_comment_id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     task_comment_owner: {
       type: DataTypes.STRING(256),

@@ -3,6 +3,7 @@ var router = express.Router();
 var sequelize = require('../config/database/config-database').sequelize;
 
 var taskValidator = require('../services/validators/task-validator');
+var taskCommentValidator = require('../services/validators/task_comment-validator');
 var errorResponse = require('../errors/errors-response');
 const Task = sequelize.import('../models/task.js');
 const Team = sequelize.import('../models/team.js');
@@ -10,6 +11,7 @@ const Location = sequelize.import('../models/location.js');
 const User = sequelize.import('../models/user.js');
 const Task_Group = sequelize.import('../models/task_group.js');
 const Task_Instructions = sequelize.import('../models/task_instructions.js');
+const Task_Comment = sequelize.import('../models/task_comment.js');
 
 Task.hasOne(Task_Instructions, {as: 'TaskInstructions', foreignKey: 'task_instructions_id', sourceKey: 'task_instruction'});
 Task.belongsTo(User, {as: 'TaskSupervisor', foreignKey: 'task_supervisor'});
@@ -17,7 +19,7 @@ Task.belongsTo(User, {as: 'TaskMaster', foreignKey: 'task_master'});
 Task.belongsTo(Task_Group, {as: 'TaskGroup', foreignKey: 'task_group'});
 Task.belongsTo(Location, {as: 'TaskLocation', foreignKey: 'task_location'});
 Task.belongsTo(Team, {as: 'TaskTeam', foreignKey: 'task_team'});
-//Task_Group.hasMany(Task, {foreignKey: 'task_group', sourceKey: 'task_group_id'});
+Task.hasMany(Task_Comment, {as: 'TaskComments', foreignKey: 'task_comment_task'});
 
 
 //----------------------------------------- TASK TABLE
@@ -90,7 +92,8 @@ router.get('/task/:id', function(req, res, next) {
 			'TaskGroup',
 			'TaskInstructions',
 			'TaskLocation',
-			'TaskTeam' ],
+			'TaskTeam',
+			'TaskComments'],
 		raw: false })
 		.then(taskResult => {
 			if (taskResult) {
@@ -228,44 +231,32 @@ router.put('/task/:id', function (req, res, next) {
 /**
  * @apiDefine ErrorDeleteGroup
  * @apiError AuthenticationRequired You must be authenticated.
- * @apiError ContentTypeInvalid The content-type of the request is invalid..
- * @apiError UnsupportedMediaTypeError The body passed is invalid.
  * @apiError (Error 5xx) InternalServerError The problem is due to the server
  * @apiError RessourceAlreadyExist The ressource already exists
  *
  */
 /**
  * @apiGroup TASK
- * @api {DELETE} /task/task/:id Delete the task and his instructions
- * @apiDescription Delete definitively the task of the database
+ * @api {DELETE} /task/task/:id Delete the task
+ * @apiDescription Delete definitively the task, his instructions and his comments of the database
  * @apiParam {String} id ``REQUIRED`` The id of the task (ID)
  * @apiSuccess (Success 204) NOCONTENT *No content sent*
  * @apiUse ErrorDeleteGroup
  */
 router.delete('/task/:id', function (req, res, next) {
 
-	Task.destroy({ where: {task_id: taskValidator.checkAndFormat_task_id(req.params.id)}})
-		.then( result => {
-			if (result > 0) {
+	var taskPromise = Task.destroy({ where: {task_id: taskValidator.checkAndFormat_task_id(req.params.id)}});
+	var taskInstructionPromise = Task_Instructions.destroy({ where: {task_instructions_id: taskValidator.checkAndFormat_task_id(req.params.id)}});
+	var taskCommentPromise = Task_Comment.destroy({ where: {task_comment_task: taskCommentValidator.checkAndFormat_task_comment_task(req.params.id)}});
 
-				Task_Instructions.destroy({ where: {task_instructions_id: taskValidator.checkAndFormat_task_id(req.params.id)}})
-					.then( result => {
-						res.status(204).end();
-					})
-					.catch(err => {
-						res.status(500);
-						res.send(errorResponse.InternalServerError("Problem to delete the instructions : "+err));
-					});
-
-			} else {
-				res.status(404);
-				res.send(errorResponse.RessourceNotFound('The task does not exist'));
-			}
-		})
-		.catch(err => {
-			res.status(500);
-			res.send(errorResponse.InternalServerError("Problem to delete the task : "+err));
-		});
+		Promise.all([taskPromise, taskInstructionPromise, taskCommentPromise])
+			.then( result => {
+				res.status(204).end();
+			})
+			.catch(err => {
+				res.status(500);
+				res.send(errorResponse.InternalServerError("Problem to delete the task : "+err));
+			});
 
 });
 
@@ -273,7 +264,7 @@ router.delete('/task/:id', function (req, res, next) {
 
 /**
  * @apiGroup TASK
- * @api {GET} /task/instructions/:id Get the instruction of the task
+ * @api {GET} /task/instructions/:id Get instructions
  * @apiDescription Retrieve all information about a task
  * @apiParam {String} id ``REQUIRED`` The id of the task whose the instruction must be retrieved (ID)
  * @apiSuccess {Integer} task_instrucions_id The id of the instruction task (ID)
@@ -327,7 +318,7 @@ router.get('/instructions/:id', function(req, res, next) {
  */
 /**
  * @apiGroup TASK
- * @api {PUT} /task/instructions/:id Update a task
+ * @api {PUT} /task/instructions/:id Update instructions
  * @apiDescription Insert or Update the instructions of a task
  * @apiParam {String} id ``REQUIRED`` The id of the task whose the instruction must be inserted (ID)
  * @apiParam (Body) {Blob} task_instructions_instructions All formated instructions of the task
@@ -387,5 +378,144 @@ router.put('/instructions/:id', function (req, res, next) {
 
 });
 
+//----------------------------------------- COMMENT_TASK TABLE
+
+/**
+ * @apiGroup TASK
+ * @api {GET} /task/comments/:id Get all comments
+ * @apiDescription Retrieve all comment about the task
+ * @apiParam {String} id ``REQUIRED`` The id of the task whose the comments must be retrieved (ID)
+ * @apiSuccess {Object[]} comments The array with all comments
+ * @apiSuccess {Integer} comments.task_comment_id The id of the comment raw (ID)
+ * @apiSuccess {Integer} comments.task_comment_owner The id of the user who has written the comment
+ * @apiSuccess {String} comments.task_comment_content The comment
+ * @apiSuccess {Date} comments.task_comment_date The date when the comment has been written
+ * @apiSuccess {Integer} comments.task_comment_task The id of the task that it is linked
+ * @apiSuccess {Date} comments.createdAt The creation date of the comment raw
+ * @apiSuccess {Date} comments.updatedAt The last date update of the comment raw
+ * @apiUse ErrorGetGroup
+ */
+router.get('/comments/:id', function(req, res, next) {
+
+	Task.findOne({ where: { task_id: req.params.id }, attributes: ['task_id']})
+		.then( taskResult => {
+			if (taskResult) {
+
+				taskResult.getTaskComments({raw: true, order: [['task_comment_date', 'ASC']]})
+					.then( comments => {
+						if (comments) {
+							res.type('json');
+							res.send({"comments": comments});
+						}else {
+							res.status(404);
+							res.send(errorResponse.RessourceNotFound('No comment does not exist'));
+						}
+					})
+					.catch( err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
+					});
+
+			} else {
+				res.status(404);
+				res.send(errorResponse.RessourceNotFound('The task does not exist'));
+			}
+		})
+		.catch(err => {
+			res.status(500);
+			res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
+		});
+
+});
+
+/**
+ * @apiDefine ErrorPutGroup
+ * @apiError AuthenticationRequired You must be authenticated.
+ * @apiError ContentTypeInvalid The content-type of the request is invalid..
+ * @apiError UnsupportedMediaTypeError The body passed is invalid.
+ * @apiError (Error 5xx) InternalServerError The problem is due to the server
+ * @apiError RessourceAlreadyExist The ressource already exists
+ */
+/**
+ * @apiGroup TASK
+ * @api {POST} /task/instructions/:id Post a comment
+ * @apiDescription Insert a comment about a task
+ * @apiParam {String} id ``REQUIRED`` The id of the task whose the instruction must be inserted (ID)
+ * @apiParam (Body) {Integer} task_comment_owner The id of the user who has written the comment
+ * @apiParam (Body) {String} task_comment_content The content of the comment
+ * @apiSuccess (Success 204) NOCONTENT *No content sent*
+ * @apiUse ErrorPostGroup
+ */
+router.post('/comment/:id', function (req, res, next) {
+
+	if(req.is('application/json')){
+
+		Task.findOne({ where: { task_id : taskValidator.checkAndFormat_task_id(req.params.id) } })
+			.then( taskResult => {
+				// If the task exists
+				if (taskResult) {
+					//Save the new comment
+					req.body.task_comment_task = req.params.id;
+					req.body.task_comment_date = Date.now();
+					Task_Comment.build(taskCommentValidator.mapTaskComment(req)).save()
+						.then( insertResult => {
+							res.status(204).end();
+						})
+						.catch( err =>{
+							res.status(500);
+							res.send(errorResponse.InternalServerError("Problem to insert the comment : "+err.message));
+						})
+
+				} else {
+					res.status(404);
+					res.send(errorResponse.RessourceNotFound('The task does not exist'));
+				}
+			})
+			.catch(err => {
+				res.status(500);
+				res.send(errorResponse.InternalServerError("Problem to check if the task exists : "+err));
+			});
+
+	}else{
+		res.status(406);
+		res.send(errorResponse.ContentTypeInvalid("Content-type received: "+req.get('Content-Type')+". Content-type required : application/json"));
+	}
+
+});
+
+/**
+ * @apiDefine ErrorDeleteGroup
+ * @apiError AuthenticationRequired You must be authenticated.
+ * @apiError (Error 5xx) InternalServerError The problem is due to the server
+ * @apiError RessourceAlreadyExist The ressource already exists
+ *
+ */
+/**
+ * @apiGroup TASK
+ * @api {DELETE} /task/comment/:id Delete a comment
+ * @apiDescription Delete definitively the comment of the database
+ * @apiParam {String} id ``REQUIRED`` The id of the comment (ID)
+ * @apiSuccess (Success 204) NOCONTENT *No content sent*
+ * @apiUse ErrorDeleteGroup
+ */
+router.delete('/comment/:id', function (req, res, next) {
+
+	var taskCommentPromise = Task_Comment.destroy({ where: {task_comment_id: taskCommentValidator.checkAndFormat_task_comment_id(req.params.id)}});
+
+	Promise.all([taskCommentPromise])
+		.then( result => {
+			if (result > 0) {
+				res.status(204).end();
+			} else {
+				res.status(404);
+				res.send(errorResponse.RessourceNotFound('The team does not exist'));
+			}
+		})
+		.catch(err => {
+			res.status(500);
+			res.send(errorResponse.InternalServerError("Problem to delete the comment : "+err));
+		});
+
+});
 
 module.exports = router;
