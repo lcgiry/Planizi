@@ -2,7 +2,7 @@ var format = require('../format');
 
 
 //------------------------ List all fields of the table -----------------------------
-let fields = [	'task_id', 'task_label', 'task_description', 'task_team', 'task_supervisor', 'task_master', 'task_group', 'task-location', 'task-instruction'];
+let fields = [	'task_id', 'task_label', 'task_description', 'task_team', 'task_supervisor', 'task_master', 'task_group', 'task_location'];
 
 
 //------------------------ Define all methods that can check and format each field -----------------------------
@@ -39,7 +39,12 @@ module.exports.checkAndFormat_task_location = function(value){
 };
 
 module.exports.checkAndFormat_task_instruction = function(value){
-	return value;
+	if(typeof value === String){
+		return value;
+	}else{
+		return (value.toString());
+	}
+
 };
 
 

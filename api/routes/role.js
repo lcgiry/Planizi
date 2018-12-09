@@ -5,7 +5,7 @@ var sequelize = require('../config/database/config-database').sequelize;
 const Role = sequelize.import('../models/role.js');
 const User = sequelize.import('../models/user.js');
 var roleValidator = require('../services/validators/role-validator');
-User.hasOne(Role);
+User.hasOne(Role, {foreignKey: 'role_label', sourceKey: 'user_role'});
 
 //----------------------------------------- ROLE TABLE
 /**

@@ -11,12 +11,12 @@ const User = sequelize.import('../models/user.js');
 const Task_Group = sequelize.import('../models/task_group.js');
 const Task_Instructions = sequelize.import('../models/task_instructions.js');
 
-Task.hasOne(Task_Instructions, {as: 'Instructions', foreignKey: 'task_instructions_id', sourceKey: 'task_instruction'});
-Task.hasOne(User, {as: 'TaskSupervisor', foreignKey: 'task_supervisor'});
-Task.hasOne(User, {as: 'TaskMaster', foreignKey: 'task_master'});
-Task.hasOne(Task_Group, {as: 'TaskGroup', foreignKey: 'task_group'});
-Task.hasOne(Location, {as: 'TaskLocation', foreignKey: 'task_location'});
-Task.hasOne(Team, {as: 'TaskTeam', foreignKey: 'task_team'});
+Task.hasOne(Task_Instructions, {as: 'TaskInstructions', foreignKey: 'task_instructions_id', sourceKey: 'task_instruction'});
+Task.belongsTo(User, {as: 'TaskSupervisor', foreignKey: 'task_supervisor'});
+Task.belongsTo(User, {as: 'TaskMaster', foreignKey: 'task_master'});
+Task.belongsTo(Task_Group, {as: 'TaskGroup', foreignKey: 'task_group'});
+Task.belongsTo(Location, {as: 'TaskLocation', foreignKey: 'task_location'});
+Task.belongsTo(Team, {as: 'TaskTeam', foreignKey: 'task_team'});
 //Task_Group.hasMany(Task, {foreignKey: 'task_group', sourceKey: 'task_group_id'});
 
 
@@ -84,7 +84,14 @@ router.get('/tasks', function(req, res, next) {
  */
 router.get('/task/:id', function(req, res, next) {
 
-	Task.findOne({ where: { task_id : taskValidator.checkAndFormat_task_id(req.params.id) }, raw: true })
+	Task.findOne({ where: {
+		task_id : taskValidator.checkAndFormat_task_id(req.params.id) },
+		include: [{model: User, as:'TaskSupervisor'},
+			'TaskGroup',
+			'TaskInstructions',
+			'TaskLocation',
+			'TaskTeam' ],
+		raw: false })
 		.then(taskResult => {
 			if (taskResult) {
 				res.type('json');
@@ -120,7 +127,6 @@ router.get('/task/:id', function(req, res, next) {
  * @apiParam (Body) {String} task_master ``REQUIRED``  The master email of the task, the people to contact if a problem occurs
  * @apiParam (Body) {String} task_group The ID group task that belong the task
  * @apiParam (Body) {String} task_location The ID location where the task take place
- * @apiParam (Body) {String} task_instruction The ID of the instructions
  * @apiSuccess (Success 201) {String} team_label The team label of the new team.
  * @apiUse ErrorPostGroup
  */
@@ -230,7 +236,7 @@ router.put('/task/:id', function (req, res, next) {
  */
 /**
  * @apiGroup TASK
- * @api {DELETE} /task/task/:id Delete the task
+ * @api {DELETE} /task/task/:id Delete the task and his instructions
  * @apiDescription Delete definitively the task of the database
  * @apiParam {String} id ``REQUIRED`` The id of the task (ID)
  * @apiSuccess (Success 204) NOCONTENT *No content sent*
@@ -238,10 +244,19 @@ router.put('/task/:id', function (req, res, next) {
  */
 router.delete('/task/:id', function (req, res, next) {
 
-	Task.destroy({ where: {task_label: taskValidator.checkAndFormat_task_id(req.params.id)}})
+	Task.destroy({ where: {task_id: taskValidator.checkAndFormat_task_id(req.params.id)}})
 		.then( result => {
 			if (result > 0) {
-				res.status(204).end();
+
+				Task_Instructions.destroy({ where: {task_instructions_id: taskValidator.checkAndFormat_task_id(req.params.id)}})
+					.then( result => {
+						res.status(204).end();
+					})
+					.catch(err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError("Problem to delete the instructions : "+err));
+					});
+
 			} else {
 				res.status(404);
 				res.send(errorResponse.RessourceNotFound('The task does not exist'));
@@ -254,7 +269,7 @@ router.delete('/task/:id', function (req, res, next) {
 
 });
 
-//----------------------------------------- INSTRUCTION_TEAM TABLE
+//----------------------------------------- INSTRUCTION_TASK TABLE
 
 /**
  * @apiGroup TASK
@@ -270,30 +285,25 @@ router.delete('/task/:id', function (req, res, next) {
 router.get('/instructions/:id', function(req, res, next) {
 
 	Task.findOne({ where: { task_id: req.params.id }, attributes: ['task_id', 'task_instruction']})
-		.then(taskResult => {
+		.then( taskResult => {
 
 			if (taskResult) {
-				console.log(taskResult.getInstructions());
-				/*if(taskResult.task_instruction){
-					var idOfTheTask = taskResult.task_instruction;
-					Task_Instructions.findOne({ where: { task_instructions_id: idOfTheTask } })
-						.then(instructionResult => {
-							if (instructionResult) {
-								res.type('json');
-								res.send(instructionResult);
-							}else {
-								res.status(404);
-								res.send(errorResponse.RessourceNotFound('The instructions does not exist'));
-							}
-						})
-						.catch(err => {
-							res.status(500);
-							res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
-						});
-				}else{
-					res.status(404);
-					res.send(errorResponse.RessourceNotFound('The task has no instruction'));
-				}*/
+
+				taskResult.getTaskInstructions({raw: true})
+					.then( instructions => {
+						if (instructions) {
+							instructions.task_instructions_instructions = instructions.task_instructions_instructions.toString('utf8');
+							res.type('json');
+							res.send(instructions);
+						}else {
+							res.status(404);
+							res.send(errorResponse.RessourceNotFound('The instructions does not exist'));
+						}
+					})
+					.catch( err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
+					});
 
 			} else {
 				res.status(404);
@@ -308,68 +318,6 @@ router.get('/instructions/:id', function(req, res, next) {
 });
 
 /**
- * @apiDefine ErrorPostGroup
- * @apiError AuthenticationRequired You must be authenticated.
- * @apiError ContentTypeInvalid The content-type of the request is invalid..
- * @apiError UnsupportedMediaTypeError The body passed is invalid.
- * @apiError (Error 5xx) InternalServerError The problem is due to the server
- * @apiError RessourceAlreadyExist The ressource already exists
- */
-/**
- * @apiGroup TASK
- * @api {POST} /task/task/ Post a new task
- * @apiDescription Create a new task in database
- * @apiParam (Body) {String} task_label ``REQUIRED`` The title given to the task
- * @apiParam (Body) {String} tasks_description The little description of the task
- * @apiParam (Body) {String} task_team The team linked to the task
- * @apiParam (Body) {String} task_supervisor The supervisor email of the task in place
- * @apiParam (Body) {String} task_master ``REQUIRED``  The master email of the task, the people to contact if a problem occurs
- * @apiParam (Body) {String} task_group The ID group task that belong the task
- * @apiParam (Body) {String} task_location The ID location where the task take place
- * @apiParam (Body) {String} task_instruction The ID of the instructions
- * @apiSuccess (Success 201) {String} team_label The team label of the new team.
- * @apiUse ErrorPostGroup
- */
-router.post('/task/', function(req, res, next) {
-
-	if(req.is('application/json')){
-
-		var newTaskPromise = Task.build(taskValidator.mapTask(req));
-
-		Task.findOne({ where: { task_id : taskValidator.checkAndFormat_task_id(req.params.id) } })
-			.then( result =>{
-				//If team does not exist yet
-				if(result === null){
-					//Save the new team
-					Promise.all([newTaskPromise.save()])
-						.then( result => {
-							res.status(201);
-							res.send({
-								"task_id": result[0].task_id
-							});
-						})
-						.catch( err =>{
-							res.status(500);
-							res.send(errorResponse.InternalServerError(err.message));
-						});
-					//If team exists yet
-				}else{
-					res.status(404);
-					res.send(errorResponse.RessourceAlreadyExist( "The task is yet exists"));
-				}
-			})
-			.catch( err =>{
-				res.send(errorResponse.InternalServerError("Problem to check if the task exists : "+err));
-			});
-
-	}else{
-		res.status(406);
-		res.send(errorResponse.ContentTypeInvalid("Content-type received: "+req.get('Content-Type')+". Content-type required : application/json"));
-	}
-
-});
-
-/**
  * @apiDefine ErrorPutGroup
  * @apiError AuthenticationRequired You must be authenticated.
  * @apiError ContentTypeInvalid The content-type of the request is invalid..
@@ -379,34 +327,48 @@ router.post('/task/', function(req, res, next) {
  */
 /**
  * @apiGroup TASK
- * @api {PUT} /task/task/:id Update a task
- * @apiDescription Update a task
- * @apiParam {String} id ``REQUIRED`` The id of the task (ID)
- * @apiParam (Body) {String} task_label The title given to the task
- * @apiParam (Body) {String} tasks_description The little description of the task
- * @apiParam (Body) {String} task_team The team linked to the task
- * @apiParam (Body) {String} task_supervisor The supervisor email of the task in place
- * @apiParam (Body) {String} task_master The master email of the task, the people to contact if a problem occurs
- * @apiParam (Body) {String} task_group The ID group task that belong the task
- * @apiParam (Body) {String} task_location The ID location where the task take place
- * @apiParam (Body) {String} task_instruction The ID of the instructions
+ * @api {PUT} /task/instructions/:id Update a task
+ * @apiDescription Insert or Update the instructions of a task
+ * @apiParam {String} id ``REQUIRED`` The id of the task whose the instruction must be inserted (ID)
+ * @apiParam (Body) {Blob} task_instructions_instructions All formated instructions of the task
  * @apiSuccess (Success 204) NOCONTENT *No content sent*
  * @apiUse ErrorPostGroup
  */
-router.put('/team/:id', function (req, res, next) {
+router.put('/instructions/:id', function (req, res, next) {
 
 	if(req.is('application/json')){
 
-		Task.findOne({  where: { task_id : taskValidator.checkAndFormat_task_id(req.params.id) } })
+		Task.findOne({ where: { task_id : taskValidator.checkAndFormat_task_id(req.params.id) } })
 			.then( taskResult => {
 				if (taskResult) {
 
-					taskResult.update(taskValidator.mapTask(req)).then( result => {
-						res.status(204).end();
-					}).catch( err => {
-						res.status(500);
-						res.send(errorResponse.InternalServerError("Problem to update task : "+err));
-					});
+					Task_Instructions.findOne({ where: { task_instructions_id : taskValidator.checkAndFormat_task_id(req.params.id) } })
+						.then( instructionResult => {
+							if (instructionResult) {
+								instructionResult.update({"task_instructions_id": req.params.id, "task_instructions_instructions": taskValidator.checkAndFormat_task_instruction(req.body.task_instructions_instructions)})
+									.then( updateResult => {
+										res.status(204).end();
+									})
+									.catch( updateErr => {
+										res.status(500);
+										res.send(errorResponse.InternalServerError("Problem to update the instructions : "+updateErr.message));
+									});
+							} else {
+							//Save the new instruction
+							Task_Instructions.build({"task_instructions_id": req.params.id, "task_instructions_instructions": taskValidator.checkAndFormat_task_instruction(req.body.task_instructions_instructions) }).save()
+								.then( insertResult => {
+									res.status(204).end();
+								})
+								.catch( err =>{
+									res.status(500);
+									res.send(errorResponse.InternalServerError("Problem to insert the instructions : "+err.message));
+								});
+							}
+						})
+						.catch( err => {
+							res.status(500);
+							res.send(errorResponse.InternalServerError("Problem to check if the instructions yet exist : "+err));
+						});
 
 				} else {
 					res.status(404);
@@ -424,42 +386,6 @@ router.put('/team/:id', function (req, res, next) {
 	}
 
 });
-
-/**
- * @apiDefine ErrorDeleteGroup
- * @apiError AuthenticationRequired You must be authenticated.
- * @apiError ContentTypeInvalid The content-type of the request is invalid..
- * @apiError UnsupportedMediaTypeError The body passed is invalid.
- * @apiError (Error 5xx) InternalServerError The problem is due to the server
- * @apiError RessourceAlreadyExist The ressource already exists
- *
- */
-/**
- * @apiGroup TASK
- * @api {DELETE} /task/task/:id Delete the task
- * @apiDescription Delete definitively the task of the database
- * @apiParam {String} id ``REQUIRED`` The id of the task (ID)
- * @apiSuccess (Success 204) NOCONTENT *No content sent*
- * @apiUse ErrorDeleteGroup
- */
-router.delete('/task/:id', function (req, res, next) {
-
-	Task.destroy({ where: {task_label: taskValidator.checkAndFormat_task_id(req.params.id)}})
-		.then( result => {
-			if (result > 0) {
-				res.status(204).end();
-			} else {
-				res.status(404);
-				res.send(errorResponse.RessourceNotFound('The task does not exist'));
-			}
-		})
-		.catch(err => {
-			res.status(500);
-			res.send(errorResponse.InternalServerError("Problem to delete the task : "+err));
-		});
-
-});
-
 
 
 module.exports = router;

@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     task_instructions_instructions: {
-      type: "BLOB",
+      type: DataTypes.BLOB,
       allowNull: false
     },
     createdAt: {

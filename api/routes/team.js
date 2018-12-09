@@ -7,7 +7,7 @@ var errorResponse = require('../errors/errors-response');
 const Team = sequelize.import('../models/team.js');
 const User = sequelize.import('../models/user.js');
 const User_Team = sequelize.import('../models/user_team.js');
-Team.belongsToMany(User, {through: User_Team, foreignKey: 'user_team_team', otherKey:'user_team_user'});
+//Team.belongsToMany(User, {through: User_Team, foreignKey: 'user_team_team', otherKey:'user_team_user'});
 	
 
 //----------------------------------------- TEAM TABLE
