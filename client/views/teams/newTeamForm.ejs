@@ -1,0 +1,43 @@
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Génerer une nouvelle équipe</h4>
+    </div>
+    <form method="post" action="/teams/newTeam" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
+	<div class="modal-body">
+		<div class="form-group">
+				<label class="col-sm-3 control-label">Label</label>
+					<div class="col-sm-6">
+						<input data-parsley-type="digits" type="text" value="" class="form-control" name="team_label">
+		        </div>
+		</div>
+		<div class="form-group">
+				<label class="col-sm-3 control-label">Nom</label>
+					<div class="col-sm-6">
+						<input data-parsley-type="digits" type="text" value="" class="form-control" name="team_name">
+		        </div>
+		</div>
+		<div class="form-group">
+				<label class="col-sm-3 control-label">Nom français</label>
+					<div class="col-sm-6">
+						<input data-parsley-type="digits" type="text" value="" class="form-control" name="team_name_fr">
+		        </div>
+		</div>
+	</div>
+    <div class="modal-footer"> 
+		<div class="form-group">
+			<div class="col-sm-12 text-center">
+				<button type="button" class="btn btn-danger btn-space" data-dismiss="modal">Close</button>
+                <button class="btn btn-alt3 btn-space" type="submit">Enregistrer<i class="icon s7-check"></i></button>
+			</div>
+		</div>
+	</div>
+    </form>                            
+</div>                                
+
+
+
+
+
+
+

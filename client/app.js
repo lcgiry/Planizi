@@ -21,7 +21,8 @@ var dashboardRouter = require('./routes/dashboard');
 var taskRouter = require('./routes/tasks');
 var availabilitiesRouter = require('./routes/availabilities')
 var profileRouter = require('./routes/profile');
-var teamRouter = require('./routes/team');
+var teamRouter = require('./routes/teams');
+var shift_unitRouter = require('./routes/shift_unit');
 var app = express();
 
 
@@ -67,7 +68,8 @@ app.use('/dashboard', dashboardRouter);
 app.use('/tasks', taskRouter);
 app.use('/availabilities', availabilitiesRouter);
 app.use('/profile', profileRouter);
-app.use('/team', teamRouter);
+app.use('/teams', teamRouter);
+app.use('/shift_unit', shift_unitRouter);
 
 
 // catch 404 and forward to error handler

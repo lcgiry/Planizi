@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<div class="modal fade" id="editShiftUnit_<%= shiftUnit.shift_unit_id %>" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Editer un créneau</h4>
+    </div>
+    <form method="post" action="/shift_unit/editShiftUnit/<%= shiftUnit.shift_unit_id %>" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
+	<div class="modal-body">
+		<div class="form-group">
+			<label class="col-sm-3 control-label font-weight-bold">ID</label>
+				<div class="col-sm-6">
+					<input name="shift_unit_id" type="text" disabled="disabled" placeholder="<%= shiftUnit.shift_unit_id %>"  class="form-control">
+                    <input id="prodId" name="shift_unit_id" type="hidden" value="<%= shiftUnit.shift_unit_id %>">
+                </div>
+        </div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label font-weight-bold">Début</label>
+            <div class="col-sm-6">
+				<div data-start-view="2", data-min-view="0" "step=15" data-date-format="dd/mm/yyyy-HH:ii" class="input-group date datetimepicker">
+					<span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                    <input name="shift_unit_start" required="" type="text" data-mask="date" value=<%= moment(shiftUnit.shift_unit_start).format("DD/MM/YYYY-HH:mm") %>
+						placeholder="dd/mm/yyyy-HH:ii" class="form-control task-need-date-input" min="2018-01-01T00:00:00" max="2118-01-01T00:00:00">
+				</div>				      				
+			</div>
+		</div>
+        <div class="form-group">
+			<label class="col-sm-3 control-label font-weight-bold">Fin</label>
+            <div class="col-sm-6">
+				<div data-start-view="2", data-min-view="0" "step=15" data-date-format="dd/mm/yyyy-HH:ii" class="input-group date datetimepicker">
+					<span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+                    <input name="shift_unit_end" required="" type="text" data-mask="date" value=<%= moment(shiftUnit.shift_unit_end).format("DD/MM/YYYY-HH:mm") %>
+						placeholder="dd/mm/yyyy-HH:ii" class="form-control task-need-date-input" min="2018-01-01T00:00:00" max="2118-01-01T00:00:00">
+                </div>				      				
+			</div>
+		</div>
+        <div class="form-group">
+			<label class="col-sm-3 control-label">Point</label>
+				<div class="col-sm-6">
+					<input data-parsley-type="digits" type="number" value="<%= shiftUnit.shift_unit_point %>" class="form-control" name="shift_unit_point">
+                </div>
+        </div>
+	</div>
+    <div class="modal-footer"> 
+		<div class="form-group">
+			<div class="col-sm-12 text-center">
+				<button type="button" class="btn btn-danger btn-space" data-dismiss="modal">Close</button>
+                <button class="btn btn-alt3 btn-space" type="submit">Enregistrer<i class="icon s7-check"></i></button>
+			</div>
+		</div>
+	</div>
+    </form>                            
+</div> 
+</div>
+</div>                               
+</html>
+
+
+
+
+
+

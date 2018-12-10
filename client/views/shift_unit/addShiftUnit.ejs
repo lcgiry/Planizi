@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="/assets/img/favicon.png">
-    <title>Planizi - Registration</title>
+    <title>Planizi - Add shift unit</title>
     <link rel="stylesheet" type="text/css" href="/assets/lib/stroke-7/style.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/lib/jquery.nanoscroller/css/nanoscroller.css"/>
     <!--[if lt IE 9]>
@@ -15,7 +15,7 @@
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="/assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/lib/datetimepicker/css/bootstrap-datetimepicker.css"/>
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
 </head>
 
@@ -36,7 +36,7 @@
                             <h3>Ajouter un créneau</h3>
                         </div>
                         <div class="panel-body">
-                            <form method="post" action="/availabilities/addShiftUnit" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
+                            <form method="post" action="./addShiftUnit" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label font-weight-bold">Début</label>
                                     <div class="col-sm-6">
@@ -65,7 +65,7 @@
                                 </div>
                                     <div class="form-group">
                                         <div class="col-sm-12 text-center">
-                                            <a href="/availabilities/showShiftUnit" style="color: white; text-decoration: white" class="btn btn-danger btn-space">Annuler</a>
+                                            <a href="./showShiftUnit" style="color: white; text-decoration: white" class="btn btn-danger btn-space">Annuler</a>
                                             <button class="btn btn-alt3 btn-space" type="submit">Enregistrer<i class="icon s7-check"></i></button>
                                         </div>
                                     </div>

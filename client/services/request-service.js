@@ -7,6 +7,7 @@ module.exports.requestGET = function(url){
 	return rp(request);
 };
 
+
 module.exports.isResponseJSONContentType= function(response){
 	if(response.headers['content-type'].match(/application\/json/g)) {
 		return true;

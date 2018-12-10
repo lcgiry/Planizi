@@ -75,7 +75,9 @@
 	top: -7px;
 	right: 6px;
 }
-
+.datepicker.dropdown-menu {
+	z-index: 99999 !important;
+}
 .datetimepicker-dropdown-bottom-left:after {
 	top: -6px;
 	right: 7px;
