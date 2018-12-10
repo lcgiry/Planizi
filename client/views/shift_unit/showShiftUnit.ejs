@@ -79,13 +79,8 @@
     </div>
     
   <!-- Modal -->
-  <div class="modal fade" id="newShiftUnit" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <%- include newShiftUnitForm.ejs %>  
-    </div>
-   </div>
+   <%- include newShiftUnitForm.ejs %>  
+
    <% shiftUnitArray.forEach((shiftUnit, index) => { %>
 				<%- include editShiftUnitForm.ejs %>
 

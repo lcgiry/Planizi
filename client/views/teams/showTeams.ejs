@@ -56,14 +56,18 @@
                                         <td><%= team.team_label %></td>
                                         <td><%= team.team_name %></td>
                                         <td><%= team.team_name_fr %></td>
-                                        <td><span class="input-group-addon btn btn-primary" onclick="location.href='/team/delTeam/<%= team.team_label %>'"><i class="icon-th s7-trash"></i></span></td>
+                                        <td><span class="input-group-addon btn btn-primary" onclick="location.href='./delTeam/<%= team.team_label %>'">
+											<i class="icon-th s7-trash"></i></span>
+											<span class="input-group-addon btn btn-primary" data-toggle="modal" data-target="#editTeam_<%= team.team_label %>">
+											<i class="icon-th s7-edit"></i></span>
+                                        </td>
                                     </tr>
                                     <% }) %>
                                    
                                     </tbody>
                                 </table>
                             </div>
-                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newShiftUnit">Créer une nouvelle équipe</button>
+                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newTeam">Créer une nouvelle équipe</button>
                         </div>
                     </div>
 
@@ -73,13 +77,12 @@
     </div>
     
   <!-- Modal -->
-  <div class="modal fade" id="newShiftUnit" role="dialog">
-    <div class="modal-dialog">
-    
+
       <!-- Modal content-->
-      <%- include newTeamForm.ejs %>  
-    </div>     
-  </div>
+<%- include newTeamForm.ejs %>      
+<% teamArray.forEach((team, index) => { %>
+	<%- include editTeamForm.ejs %>
+<% }) %>
 
 </div> 
 <script src="/assets/lib/fuelux/js/wizard.js" type="text/javascript"></script>

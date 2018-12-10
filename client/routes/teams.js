@@ -12,7 +12,7 @@ router.get('/myTeams', function(req, res, next) {
 	}
 });
 
-router.get('/ShowTeams', function(req, res, next) {
+router.get('/showTeams', function(req, res, next) {
     if(!req.session.user){
 		res.redirect('/login');
 	}else{
@@ -40,5 +40,43 @@ router.get('/ShowTeams', function(req, res, next) {
 			});
 	}
 });
+router.post('/newTeam', function(req, res, next) {
+    	if(!req.session.user){
+		res.redirect('/login');
+	}else{
+		var myURL ='http://localhost:8080/team/team';
+		var data = req.body;
+		request({ url: myURL, method: 'POST', json: data}, function(error, request, body) {})		
+		res.redirect('./showTeams/');	
+			
+		
+	}
+});
+
+router.post('/editTeam/:id', function(req, res, next) {
+    	if(!req.session.user){
+		res.redirect('/login');
+	}else{
+		var myURL ='http://localhost:8080/team/team/'+req.params.id;
+		var data = req.body;
+		request({ url: myURL, method: 'PUT', json: data}, function(error, request, body) {})		
+		res.redirect('../showTeams/');	
+			
+		
+	}
+});
+
+router.get('/delTeam/:id', function(req, res, next) {
+    	if(!req.session.user){
+		res.redirect('/login');
+	}else{
+		var myURL ='http://localhost:8080/team/team/'+req.params.id;
+		request({ url: myURL, method: 'delete'}, function(error, request, body) {})		
+		res.redirect('../showTeams/');	
+			
+		
+	}
+});
+
 
 module.exports = router;
