@@ -3,6 +3,7 @@ var router = express.Router();
 var sequelize = require('../config/database/config-database').sequelize;
 
 var userValidator = require('../services/validators/user-validator');
+var skillValidator = require('../services/validators/skill-validator');
 var errorResponse = require('../errors/errors-response');
 const User = sequelize.import('../models/user.js');
 const Skill = sequelize.import('../models/skill.js');

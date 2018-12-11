@@ -23,6 +23,7 @@ var availabilitiesRouter = require('./routes/availabilities')
 var profileRouter = require('./routes/profile');
 var teamRouter = require('./routes/teams');
 var shift_unitRouter = require('./routes/shift_unit');
+var skillsRouter = require('./routes/skills');
 var app = express();
 
 
@@ -70,6 +71,7 @@ app.use('/availabilities', availabilitiesRouter);
 app.use('/profile', profileRouter);
 app.use('/teams', teamRouter);
 app.use('/shift_unit', shift_unitRouter);
+app.use('/skills', skillsRouter);
 
 
 // catch 404 and forward to error handler

@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<div class="modal fade" id="editTeam_<%= team.team_label %>" role="dialog">
+	<div class="modal fade" id="newSkill" role="dialog">
 <div class="modal-dialog">
 <div class="modal-content">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Editer une équipe</h4>
+        <h4 class="modal-title">Génerer une nouvelle équipe</h4>
     </div>
-    <form method="post" action="/teams/editTeam/<%= team.team_label %>" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
+    <form method="post" action="/skills/newSkill" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
 	<div class="modal-body">
 		<div class="form-group">
 				<label class="col-sm-3 control-label">Label</label>
 					<div class="col-sm-6">
-					<input name="team_label" type="text" disabled="disabled" placeholder="<%= team.team_label %>"  class="form-control">
-                    <input id="prodId" name="team_label" type="hidden" value="<%= team.team_label %>">
+						<input data-parsley-type="digits" type="text" required="" value="" class="form-control" name="skill_label">
 		        </div>
 		</div>
 		<div class="form-group">
 				<label class="col-sm-3 control-label">Nom</label>
 					<div class="col-sm-6">
-						<input data-parsley-type="digits" type="text" value="<%= team.team_name %>" class="form-control" name="team_name">
+						<input data-parsley-type="digits" type="text" value="" class="form-control" name="skill_name">
 		        </div>
 		</div>
 		<div class="form-group">
 				<label class="col-sm-3 control-label">Nom français</label>
 					<div class="col-sm-6">
-						<input data-parsley-type="digits" type="text" value="<%= team.team_name_fr %>" class="form-control" name="team_name_fr">
+						<input data-parsley-type="digits" type="text" value="" class="form-control" name="skill_name_fr">
 		        </div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Description</label>
 			<div class="col-sm-6">
-				<textarea name="team_description" value=""class="form-control" maxlength="500"><%= team.team_description %></textarea>
+				<textarea name="skill_description" class="form-control" maxlength="500"></textarea>
 			</div>
 		</div>
     </div>

@@ -5,6 +5,8 @@ var sequelize = require('../config/database/config-database').sequelize;
 
 var serverConfig = require('../config/server.json');
 var userValidator = require('../services/validators/user-validator');
+var skillValidator = require('../services/validators/skill-validator');
+var teamValidator = require('../services/validators/team-validator');
 var errorResponse = require('../errors/errors-response');
 const User = sequelize.import('../models/user.js');
 const Skill = sequelize.import('../models/skill.js');
@@ -175,6 +177,146 @@ router.post('/user/', function(req, res, next) {
 		res.send(errorResponse.ContentTypeInvalid("Content-type received: "+req.get('Content-Type')+". Content-type required : application/json"));
 	}
 
+});
+
+router.post('/skill/', function(req, res, next) {
+	if(req.is('application/json')){
+		//check if the user exists
+		User.findOne({ where: {user_mail : userValidator.checkAndFormat_user_mail(req.body.user_mail)} })
+			.then( userResult =>{
+				//If user exists 
+				if(userResult !== null){
+					//check if the skill exists
+					Skill.findOne({	
+						where: {skill_label : skillValidator.checkAndFormat_skill_label(req.body.skill_label)},
+						attributes: ['skill_label']})
+								.then(skillResult => {
+									if(skillResult !== null){
+									//adding skill for the user
+										userResult.addSkill(skillResult);
+										res.status(201);
+										res.send("skill added");
+								}})
+								.catch(err => {
+									res.status(500);
+									res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
+									
+								});			
+			}		
+			})
+			.catch( err =>{
+				res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
+			});
+
+	}else{
+		res.status(406);
+		res.send(errorResponse.ContentTypeInvalid("Content-type received: "+req.get('Content-Type')+". Content-type required : application/json"));
+	}
+});
+
+router.delete('/skill/', function(req, res, next) {
+	if(req.is('application/json')){
+		//check if the user exists
+		User.findOne({ where: {user_mail : userValidator.checkAndFormat_user_mail(req.body.user_mail)} })
+			.then( userResult =>{
+				//If user exists 
+				if(userResult !== null){
+					//check if the skill exists
+					Skill.findOne({	
+						where: {skill_label : skillValidator.checkAndFormat_skill_label(req.body.skill_label)},
+						attributes: ['skill_label']})
+								.then(skillResult => {
+									if(skillResult !== null){
+									//deleteing skill for the user
+										userResult.removeSkill(skillResult);
+										res.status(201);
+										res.send("skill deleted");
+								}})
+								.catch(err => {
+									res.status(500);
+									res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
+									
+								});			
+			}		
+			})
+			.catch( err =>{
+				res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
+			});
+
+	}else{
+		res.status(406);
+		res.send(errorResponse.ContentTypeInvalid("Content-type received: "+req.get('Content-Type')+". Content-type required : application/json"));
+	}
+});
+
+router.post('/team/', function(req, res, next) {
+	if(req.is('application/json')){
+		//check if the user exists
+		User.findOne({ where: {user_mail : userValidator.checkAndFormat_user_mail(req.body.user_mail)} })
+			.then( userResult =>{
+				//If user exists 
+				if(userResult !== null){
+					//check if the team exists
+					Team.findOne({	
+						where: {team_label : teamValidator.checkAndFormat_team_label(req.body.team_label)},
+						attributes: ['team_label']})
+								.then(teamResult => {
+									if(teamResult !== null){
+									//adding team for the user
+										userResult.addTeam(teamResult);
+										res.status(201);
+										res.send("team added");
+								}})
+								.catch(err => {
+									res.status(500);
+									res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
+									
+								});			
+			}		
+			})
+			.catch( err =>{
+				res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
+			});
+
+	}else{
+		res.status(406);
+		res.send(errorResponse.ContentTypeInvalid("Content-type received: "+req.get('Content-Type')+". Content-type required : application/json"));
+	}
+});
+
+router.delete('/team/', function(req, res, next) {
+	if(req.is('application/json')){
+		//check if the user exists
+		User.findOne({ where: {user_mail : userValidator.checkAndFormat_user_mail(req.body.user_mail)} })
+			.then( userResult =>{
+				//If user exists 
+				if(userResult !== null){
+					//check if the team exists
+					Team.findOne({	
+						where: {team_label : teamValidator.checkAndFormat_team_label(req.body.team_label)},
+						attributes: ['team_label']})
+								.then(team => {
+									if(teamResult !== null){
+									//deleteing skill for the user
+										userResult.removeTeam(teamResult);
+										res.status(201);
+										res.send("team deleted");
+								}})
+								.catch(err => {
+									res.status(500);
+									res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
+									
+								});			
+			}		
+			})
+			.catch( err =>{
+				res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
+			});
+
+	}else{
+		res.status(406);
+		res.send(errorResponse.ContentTypeInvalid("Content-type received: "+req.get('Content-Type')+". Content-type required : application/json"));
+	}
 });
 
 /**
