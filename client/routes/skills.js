@@ -12,7 +12,7 @@ router.get('/mySkills', function(req, res, next) {
 	}
 });
 
-router.get('/showSkills', function(req, res, next) {
+router.get('/configSkills', function(req, res, next) {
     if(!req.session.user){
 		res.redirect('/login');
 	}else{
@@ -31,7 +31,7 @@ router.get('/showSkills', function(req, res, next) {
 				});
 				//If its good, render the view with informations
 				skillList = JSON.parse(responses[0].body).skills;
-				res.render('skills/showSkills', {
+				res.render('skills/configSkills', {
 					skillArray: skillList
 				});
 			})
@@ -47,7 +47,7 @@ router.post('/newSkill', function(req, res, next) {
 		var myURL ='http://localhost:8080/skill/skill';
 		var data = req.body;
 		request({ url: myURL, method: 'POST', json: data}, function(error, request, body) {})		
-		res.redirect('./showSkills/');	
+		res.redirect('./configSkills/');	
 			
 		
 	}
@@ -61,7 +61,7 @@ router.post('/editSkill/:id', function(req, res, next) {
 		var data = req.body;
 		console.log(data)
 		request({ url: myURL, method: 'PUT', json: data}, function(error, request, body) {console.log(body)})		
-		res.redirect('../showSkills/');	
+		res.redirect('../configSkills/');	
 			
 		
 	}
@@ -73,7 +73,7 @@ router.get('/delSkill/:id', function(req, res, next) {
 	}else{
 		var myURL ='http://localhost:8080/skill/skill/'+req.params.id;
 		request({ url: myURL, method: 'delete'}, function(error, request, body) {})		
-		res.redirect('../showSkills/');	
+		res.redirect('../configSkills/');	
 			
 		
 	}

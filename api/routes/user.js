@@ -255,24 +255,31 @@ router.post('/team/', function(req, res, next) {
 		User.findOne({ where: {user_mail : userValidator.checkAndFormat_user_mail(req.body.user_mail)} })
 			.then( userResult =>{
 				//If user exists 
-				if(userResult !== null){
+				if(userResult){
 					//check if the team exists
 					Team.findOne({	
 						where: {team_label : teamValidator.checkAndFormat_team_label(req.body.team_label)},
 						attributes: ['team_label']})
 								.then(teamResult => {
-									if(teamResult !== null){
+									if(teamResult){
 									//adding team for the user
 										userResult.addTeam(teamResult);
 										res.status(201);
 										res.send("team added");
-								}})
+									}else{
+										res.status(404);
+										res.send("team not found");
+									}
+								})
 								.catch(err => {
 									res.status(500);
 									res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
 									
 								});			
-			}		
+				}else{
+					res.status(404);
+					res.send("user not found");
+				}		
 			})
 			.catch( err =>{
 				res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
