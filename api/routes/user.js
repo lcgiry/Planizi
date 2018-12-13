@@ -458,18 +458,13 @@ router.get('/skills/:mail', function(req, res, next) {
 
 
 	User.findOne({where: {user_mail: req.params.mail}})
-		.then(result=>{
-			if(result) {
-				result.getSkills()
-					.then(result => {
-
-						if(result[0]){
+		.then(userResult=>{
+			if(userResult) {
+				userResult.getSkills()
+					.then(skillsResult => {
 							res.status(200);
-							res.send({user: result[0].user_skill.user_skill_user, skills: result});
-						}else{
-							res.status(404);
-							res.send(errorResponse.RessourceNotFound("The user has no skills"));
-						}
+							res.send({user: userResult, skills: skillsResult});
+						
 					})
 					.catch(err => {
 						res.status(500);

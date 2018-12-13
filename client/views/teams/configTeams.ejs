@@ -56,11 +56,11 @@
                                         <td><%= team.team_label %></td>
                                         <td><%= team.team_name %></td>
                                         <td><%= team.team_name_fr %></td>
-                                        <td><span class="input-group-addon btn btn-primary" onclick="location.href='./delTeam/<%= team.team_label %>'">
+                                        <td><span class="input-group-addon btn btn-primary" onclick="location.href='/teams/delTeam/<%= team.team_label %>'">
 											<i class="icon-th s7-trash"></i></span>
 											<span class="input-group-addon btn btn-primary" data-toggle="modal" data-target="#editTeam_<%= team.team_label %>">
 											<i class="icon-th s7-note"></i></span>
-											<span class="input-group-addon btn btn-primary" onclick="location.href='./showTeam/<%= team.team_label %>'">
+											<span class="input-group-addon btn btn-primary" onclick="location.href='/teams/showTeam/<%= team.team_label %>'">
 											<i class="icon-th s7-look"></i></span>
                                         </td>
                                     </tr>
