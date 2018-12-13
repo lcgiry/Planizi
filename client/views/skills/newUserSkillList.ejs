@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<div class="modal fade" id="addUserSkill" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Ajouter un membre à l'équipe <%= skill.skill_name_fr %></h4>
+    </div>
+    <form method="post" action="/skills/<%= skill.skill_label %>/newUserSkill" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
+	<div class="modal-body">
+		                            <div class="form-group">
+                                        
+                                        <div class="col-sm-12 col-xs-12">
+                                            <select class="select2" name="user_mail">
+                                                <% usersArray.forEach((user, index) => { %>
+                                                <option value="<%= user.user_mail %>"><%= user.user_name %> <%= user.user_surname %> (<%= user.user_nickname %>)</option>
+                                                <% }) %>
+                                            </select>
+                                        </div>
+                                     
+                                        <div>
+											<input id="prodId" name="team_label" type="hidden" value="<%= skill.skill_label %>">
+										</div>
+                                    </div>
+		
+    </div>
+    <div class="modal-footer"> 
+		<div class="form-group">
+			<div class="col-sm-12 text-center">
+				<button type="button" class="btn btn-danger btn-space" data-dismiss="modal">Close</button>
+                <button class="btn btn-alt3 btn-space" type="submit">Enregistrer<i class="icon s7-check"></i></button>
+			</div>
+		</div>
+	</div>
+    </form>                            
+</div> 
+</div>
+</div>                                
+</html>
+
+
+
+
+
+

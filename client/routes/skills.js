@@ -79,6 +79,40 @@ router.get('/delSkill/:id', function(req, res, next) {
 	}
 });
 
+router.get('/showSkill/:id', function(req, res, next) {
+    if(!req.session.user){
+		res.redirect('/login');
+	}else{
+		var UserSkillPromise = requestService.requestGET('/skill/users/'+req.params.id);
+		var UsersPromise = requestService.requestGET('/user/users/');
+		Promise.all([UserSkillPromise, UsersPromise])
+			.then(responses=>{
+				//Check the response
+				responses.forEach(response=> {
+					if (requestService.isResponseJSONContentType(response)) {
+						if (!requestService.isNotResponseError(response)) {
+							next(new Error(response.error));
+						}
+					} else {
+						next(new Error('Bad Content-Type'));
+					}
+				});
+				//If its good, render the view with informations
+				UserSkillList = JSON.parse(responses[0].body).users;
+				skill = JSON.parse(responses[0].body).skill;
+				usersList = JSON.parse(responses[1].body).users;
+				res.render('teams/showTeam', {
+					userSkillArray: UserSkillList,
+					skill : skill,
+					usersArray : usersList
+				});
+			})
+			.catch(err=>{
+				next(err);
+			});
+	}
+});
+
 router.get('/:user/delSkill/:skill', function(req, res, next) {
     	if(!req.session.user){
 		res.redirect('/login');
