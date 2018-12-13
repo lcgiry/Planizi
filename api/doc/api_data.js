@@ -1,5 +1,563 @@
 define({ "api": [
   {
+    "group": "LOCATION",
+    "type": "DELETE",
+    "url": "/location/location/:id",
+    "title": "Delete a location",
+    "description": "<p>Delete definitively the location of the database</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p><code>REQUIRED</code> The id of the location (ID)</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 204": [
+          {
+            "group": "Success 204",
+            "optional": false,
+            "field": "NOCONTENT",
+            "description": "<p><em>No content sent</em></p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/location.js",
+    "groupTitle": "LOCATION",
+    "name": "DeleteLocationLocationId",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ContentTypeInvalid",
+            "description": "<p>The content-type of the request is invalid..</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UnsupportedMediaTypeError",
+            "description": "<p>The body passed is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "RessourceAlreadyExist",
+            "description": "<p>The ressource already exists</p>"
+          }
+        ],
+        "Error 5xx": [
+          {
+            "group": "Error 5xx",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>The problem is due to the server</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "LOCATION",
+    "type": "GET",
+    "url": "/location/location/:id",
+    "title": "Get one location",
+    "description": "<p>Retrieve all information about a location</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p><code>REQUIRED</code> The id of the location to retrieve (ID)</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "location_id",
+            "description": "<p>The id of the location (ID)</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "location_label",
+            "description": "<p>The label of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Decimal",
+            "optional": false,
+            "field": "location_longitude",
+            "description": "<p>The longitude information of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Decimal",
+            "optional": false,
+            "field": "location_latitude",
+            "description": "<p>The latitude information of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "location_address",
+            "description": "<p>The address of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "location_postcode",
+            "description": "<p>The postcode of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "location_city",
+            "description": "<p>The city of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "location_description",
+            "description": "<p>The description of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "createdAt",
+            "description": "<p>The creation date of the location raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "updatedAt",
+            "description": "<p>The last date update of the location raw</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/location.js",
+    "groupTitle": "LOCATION",
+    "name": "GetLocationLocationId",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "BadRequest",
+            "description": "<p>Your request is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UserNotFound",
+            "description": "<p>The user does not exist.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "LOCATION",
+    "type": "GET",
+    "url": "/location/locations",
+    "title": "Get all locations",
+    "description": "<p>Retrieve all information about all location available</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "locations",
+            "description": "<p>The array with all locations</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "locations.location_id",
+            "description": "<p>The id of the location (ID)</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "locations.location_label",
+            "description": "<p>The label of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Decimal",
+            "optional": false,
+            "field": "locations.location_longitude",
+            "description": "<p>The longitude information of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Decimal",
+            "optional": false,
+            "field": "locations.location_latitude",
+            "description": "<p>The latitude information of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "locations.location_address",
+            "description": "<p>The address of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "locations.location_postcode",
+            "description": "<p>The postcode of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "locations.location_city",
+            "description": "<p>The city of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "locations.location_description",
+            "description": "<p>The description of the location</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "createdAt",
+            "description": "<p>The creation date of the location raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "updatedAt",
+            "description": "<p>The last date update of the location raw</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/location.js",
+    "groupTitle": "LOCATION",
+    "name": "GetLocationLocations",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "BadRequest",
+            "description": "<p>Your request is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UserNotFound",
+            "description": "<p>The user does not exist.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "LOCATION",
+    "type": "POST",
+    "url": "/location/location/",
+    "title": "Post a new task",
+    "description": "<p>Create a new location in database</p>",
+    "parameter": {
+      "fields": {
+        "Body": [
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "location_label",
+            "description": "<p><code>REQUIRED</code> The label of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "Decimal",
+            "optional": false,
+            "field": "location_longitude",
+            "description": "<p>The longitude information of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "Decimal",
+            "optional": false,
+            "field": "location_latitude",
+            "description": "<p>The latitude information of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "location_address",
+            "description": "<p><code>REQUIRED</code>  The address of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "location_postcode",
+            "description": "<p><code>REQUIRED</code>  The postcode of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "location_city",
+            "description": "<p><code>REQUIRED</code> The city of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "location_description",
+            "description": "<p>The description of the location</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 201": [
+          {
+            "group": "Success 201",
+            "type": "Integer",
+            "optional": false,
+            "field": "location_id",
+            "description": "<p>The id of the new location.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/location.js",
+    "groupTitle": "LOCATION",
+    "name": "PostLocationLocation",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ContentTypeInvalid",
+            "description": "<p>The content-type of the request is invalid..</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UnsupportedMediaTypeError",
+            "description": "<p>The body passed is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "RessourceAlreadyExist",
+            "description": "<p>The ressource already exists</p>"
+          }
+        ],
+        "Error 5xx": [
+          {
+            "group": "Error 5xx",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>The problem is due to the server</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "LOCATION",
+    "type": "PUT",
+    "url": "/location/location/:id",
+    "title": "Update a location",
+    "description": "<p>Update a location</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "id",
+            "description": "<p><code>REQUIRED</code> The id of the location (ID)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "location_label",
+            "description": "<p>The label of the location</p>"
+          }
+        ],
+        "Body": [
+          {
+            "group": "Body",
+            "type": "Decimal",
+            "optional": false,
+            "field": "location_longitude",
+            "description": "<p>The longitude information of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "Decimal",
+            "optional": false,
+            "field": "location_latitude",
+            "description": "<p>The latitude information of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "location_address",
+            "description": "<p>The address of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "location_postcode",
+            "description": "<p>The postcode of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "location_city",
+            "description": "<p>The city of the location</p>"
+          },
+          {
+            "group": "Body",
+            "type": "String",
+            "optional": false,
+            "field": "location_description",
+            "description": "<p>The description of the location</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 204": [
+          {
+            "group": "Success 204",
+            "optional": false,
+            "field": "NOCONTENT",
+            "description": "<p><em>No content sent</em></p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/location.js",
+    "groupTitle": "LOCATION",
+    "name": "PutLocationLocationId",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ContentTypeInvalid",
+            "description": "<p>The content-type of the request is invalid..</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UnsupportedMediaTypeError",
+            "description": "<p>The body passed is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "RessourceAlreadyExist",
+            "description": "<p>The ressource already exists</p>"
+          }
+        ],
+        "Error 5xx": [
+          {
+            "group": "Error 5xx",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>The problem is due to the server</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
     "group": "ROLE",
     "type": "DELETE",
     "url": "/role/role/:label",
@@ -558,6 +1116,424 @@ define({ "api": [
     "filename": "routes/role.js",
     "groupTitle": "ROLE",
     "name": "PutRoleRoleLabel",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ContentTypeInvalid",
+            "description": "<p>The content-type of the request is invalid..</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UnsupportedMediaTypeError",
+            "description": "<p>The body passed is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "RessourceAlreadyExist",
+            "description": "<p>The ressource already exists</p>"
+          }
+        ],
+        "Error 5xx": [
+          {
+            "group": "Error 5xx",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>The problem is due to the server</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "SHIFT_SUBSET",
+    "type": "DELETE",
+    "url": "/shift_subset/shift_subset/:id",
+    "title": "Delete the shift subset",
+    "description": "<p>Delete definitively the shift_subset of the database</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "label",
+            "description": "<p><code>REQUIRED</code> The id of the shift_subset (ID)</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 204": [
+          {
+            "group": "Success 204",
+            "optional": false,
+            "field": "NOCONTENT",
+            "description": "<p><em>No content sent</em></p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/shift_subset.js",
+    "groupTitle": "SHIFT_SUBSET",
+    "name": "DeleteShift_subsetShift_subsetId",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ContentTypeInvalid",
+            "description": "<p>The content-type of the request is invalid..</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UnsupportedMediaTypeError",
+            "description": "<p>The body passed is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "RessourceAlreadyExist",
+            "description": "<p>The ressource already exists</p>"
+          }
+        ],
+        "Error 5xx": [
+          {
+            "group": "Error 5xx",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>The problem is due to the server</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "SHIFT_SUBSET",
+    "type": "GET",
+    "url": "/shift_subset/all",
+    "title": "Get all shift subsets",
+    "description": "<p>Retrieve all shifts of all tasks</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "shift_subsets",
+            "description": "<p>The array with all shift subsets</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "shift_subsets.shift_subset_id",
+            "description": "<p>The id of the shift subset to retrieve (ID)</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subsets.shift_subset_start",
+            "description": "<p>The start date of the shift</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subsets.shift_subset_end",
+            "description": "<p>The end date of the shift</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subsets.createdAt",
+            "description": "<p>The creation date of the shift subset raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subsets.updatedAt",
+            "description": "<p>The last date update of the shift subset raw</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/shift_subset.js",
+    "groupTitle": "SHIFT_SUBSET",
+    "name": "GetShift_subsetAll",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "BadRequest",
+            "description": "<p>Your request is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UserNotFound",
+            "description": "<p>The user does not exist.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "SHIFT_SUBSET",
+    "type": "GET",
+    "url": "/shift_subset/shift_subset/:id",
+    "title": "Get one team",
+    "description": "<p>Retrieve all information about a team</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "id",
+            "description": "<p><code>REQUIRED</code> The id of the shift subset to retrieve (ID)</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "shift_subset_id",
+            "description": "<p>The id of the shift subset to retrieve (ID)</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subset_start",
+            "description": "<p>The start date of the shift</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subset_end",
+            "description": "<p>The end date of the shift</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "createdAt",
+            "description": "<p>The creation date of the shift subset raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "updatedAt",
+            "description": "<p>The last date update of the shift subset raw</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/shift_subset.js",
+    "groupTitle": "SHIFT_SUBSET",
+    "name": "GetShift_subsetShift_subsetId",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "BadRequest",
+            "description": "<p>Your request is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UserNotFound",
+            "description": "<p>The user does not exist.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "SHIFT_SUBSET",
+    "type": "POST",
+    "url": "/shift_subset/shift_subset/",
+    "title": "Post a new shift subset",
+    "description": "<p>Create a new shift subset in database</p>",
+    "parameter": {
+      "fields": {
+        "Body": [
+          {
+            "group": "Body",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subset_start",
+            "description": "<p><code>REQUIRED</code> The start date of the shift</p>"
+          },
+          {
+            "group": "Body",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subset_end",
+            "description": "<p><code>REQUIRED</code> The end date of the shift</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 201": [
+          {
+            "group": "Success 201",
+            "type": "String",
+            "optional": false,
+            "field": "shift_subset_id",
+            "description": "<p>The id of the new shift_subset</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/shift_subset.js",
+    "groupTitle": "SHIFT_SUBSET",
+    "name": "PostShift_subsetShift_subset",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ContentTypeInvalid",
+            "description": "<p>The content-type of the request is invalid..</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UnsupportedMediaTypeError",
+            "description": "<p>The body passed is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "RessourceAlreadyExist",
+            "description": "<p>The ressource already exists</p>"
+          }
+        ],
+        "Error 5xx": [
+          {
+            "group": "Error 5xx",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>The problem is due to the server</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "SHIFT_SUBSET",
+    "type": "PUT",
+    "url": "/shift_subset/shift_subset/:id",
+    "title": "Update a shift subset",
+    "description": "<p>Update a team</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "id",
+            "description": "<p><code>REQUIRED</code> The id of the shift subset (ID)</p>"
+          }
+        ],
+        "Body": [
+          {
+            "group": "Body",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subset_start",
+            "description": "<p>The start date of the shift</p>"
+          },
+          {
+            "group": "Body",
+            "type": "Date",
+            "optional": false,
+            "field": "shift_subset_end",
+            "description": "<p>The end date of the shift</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 204": [
+          {
+            "group": "Success 204",
+            "optional": false,
+            "field": "NOCONTENT",
+            "description": "<p><em>No content sent</em></p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/shift_subset.js",
+    "groupTitle": "SHIFT_SUBSET",
+    "name": "PutShift_subsetShift_subsetId",
     "error": {
       "fields": {
         "Error 4xx": [
@@ -2130,7 +3106,7 @@ define({ "api": [
     "group": "TASK",
     "type": "POST",
     "url": "/task/instructions/:id",
-    "title": "Add a comment",
+    "title": "Post a comment",
     "description": "<p>Insert a comment about a task</p>",
     "parameter": {
       "fields": {
@@ -2783,6 +3759,144 @@ define({ "api": [
     "filename": "routes/team.js",
     "groupTitle": "TEAM",
     "name": "GetTeamTeams",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationRequired",
+            "description": "<p>You must be authenticated.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "BadRequest",
+            "description": "<p>Your request is invalid.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "UserNotFound",
+            "description": "<p>The user does not exist.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "group": "TEAM",
+    "type": "GET",
+    "url": "/team/users/:label",
+    "title": "Get all users linked to a team",
+    "description": "<p>Retrieve all users linked linked to a particular team</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "label",
+            "description": "<p><code>REQUIRED</code> The label given to the team (ID)</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "team",
+            "description": "<p>The team related to the next users</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "users",
+            "description": "<p>The array with all users linked to the team</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "users.user_mail",
+            "description": "<p>The mail of the user to retrieve (ID)</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "users.user_name",
+            "description": "<p>The name of the user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "users.user_surname",
+            "description": "<p>The surname of the user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "users.user_nickname",
+            "description": "<p>The nickname of the user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "users.user_team",
+            "description": "<p><em>JOIN TABLE</em> The association table between teams and users</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "users.user_team.team_id",
+            "description": "<p><em>JOIN TABLE</em> The ID of the raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "users.user_team.team_user",
+            "description": "<p><em>JOIN TABLE</em> The foreign key to user</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "users.user_team.team_team",
+            "description": "<p><em>JOIN TABLE</em> The foreign key to team</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "users.user_team.createdAt",
+            "description": "<p><em>JOIN TABLE</em> The creation date of the raw</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Date",
+            "optional": false,
+            "field": "users.user_team.updatedAt",
+            "description": "<p><em>JOIN TABLE</em> The last date update of the raw</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/shift_subset.js",
+    "groupTitle": "TEAM",
+    "name": "GetTeamUsersLabel",
     "error": {
       "fields": {
         "Error 4xx": [

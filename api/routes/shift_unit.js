@@ -10,6 +10,8 @@ const Availibility_User = sequelize.import('../models/availibility_user.js');
 const User = sequelize.import('../models/user.js');
 Shift_Unit.belongsToMany(User, {through: Availibility_User, foreignKey: 'availibility_user_shift_unit', otherKey: 'availibility_user_user'});
 User.belongsToMany(Shift_Unit, {through: Availibility_User, foreignKey: 'availibility_user_user', otherKey: 'availibility_user_shift_unit'});
+
+
 //----------------------------------------- SHIFT_UNIT TABLE
 /**
  * @apiDefine ErrorGetGroup
@@ -78,36 +80,6 @@ router.get('/shift_unit/:id', function(req, res, next) {
 
 });
 
-
-router.put('/generate_availibilities/:id', function(req, res, next) {
-
-	Shift_Unit.findOne({where: {shift_unit_id: req.params.id}})
-		.then(shiftResult=>{
-			if(shiftResult) {
-				User.findAll({attributes: ['user_mail']}).then(userResult => {
-					
-					shiftResult.setUsers(userResult)
-					res.status(200);
-					res.send(userResult);
-							
-					})
-					.catch(err => {
-						res.status(500);
-						res.send(errorResponse.InternalServerError("Problem to set availibity_user raws the users for the shift unit : "+err));
-					});
-			}else{
-				res.status(404);
-				res.send(errorResponse.RessourceNotFound("The shift_unit does not exist : "+err));
-			}
-		})
-		.catch(err=>{
-			res.status(500);
-			res.send(errorResponse.InternalServerError("Problem to check if the shift_unit exists : "+err));
-		});
-
-});
-
-
 /**
  * @apiGroup SHIFT_UNIT
  * @api {POST} /shift_unit/ Create a new shift unit
@@ -117,12 +89,11 @@ router.put('/generate_availibilities/:id', function(req, res, next) {
  * @apiSuccess (Success 201) {String} shift_unit_id The ID of the new shift_unit.
  * @apiUse ErrorPostGroup
  */
- 
- router.post('/shift_unit/', function(req, res, next) {
+router.post('/shift_unit/', function(req, res, next) {
 
 	if(req.is('application/json')){
 
-		
+
 
 		Shift_Unit.findOne({ where: {shift_unit_start : shift_unitValidator.checkAndFormat_shift_unit_start(req.body.shift_unit_start), shift_unit_end : shift_unitValidator.checkAndFormat_shift_unit_end(req.body.shift_unit_end)} })
 			.then( result =>{
@@ -136,12 +107,12 @@ router.put('/generate_availibilities/:id', function(req, res, next) {
 							User.findAll({attributes: ['user_mail']}).then(userResult => {
 								result[0].setUsers(userResult)
 
-									})
+							})
 								.catch(err => {
 									Shift_Unit.destroy({ where: {shift_unit_id : result[0].shift_unit_id}})
 									res.status(500);
 									res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
-									
+
 								});
 
 							res.status(201);
@@ -153,7 +124,7 @@ router.put('/generate_availibilities/:id', function(req, res, next) {
 							res.status(500);
 							res.send(errorResponse.InternalServerError(err.message));
 						});
-				//If shift_unit exists yet
+					//If shift_unit exists yet
 				}else{
 					res.status(404);
 					res.send(errorResponse.RessourceAlreadyExist( "The shift unit yet exists, id is : " + result.shift_unit_id));
@@ -174,7 +145,7 @@ router.put('/generate_availibilities/:id', function(req, res, next) {
  * @apiGroup SHIFT_UNIT
  * @api {POST} /shift_unit/:id Update the shift unit
  * @apiParam (Body) {Date} shift_unit_start ``REQUIRED`` The begining of the shift_unit
- * @apiParam (Body) {Date} shift_unit_end ``REQUIRED`` The end of the shift_unit
+ * @apiParam (Body) {Date} shift_unit_end The end of the shift_unit
  * @apiParam (Body) {Integer} shift_unit_point ``REQUIRED`` The points of the unit_shift
  * @apiSuccess (Success 201) {String} shift_unit_id The ID of the new shift_unit.
  * @apiUse ErrorPostGroup
@@ -211,6 +182,7 @@ router.put('/shift_unit/:id', function (req, res, next) {
 
 });
 
+
 router.delete('/shift_unit/:id', function (req, res, next) {
 	//@todo check if the shift_unit if refered before destroy entry
 	Shift_Unit.destroy({ where: {shift_unit_id: shift_unitValidator.checkAndFormat_shift_unit_id(req.params.id)}})
@@ -230,5 +202,33 @@ router.delete('/shift_unit/:id', function (req, res, next) {
 
 });
 
+
+router.put('/generate_availibilities/:id', function(req, res, next) {
+
+	Shift_Unit.findOne({where: {shift_unit_id: req.params.id}})
+		.then(shiftResult=>{
+			if(shiftResult) {
+				User.findAll({attributes: ['user_mail']}).then(userResult => {
+
+					shiftResult.setUsers(userResult)
+					res.status(200);
+					res.send(userResult);
+
+				})
+					.catch(err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError("Problem to set availibity_user raws the users for the shift unit : "+err));
+					});
+			}else{
+				res.status(404);
+				res.send(errorResponse.RessourceNotFound("The shift_unit does not exist : "+err));
+			}
+		})
+		.catch(err=>{
+			res.status(500);
+			res.send(errorResponse.InternalServerError("Problem to check if the shift_unit exists : "+err));
+		});
+
+});
 
 module.exports = router;

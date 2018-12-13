@@ -98,12 +98,12 @@ router.get('/location/:id', function(req, res, next) {
  * @apiGroup LOCATION
  * @api {POST} /location/location/ Post a new task
  * @apiDescription Create a new location in database
- * @apiParam {String} location_label ``REQUIRED`` The label of the location
+ * @apiParam (Body) {String} location_label ``REQUIRED`` The label of the location
  * @apiParam (Body) {Decimal} location_longitude The longitude information of the location
  * @apiParam (Body) {Decimal} location_latitude The latitude information of the location
- * @apiParam (Body) {String} ``REQUIRED`` location_address The address of the location
- * @apiParam (Body) {String} ``REQUIRED`` location_postcode The postcode of the location
- * @apiParam (Body) {String} ``REQUIRED`` location_city The city of the location
+ * @apiParam (Body) {String} location_address ``REQUIRED``  The address of the location
+ * @apiParam (Body) {String} location_postcode ``REQUIRED``  The postcode of the location
+ * @apiParam (Body) {String} location_city ``REQUIRED`` The city of the location
  * @apiParam (Body) {String} location_description The description of the location
  * @apiSuccess (Success 201) {Integer} location_id The id of the new location.
  * @apiUse ErrorPostGroup
@@ -219,11 +219,16 @@ router.put('/location/:id', function (req, res, next) {
  */
 router.delete('/location/:id', function (req, res, next) {
 
-	var locationPromise = Task.destroy({ where: {task_id: taskValidator.checkAndFormat_task_id(req.params.id)}});
+	var locationPromise = Location.destroy({ where: {location_id: locationValidator.checkAndFormat_location_id(req.params.id)}});
 
 		Promise.all([locationPromise])
 			.then( result => {
-				res.status(204).end();
+				if (result > 0) {
+					res.status(204).end();
+				} else {
+					res.status(404);
+					res.send(errorResponse.RessourceNotFound('The location does not exist'));
+				}
 			})
 			.catch(err => {
 				res.status(500);

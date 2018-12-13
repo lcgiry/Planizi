@@ -508,7 +508,7 @@ router.delete('/comment/:id', function (req, res, next) {
 				res.status(204).end();
 			} else {
 				res.status(404);
-				res.send(errorResponse.RessourceNotFound('The team does not exist'));
+				res.send(errorResponse.RessourceNotFound('The comment does not exist'));
 			}
 		})
 		.catch(err => {

@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     shift_subset_id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     shift_subset_start: {
       type: DataTypes.DATE,
