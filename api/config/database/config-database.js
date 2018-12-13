@@ -17,7 +17,7 @@ let mysqlConnexion = function () {
 }
 
 
-const sequelize = new Sequelize('db_planizi', 'planizi', 'planizi', {
+const sequelize = new Sequelize('db_planizi', 'root', 'root', {
 
 	host: 'localhost',
 	dialect: 'mysql',
