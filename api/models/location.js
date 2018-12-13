@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     location_id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     location_label: {
       type: DataTypes.STRING(128),

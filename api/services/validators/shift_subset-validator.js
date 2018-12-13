@@ -1,16 +1,17 @@
 var format = require('../format');
+var moment = require('moment');
 
 
 //------------------------ List all fields of the table -----------------------------
-let fields = ['shift_unit_start', 'shift_unit_end', 'shift_unit_point'];
+let fields = ['shift_subset_id','shift_subset_start', 'shift_subset_end'];
 
 
 //------------------------ Define all methods that can check and format each field -----------------------------
-module.exports.checkAndFormat_shift_unit_id = function(value){
+module.exports.checkAndFormat_shift_subset_id = function(value){
 	return value;
 };
 
-module.exports.checkAndFormat_shift_unit_start = function(value){
+module.exports.checkAndFormat_shift_subset_start = function(value){
 	var date = moment(value);
 	var remainder = (date.minute() % 15);
 	if(remainder == 15){
@@ -20,7 +21,7 @@ module.exports.checkAndFormat_shift_unit_start = function(value){
 	return roundedDate;
 };
 
-module.exports.checkAndFormat_shift_unit_end = function(value){
+module.exports.checkAndFormat_shift_subset_end = function(value){
 	var date = moment(value);
 	var remainder = 15 - (date.minute() % 15);
 	if(remainder == 15){
@@ -30,23 +31,21 @@ module.exports.checkAndFormat_shift_unit_end = function(value){
 	return roundedDate;
 };
 
-module.exports.checkAndFormat_shift_unit_point = function(value){
-	return value;
-};
+module.exports.checkSubsetRange = function(start, end){
 
+};
 
 
 //------------------------ Make all previous methods callable -----------------------------
 var checkAndFormatCallable = {
-	shift_unit_id : this.checkAndFormat_shift_unit_id,
-	shift_unit_start : this.checkAndFormat_shift_unit_start,
-	shift_unit_end : this.checkAndFormat_shift_unit_end,
-	shift_unit_point : this.checkAndFormat_shift_unit_point,
+	shift_subset_id : this.checkAndFormat_shift_subset_id,
+	shift_subset_start: this.checkAndFormat_shift_subset_start,
+	shift_subset_end: this.checkAndFormat_shift_subset_end
 };
 
 
 //------------------------ The most important function that map request to an object well formed for the database -----------------------------
-module.exports.mapShiftUnit = function(req){
+module.exports.mapShiftSubset = function(req){
 
 	let result = {};
 
