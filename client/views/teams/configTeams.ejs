@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="/assets/img/favicon.png">
-    <title>Planizi - Editer les compétences</title>
+    <title>Planizi - Editer les équipes</title>
     <link rel="stylesheet" type="text/css" href="/assets/lib/stroke-7/style.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/lib/jquery.nanoscroller/css/nanoscroller.css"/>
     <!--[if lt IE 9]>
@@ -43,25 +43,25 @@
                                 <table class="table table-striped table-fw-widget table-hover">
                                     <thead>
                                     <tr>
-                                        <th width="15%">Label</th>
-                                        <th width="15%">Nom</th>
-                                        <th width="15%">Nom français</th>
-                                        <th width="40%">Description</th>
-                                        <th width="15%"></th>
+                                        <th width="10%">Label</th>
+                                        <th width="35%">Nom</th>
+                                        <th width="35%">Nom français</th>
+                                        <th width="10%"></th>
                                     </tr>
                                     </thead>
                                     <tbody class="no-border-x">
-                                    <% skillArray.forEach((skill, index) => { %>
+                                    <% teamArray.forEach((team, index) => { %>
                                     <tr>
 										
-                                        <td><%= skill.skill_label %></td>
-                                        <td><%= skill.skill_name %></td>
-                                        <td><%= skill.skill_name_fr %></td>
-                                        <td><%= skill.skill_description %></td>
-                                        <td><span class="input-group-addon btn btn-primary" onclick="location.href='./delSkill/<%= skill.skill_label %>'">
+                                        <td><%= team.team_label %></td>
+                                        <td><%= team.team_name %></td>
+                                        <td><%= team.team_name_fr %></td>
+                                        <td><span class="input-group-addon btn btn-primary" onclick="location.href='./delTeam/<%= team.team_label %>'">
 											<i class="icon-th s7-trash"></i></span>
-											<span class="input-group-addon btn btn-primary" data-toggle="modal" data-target="#editSkill_<%= skill.skill_label %>">
-											<i class="icon-th s7-edit"></i></span>
+											<span class="input-group-addon btn btn-primary" data-toggle="modal" data-target="#editTeam_<%= team.team_label %>">
+											<i class="icon-th s7-note"></i></span>
+											<span class="input-group-addon btn btn-primary" onclick="location.href='./showTeam/<%= team.team_label %>'">
+											<i class="icon-th s7-look"></i></span>
                                         </td>
                                     </tr>
                                     <% }) %>
@@ -69,7 +69,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newSkill">Créer une nouvelle compétence</button>
+                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newTeam">Créer une nouvelle équipe</button>
                         </div>
                     </div>
 
@@ -81,9 +81,9 @@
   <!-- Modal -->
 
       <!-- Modal content-->
-<%- include newSkillForm.ejs %>      
-<% skillArray.forEach((skill, index) => { %>
-	<%- include editSkillForm.ejs %>
+<%- include newTeamForm.ejs %>      
+<% teamArray.forEach((team, index) => { %>
+	<%- include editTeamForm.ejs %>
 <% }) %>
 
 </div> 

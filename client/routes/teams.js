@@ -12,7 +12,7 @@ router.get('/myTeams', function(req, res, next) {
 	}
 });
 
-router.get('/showTeams', function(req, res, next) {
+router.get('/configTeams', function(req, res, next) {
     if(!req.session.user){
 		res.redirect('/login');
 	}else{
@@ -31,7 +31,7 @@ router.get('/showTeams', function(req, res, next) {
 				});
 				//If its good, render the view with informations
 				teamList = JSON.parse(responses[0].body).teams;
-				res.render('teams/showTeams', {
+				res.render('teams/configTeams', {
 					teamArray: teamList
 				});
 			})
@@ -78,5 +78,52 @@ router.get('/delTeam/:id', function(req, res, next) {
 	}
 });
 
+router.get('/showTeam/:id', function(req, res, next) {
+    if(!req.session.user){
+		res.redirect('/login');
+	}else{
+		var TeamUsersPromise = requestService.requestGET('/team/users/'+req.params.id);
+		var UsersPromise = requestService.requestGET('/user/users/');
+		Promise.all([TeamUsersPromise, UsersPromise])
+			.then(responses=>{
+				//Check the response
+				responses.forEach(response=> {
+					if (requestService.isResponseJSONContentType(response)) {
+						if (!requestService.isNotResponseError(response)) {
+							next(new Error(response.error));
+						}
+					} else {
+						next(new Error('Bad Content-Type'));
+					}
+				});
+				//If its good, render the view with informations
+				teamUsersList = JSON.parse(responses[0].body).users;
+				team = JSON.parse(responses[0].body).team;
+				usersList = JSON.parse(responses[1].body).users;
+				res.render('teams/showTeam', {
+					teamUsersArray: teamUsersList,
+					team : team,
+					usersArray : usersList
+				});
+			})
+			.catch(err=>{
+				next(err);
+			});
+	}
+});
+
+router.post('/:team/newTeamUser/', function(req, res, next) {
+    	if(!req.session.user){
+		res.redirect('/login');
+	}else{
+		var myURL ='http://localhost:8080/user/team/';
+		var data = req.body;
+		console.log(data);
+		request({ url: myURL, method: 'POST', json: data}, function(error, request, body) {console.log(body)});		
+		res.redirect('/teams/showTeam/'+req.params.team);	
+			
+		
+	}
+});
 
 module.exports = router;

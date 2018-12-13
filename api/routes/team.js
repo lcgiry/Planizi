@@ -254,18 +254,12 @@ router.delete('/team/:label', function (req, res, next) {
  */
 router.get('/users/:label', function(req, res, next) {
 	Team.findOne({where: {team_label: req.params.label}})
-		.then(result=>{
-			if(result) {
-				result.getUsers({attributes: ['user_mail', 'user_name','user_surname','user_nickname']})
-					.then(result => {
-
-						if(result[0]){
-							res.status(200);
-							res.send({team: result[0].user_team.user_team_team, users: result});
-						}else{
-							res.status(404);
-							res.send(errorResponse.RessourceNotFound("There is no user in the team"));
-						}
+		.then(teamResult=>{
+			if(teamResult) {
+				teamResult.getUsers({attributes: ['user_mail', 'user_name','user_surname','user_nickname', 'user_role', 'user_phone']})
+					.then(userResult => {
+						res.status(200);
+						res.send({team: teamResult, users: userResult});
 					})
 					.catch(err => {
 						res.status(500);
