@@ -60,7 +60,7 @@ router.post('/editTeam/:id', function(req, res, next) {
 		var myURL ='http://localhost:8080/team/team/'+req.params.id;
 		var data = req.body;
 		request({ url: myURL, method: 'PUT', json: data}, function(error, request, body) {})		
-		res.redirect('../showTeams/');	
+		res.redirect('../configTeams/');	
 			
 		
 	}
@@ -111,6 +111,40 @@ router.get('/showTeam/:id', function(req, res, next) {
 			});
 	}
 });
+
+/*router.get('/showTeams', function(req, res, next) {
+    if(!req.session.user){
+		res.redirect('/login');
+	}else{
+		var TeamUsersPromise = requestService.requestGET('/team/users/'+req.params.id);
+		var UsersPromise = requestService.requestGET('/user/users/');
+		Promise.all([TeamUsersPromise, UsersPromise])
+			.then(responses=>{
+				//Check the response
+				responses.forEach(response=> {
+					if (requestService.isResponseJSONContentType(response)) {
+						if (!requestService.isNotResponseError(response)) {
+							next(new Error(response.error));
+						}
+					} else {
+						next(new Error('Bad Content-Type'));
+					}
+				});
+				//If its good, render the view with informations
+				teamUsersList = JSON.parse(responses[0].body).users;
+				team = JSON.parse(responses[0].body).team;
+				usersList = JSON.parse(responses[1].body).users;
+				res.render('teams/showTeam', {
+					teamUsersArray: teamUsersList,
+					team : team,
+					usersArray : usersList
+				});
+			})
+			.catch(err=>{
+				next(err);
+			});
+	}
+});*/
 
 router.post('/:team/newTeamUser/', function(req, res, next) {
     	if(!req.session.user){
