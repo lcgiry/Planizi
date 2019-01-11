@@ -90,11 +90,9 @@ router.get('/shift_unit/:id', function(req, res, next) {
  * @apiUse ErrorPostGroup
  */
 router.post('/shift_unit/', function(req, res, next) {
-
+	console.log('@@@ REQ', req, '@@@ RES', res );
+	
 	if(req.is('application/json')){
-
-
-
 		Shift_Unit.findOne({ where: {shift_unit_start : shift_unitValidator.checkAndFormat_shift_unit_start(req.body.shift_unit_start), shift_unit_end : shift_unitValidator.checkAndFormat_shift_unit_end(req.body.shift_unit_end)} })
 			.then( result =>{
 				//If shift_unit does not exist yet
@@ -104,17 +102,14 @@ router.post('/shift_unit/', function(req, res, next) {
 					Promise.all([newShift_UnitPromise.save()])
 						.then( result => {
 							//Creating new availibility_user raws
-							User.findAll({attributes: ['user_mail']}).then(userResult => {
+						 	User.findAll({attributes: ['user_mail']}).then(userResult => {
 								result[0].setUsers(userResult)
-
 							})
 								.catch(err => {
 									Shift_Unit.destroy({ where: {shift_unit_id : result[0].shift_unit_id}})
 									res.status(500);
 									res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
-
 								});
-
 							res.status(201);
 							res.send({
 								"shift_unit_id": result[0].shift_unit_id
@@ -122,6 +117,7 @@ router.post('/shift_unit/', function(req, res, next) {
 						})
 						.catch( err =>{
 							res.status(500);
+							console.log('@@@',err.message)
 							res.send(errorResponse.InternalServerError(err.message));
 						});
 					//If shift_unit exists yet
@@ -133,12 +129,10 @@ router.post('/shift_unit/', function(req, res, next) {
 			.catch( err =>{
 				res.send(errorResponse.InternalServerError("Problem to check if the shift unit exists : "+err));
 			});
-
 	}else{
 		res.status(406);
 		res.send(errorResponse.ContentTypeInvalid("Content-type received: "+req.get('Content-Type')+". Content-type required : application/json"));
 	}
-
 });
 
 /**
