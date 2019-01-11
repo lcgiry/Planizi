@@ -93,9 +93,7 @@ router.post('/shift_unit/', function(req, res, next) {
 
 	if(req.is('application/json')){
 
-
-
-		Shift_Unit.findOne({ where: {shift_unit_start : shift_unitValidator.checkAndFormat_shift_unit_start(req.body.shift_unit_start), shift_unit_end : shift_unitValidator.checkAndFormat_shift_unit_end(req.body.shift_unit_end)} })
+		Shift_Unit.findOne({ where: {shift_unit_start : shift_unitValidator.checkAndFormat_shift_unit_start(req.body.shift_unit_start)}})
 			.then( result =>{
 				//If shift_unit does not exist yet
 				if(result === null){
@@ -104,15 +102,14 @@ router.post('/shift_unit/', function(req, res, next) {
 					Promise.all([newShift_UnitPromise.save()])
 						.then( result => {
 							//Creating new availibility_user raws
-							User.findAll({attributes: ['user_mail']}).then(userResult => {
-								result[0].setUsers(userResult)
-
-							})
+							User.findAll({attributes: ['user_mail']})
+								.then(userResult => {
+									result[0].setUsers(userResult)
+								})
 								.catch(err => {
-									Shift_Unit.destroy({ where: {shift_unit_id : result[0].shift_unit_id}})
+									Shift_Unit.destroy({ where: {shift_unit_id : result[0].shift_unit_id}});
 									res.status(500);
 									res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
-
 								});
 
 							res.status(201);

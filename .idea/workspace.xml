@@ -2,10 +2,367 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="891ded10-5da8-4e91-aa1f-edfd27b17fa1" name="Default" comment="Generate the architecture of the project">
-      <change afterPath="$APPLICATION_CONFIG_DIR$/colors/_@user_Darcula.icls" afterDir="false" />
-      <change afterPath="$APPLICATION_CONFIG_DIR$/options/baseRefactoring.xml" afterDir="false" />
-      <change afterPath="$APPLICATION_CONFIG_DIR$/options/find.xml" afterDir="false" />
-      <change afterPath="$APPLICATION_CONFIG_DIR$/options/markdown.xml" afterDir="false" />
+      <change beforePath="$APPLICATION_CONFIG_DIR$/options/find.xml" beforeDir="false" afterPath="$APPLICATION_CONFIG_DIR$/options/find.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/.idea/GestionnaireMDP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/.idea/runConfigurations/bin_www.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/bin/www" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/.bin/mime" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/accepts/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/accepts/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/accepts/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/accepts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/accepts/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/array-flatten/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/array-flatten/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/array-flatten/array-flatten.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/array-flatten/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/basic-auth/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/basic-auth/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/basic-auth/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/basic-auth/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/basic-auth/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/lib/read.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/lib/types/json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/lib/types/raw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/lib/types/text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/lib/types/urlencoded.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/body-parser/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/bytes/History.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/bytes/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/bytes/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/bytes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/bytes/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-disposition/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-disposition/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-disposition/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-disposition/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-disposition/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-type/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-type/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-type/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-type/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/content-type/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-parser/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-parser/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-parser/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-parser/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-parser/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-signature/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-signature/History.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-signature/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-signature/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie-signature/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/cookie/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/.coveralls.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/component.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/src/browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/src/debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/src/inspector-log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/debug/src/node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/depd/History.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/depd/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/depd/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/depd/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/depd/lib/browser/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/depd/lib/compat/callsite-tostring.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/depd/lib/compat/event-listener-count.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/depd/lib/compat/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/depd/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/destroy/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/destroy/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/destroy/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/destroy/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ee-first/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ee-first/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ee-first/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ee-first/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ejs/Jakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ejs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ejs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ejs/ejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ejs/ejs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ejs/lib/ejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ejs/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ejs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/encodeurl/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/encodeurl/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/encodeurl/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/encodeurl/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/encodeurl/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/escape-html/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/escape-html/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/escape-html/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/escape-html/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/etag/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/etag/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/etag/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/etag/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/etag/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/History.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/express.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/middleware/init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/middleware/query.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/response.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/router/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/router/route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/lib/view.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/express/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/finalhandler/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/finalhandler/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/finalhandler/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/finalhandler/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/finalhandler/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/forwarded/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/forwarded/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/forwarded/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/forwarded/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/forwarded/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/fresh/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/fresh/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/fresh/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/fresh/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/fresh/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/http-errors/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/http-errors/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/http-errors/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/http-errors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/http-errors/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/Changelog.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/dbcs-codec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/dbcs-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/internal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/sbcs-codec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/sbcs-data-generated.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/sbcs-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/tables/big5-added.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/tables/cp936.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/tables/cp949.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/tables/cp950.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/tables/eucjp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/tables/gbk-added.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/tables/shiftjis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/utf16.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/encodings/utf7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/lib/bom-handling.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/lib/extend-node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/lib/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/lib/streams.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/iconv-lite/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/inherits/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/inherits/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/inherits/inherits.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/inherits/inherits_browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/inherits/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ipaddr.js/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ipaddr.js/ipaddr.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ipaddr.js/lib/ipaddr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ipaddr.js/lib/ipaddr.js.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ipaddr.js/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/media-typer/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/media-typer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/media-typer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/media-typer/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/media-typer/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/merge-descriptors/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/merge-descriptors/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/merge-descriptors/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/merge-descriptors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/merge-descriptors/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/methods/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/methods/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/methods/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/methods/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/methods/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-db/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-db/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-db/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-db/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-db/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-db/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-types/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-types/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-types/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-types/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime-types/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime/build/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime/cli.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime/mime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/mime/types.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/morgan/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/morgan/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/morgan/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/morgan/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/morgan/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ms/license.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ms/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/ms/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/negotiator/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/negotiator/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/negotiator/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/negotiator/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/negotiator/lib/charset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/negotiator/lib/encoding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/negotiator/lib/language.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/negotiator/lib/mediaType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/negotiator/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-finished/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-finished/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-finished/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-finished/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-finished/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-headers/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-headers/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-headers/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-headers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/on-headers/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/parseurl/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/parseurl/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/parseurl/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/parseurl/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/parseurl/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/path-to-regexp/History.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/path-to-regexp/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/path-to-regexp/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/path-to-regexp/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/path-to-regexp/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/proxy-addr/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/proxy-addr/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/proxy-addr/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/proxy-addr/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/proxy-addr/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/dist/qs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/lib/formats.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/lib/parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/lib/stringify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/test/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/test/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/test/parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/test/stringify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/qs/test/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/range-parser/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/range-parser/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/range-parser/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/range-parser/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/range-parser/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/raw-body/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/raw-body/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/raw-body/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/raw-body/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/raw-body/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/raw-body/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safe-buffer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safe-buffer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safe-buffer/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safe-buffer/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safe-buffer/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safer-buffer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safer-buffer/Porting-Buffer.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safer-buffer/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safer-buffer/dangerous.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safer-buffer/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safer-buffer/safer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/safer-buffer/tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/send/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/send/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/send/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/send/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/send/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/serve-static/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/serve-static/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/serve-static/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/serve-static/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/serve-static/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/setprototypeof/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/setprototypeof/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/setprototypeof/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/setprototypeof/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/setprototypeof/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/statuses/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/statuses/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/statuses/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/statuses/codes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/statuses/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/statuses/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/type-is/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/type-is/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/type-is/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/type-is/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/type-is/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/unpipe/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/unpipe/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/unpipe/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/unpipe/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/unpipe/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/utils-merge/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/utils-merge/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/utils-merge/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/utils-merge/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/utils-merge/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/vary/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/vary/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/vary/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/vary/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/node_modules/vary/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/public/stylesheets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/routes/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/views/error.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Etudes supérieurs INSA Télécoms 2/GestionnaireMDP/views/index.ejs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/planizi_database_dump_2018.10.21.sql" beforeDir="false" />
     </list>
@@ -21,75 +378,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="task.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/routes/task.js">
+      <file leaf-file-name="tasks.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/routes/tasks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="407" column="59" selection-start-line="407" selection-start-column="59" selection-end-line="407" selection-end-column="59" />
+            <state relative-caret-position="552">
+              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
               <folding>
-                <element signature="e#1234#1435#0" />
-                <element signature="e#1436#2505#0" />
-                <element signature="e#2552#2947#0" />
-                <element signature="e#2699#2806#0" />
-                <element signature="e#2828#2942#0" />
-                <element signature="e#2951#3974#0" />
-                <element signature="e#4039#4566#0" />
-                <element signature="e#4069#4137#0" />
-                <element signature="e#4151#4295#0" />
-                <element signature="e#4152#4338#0" />
-                <element signature="e#4233#4334#0" />
-                <element signature="e#4356#4470#0" />
-                <element signature="e#4479#4864#0" />
-                <element signature="e#4865#5770#0" />
-                <element signature="e#6080#7387#0" />
-                <element signature="e#6692#6790#0" />
-                <element signature="e#6827#6935#0" />
-                <element signature="e#6959#7060#0" />
-                <element signature="e#6693#6858#0" />
-                <element signature="e#6865#7242#0" />
-                <element signature="e#7243#8143#0" />
-                <element signature="e#8194#9052#0" />
-                <element signature="e#8228#8880#0" />
-                <element signature="e#8349#8733#0" />
-                <element signature="e#8371#8618#0" />
-                <element signature="e#8441#8478#0" />
-                <element signature="e#8494#8609#0" />
-                <element signature="e#8624#8728#0" />
-                <element signature="e#8752#8874#0" />
-                <element signature="e#8884#9049#0" />
-                <element signature="e#9056#9446#0" />
-                <element signature="e#9447#9731#0" />
-                <element signature="e#9880#10384#0" />
-                <element signature="e#10268#10853#0" />
-                <element signature="e#10911#11753#0" />
-                <element signature="e#11374#11497#0" />
-                <element signature="e#11511#11612#0" />
-                <element signature="e#11634#11748#0" />
-                <element signature="e#11835#12212#0" />
-                <element signature="e#12213#13113#0" />
-                <element signature="e#12698#14610#0" />
-                <element signature="e#12732#14438#0" />
-                <element signature="e#13854#14019#0" />
-                <element signature="e#15031#15616#0" />
-                <element signature="e#16256#16379#0" />
-                <element signature="e#16393#16494#0" />
-                <element signature="e#16516#16630#0" />
-                <element signature="e#16639#17023#0" />
-                <element signature="e#17024#17443#0" />
-                <element signature="e#17834#18853#0" />
-                <element signature="e#19185#19575#0" />
-                <element signature="e#19576#19881#0" />
-                <element signature="e#19238#19905#0" />
+                <element signature="e#179#1436#0" />
+                <element signature="e#203#233#0" />
+                <element signature="e#237#1433#0" />
+                <element signature="e#674#1390#0" />
+                <element signature="e#734#974#0" />
+                <element signature="e#797#911#0" />
+                <element signature="e#855#904#0" />
+                <element signature="e#917#968#0" />
+                <element signature="e#1271#1383#0" />
+                <element signature="e#1407#1428#0" />
+                <element signature="e#2117#2231#0" />
+                <element signature="e#2175#2224#0" />
+                <element signature="e#2237#2288#0" />
+                <element signature="e#2993#3223#0" />
+                <element signature="e#3305#3415#0" />
+                <element signature="e#3466#5582#0" />
+                <element signature="e#3491#3521#0" />
+                <element signature="e#3525#5579#0" />
+                <element signature="e#3561#5574#0" />
+                <element signature="e#3573#5570#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -177,10 +492,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/package.json" />
-        <option value="$PROJECT_DIR$/api/errors/errors-response.js" />
-        <option value="$PROJECT_DIR$/api/routes/user.js" />
-        <option value="$PROJECT_DIR$/client/routes/authentication.js" />
         <option value="$PROJECT_DIR$/client/bin/www" />
         <option value="$PROJECT_DIR$/client/config/authentication/config-authentication.json" />
         <option value="$PROJECT_DIR$/api/package.json" />
@@ -190,7 +501,6 @@
         <option value="$PROJECT_DIR$/api/services/validators/role-validator.js" />
         <option value="$PROJECT_DIR$/client/services/request-service.js" />
         <option value="$PROJECT_DIR$/api/views/registrationFormSkill.ejs" />
-        <option value="$PROJECT_DIR$/client/routes/users.js" />
         <option value="$PROJECT_DIR$/client/public/template-assets/css/style.css" />
         <option value="$PROJECT_DIR$/client/public/template-assets/lib/summernote/summernote.js" />
         <option value="$PROJECT_DIR$/client/views/registration/registrationFormSkill.ejs" />
@@ -214,7 +524,6 @@
         <option value="$PROJECT_DIR$/client/public/stylesheets/style-shift.css" />
         <option value="$PROJECT_DIR$/client/views/tasks/shift-sumup-panel.ejs" />
         <option value="$PROJECT_DIR$/client/views/tasks/shift-sumup-panel-people-specific.ejs" />
-        <option value="$PROJECT_DIR$/client/routes/tasks.js" />
         <option value="$PROJECT_DIR$/client/public/javascripts/shift-task.js" />
         <option value="$PROJECT_DIR$/client/views/tasks/shift-edit.ejs" />
         <option value="$PROJECT_DIR$/api/models/task.js" />
@@ -227,7 +536,13 @@
         <option value="$PROJECT_DIR$/api/services/validators/location-validator.js" />
         <option value="$PROJECT_DIR$/api/routes/task.js" />
         <option value="$PROJECT_DIR$/api/routes/location.js" />
+        <option value="$PROJECT_DIR$/api/services/validators/shift_unit-validator.js" />
+        <option value="$PROJECT_DIR$/api/models/shift_unit.js" />
+        <option value="$PROJECT_DIR$/api/routes/shift_unit.js" />
         <option value="$PROJECT_DIR$/api/app.js" />
+        <option value="$PROJECT_DIR$/client/routes/users.js" />
+        <option value="$PROJECT_DIR$/client/routes/authentication.js" />
+        <option value="$PROJECT_DIR$/client/routes/tasks.js" />
       </list>
     </option>
   </component>
@@ -268,8 +583,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="149" />
-    <option name="y" value="-9" />
+    <option name="x" value="263" />
+    <option name="y" value="-20" />
     <option name="width" value="1428" />
     <option name="height" value="894" />
   </component>
@@ -289,7 +604,13 @@
             <path>
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code-node" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -302,7 +623,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="CSS" />
     <property name="javascript.nodejs.core.library.configured.version" value="7.7.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../24h de l'INSA (Site NodeJS)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -312,19 +633,19 @@
     <property name="ts.external.directory.path" value="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\validators" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\routes" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\routes" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\views\tasks" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\public\stylesheets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\app\components" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\format" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\assets\template-assets\css" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\validators" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\routes" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\routes" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\views\tasks" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\public\stylesheets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -363,6 +684,10 @@
       <workItem from="1543177309570" duration="2797000" />
       <workItem from="1543518761754" duration="91853000" />
       <workItem from="1544297780447" duration="19928000" />
+      <workItem from="1544781589170" duration="29000" />
+      <workItem from="1544802303738" duration="9671000" />
+      <workItem from="1547061372634" duration="3478000" />
+      <workItem from="1547154523754" duration="2116000" />
     </task>
     <task id="LOCAL-00001" summary="Generate the architecture of the project">
       <created>1540155774955</created>
@@ -375,7 +700,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="441680000" />
+    <option name="totallyTimeSpent" value="461946000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,12 +719,11 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021075" side_tool="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49789253" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.3340358" weight="0.32897604" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.5021075" weight="0.26143792" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.5021075" visible="true" weight="0.26143792" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.49883586" weight="0.32788798" />
@@ -409,26 +733,27 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49789253" visible="true" weight="0.32897604" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.3340358" weight="0.32897604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19266589" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32897604" />
       <window_info anchor="bottom" id="TypeScript" order="8" sideWeight="0.49883586" weight="0.32788798" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49841937" weight="0.32897604" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.5015806" side_tool="true" visible="true" weight="0.35239208" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021075" side_tool="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49841937" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.3340358" weight="0.32897604" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -477,235 +802,10 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="22" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/out-template-html/form-validation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1368">
-          <caret line="514" column="136" lean-forward="true" selection-start-line="514" selection-start-column="24" selection-end-line="514" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/out-template-html/ui-buttons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="434" column="42" selection-start-line="434" selection-start-column="42" selection-end-line="434" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/out-template-html/form-elements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="542" column="62" lean-forward="true" selection-start-line="542" selection-start-column="26" selection-end-line="542" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#div#0;n#nav#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/out-template-html/ui-modals.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="523" column="81" selection-start-line="523" selection-start-column="65" selection-end-line="523" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/views/registrationForm.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/routes/registration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="62" lean-forward="true" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormPersonal.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormSkill.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="50" column="112" lean-forward="true" selection-start-line="50" selection-start-column="112" selection-end-line="50" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/test.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/views/error.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/out-template-html/ui-alerts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="372" column="24" lean-forward="true" selection-start-line="370" selection-start-column="18" selection-end-line="372" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/out-template-html/ui-notifications.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1441">
-          <caret line="582" column="1" selection-start-line="582" selection-start-column="1" selection-end-line="583" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/out-template-html/ui-panels.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="366" column="18" lean-forward="true" selection-start-line="356" selection-start-column="12" selection-end-line="366" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/tasks/shift-sumup-panel-people-specific.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/tasks/shift-sumup-panel-people-generic.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#422#428#1#HTML" expanded="true" />
-            <element signature="e#455#461#0#HTML" expanded="true" />
-            <element signature="e#461#467#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#6;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#7;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#1737#1743#1#HTML" expanded="true" />
-            <element signature="e#1770#1776#0#HTML" expanded="true" />
-            <element signature="e#1776#1782#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#3;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#3082#3088#0#HTML" expanded="true" />
-            <element signature="e#3194#3200#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/public/javascripts/shift-task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
-          <caret line="198" column="13" lean-forward="true" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
-          <folding>
-            <element signature="e#35#3051#0" />
-            <element signature="e#311#487#0" />
-            <element signature="e#721#1060#0" />
-            <element signature="e#1222#1399#0" />
-            <element signature="e#1133#1197#0" />
-            <element signature="e#972#1069#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/tasks/shift-edit.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="228" column="46" selection-start-line="228" selection-start-column="46" selection-end-line="228" selection-end-column="46" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#1094#1100#0#HTML" expanded="true" />
-            <element signature="e#1100#1106#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#form#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/public/stylesheets/style-shift.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/out-template-html/ui-general.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="560" column="75" selection-start-line="560" selection-start-column="63" selection-end-line="560" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/tasks/new-task.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="232" column="87" selection-start-line="232" selection-start-column="63" selection-end-line="232" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="61" selection-start-line="61" selection-end-line="64" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/authentication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/registration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-787">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/skill.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/models/user_need.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -722,36 +822,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/shift_unit.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/services/validators/team-validator.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/validators/shift_unit-validator.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252">
           <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/routes/tasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1998">
-          <caret line="111" column="47" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -762,23 +839,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/models/task_comment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="8" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -786,9 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -796,60 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
           <caret line="210" column="56" selection-start-line="210" selection-start-column="56" selection-end-line="210" selection-end-column="56" />
-          <folding>
-            <element signature="e#598#799#0" />
-            <element signature="e#800#1467#0" />
-            <element signature="e#1514#1909#0" />
-            <element signature="e#1568#1772#0" />
-            <element signature="e#1589#1655#0" />
-            <element signature="e#1661#1768#0" />
-            <element signature="e#1790#1904#0" />
-            <element signature="e#1913#2566#0" />
-            <element signature="e#2619#3079#0" />
-            <element signature="e#2756#2942#0" />
-            <element signature="e#2777#2831#0" />
-            <element signature="e#2837#2938#0" />
-            <element signature="e#2960#3074#0" />
-            <element signature="e#3083#3468#0" />
-            <element signature="e#3469#4039#0" />
-            <element signature="e#4087#5135#0" />
-            <element signature="e#4121#4963#0" />
-            <element signature="e#4312#4837#0" />
-            <element signature="e#4370#4720#0" />
-            <element signature="e#4462#4567#0" />
-            <element signature="e#4504#4557#0" />
-            <element signature="e#4589#4687#0" />
-            <element signature="e#4724#4832#0" />
-            <element signature="e#4856#4957#0" />
-            <element signature="e#4967#5132#0" />
-            <element signature="e#5139#5516#0" />
-            <element signature="e#5517#6079#0" />
-            <element signature="e#6133#7000#0" />
-            <element signature="e#6167#6828#0" />
-            <element signature="e#6297#6681#0" />
-            <element signature="e#6319#6566#0" />
-            <element signature="e#6389#6426#0" />
-            <element signature="e#6442#6557#0" />
-            <element signature="e#6572#6676#0" />
-            <element signature="e#6700#6822#0" />
-            <element signature="e#6832#6997#0" />
-            <element signature="e#7004#7394#0" />
-            <element signature="e#7395#7688#0" />
-            <element signature="e#7745#8162#0" />
-            <element signature="e#7864#8029#0" />
-            <element signature="e#8047#8157#0" />
-            <element signature="e#8226#8424#0" />
-            <element signature="e#8425#9641#0" />
-            <element signature="e#9695#10569#0" />
-            <element signature="e#9768#10429#0" />
-            <element signature="e#9784#10320#0" />
-            <element signature="e#9900#10157#0" />
-            <element signature="e#9922#10031#0" />
-            <element signature="e#10035#10150#0" />
-            <element signature="e#10178#10313#0" />
-            <element signature="e#10324#10425#0" />
-            <element signature="e#10445#10564#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -857,23 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="469">
-            <caret line="174" column="2" lean-forward="true" selection-start-line="174" selection-start-column="2" selection-end-line="174" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/doc/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -889,102 +879,348 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/location.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="235" lean-forward="true" selection-start-line="235" selection-end-line="235" />
-          <folding>
-            <element signature="e#1405#1606#0" />
-            <element signature="e#645#1734#0" />
-            <element signature="e#2723#3118#0" />
-            <element signature="e#2165#3292#0" />
-            <element signature="e#3189#3675#0" />
-            <element signature="e#4469#4655#0" />
-            <element signature="e#4490#4544#0" />
-            <element signature="e#4550#4651#0" />
-            <element signature="e#4673#4787#0" />
-            <element signature="e#4796#5181#0" />
-            <element signature="e#4062#4939#0" />
-            <element signature="e#6062#7105#0" />
-            <element signature="e#6096#6933#0" />
-            <element signature="e#6937#7102#0" />
-            <element signature="e#7109#7486#0" />
-            <element signature="e#6429#7243#0" />
-            <element signature="e#8438#9296#0" />
-            <element signature="e#8472#9124#0" />
-            <element signature="e#9300#9546#0" />
-            <element signature="e#8407#8730#0" />
-            <element signature="e#9920#10587#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/task.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="407" column="59" selection-start-line="407" selection-start-column="59" selection-end-line="407" selection-end-column="59" />
-          <folding>
-            <element signature="e#1234#1435#0" />
-            <element signature="e#1436#2505#0" />
-            <element signature="e#2552#2947#0" />
-            <element signature="e#2699#2806#0" />
-            <element signature="e#2828#2942#0" />
-            <element signature="e#2951#3974#0" />
-            <element signature="e#4039#4566#0" />
-            <element signature="e#4069#4137#0" />
-            <element signature="e#4151#4295#0" />
-            <element signature="e#4152#4338#0" />
-            <element signature="e#4233#4334#0" />
-            <element signature="e#4356#4470#0" />
-            <element signature="e#4479#4864#0" />
-            <element signature="e#4865#5770#0" />
-            <element signature="e#6080#7387#0" />
-            <element signature="e#6692#6790#0" />
-            <element signature="e#6827#6935#0" />
-            <element signature="e#6959#7060#0" />
-            <element signature="e#6693#6858#0" />
-            <element signature="e#6865#7242#0" />
-            <element signature="e#7243#8143#0" />
-            <element signature="e#8194#9052#0" />
-            <element signature="e#8228#8880#0" />
-            <element signature="e#8349#8733#0" />
-            <element signature="e#8371#8618#0" />
-            <element signature="e#8441#8478#0" />
-            <element signature="e#8494#8609#0" />
-            <element signature="e#8624#8728#0" />
-            <element signature="e#8752#8874#0" />
-            <element signature="e#8884#9049#0" />
-            <element signature="e#9056#9446#0" />
-            <element signature="e#9447#9731#0" />
-            <element signature="e#9880#10384#0" />
-            <element signature="e#10268#10853#0" />
-            <element signature="e#10911#11753#0" />
-            <element signature="e#11374#11497#0" />
-            <element signature="e#11511#11612#0" />
-            <element signature="e#11634#11748#0" />
-            <element signature="e#11835#12212#0" />
-            <element signature="e#12213#13113#0" />
-            <element signature="e#12698#14610#0" />
-            <element signature="e#12732#14438#0" />
-            <element signature="e#13854#14019#0" />
-            <element signature="e#15031#15616#0" />
-            <element signature="e#16256#16379#0" />
-            <element signature="e#16393#16494#0" />
-            <element signature="e#16516#16630#0" />
-            <element signature="e#16639#17023#0" />
-            <element signature="e#17024#17443#0" />
-            <element signature="e#17834#18853#0" />
-            <element signature="e#19185#19575#0" />
-            <element signature="e#19576#19881#0" />
-            <element signature="e#19238#19905#0" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/models/shift_unit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/config/authentication/config-authentication.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/authentication.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="32" selection-start-line="32" selection-end-line="36" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        <state relative-caret-position="-1020">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/models/task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1627">
+            <caret line="174" column="2" lean-forward="true" selection-start-line="174" selection-start-column="2" selection-end-line="174" selection-end-column="27" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/services/validators/shift_unit-validator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/errors/errors-response.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/tasks/list-tasks.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="39" column="46" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/registration/registrationFormSkill.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="53" column="48" lean-forward="true" selection-start-line="48" selection-start-column="40" selection-end-line="53" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="44" column="11" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="44" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/shift_subset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="46" column="11" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="46" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/services/validators/role-validator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="46" selection-start-line="3" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/services/validators/shift_subset-validator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/scriptTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/registration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config/authentication/config-authentication.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config/authentication/config-authentication.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/doc/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/location.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/teams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-378" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/config/database/config-database.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/config/database/config-database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/authentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#248#391#0" />
+            <element signature="e#272#302#0" />
+            <element signature="e#306#389#0" />
+            <element signature="e#436#570#0" />
+            <element signature="e#460#490#0" />
+            <element signature="e#494#568#0" />
+            <element signature="e#627#1023#0" />
+            <element signature="e#903#1020#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/shift_unit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#250#562#0" />
+            <element signature="e#277#307#0" />
+            <element signature="e#311#560#0" />
+            <element signature="e#620#1204#0" />
+            <element signature="e#648#678#0" />
+            <element signature="e#682#1202#0" />
+            <element signature="e#1078#1198#0" />
+            <element signature="e#1102#1145#0" />
+            <element signature="e#1151#1194#0" />
+            <element signature="e#1262#2244#0" />
+            <element signature="e#1290#1320#0" />
+            <element signature="e#1324#2242#0" />
+            <element signature="e#1452#2199#0" />
+            <element signature="e#1512#1752#0" />
+            <element signature="e#1575#1689#0" />
+            <element signature="e#1633#1682#0" />
+            <element signature="e#1695#1746#0" />
+            <element signature="e#1913#2192#0" />
+            <element signature="e#1968#2165#0" />
+            <element signature="e#2216#2237#0" />
+            <element signature="e#2305#2576#0" />
+            <element signature="e#2333#2363#0" />
+            <element signature="e#2367#2574#0" />
+            <element signature="e#2639#3165#0" />
+            <element signature="e#2667#2697#0" />
+            <element signature="e#2701#3163#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/shift_unit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="151" column="34" selection-start-line="151" selection-start-column="34" selection-end-line="151" selection-end-column="34" />
+          <folding>
+            <element signature="e#821#1022#0" />
+            <element signature="e#1023#1647#0" />
+            <element signature="e#1692#2107#0" />
+            <element signature="e#1753#1970#0" />
+            <element signature="e#1775#1848#0" />
+            <element signature="e#1854#1966#0" />
+            <element signature="e#1988#2102#0" />
+            <element signature="e#2111#2635#0" />
+            <element signature="e#2691#3127#0" />
+            <element signature="e#2793#2990#0" />
+            <element signature="e#2815#2870#0" />
+            <element signature="e#2876#2986#0" />
+            <element signature="e#3008#3122#0" />
+            <element signature="e#3131#3580#0" />
+            <element signature="e#3634#5222#0" />
+            <element signature="e#3668#5050#0" />
+            <element signature="e#3822#4918#0" />
+            <element signature="e#3886#4765#0" />
+            <element signature="e#4079#4605#0" />
+            <element signature="e#4203#4254#0" />
+            <element signature="e#4278#4492#0" />
+            <element signature="e#4536#4595#0" />
+            <element signature="e#4627#4725#0" />
+            <element signature="e#4769#4913#0" />
+            <element signature="e#4937#5044#0" />
+            <element signature="e#5054#5219#0" />
+            <element signature="e#5226#5663#0" />
+            <element signature="e#5754#6475#0" />
+            <element signature="e#5898#6322#0" />
+            <element signature="e#5925#6201#0" />
+            <element signature="e#6011#6055#0" />
+            <element signature="e#6071#6192#0" />
+            <element signature="e#6207#6317#0" />
+            <element signature="e#6341#6469#0" />
+            <element signature="e#6479#6644#0" />
+            <element signature="e#6711#7354#0" />
+            <element signature="e#7046#7220#0" />
+            <element signature="e#7067#7100#0" />
+            <element signature="e#7106#7216#0" />
+            <element signature="e#7238#7349#0" />
+            <element signature="e#7427#8149#0" />
+            <element signature="e#7512#8003#0" />
+            <element signature="e#7533#7881#0" />
+            <element signature="e#7600#7696#0" />
+            <element signature="e#7717#7874#0" />
+            <element signature="e#7885#7999#0" />
+            <element signature="e#8019#8144#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/tasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="e#179#1436#0" />
+            <element signature="e#203#233#0" />
+            <element signature="e#237#1433#0" />
+            <element signature="e#674#1390#0" />
+            <element signature="e#734#974#0" />
+            <element signature="e#797#911#0" />
+            <element signature="e#855#904#0" />
+            <element signature="e#917#968#0" />
+            <element signature="e#1271#1383#0" />
+            <element signature="e#1407#1428#0" />
+            <element signature="e#2117#2231#0" />
+            <element signature="e#2175#2224#0" />
+            <element signature="e#2237#2288#0" />
+            <element signature="e#2993#3223#0" />
+            <element signature="e#3305#3415#0" />
+            <element signature="e#3466#5582#0" />
+            <element signature="e#3491#3521#0" />
+            <element signature="e#3525#5579#0" />
+            <element signature="e#3561#5574#0" />
+            <element signature="e#3573#5570#0" />
+          </folding>
         </state>
       </provider>
     </entry>

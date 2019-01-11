@@ -8,7 +8,7 @@ router.get('/google',
 
 /* When google has authenticated the user and call back the application */
 router.get('/google/callback', function(req, res, next){
-	/*passport.authenticate('google', { session: false }, function(err, user, info){
+	passport.authenticate('google', { session: false }, function(err, user, info){
 		//If the user yet exist in database
 		if(info.exist == true){
 			req.session.user = user;
@@ -24,8 +24,8 @@ router.get('/google/callback', function(req, res, next){
 		}else{
 			throw new Error("Authentication failed !")
 		}
-	})(req, res, next);*/
-	var UserPromise = requestService.requestGET('/user/user/alexis.saget@gmail.com');
+	})(req, res, next);
+	/*var UserPromise = requestService.requestGET('/user/user/alexis.saget@gmail.com');
 	Promise.all([UserPromise])
 		.then(responses=>{
 			//Check the response
@@ -46,9 +46,8 @@ router.get('/google/callback', function(req, res, next){
 		})
 		.catch(err=>{
 			next(err);
-		});	
+		});*/
 
 });
-
 
 module.exports = router;
