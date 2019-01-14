@@ -31,7 +31,8 @@
                         <div class="bottom">
                             <div class="user-avatar"><span class="status"></span><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/bobross-profile_image-0b9dd167a9bb16b5-300x300.jpeg"></div>
                                 <div class="user-info">
-                                    <h4><%= user.user_name %> <%= user.user_nickname == '' ? '' : '"'+user.user_nickname+'"' %> <%= user.user_surname %></h4><span><%= user.user_description %></span>
+                                    <h4><%= user.user_name %> <%= user.user_surname %><i><%= user.user_nickname == '' ? '' : ' - '+user.user_nickname %></i></h4>
+                                    <span><%= user.user_description %></span>
                                 </div>
                             <div class="col-sm-2">
                                 <div class="content">
@@ -47,7 +48,7 @@
                             <div class="panel-heading">
                                 <h4>Mes infos</h4>
                             </div>
-                            <div class="panel-body"><span class="description"><%= user.user_description %></span>
+                            <div class="panel-body">
                                 <table class="no-border no-strip skills">
                                     <tbody class="no-border-x no-border-y">
                                     <tr>
@@ -83,11 +84,11 @@
                                     <tbody class="no-border-x no-border-y">
                                     <tr>
                                         <td class="item">Carte d'identité:<span class="icon s7-file"></span></td>
-                                        <td>carte_identite_bob_ross.jpg</td>
+                                        <td>carte_identite_<%=user.user_name%>_<%=user.user_surname%>.jpg</td>
                                     </tr>
                                     <tr>
                                         <td class="item">CV:<span class="icon s7-file"></span></td>
-                                        <td>CV_bob_ross.jpg</td>
+                                        <td>CV_<%=user.user_name%>_<%=user.user_surname%>.jpg</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -102,6 +103,7 @@
                             <div class="panel-body">
                                 <table class="no-border no-strip skills">
                                     <tbody class="no-border-x no-border-y">
+                                    <% if (mySkillsArray.length >0) {%>
                                     <% mySkillsArray.forEach((skill, index) => { %>
                                     <tr>
 										<td width="90%"><%= skill.skill_name_fr %></td>
@@ -109,13 +111,20 @@
 											<i class="icon-th s7-trash"></i></span></td>
                                     </tr>
                                     <% }) %>
-                                    <tr>
-										<td><span class="input-group-addon btn btn-primary" data-toggle="modal" data-target="#addSkill">
-											<i class="icon-th s7-plus"></i></span></td>
-									</tr>
+                                    <%} else {%>
+                                        <span>Vous n'avez pas encore de compétence.</span>
+                                    <% }%>
                                     </tbody>
-                                    
+                                    <table class="no-border no-strip skills">
+                                        <tbody class="no-border-x no-border-y">
+                                            <tr>
+                                                    <td><span class="input-group-addon btn btn-primary" data-toggle="modal" data-target="#addSkill">
+                                                    <i class="icon-th s7-plus"></i></span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </table>
+                                
                             </div>
                         </div>
                     </div>

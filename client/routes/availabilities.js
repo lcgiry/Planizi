@@ -7,7 +7,7 @@ const requestService = require("../services/request-service");
 router.get('/addAvailabilities', function(req, res, next) {
 
 	//Check if user logged in or not
-    if(req.session.user){
+    if(!req.session.user){
 		res.redirect('/login');
 	}else{
 		var allShifts = requestService.requestGET('/shift_unit/all');
@@ -35,7 +35,7 @@ router.get('/addAvailabilities', function(req, res, next) {
 // });
 router.get('/my-availabilities', function(req, res, next) {
 
-	if(req.session.user){
+	if(!req.session.user){
 		res.redirect('/login');
 	}else{
 		var AvailabilitiesPromise = requestService.requestGET('/user/availabilities/'+'john71570@gmail.com');
@@ -89,10 +89,11 @@ router.get('/my-availabilities', function(req, res, next) {
 
 router.get('/my-availabilities/ajax', function(req, res, next) {
 
-	if(req.session.user){
+	if(!req.session.user){
 		res.redirect('/login');
 	}else{
-		var AvailabilitiesPromise = requestService.requestGET('/user/availabilities/'+'john71570@gmail.com');
+		// var AvailabilitiesPromise = requestService.requestGET('/user/availabilities/'+'john71570@gmail.com');
+		var AvailabilitiesPromise = requestService.requestGET('/user/availabilities/'+'req.session.user');
 		var availibilitiesList = null;
 
 		Promise.all([AvailabilitiesPromise])
@@ -141,7 +142,7 @@ router.get('/my-availabilities/ajax', function(req, res, next) {
 
 router.post('/my-availabilities/ajax', function(req, res, next) {
 
-	if(req.session.user){
+	if(!req.session.user){
 		res.redirect('/login');
 	}else{
 
