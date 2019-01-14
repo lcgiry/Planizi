@@ -6,10 +6,10 @@ var sequelize = require('../config/database/config-database').sequelize;
 var errorResponse = require('../errors/errors-response');
 var shift_unitValidator = require('../services/validators/shift_unit-validator');
 const Shift_Unit = sequelize.import('../models/shift_unit.js');
-const Availibility_User = sequelize.import('../models/availibility_user.js');
+const Availability_User = sequelize.import('../models/availability_user.js');
 const User = sequelize.import('../models/user.js');
-Shift_Unit.belongsToMany(User, {through: Availibility_User, foreignKey: 'availibility_user_shift_unit', otherKey: 'availibility_user_user'});
-User.belongsToMany(Shift_Unit, {through: Availibility_User, foreignKey: 'availibility_user_user', otherKey: 'availibility_user_shift_unit'});
+Shift_Unit.belongsToMany(User, {through: Availability_User, foreignKey: 'availability_user_shift_unit', otherKey: 'availability_user_user'});
+User.belongsToMany(Shift_Unit, {through: Availability_User, foreignKey: 'availability_user_user', otherKey: 'availability_user_shift_unit'});
 
 
 //----------------------------------------- SHIFT_UNIT TABLE
@@ -93,7 +93,8 @@ router.post('/shift_unit/', function(req, res, next) {
 	console.log('@@@ REQ', req, '@@@ RES', res );
 	
 	if(req.is('application/json')){
-		Shift_Unit.findOne({ where: {shift_unit_start : shift_unitValidator.checkAndFormat_shift_unit_start(req.body.shift_unit_start), shift_unit_end : shift_unitValidator.checkAndFormat_shift_unit_end(req.body.shift_unit_end)} })
+
+		Shift_Unit.findOne({ where: {shift_unit_start : shift_unitValidator.checkAndFormat_shift_unit_start(req.body.shift_unit_start)}})
 			.then( result =>{
 				//If shift_unit does not exist yet
 				if(result === null){
@@ -101,12 +102,13 @@ router.post('/shift_unit/', function(req, res, next) {
 					var newShift_UnitPromise = Shift_Unit.build(shift_unitValidator.mapShiftUnit(req));
 					Promise.all([newShift_UnitPromise.save()])
 						.then( result => {
-							//Creating new availibility_user raws
-						 	User.findAll({attributes: ['user_mail']}).then(userResult => {
-								result[0].setUsers(userResult)
-							})
+							//Creating new availability_user raws
+							User.findAll({attributes: ['user_mail']})
+								.then(userResult => {
+									result[0].setUsers(userResult)
+								})
 								.catch(err => {
-									Shift_Unit.destroy({ where: {shift_unit_id : result[0].shift_unit_id}})
+									Shift_Unit.destroy({ where: {shift_unit_id : result[0].shift_unit_id}});
 									res.status(500);
 									res.send(errorResponse.InternalServerError('Problem to execute the request : '+err));
 								});
@@ -180,7 +182,7 @@ router.put('/shift_unit/:id', function (req, res, next) {
 router.delete('/shift_unit/:id', function (req, res, next) {
 	//@todo check if the shift_unit if refered before destroy entry
 	Shift_Unit.destroy({ where: {shift_unit_id: shift_unitValidator.checkAndFormat_shift_unit_id(req.params.id)}})
-	//Availibility_User.destroy({ where: {availibity_user_shift_unit_id: shift_unitValidator.checkAndFormat_shift_unit_id(req.params.id)}})
+	//Availability_User.destroy({ where: {availibity_user_shift_unit_id: shift_unitValidator.checkAndFormat_shift_unit_id(req.params.id)}})
 		.then( result => {
 			if (result > 0) {
 				res.status(204).end();
@@ -195,7 +197,6 @@ router.delete('/shift_unit/:id', function (req, res, next) {
 		});
 
 });
-
 
 router.put('/generate_availibilities/:id', function(req, res, next) {
 

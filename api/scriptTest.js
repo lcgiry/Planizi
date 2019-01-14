@@ -7,10 +7,9 @@ var moment = require('moment');
 var date = moment("2018-12-06 - 21:46:43", "YYYY-MM-DD - HH:mm:ss");
 
 
-var remainder = (date.minute() % 15);
-if(remainder == 15){
-	remainder=0;
-}
-var roundedDate = date.subtract(remainder, "minutes").second(0)//.format("YYYY-MM-DD - HH:mm");
+var start = Date.parse('2019-01-10 07:00:00');
+var end = Date.parse('2019-01-10 09:00:00');
 
-console.log(roundedDate);
+if(Date.parse('2019-01-10 08:00:00')>start){
+	console.log('YES');
+}

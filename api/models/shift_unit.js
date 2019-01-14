@@ -6,7 +6,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       primaryKey: true,
-			autoIncrement: true
+      autoincrement: true,
+      defaultValue: 1
     },
     shift_unit_start: {
       type: DataTypes.DATE,

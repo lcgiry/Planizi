@@ -1,14 +1,14 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('availibility_equipment', {
-    availibility_equipment_id: {
+  return sequelize.define('availability_equipment', {
+    availability_equipment_id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    availibility_equipment_shift_unit: {
+    availability_equipment_shift_unit: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       references: {
@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
         key: 'shift_unit_id'
       }
     },
-    availibility_equipment_equipment: {
+    availability_equipment_equipment: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       references: {
@@ -24,12 +24,12 @@ module.exports = function(sequelize, DataTypes) {
         key: 'equipment_id'
       }
     },
-    availibility_equipment_available: {
+    availability_equipment_available: {
       type: DataTypes.INTEGER(4),
       allowNull: true,
       defaultValue: '0'
     },
-    availibility_equipment_assignment: {
+    availability_equipment_assignment: {
       type: DataTypes.INTEGER(4),
       allowNull: true,
       defaultValue: '0'
@@ -43,6 +43,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     }
   }, {
-    tableName: 'availibility_equipment'
+    tableName: 'availability_equipment'
   });
 };

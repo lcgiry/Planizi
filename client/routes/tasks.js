@@ -94,7 +94,7 @@ router.get('/new-task/add-shift', function(req, res, next) {
 });
 
 router.post('/new-task/add-shift', function(req, res, next) {
-	if(req.session.user){
+	if(!req.session.user){
 		res.redirect('/login');
 	}else{
 		console.log(req.body);

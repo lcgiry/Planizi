@@ -11818,9 +11818,9 @@ li.L9 {
   }
 }
 .full-calendar .fc-content .fc-event-container .fc-event {
-  background: #ef6262 !important;
-  border-color: #eb3d3d !important;
-  color: #ffffff !important;
+  background: #ef6262 ;
+  border-color: #eb3d3d ;
+  color: #ffffff ;
   border-radius: 0;
 }
 .full-calendar .fc-content .fc-border-separate .fc-today {
