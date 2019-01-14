@@ -34,134 +34,33 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="info-block panel">
-                    <div class="panel-heading">Mon équipe</div>
+                    <div class="panel-heading"><%= teamInfo.team.team_name_fr%></div>
                 </div>
             </div>
+
+            <% for(i=0;i<teamInfo.users.length;i++){ %>
             <div class="col-md-4 col-sm-6">
                 <div class="info-block panel">
                     <div class="panel-heading">
                         <div class="col-xs-3"><img src="assets/img/avatar4.jpg" class="img-circle" width="30" height="30"></img></div>
-                        <div class="col-xs-9">John Ratignier</div>
+                        <div class="col-xs-9"><%= teamInfo.users[i].user_name + ' ' + teamInfo.users[i].user_surname %></div>
                     </div>
                     <div class="panel-body">
                         <div class="col-xs-3">Rôle</div>
-                        <div class="col-xs-9">Administrateur</div>
+                        <div class="col-xs-9"><%= teamInfo.users[i].user_role%></div>
                     
                         <div class="col-xs-3">Téléphone</div>
-                        <div class="col-xs-9">06 15 24 65 45</div>
+                        <div class="col-xs-9"><%= teamInfo.users[i].user_phone%></div>
 
                         <div class="col-xs-3">E-mail</div>
-                        <div class="col-xs-9">john.ratignier@insa-lyon.fr</div>
+                        <div class="col-xs-9"><%= teamInfo.users[i].user_mail%></div>
 
                         <div class="col-xs-3">Compétences</div>
-                        <div class="col-xs-9">Permis fusée</div>
-                    </div>
-                </div>
-            </div><div class="col-md-4 col-sm-6">
-                <div class="info-block panel">
-                    <div class="panel-heading">
-                        <div class="col-xs-3"><img src="assets/img/avatar3.jpg" class="img-circle" width="30" height="30"></img></div>
-                        <div class="col-xs-9">Ludovic Giry</div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="col-xs-3">Rôle</div>
-                        <div class="col-xs-9">Scrum master</div>
-                    
-                        <div class="col-xs-3">Téléphone</div>
-                        <div class="col-xs-9">06 23 98 88 05</div>
-
-                        <div class="col-xs-3">E-mail</div>
-                        <div class="col-xs-9">ludovic.giry@insa-lyon.fr</div>
-
-                        <div class="col-xs-3">Compétences</div>
-                        <div class="col-xs-9">Jongleur</div>
+                        <div class="col-xs-9">----</div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="info-block panel">
-                    <div class="panel-heading">
-                        <div class="col-xs-3"><img src="assets/img/avatar7.jpg" class="img-circle" width="30" height="30"></img></div>
-                        <div class="col-xs-9">Alexis Saget</div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="col-xs-3">Rôle</div>
-                        <div class="col-xs-9">Product owner</div>
-                    
-                        <div class="col-xs-3">Téléphone</div>
-                        <div class="col-xs-9">06 22 13 29 45</div>
-
-                        <div class="col-xs-3">E-mail</div>
-                        <div class="col-xs-9">alexis.saget@insa-lyon.fr</div>
-
-                        <div class="col-xs-3">Compétences</div>
-                        <div class="col-xs-9">Son et lumières</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="info-block panel">
-                    <div class="panel-heading">
-                        <div class="col-xs-3"><img src="assets/img/avatar6.jpg" class="img-circle" width="30" height="30"></img></div>
-                        <div class="col-xs-9">Fabien Lenoble</div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="col-xs-3">Rôle</div>
-                        <div class="col-xs-9">Product manager</div>
-                    
-                        <div class="col-xs-3">Téléphone</div>
-                        <div class="col-xs-9">06 16 15 07 65</div>
-
-                        <div class="col-xs-3">E-mail</div>
-                        <div class="col-xs-9">fabien.lenoble@insa-lyon.fr</div>
-
-                        <div class="col-xs-3">Compétences</div>
-                        <div class="col-xs-9">Permis mongolfière</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="info-block panel">
-                    <div class="panel-heading">
-                        <div class="col-xs-3"><img src="assets/img/avatar2.jpg" class="img-circle" width="30" height="30"></img></div>
-                        <div class="col-xs-9">Emmanuelle Buglin</div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="col-xs-3">Rôle</div>
-                        <div class="col-xs-9">Spectatrice</div>
-                    
-                        <div class="col-xs-3">Téléphone</div>
-                        <div class="col-xs-9">06 44 03 06 12</div>
-
-                        <div class="col-xs-3">E-mail</div>
-                        <div class="col-xs-9">emmanuelle.buglin@insa-lyon.fr</div>
-
-                        <div class="col-xs-3">Compétences</div>
-                        <div class="col-xs-9">Passive</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="info-block panel">
-                    <div class="panel-heading">
-                        <div class="col-xs-3"><img src="assets/img/avatar8.jpg" class="img-circle" width="30" height="30"></img></div>
-                        <div class="col-xs-9">Tim Greg</div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="col-xs-3">Rôle</div>
-                        <div class="col-xs-9">UI/UX Designer</div>
-                    
-                        <div class="col-xs-3">Téléphone</div>
-                        <div class="col-xs-9">06 15 96 00 32</div>
-
-                        <div class="col-xs-3">E-mail</div>
-                        <div class="col-xs-9">tim.greg@insa-lyon.fr</div>
-
-                        <div class="col-xs-3">Compétences</div>
-                        <div class="col-xs-9">Photographie</div>
-                    </div>
-                </div>
-            </div>
+            <% } %>
         </div>
     </div>
 </div>

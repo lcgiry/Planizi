@@ -8,7 +8,42 @@ router.get('/myTeams', function(req, res, next) {
     if(!req.session.user){
 		res.redirect('/login');
 	}else{
-		res.render('teams/myTeam', {user: 'req.session.user'});
+		var teamNamesPromise = requestService.requestGET('/user/teams/'+req.session.user.user_mail)
+		Promise.all([teamNamesPromise])
+			.then(responses=>{
+				responses.forEach(response=> {
+					if (requestService.isResponseJSONContentType(response)) {
+						if (!requestService.isNotResponseError(response)) {
+							next(new Error(response.error));
+						}
+					} else {
+						next(new Error('Bad Content-Type'));
+					}
+				});
+				//Currently only one team is returned when getting /user/teams/:mail
+				teamName = JSON.parse(responses[0].body).teams[0].team_label;
+				var teamPromise = requestService.requestGET('/team/users/'+teamName);
+				Promise.all([teamPromise])
+					.then(responses=>{
+						responses.forEach(response=> {
+							if (requestService.isResponseJSONContentType(response)) {
+								if (!requestService.isNotResponseError(response)) {
+									next(new Error(response.error));
+								}
+							} else {
+								next(new Error('Bad Content-Type'));
+							}
+						});
+						teamInfo = JSON.parse(responses[0].body);
+						res.render('teams/myTeam', {
+							teamInfo: teamInfo,
+							user: 'req.session.user'
+						});
+					})
+			})
+		
+		
+		// res.render('teams/myTeam', {user: 'req.session.user'});
 	}
 });
 

@@ -506,6 +506,8 @@ router.get('/skills/:mail', function(req, res, next) {
  */
 router.get('/teams/:mail', function(req, res, next) {
 
+	// récupère une seule team pour l'instant ?
+
 	User.findOne({where: {user_mail: req.params.mail}})
 		.then(result=>{
 			if(result) {
