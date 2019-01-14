@@ -7,6 +7,16 @@ module.exports.requestGET = function(url){
 	return rp(request);
 };
 
+module.exports.requestPOST = function(url, jsonBody){
+	var request = {method: 'POST', uri: serverConfig.server+url, resolveWithFullResponse: true, body: jsonBody, json: true};
+	return rp(request);
+};
+
+module.exports.requestPUT = function(url, jsonBody){
+	var request = {method: 'PUT', uri: serverConfig.server+url, resolveWithFullResponse: true, body: jsonBody, json: true};
+	return rp(request);
+};
+
 
 module.exports.isResponseJSONContentType= function(response){
 	if(response.headers['content-type'].match(/application\/json/g)) {

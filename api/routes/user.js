@@ -18,8 +18,8 @@ User.belongsToMany(Team, {through: User_Team, foreignKey: 'user_team_user', othe
 const User_Friend = sequelize.import('../models/user_friend.js');
 User.belongsToMany(User, {as: "friends", through: User_Friend, foreignKey: 'user_friend_user', otherKey: 'user_friend_friend'});
 const Shift_Unit = sequelize.import('../models/shift_unit.js');
-const Availibility_User = sequelize.import('../models/availibility_user.js');
-User.belongsToMany(Shift_Unit, {as: "avaibilities", through: Availibility_User, foreignKey: 'availibility_user_user', otherKey: 'availibility_user_shift_unit'});
+const Availability_User = sequelize.import('../models/availability_user.js');
+User.belongsToMany(Shift_Unit, {as: "availabilities", through: Availability_User, foreignKey: 'availability_user_user', otherKey: 'availability_user_shift_unit'});
 
 
 //----------------------------------------- USER TABLE
@@ -153,7 +153,7 @@ router.post('/user/', function(req, res, next) {
 					Promise.all([newUserPromise.save()])
 						.then( result => {
 							Shift_Unit.findAll({attributes: ['shift_unit_id']}).then( shiftResult =>{
-								result[0].setAvaibilities(shiftResult)});
+								result[0].setAvailabilities(shiftResult)});
 							res.status(201);
 							res.send(result);
 						})
@@ -482,6 +482,7 @@ router.get('/skills/:mail', function(req, res, next) {
 
 });
 
+//----------------------------------------- USER_TEAM TABLE
 /**
  * @apiGroup USER
  * @api {GET} /user/teams/:mail Get all skills of an user
@@ -554,6 +555,7 @@ router.get('/teams/:mail', function(req, res, next) {
  * @apiUse ErrorGetGroup
  */
 
+//----------------------------------------- USER_FRIEND TABLE
 router.get('/friends/:mail', function(req, res, next) {
 	
 	User.findOne({where: {user_mail: req.params.mail}})
@@ -586,35 +588,35 @@ router.get('/friends/:mail', function(req, res, next) {
 
 });
 
+//----------------------------------------- AVAILABILITY_USER TABLE
 /**
  * @apiGroup USER
- * @api {GET} /user/avaibilities/:mail Get all skills of an user
+ * @api {GET} /user/availabilities/:mail Get all skills of an user
  * @apiDescription Retrieve all teams about an users
  * @apiParam {String} mail ``REQUIRED`` The mail of the user to retrieve for get his skills (ID)
  * @apiSuccess {String} user The user related to the next skills
- * @apiSuccess {Object[]} avaibilities The array with all teams of the user
+ * @apiSuccess {Object[]} availabilities The array with all teams of the user
  
  * @apiUse ErrorGetGroup
  */
-router.get('/avaibilities/:mail', function(req, res, next) {
+router.get('/availabilities/:mail', function(req, res, next) {
 
 	User.findOne({where: {user_mail: req.params.mail}})
 		.then(result=>{
 			if(result) {
-				result.getAvaibilities()
+				result.getAvailabilities()
 					.then(result => {
-
 						if(result[0]){
 							res.status(200);
-							res.send({user: result[0].availibility_user.availibility_user_user, avaibilities: result});
+							res.send({user: result[0].availability_user.availability_user_user, availabilities: result});
 						}else{
 							res.status(404);
-							res.send(errorResponse.RessourceNotFound("The user has no avaibilities"));
+							res.send(errorResponse.RessourceNotFound("The user has no availabilities"));
 						}
 					})
 					.catch(err => {
 						res.status(500);
-						res.send(errorResponse.InternalServerError("Problem to retrieve the user avaibilities : "+err));
+						res.send(errorResponse.InternalServerError("Problem to retrieve the user availabilities : "+err));
 					});
 			}else{
 				res.status(404);
@@ -625,6 +627,48 @@ router.get('/avaibilities/:mail', function(req, res, next) {
 			res.status(500);
 			res.send(errorResponse.InternalServerError("Problem to check if the user exists : "+err));
 		});
+
+});
+
+/**
+ * @apiGroup USER
+ * @api {PUT} /user/availability/:mail Update an user availability
+ * @apiDescription Update an user availability
+ * @apiParam {String} mail ``REQUIRED`` The mail of the user to update (ID)
+ * @apiParam (Body) {String} availability_user_id The id of the raw
+ * @apiParam (Body) {String} availability_user_available The availability of the user
+ * @apiSuccess (Success 204) NOCONTENT *No content sent*
+ * @apiUse ErrorPutGroup
+ */
+router.put('/availability/:mail', function (req, res, next) {
+	if(req.is('application/json')){
+
+		Availability_User.findOne({ where: {availability_user_user: userValidator.checkAndFormat_user_mail(req.params.mail), availability_user_id: req.body.availability_user_id}})
+			.then(availabilityuserResult => {
+				if (availabilityuserResult) {
+
+					availabilityuserResult.update({availability_user_available: req.body.availability_user_available}).then( result => {
+						res.status(200).end();
+					}).catch( err => {
+						res.status(500);
+						res.send(errorResponse.InternalServerError("Problem to update user availability : "+err));
+					});
+
+				} else {
+					res.status(404);
+					res.send(errorResponse.RessourceNotFound('The availability does not exist for this user'));
+				}
+			})
+			.catch(err => {
+				res.status(500);
+				res.send(errorResponse.InternalServerError("Problem to check if the user availability exists : "+err));
+			});
+
+	}else{
+		res.status(406);
+		res.send(errorResponse.ContentTypeInvalid("Content-type received: "+req.get('Content-Type')+". Content-type required : application/json"));
+	}
+
 });
 
 module.exports = router;

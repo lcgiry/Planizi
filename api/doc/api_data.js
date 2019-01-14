@@ -4337,7 +4337,7 @@ define({ "api": [
   {
     "group": "USER",
     "type": "GET",
-    "url": "/user/avaibilities/:mail",
+    "url": "/user/availabilities/:mail",
     "title": "Get all skills of an user",
     "description": "<p>Retrieve all teams about an users</p>",
     "parameter": {
@@ -4367,7 +4367,7 @@ define({ "api": [
             "group": "Success 200",
             "type": "Object[]",
             "optional": false,
-            "field": "avaibilities",
+            "field": "availabilities",
             "description": "<p>The array with all teams of the user</p>"
           }
         ]
@@ -4376,7 +4376,7 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "routes/user.js",
     "groupTitle": "USER",
-    "name": "GetUserAvaibilitiesMail",
+    "name": "GetUserAvailabilitiesMail",
     "error": {
       "fields": {
         "Error 4xx": [

@@ -1,14 +1,14 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('availibility_user', {
-    availibility_user_id: {
+  return sequelize.define('availability_user', {
+    availability_user_id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    availibility_user_shift_unit: {
+    availability_user_shift_unit: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       references: {
@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
         key: 'shift_unit_id'
       }
     },
-    availibility_user_user: {
+    availability_user_user: {
       type: DataTypes.STRING(256),
       allowNull: false,
       references: {
@@ -24,12 +24,12 @@ module.exports = function(sequelize, DataTypes) {
         key: 'user_mail'
       }
     },
-    availibility_user_available: {
+    availability_user_available: {
       type: DataTypes.INTEGER(4),
       allowNull: false,
       defaultValue: '0'
     },
-    availibility_user_assignment: {
+    availability_user_assignment: {
       type: DataTypes.INTEGER(4),
       allowNull: false,
       defaultValue: '0'
@@ -43,6 +43,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     }
   }, {
-    tableName: 'availibility_user'
+    tableName: 'availability_user'
   });
 };

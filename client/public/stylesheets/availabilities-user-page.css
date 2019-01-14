@@ -1,0 +1,20 @@
+.calendar-availability-yes {
+    background: #0f6c13 !important;
+    border-color: #0f6c13 !important;
+    color: #ffffff !important;
+    border-radius: 0;
+}
+
+.calendar-availability-no {
+    background: #ff0014 !important;
+    border-color: #ff0014 !important;
+    color: #ffffff !important;
+    border-radius: 0;
+}
+
+.calendar-affected-yes {
+    background: #0a0f79 !important;
+    border-color: #0a0f79 !important;
+    color: #ffffff !important;
+    border-radius: 0;
+}

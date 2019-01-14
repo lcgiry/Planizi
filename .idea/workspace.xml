@@ -377,39 +377,234 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tasks.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/routes/tasks.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
-              <folding>
-                <element signature="e#179#1436#0" />
-                <element signature="e#203#233#0" />
-                <element signature="e#237#1433#0" />
-                <element signature="e#674#1390#0" />
-                <element signature="e#734#974#0" />
-                <element signature="e#797#911#0" />
-                <element signature="e#855#904#0" />
-                <element signature="e#917#968#0" />
-                <element signature="e#1271#1383#0" />
-                <element signature="e#1407#1428#0" />
-                <element signature="e#2117#2231#0" />
-                <element signature="e#2175#2224#0" />
-                <element signature="e#2237#2288#0" />
-                <element signature="e#2993#3223#0" />
-                <element signature="e#3305#3415#0" />
-                <element signature="e#3466#5582#0" />
-                <element signature="e#3491#3521#0" />
-                <element signature="e#3525#5579#0" />
-                <element signature="e#3561#5574#0" />
-                <element signature="e#3573#5570#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="availabilities.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/routes/availabilities.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="396">
+                  <caret line="127" column="60" selection-start-line="127" selection-start-column="60" selection-end-line="127" selection-end-column="60" />
+                  <folding>
+                    <element signature="e#402#1230#0" />
+                    <element signature="e#2138#3704#0" />
+                    <element signature="e#403#596#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="request-service.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/services/request-service.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/api/routes/user.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="274">
+                  <caret line="484" column="53" selection-start-line="484" selection-start-column="53" selection-end-line="484" selection-end-column="53" />
+                  <folding>
+                    <element signature="e#1553#1754#0" />
+                    <element signature="e#1755#2686#0" />
+                    <element signature="e#2733#3256#0" />
+                    <element signature="e#2919#3119#0" />
+                    <element signature="e#2940#3003#0" />
+                    <element signature="e#3009#3115#0" />
+                    <element signature="e#3137#3251#0" />
+                    <element signature="e#3260#5205#0" />
+                    <element signature="e#5257#5784#0" />
+                    <element signature="e#5388#5647#0" />
+                    <element signature="e#5409#5541#0" />
+                    <element signature="e#5547#5643#0" />
+                    <element signature="e#5665#5779#0" />
+                    <element signature="e#5789#7505#0" />
+                    <element signature="e#7553#8689#0" />
+                    <element signature="e#7587#8517#0" />
+                    <element signature="e#7773#8391#0" />
+                    <element signature="e#7831#8274#0" />
+                    <element signature="e#7923#8114#0" />
+                    <element signature="e#8004#8055#0" />
+                    <element signature="e#8143#8241#0" />
+                    <element signature="e#8278#8386#0" />
+                    <element signature="e#8410#8511#0" />
+                    <element signature="e#8521#8686#0" />
+                    <element signature="e#8741#9865#0" />
+                    <element signature="e#8774#9694#0" />
+                    <element signature="e#8928#9568#0" />
+                    <element signature="e#8979#9561#0" />
+                    <element signature="e#9033#9164#0" />
+                    <element signature="e#9195#9385#0" />
+                    <element signature="e#9230#9384#0" />
+                    <element signature="e#9409#9551#0" />
+                    <element signature="e#9587#9688#0" />
+                    <element signature="e#9698#9863#0" />
+                    <element signature="e#9919#11051#0" />
+                    <element signature="e#9952#10880#0" />
+                    <element signature="e#10106#10754#0" />
+                    <element signature="e#10157#10747#0" />
+                    <element signature="e#10211#10342#0" />
+                    <element signature="e#10373#10571#0" />
+                    <element signature="e#10408#10570#0" />
+                    <element signature="e#10595#10737#0" />
+                    <element signature="e#10773#10874#0" />
+                    <element signature="e#10884#11049#0" />
+                    <element signature="e#11102#12353#0" />
+                    <element signature="e#11135#12182#0" />
+                    <element signature="e#11289#12056#0" />
+                    <element signature="e#11331#11983#0" />
+                    <element signature="e#11383#11509#0" />
+                    <element signature="e#11539#11806#0" />
+                    <element signature="e#11564#11715#0" />
+                    <element signature="e#11719#11796#0" />
+                    <element signature="e#11830#11972#0" />
+                    <element signature="e#11987#12049#0" />
+                    <element signature="e#12075#12176#0" />
+                    <element signature="e#12186#12351#0" />
+                    <element signature="e#12406#13520#0" />
+                    <element signature="e#12439#13349#0" />
+                    <element signature="e#12593#13223#0" />
+                    <element signature="e#12644#13216#0" />
+                    <element signature="e#12696#12822#0" />
+                    <element signature="e#12846#13040#0" />
+                    <element signature="e#12880#13039#0" />
+                    <element signature="e#13064#13206#0" />
+                    <element signature="e#13242#13343#0" />
+                    <element signature="e#13353#13518#0" />
+                    <element signature="e#13524#13901#0" />
+                    <element signature="e#13902#15541#0" />
+                    <element signature="e#15594#16452#0" />
+                    <element signature="e#15627#16280#0" />
+                    <element signature="e#15748#16133#0" />
+                    <element signature="e#15770#16018#0" />
+                    <element signature="e#15840#15878#0" />
+                    <element signature="e#15894#16009#0" />
+                    <element signature="e#16024#16128#0" />
+                    <element signature="e#16152#16274#0" />
+                    <element signature="e#16284#16449#0" />
+                    <element signature="e#16456#16846#0" />
+                    <element signature="e#16847#17147#0" />
+                    <element signature="e#17203#17617#0" />
+                    <element signature="e#17319#17484#0" />
+                    <element signature="e#17340#17373#0" />
+                    <element signature="e#17379#17480#0" />
+                    <element signature="e#17502#17612#0" />
+                    <element signature="e#17682#17880#0" />
+                    <element signature="e#17881#19320#0" />
+                    <element signature="e#19374#20034#0" />
+                    <element signature="e#19452#19894#0" />
+                    <element signature="e#19472#19782#0" />
+                    <element signature="e#19528#19626#0" />
+                    <element signature="e#19647#19775#0" />
+                    <element signature="e#19786#19890#0" />
+                    <element signature="e#19910#20029#0" />
+                    <element signature="e#20038#21442#0" />
+                    <element signature="e#21495#22282#0" />
+                    <element signature="e#21567#22142#0" />
+                    <element signature="e#21583#22032#0" />
+                    <element signature="e#21628#21877#0" />
+                    <element signature="e#21650#21759#0" />
+                    <element signature="e#21763#21870#0" />
+                    <element signature="e#21898#22025#0" />
+                    <element signature="e#22036#22138#0" />
+                    <element signature="e#22158#22277#0" />
+                    <element signature="e#22287#23523#0" />
+                    <element signature="e#23579#24450#0" />
+                    <element signature="e#23652#24310#0" />
+                    <element signature="e#23668#24200#0" />
+                    <element signature="e#23786#24043#0" />
+                    <element signature="e#23808#23923#0" />
+                    <element signature="e#23927#24036#0" />
+                    <element signature="e#24064#24193#0" />
+                    <element signature="e#24204#24306#0" />
+                    <element signature="e#24326#24445#0" />
+                    <element signature="e#24454#24866#0" />
+                    <element signature="e#24928#25766#0" />
+                    <element signature="e#25000#25627#0" />
+                    <element signature="e#25016#25517#0" />
+                    <element signature="e#25070#25353#0" />
+                    <element signature="e#25091#25225#0" />
+                    <element signature="e#25229#25346#0" />
+                    <element signature="e#25374#25510#0" />
+                    <element signature="e#25521#25623#0" />
+                    <element signature="e#25643#25762#0" />
+                    <element signature="e#26150#27789#0" />
+                    <element signature="e#27842#28700#0" />
+                    <element signature="e#28532#28697#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="availabilities-user-page.ejs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/views/availabilities/availabilities-user-page.ejs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="387">
+                  <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+                  <folding>
+                    <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="calendar-availabilities-user.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/public/javascripts/calendar-availabilities-user.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-387">
+                  <caret line="32" column="91" selection-start-line="32" selection-start-column="91" selection-end-line="32" selection-end-column="91" />
+                  <folding>
+                    <element signature="e#988#1103#0" />
+                    <element signature="e#1124#1263#0" />
+                    <element signature="e#1285#1372#0" />
+                    <element signature="e#2181#2283#0" />
+                    <element signature="e#2146#3151#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="shift-task.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/public/javascripts/shift-task.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="189" column="10" lean-forward="true" selection-start-line="182" selection-start-column="8" selection-end-line="189" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="scriptTest.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/scriptTest.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="216">
+                  <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="availability_user.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/api/models/availability_user.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="468">
+                  <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -421,13 +616,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>navbar</find>
-      <find>/img/logo_planizi_blanc_sf_320.png</find>
-      <find>,</find>
-      <find>case</find>
-      <find>user_name</find>
-      <find>'</find>
-      <find>/template-assets/</find>
       <find>c=&quot;</find>
       <find>sets/</find>
       <find>c=&quot;../</find>
@@ -451,12 +639,15 @@
       <find>label</find>
       <find>team</find>
       <find>task</find>
+      <find>fullCalendar</find>
+      <find>!important</find>
+      <find>fc-event</find>
+      <find>avaibilities</find>
+      <find>Availibility</find>
+      <find>Avaibilities</find>
+      <find>availibility</find>
     </findStrings>
     <replaceStrings>
-      <replace>user_gender</replace>
-      <replace>user_phone</replace>
-      <replace>user_birthdate</replace>
-      <replace>user_description</replace>
       <replace>user_experience</replace>
       <replace>user_incapacity</replace>
       <replace>user_teeshirt_size</replace>
@@ -483,6 +674,10 @@
       <replace>&quot;;&quot;</replace>
       <replace>task</replace>
       <replace>location</replace>
+      <replace>availabilities</replace>
+      <replace>Availability</replace>
+      <replace>Availabilities</replace>
+      <replace>availability</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -492,17 +687,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/bin/www" />
-        <option value="$PROJECT_DIR$/client/config/authentication/config-authentication.json" />
-        <option value="$PROJECT_DIR$/api/package.json" />
-        <option value="$PROJECT_DIR$/client/views/error.ejs" />
-        <option value="$PROJECT_DIR$/client/services/skill-validator.js" />
-        <option value="$PROJECT_DIR$/client/services/user-api-request.js" />
-        <option value="$PROJECT_DIR$/api/services/validators/role-validator.js" />
-        <option value="$PROJECT_DIR$/client/services/request-service.js" />
-        <option value="$PROJECT_DIR$/api/views/registrationFormSkill.ejs" />
-        <option value="$PROJECT_DIR$/client/public/template-assets/css/style.css" />
-        <option value="$PROJECT_DIR$/client/public/template-assets/lib/summernote/summernote.js" />
         <option value="$PROJECT_DIR$/client/views/registration/registrationFormSkill.ejs" />
         <option value="$PROJECT_DIR$/client/config/authentication/config-authentication.js" />
         <option value="$PROJECT_DIR$/client/routes/registration.js" />
@@ -514,13 +698,11 @@
         <option value="$PROJECT_DIR$/client/views/availabilities/addAvailabilities.ejs" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/app.js" />
-        <option value="$PROJECT_DIR$/client/views/header.ejs" />
         <option value="$PROJECT_DIR$/client/routes/index.js" />
         <option value="$PROJECT_DIR$/client/views/test.ejs" />
         <option value="$PROJECT_DIR$/api/views/error.ejs" />
         <option value="$PROJECT_DIR$/client/public/javascripts/new-task.js" />
         <option value="$PROJECT_DIR$/client/public/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/client/views/tasks/new-task.ejs" />
         <option value="$PROJECT_DIR$/client/public/stylesheets/style-shift.css" />
         <option value="$PROJECT_DIR$/client/views/tasks/shift-sumup-panel.ejs" />
         <option value="$PROJECT_DIR$/client/views/tasks/shift-sumup-panel-people-specific.ejs" />
@@ -538,11 +720,24 @@
         <option value="$PROJECT_DIR$/api/routes/location.js" />
         <option value="$PROJECT_DIR$/api/services/validators/shift_unit-validator.js" />
         <option value="$PROJECT_DIR$/api/models/shift_unit.js" />
-        <option value="$PROJECT_DIR$/api/routes/shift_unit.js" />
         <option value="$PROJECT_DIR$/api/app.js" />
         <option value="$PROJECT_DIR$/client/routes/users.js" />
         <option value="$PROJECT_DIR$/client/routes/authentication.js" />
+        <option value="$PROJECT_DIR$/client/views/tasks/new-task.ejs" />
+        <option value="$PROJECT_DIR$/client/public/javascripts/calendar-task.js" />
+        <option value="$PROJECT_DIR$/client/views/header.ejs" />
+        <option value="$PROJECT_DIR$/client/public/template-assets/css/style.css" />
+        <option value="$PROJECT_DIR$/client/public/stylesheets/availabilities-user-page.css" />
+        <option value="$PROJECT_DIR$/api/routes/shift_unit.js" />
+        <option value="$PROJECT_DIR$/api/scriptTest.js" />
+        <option value="$PROJECT_DIR$/api/models/availability_equipment.js" />
+        <option value="$PROJECT_DIR$/api/models/availability_user.js" />
         <option value="$PROJECT_DIR$/client/routes/tasks.js" />
+        <option value="$PROJECT_DIR$/client/views/availabilities/availabilities-user-page.ejs" />
+        <option value="$PROJECT_DIR$/client/public/javascripts/calendar-availabilities-user.js" />
+        <option value="$PROJECT_DIR$/client/services/request-service.js" />
+        <option value="$PROJECT_DIR$/client/routes/availabilities.js" />
+        <option value="$PROJECT_DIR$/api/routes/user.js" />
       </list>
     </option>
   </component>
@@ -610,7 +805,7 @@
               <item name="code-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="code-node" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -633,19 +828,19 @@
     <property name="ts.external.directory.path" value="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\public\stylesheets" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\public\javascripts" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\views\availabilities" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\validators" />
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\routes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\public\template-assets\lib\full-calendar-3" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\app\components" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\format" />
       <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\src\assets\template-assets\css" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\services\validators" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\api\routes" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\routes" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\views\tasks" />
-      <recent name="C:\Users\UTILISATEUR\Documents\Planizi\code-node\client\public\stylesheets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -687,7 +882,7 @@
       <workItem from="1544781589170" duration="29000" />
       <workItem from="1544802303738" duration="9671000" />
       <workItem from="1547061372634" duration="3478000" />
-      <workItem from="1547154523754" duration="2116000" />
+      <workItem from="1547154523754" duration="34920000" />
     </task>
     <task id="LOCAL-00001" summary="Generate the architecture of the project">
       <created>1540155774955</created>
@@ -700,7 +895,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="461946000" />
+    <option name="totallyTimeSpent" value="494750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,6 +914,7 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894625" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021075" side_tool="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49789253" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.3340358" weight="0.32897604" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
@@ -733,7 +929,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49789253" visible="true" weight="0.32897604" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -802,166 +997,10 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/models/user_need.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/task_need_user.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/team.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/availibility_user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/validators/team-validator.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/validators/task-validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/task_comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/task_instructions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/team.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="210" column="56" selection-start-line="210" selection-start-column="56" selection-end-line="210" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/validators/task_comment-validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/routes/location.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/validators/location-validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="407" column="59" selection-start-line="407" selection-start-column="59" selection-end-line="407" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/shift_unit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/config/authentication/config-authentication.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/authentication.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="32" selection-start-line="32" selection-end-line="36" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1627">
-            <caret line="174" column="2" lean-forward="true" selection-start-line="174" selection-start-column="2" selection-end-line="174" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/services/validators/shift_unit-validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/errors/errors-response.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/tasks/list-tasks.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1004,13 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/scriptTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/routes/registration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-684">
@@ -1028,13 +1060,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/config/authentication/config-authentication.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/doc/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1105,6 +1130,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/out-template-html/ui-chat.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/error.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/template-assets/js/app-page-calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="31" />
+          <folding>
+            <element signature="e#1141#2261#0" />
+            <element signature="e#3256#3367#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/template-assets/lib/jquery.fullcalendar/bower.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/template-assets/lib/jquery.fullcalendar/fullcalendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#28#36#1" expanded="true" />
+            <element signature="e#28#36#1" expanded="true" />
+            <element signature="e#28#35#1" expanded="true" />
+            <element signature="e#28#35#1" expanded="true" />
+            <element signature="e#28#36#1" expanded="true" />
+            <element signature="e#28#36#1" expanded="true" />
+            <element signature="e#28#35#1" expanded="true" />
+            <element signature="e#28#35#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#34#40#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#59#65#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#209#215#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="e#98#104#1" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#1" expanded="true" />
+            <element signature="e#30#36#1" expanded="true" />
+            <element signature="e#39#45#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="e#77#83#1" expanded="true" />
+            <element signature="e#30#36#1" expanded="true" />
+            <element signature="e#47#53#0" expanded="true" />
+            <element signature="e#53#59#0" expanded="true" />
+            <element signature="e#59#65#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/routes/shift_unit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1139,10 +1242,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/tasks/new-task.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="22" selection-start-line="22" selection-end-line="242" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#6450#9983#0#HTML" />
+            <element signature="n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#10351#11489#0#HTML" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/javascripts/calendar-task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+          <folding>
+            <element signature="e#2381#3386#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/tasks/shift-edit.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="77" column="38" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="77" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/out-template-html/pages-calendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="105" />
+          <folding>
+            <element signature="e#532#730#0" />
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#nav#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/template-assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="11819" column="36" selection-start-line="11819" selection-start-column="28" selection-end-line="11819" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/stylesheets/availabilities-user-page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/scriptTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/models/availability_equipment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/services/validators/user-validator.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/services/format.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/shift_unit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="151" column="34" selection-start-line="151" selection-start-column="34" selection-end-line="151" selection-end-column="34" />
+        <state relative-caret-position="456">
+          <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
           <folding>
             <element signature="e#821#1022#0" />
             <element signature="e#1023#1647#0" />
@@ -1171,6 +1368,7 @@
             <element signature="e#4937#5044#0" />
             <element signature="e#5054#5219#0" />
             <element signature="e#5226#5663#0" />
+            <element signature="e#5720#6647#0" />
             <element signature="e#5754#6475#0" />
             <element signature="e#5898#6322#0" />
             <element signature="e#5925#6201#0" />
@@ -1195,31 +1393,221 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/services/validators/shift_unit-validator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/javascripts/header.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/javascripts/shift-task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="189" column="10" lean-forward="true" selection-start-line="182" selection-start-column="8" selection-end-line="189" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/javascripts/calendar-availabilities-user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="32" column="91" selection-start-line="32" selection-start-column="91" selection-end-line="32" selection-end-column="91" />
+          <folding>
+            <element signature="e#988#1103#0" />
+            <element signature="e#1124#1263#0" />
+            <element signature="e#1285#1372#0" />
+            <element signature="e#2181#2283#0" />
+            <element signature="e#2146#3151#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/models/availability_user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/services/request-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/routes/availabilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="127" column="60" selection-start-line="127" selection-start-column="60" selection-end-line="127" selection-end-column="60" />
+          <folding>
+            <element signature="e#402#1230#0" />
+            <element signature="e#2138#3704#0" />
+            <element signature="e#403#596#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/availabilities/availabilities-user-page.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+          <folding>
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/routes/tasks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="-1116">
+          <caret line="30" column="19" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="30" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="484" column="53" selection-start-line="484" selection-start-column="53" selection-end-line="484" selection-end-column="53" />
           <folding>
-            <element signature="e#179#1436#0" />
-            <element signature="e#203#233#0" />
-            <element signature="e#237#1433#0" />
-            <element signature="e#674#1390#0" />
-            <element signature="e#734#974#0" />
-            <element signature="e#797#911#0" />
-            <element signature="e#855#904#0" />
-            <element signature="e#917#968#0" />
-            <element signature="e#1271#1383#0" />
-            <element signature="e#1407#1428#0" />
-            <element signature="e#2117#2231#0" />
-            <element signature="e#2175#2224#0" />
-            <element signature="e#2237#2288#0" />
-            <element signature="e#2993#3223#0" />
-            <element signature="e#3305#3415#0" />
-            <element signature="e#3466#5582#0" />
-            <element signature="e#3491#3521#0" />
-            <element signature="e#3525#5579#0" />
-            <element signature="e#3561#5574#0" />
-            <element signature="e#3573#5570#0" />
+            <element signature="e#1553#1754#0" />
+            <element signature="e#1755#2686#0" />
+            <element signature="e#2733#3256#0" />
+            <element signature="e#2919#3119#0" />
+            <element signature="e#2940#3003#0" />
+            <element signature="e#3009#3115#0" />
+            <element signature="e#3137#3251#0" />
+            <element signature="e#3260#5205#0" />
+            <element signature="e#5257#5784#0" />
+            <element signature="e#5388#5647#0" />
+            <element signature="e#5409#5541#0" />
+            <element signature="e#5547#5643#0" />
+            <element signature="e#5665#5779#0" />
+            <element signature="e#5789#7505#0" />
+            <element signature="e#7553#8689#0" />
+            <element signature="e#7587#8517#0" />
+            <element signature="e#7773#8391#0" />
+            <element signature="e#7831#8274#0" />
+            <element signature="e#7923#8114#0" />
+            <element signature="e#8004#8055#0" />
+            <element signature="e#8143#8241#0" />
+            <element signature="e#8278#8386#0" />
+            <element signature="e#8410#8511#0" />
+            <element signature="e#8521#8686#0" />
+            <element signature="e#8741#9865#0" />
+            <element signature="e#8774#9694#0" />
+            <element signature="e#8928#9568#0" />
+            <element signature="e#8979#9561#0" />
+            <element signature="e#9033#9164#0" />
+            <element signature="e#9195#9385#0" />
+            <element signature="e#9230#9384#0" />
+            <element signature="e#9409#9551#0" />
+            <element signature="e#9587#9688#0" />
+            <element signature="e#9698#9863#0" />
+            <element signature="e#9919#11051#0" />
+            <element signature="e#9952#10880#0" />
+            <element signature="e#10106#10754#0" />
+            <element signature="e#10157#10747#0" />
+            <element signature="e#10211#10342#0" />
+            <element signature="e#10373#10571#0" />
+            <element signature="e#10408#10570#0" />
+            <element signature="e#10595#10737#0" />
+            <element signature="e#10773#10874#0" />
+            <element signature="e#10884#11049#0" />
+            <element signature="e#11102#12353#0" />
+            <element signature="e#11135#12182#0" />
+            <element signature="e#11289#12056#0" />
+            <element signature="e#11331#11983#0" />
+            <element signature="e#11383#11509#0" />
+            <element signature="e#11539#11806#0" />
+            <element signature="e#11564#11715#0" />
+            <element signature="e#11719#11796#0" />
+            <element signature="e#11830#11972#0" />
+            <element signature="e#11987#12049#0" />
+            <element signature="e#12075#12176#0" />
+            <element signature="e#12186#12351#0" />
+            <element signature="e#12406#13520#0" />
+            <element signature="e#12439#13349#0" />
+            <element signature="e#12593#13223#0" />
+            <element signature="e#12644#13216#0" />
+            <element signature="e#12696#12822#0" />
+            <element signature="e#12846#13040#0" />
+            <element signature="e#12880#13039#0" />
+            <element signature="e#13064#13206#0" />
+            <element signature="e#13242#13343#0" />
+            <element signature="e#13353#13518#0" />
+            <element signature="e#13524#13901#0" />
+            <element signature="e#13902#15541#0" />
+            <element signature="e#15594#16452#0" />
+            <element signature="e#15627#16280#0" />
+            <element signature="e#15748#16133#0" />
+            <element signature="e#15770#16018#0" />
+            <element signature="e#15840#15878#0" />
+            <element signature="e#15894#16009#0" />
+            <element signature="e#16024#16128#0" />
+            <element signature="e#16152#16274#0" />
+            <element signature="e#16284#16449#0" />
+            <element signature="e#16456#16846#0" />
+            <element signature="e#16847#17147#0" />
+            <element signature="e#17203#17617#0" />
+            <element signature="e#17319#17484#0" />
+            <element signature="e#17340#17373#0" />
+            <element signature="e#17379#17480#0" />
+            <element signature="e#17502#17612#0" />
+            <element signature="e#17682#17880#0" />
+            <element signature="e#17881#19320#0" />
+            <element signature="e#19374#20034#0" />
+            <element signature="e#19452#19894#0" />
+            <element signature="e#19472#19782#0" />
+            <element signature="e#19528#19626#0" />
+            <element signature="e#19647#19775#0" />
+            <element signature="e#19786#19890#0" />
+            <element signature="e#19910#20029#0" />
+            <element signature="e#20038#21442#0" />
+            <element signature="e#21495#22282#0" />
+            <element signature="e#21567#22142#0" />
+            <element signature="e#21583#22032#0" />
+            <element signature="e#21628#21877#0" />
+            <element signature="e#21650#21759#0" />
+            <element signature="e#21763#21870#0" />
+            <element signature="e#21898#22025#0" />
+            <element signature="e#22036#22138#0" />
+            <element signature="e#22158#22277#0" />
+            <element signature="e#22287#23523#0" />
+            <element signature="e#23579#24450#0" />
+            <element signature="e#23652#24310#0" />
+            <element signature="e#23668#24200#0" />
+            <element signature="e#23786#24043#0" />
+            <element signature="e#23808#23923#0" />
+            <element signature="e#23927#24036#0" />
+            <element signature="e#24064#24193#0" />
+            <element signature="e#24204#24306#0" />
+            <element signature="e#24326#24445#0" />
+            <element signature="e#24454#24866#0" />
+            <element signature="e#24928#25766#0" />
+            <element signature="e#25000#25627#0" />
+            <element signature="e#25016#25517#0" />
+            <element signature="e#25070#25353#0" />
+            <element signature="e#25091#25225#0" />
+            <element signature="e#25229#25346#0" />
+            <element signature="e#25374#25510#0" />
+            <element signature="e#25521#25623#0" />
+            <element signature="e#25643#25762#0" />
+            <element signature="e#26150#27789#0" />
+            <element signature="e#27842#28700#0" />
+            <element signature="e#28532#28697#0" />
           </folding>
         </state>
       </provider>
