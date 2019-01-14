@@ -29,13 +29,13 @@
                         <h3>Mes disponibilités</h3>
                     </div>
                     <div class="panel-body">
-                        <form>
+                        <form method="post" action="/availabilities/addAvailabilities" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-sm-4 col-md-4">
                                     <div class="col-sm-12 col-md-6 inputGroup">
                                         <h5><strong>Lundi 11 Octobre</strong></h5>
                                         <div>
-                                            <input id="dispo1" name="dispo1" type="checkbox" />
+                                            <input id="dispo1" name="dispo1" type="checkbox" value=""/>
                                             <label for="dispo1">8h - 10h</label>
                                         </div>
                                         <div>
@@ -176,6 +176,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <a href="/dashboard" style="color: white; text-decoration: white" class="btn btn-danger btn-space">Annuler</a>
+                            <button class="btn btn-alt3 btn-space" type="submit">Enregistrer<i class="icon s7-check"></i></button>
                         </form>
                     </div>
                 </div>
